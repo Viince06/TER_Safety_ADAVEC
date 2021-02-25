@@ -1,5 +1,5 @@
-# TRAVAIL D'ETUDE ET DE RECHERCHE
-M1 Informatique Université Nice Côte d'Azur
+# TRAVAIL D'ETUDE ET DE RECHERCHE <br> M1 Informatique Université Nice Côte d'Azur
+
 ## Auteurs
 Vincent LAUBRY et Samuele MARINO sous la direction d'Amar BOUALI et de Frédéric MALLET.
 ## Sujet
