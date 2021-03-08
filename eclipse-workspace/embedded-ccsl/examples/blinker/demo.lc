@@ -1,0 +1,14 @@
+Specification demo {
+	Clock p,a,m,t
+	[
+		repeat onn every 2 p from 0
+	    repeat off every 2 p from 1
+
+	    Let m0 be a + off
+	    Let m be m0 - onn
+	    Precedence a < m
+	    SubClocking onn <- a
+	    Exclusion off # a
+	    Let out be m and t
+	]
+}

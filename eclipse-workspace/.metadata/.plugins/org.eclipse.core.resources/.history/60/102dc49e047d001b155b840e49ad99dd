@@ -1,0 +1,3 @@
+Specification test {
+	Clock a, b, c
+}

@@ -1,0 +1,33 @@
+import fr.kairos.timesquare.ccsl.ISimpleSpecification;
+import fr.kairos.timesquare.ccsl.simple.IUtility;
+import fr.kairos.timesquare.ccsl.simple.ISpecificationBuilder;
+
+public class Test implements ISpecificationBuilder {
+	static public Test INSTANCE = new Test();
+	private Test () {
+		// SINGLETON
+	}
+	@Override
+	public void build(ISimpleSpecification simple) {
+		simple.addClock("a");
+		simple.addClock("b");
+		simple.addClock("c");
+		simple.addClock("d");
+		simple.addClock("e");
+		
+		simple.precedence("a", "b");
+		simple.precedence("b", "c");
+		
+		simple.exclusion("a", "c");
+	}
+	private static IUtility[] utilities = { 
+		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()
+	};
+	public static void main(String[] args) {
+		String name = "test";
+		for (IUtility u : utilities) {
+			u.treat(name, INSTANCE);
+		}
+		// no execution
+	}
+}

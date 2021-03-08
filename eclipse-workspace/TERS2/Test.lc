@@ -1,0 +1,7 @@
+Specification test {
+	Clock a, b, c, d, e [
+		SubClocking a <- b
+		Precedence a < b < c
+		Exclusion a # c
+	]
+}
