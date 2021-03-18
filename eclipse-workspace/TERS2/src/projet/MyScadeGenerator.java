@@ -1,3 +1,4 @@
+package projet;
 
 public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecification {
 
