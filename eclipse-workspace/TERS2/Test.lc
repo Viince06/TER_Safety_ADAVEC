@@ -1,7 +1,17 @@
 Specification test {
-	Clock a, b, c, d, e [
+	Clock a, b, c, d, e, f [
 		SubClocking a <- b
-		Precedence a < b < c
+		Precedence a < b < (init: 2 max: 5) c <= (init: 2 max:-1) d
 		Exclusion a # c
-	]
+		Let test be e minus d
+		Let test2 be e - d + f
+		Let test3 be e - d * f
+		repeat aprime every 5 a from 3 upTo 10
+		g = a $ 5 on b  // A partir de a, on attends 5 pour b <-- g
+		h = a $ 5
+		i = a [5, 10]
+		l = a sampledOn b  // Des qu'il y a "a", il prend le premier "b" qui lui arrive
+		Let j be inf(a, b, c)
+		Let k be sup(a, b, c)
+		]
 }
