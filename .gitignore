@@ -3,7 +3,7 @@
 **/*.log
 
 
-**/eclipse-workspace/.metadata/*
+**/metadata/*
 
 # BlueJ files
 *.ctxt
