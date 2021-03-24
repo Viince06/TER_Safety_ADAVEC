@@ -1,7 +1,7 @@
 # Log file
 **/logs
 **/*.log
-
+eclipse-workspace/.metadata/.log
 
 **/.metadata/*
 **/.metadata/.plugins/**
