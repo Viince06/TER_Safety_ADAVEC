@@ -5,7 +5,7 @@
 
 **/eclipse-workspace/.metadata/
 **/eclipse-workspace/.metadata/.plugins/*
-
+**/eclipse-workspace/.metadata/.log
 
 # BlueJ files
 *.ctxt
