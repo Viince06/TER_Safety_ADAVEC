@@ -4,9 +4,11 @@
 ccsl-sts-main/
 
 **/eclipse-workspace/.metadata/
+**/eclipse-workspace/.metadata/.plugins/
 
 # Log file
-*.log
+**/logs
+**/*.log
 
 # BlueJ files
 *.ctxt
