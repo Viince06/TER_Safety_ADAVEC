@@ -2,11 +2,6 @@
 **/logs
 **/*.log
 
-# Path locale
-D:\Projets\TERS2\TER_SafetyCriticalSystem\eclipse-workspace\.metadata\.log
-D:\Projets\TERS2\TER_SafetyCriticalSystem\eclipse-workspace\.metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.jdt.ui.prefs
-D:\Projets\TERS2\TER_SafetyCriticalSystem\eclipse-workspace\.metadata\version.ini
-
 **/.metadata/*
 **/.metadata/.plugins/**
 
