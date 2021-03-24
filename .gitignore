@@ -4,7 +4,7 @@
 ccsl-sts-main/
 
 **/eclipse-workspace/.metadata/
-**/eclipse-workspace/.metadata/.plugins/
+**/eclipse-workspace/.metadata/.plugins/**
 
 # Log file
 **/logs
