@@ -4,7 +4,7 @@
 
 
 **/.metadata/*
-**/.metadata/.plugins**
+**/.metadata/.plugins/**
 
 # BlueJ files
 *.ctxt
