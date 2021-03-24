@@ -1,10 +1,11 @@
-**/eclipse-workspace/.metadata/
-!eclipse-workspace/.metadata/.plugins
-**/eclipse-workspace/.metadata/.plugins/*
-
 # Log file
 **/logs
 **/*.log
+
+
+**/eclipse-workspace/.metadata/
+**/eclipse-workspace/.metadata/.plugins/*
+
 
 # BlueJ files
 *.ctxt
