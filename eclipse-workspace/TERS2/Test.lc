@@ -12,6 +12,6 @@ Specification test {
 		i = a [5, 10]
 		l = a sampledOn b  // Des qu'il y a "a", il prend le premier "b" qui lui arrive
 		Let j be inf(a, b, c)
-		Let k be sup(a, b, c)
+		Let k be sup(a, b, c) 
 		]
 }

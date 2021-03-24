@@ -3,9 +3,9 @@ import fr.kairos.timesquare.ccsl.ISimpleSpecification;
 import fr.kairos.timesquare.ccsl.simple.IUtility;
 import fr.kairos.timesquare.ccsl.simple.ISpecificationBuilder;
 
-public class Test implements ISpecificationBuilder {
-	static public Test INSTANCE = new Test();
-	private Test () {
+public class test implements ISpecificationBuilder {
+	static public test INSTANCE = new test();
+	private test () {
 		// SINGLETON
 	}
 	@Override
@@ -47,9 +47,11 @@ public class Test implements ISpecificationBuilder {
 		
 		simple.sup("k", "a", "b", "c");
 	}
+	
 	private static IUtility[] utilities = { 
-		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()
+			new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()
 	};
+	
 	public static void main(String[] args) {
 		String name = "test";
 		for (IUtility u : utilities) {
