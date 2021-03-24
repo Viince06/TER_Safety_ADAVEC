@@ -12,7 +12,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import java.io.File;
 
-public class inputEncapsulation {
+public class InputEncapsulation {
 	
 	public static void main(String argv[]) {
 
@@ -26,7 +26,7 @@ public class inputEncapsulation {
 	         doc.appendChild(inputs);
 	         
 	         
-	         //doc.appendChild(InputCreation.test());
+	         //doc.appendChild(InputCreation.class);
 	        
 	         
 	         
@@ -36,7 +36,7 @@ public class inputEncapsulation {
 	         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 	         
 	         DOMSource source = new DOMSource(doc);
-	         StreamResult result = new StreamResult(new File("J:\\aMASTER\\TER_SafetyCriticalSystem\\test.xml"));
+	         StreamResult result = new StreamResult(new File("ENCtest.xml"));
 	         transformer.transform(source, result);
 	         
 	         // Output to console for testing

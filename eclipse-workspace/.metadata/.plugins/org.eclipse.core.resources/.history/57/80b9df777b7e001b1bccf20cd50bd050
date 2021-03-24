@@ -1,6 +1,0 @@
-Specification test {
-	Clock a, b, c, d, e [
-		Precedence a < b < c
-		Exclusion a # c
-	]
-}

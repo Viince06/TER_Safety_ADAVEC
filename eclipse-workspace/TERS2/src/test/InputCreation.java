@@ -50,7 +50,7 @@ public class InputCreation {
 	         Element edvariable = doc.createElement("ed:Variable");
 	         pragmas.appendChild(edvariable);
 	         Attr attr3 = doc.createAttribute("oid");
-	         attr3.setValue("!ed/f069/2D74/2964/605337673343"); //What is this shit ?
+	         attr3.setValue("!ed/f069/2D74/2964/605337673343"); 
 	         edvariable.setAttributeNode(attr3);
 	         
 	         
@@ -61,7 +61,7 @@ public class InputCreation {
 	         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 	         
 	         DOMSource source = new DOMSource(doc);
-	         StreamResult result = new StreamResult(new File("J:\\aMASTER\\TER_SafetyCriticalSystem\\test.xml"));
+	         StreamResult result = new StreamResult(new File("CREtest.xml"));
 	         transformer.transform(source, result);
 	         
 	         // Output to console for testing
