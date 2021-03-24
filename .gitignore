@@ -3,6 +3,8 @@
 *.class
 ccsl-sts-main/
 
+**/eclipse-workspace/.metadata*
+
 # Log file
 *.log
 
