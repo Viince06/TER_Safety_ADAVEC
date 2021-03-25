@@ -25,6 +25,6 @@ workspace ::= {
 {"1", NULL}
 }
 project_ref ::= {
-{"2", "ProjectTER.etp", "1"}
+{"2", "ProjetTERNoCCSLTest.etp", "1"}
 }
 END

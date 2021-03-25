@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Type name="ClockStatus">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="PRESENT">
+							<pragmas>
+								<ed:Value oid="!ed/9acd/7036/3B88/605c667641ab"/>
+							</pragmas>
+						</Value>
+						<Value name="ABSENT">
+							<pragmas>
+								<ed:Value oid="!ed/9ad6/7036/3B88/605c66826a45"/>
+							</pragmas>
+						</Value>
+						<Value name="DEAD">
+							<pragmas>
+								<ed:Value oid="!ed/9add/7036/3B88/605c6683156f"/>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/9ac0/7036/3B88/605c665c5948"/>
+			</pragmas>
+		</Type>
+		<Type name="Strictness">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="STRICT">
+							<pragmas>
+								<ed:Value oid="!ed/9ace/7036/3B88/605c667b58eb"/>
+							</pragmas>
+						</Value>
+						<Value name="NONSTRICT">
+							<pragmas>
+								<ed:Value oid="!ed/9ae4/7036/3B88/605c6684576"/>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/9ac6/7036/3B88/605c666063d5"/>
+			</pragmas>
+		</Type>
+		<Type name="XStrictness">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="RNS">
+							<pragmas>
+								<ed:Value oid="!ed/9acf/7036/3B88/605c668079d1"/>
+							</pragmas>
+						</Value>
+						<Value name="LNS">
+							<pragmas>
+								<ed:Value oid="!ed/9aeb/7036/3B88/605c6685704b"/>
+							</pragmas>
+						</Value>
+						<Value name="S">
+							<pragmas>
+								<ed:Value oid="!ed/9af2/7036/3B88/605c668649a2"/>
+							</pragmas>
+						</Value>
+						<Value name="NS">
+							<pragmas>
+								<ed:Value oid="!ed/9af9/7036/3B88/605c6687194e"/>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/9acc/7036/3B88/605c666011bf"/>
+			</pragmas>
+		</Type>
+	</declarations>
+</File>

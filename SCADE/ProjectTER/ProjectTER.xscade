@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Type name="ClockStatus">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="PRESENT">
+							<pragmas>
+								<ed:Value oid="!ed/5041/5D75/283C/605c5abb448a"/>
+							</pragmas>
+						</Value>
+						<Value name="ABSENT">
+							<pragmas>
+								<ed:Value oid="!ed/5048/5D75/283C/605c5ac64e4e"/>
+							</pragmas>
+						</Value>
+						<Value name="DEAD">
+							<pragmas>
+								<ed:Value oid="!ed/504f/5D75/283C/605c5ac674ab"/>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/5034/5D75/283C/605c5a7a45b"/>
+			</pragmas>
+		</Type>
+		<Type name="Strictness">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="STRICT">
+							<pragmas>
+								<ed:Value oid="!ed/5064/5D75/283C/605c5ae5569"/>
+							</pragmas>
+						</Value>
+						<Value name="NONSTRICT">
+							<pragmas>
+								<ed:Value oid="!ed/506c/5D75/283C/605c5af52061"/>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/503a/5D75/283C/605c5a8974cc"/>
+			</pragmas>
+		</Type>
+		<Type name="XStrictness">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="RNS">
+							<pragmas>
+								<ed:Value oid="!ed/5065/5D75/283C/605c5aea752c"/>
+							</pragmas>
+						</Value>
+						<Value name="LNS">
+							<pragmas>
+								<ed:Value oid="!ed/5073/5D75/283C/605c5b055d21"/>
+							</pragmas>
+						</Value>
+						<Value name="S">
+							<pragmas>
+								<ed:Value oid="!ed/507a/5D75/283C/605c5b05298b"/>
+							</pragmas>
+						</Value>
+						<Value name="NS">
+							<pragmas>
+								<ed:Value oid="!ed/5081/5D75/283C/605c5b051bca"/>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/5040/5D75/283C/605c5a89658"/>
+			</pragmas>
+		</Type>
+	</declarations>
+</File>

@@ -1,15 +1,54 @@
 package projet;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecification {
   
   // Method descriptor #6 (Ljava/lang/String;)V
   public void addClock(java.lang.String arg0) {
-	  System.out.println("Clock added: " + arg0);
+	  PrintWriter outputfile = null;
+	  try {
+		  outputfile = new PrintWriter(new FileWriter("addClockTest.txt"));
+		    } catch (IOException e) {
+		            e.printStackTrace();
+		    }
+	  outputfile.println("L1 = " + arg0 + ";");
+	  outputfile.println("v = L14");
+	  outputfile.println("L2 = true;");
+	  outputfile.println("L3 = false;");
+	  outputfile.println("L4 = (case L1 of");
+	  outputfile.println(" | PRESENT :   L2");
+	  outputfile.println(" | _ :   L3);");
+	  outputfile.close();
   }
   
   // Method descriptor #8 (Ljava/lang/String;Ljava/lang/String;)V
   public void subclock(java.lang.String arg0, java.lang.String arg1){
-	  
+	  PrintWriter outputfile = null;
+	  try {
+		  outputfile = new PrintWriter(new FileWriter("subClockTest.txt"));
+		    } catch (IOException e) {
+		            e.printStackTrace();
+		    }
+	  outputfile.println("L1 = " + arg0 + ";");
+	  outputfile.println("L2 = " + arg1 + ";");
+	  outputfile.println("v = L10;");
+	  outputfile.println("L3 = true;");
+	  outputfile.println("L4 = false;");
+	  outputfile.println("L5 = true;");
+	  outputfile.println("L6 = false;");
+	  outputfile.println("L7 = ( case L1 of");
+	  outputfile.println(" | PRESENT :   L3");
+	  outputfile.println(" | _ :   L4);");
+	  outputfile.println("L8 = ( case L2 of");
+	  outputfile.println(" | PRESENT :   L5");
+	  outputfile.println(" | _ :   L6);");
+	  outputfile.println("L9 =  not L8;");
+	  outputfile.println("L10 = L7 and L9;");
+	  outputfile.close();
+
   }
   
   

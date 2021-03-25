@@ -1,0 +1,15 @@
+L1 = a;
+L2 = b;
+v = L10;
+L3 = true;
+L4 = false;
+L5 = true;
+L6 = false;
+L7 = ( case L1 of
+ | PRESENT :   L3
+ | _ :   L4);
+L8 = ( case L2 of
+ | PRESENT :   L5
+ | _ :   L6);
+L9 =  not L8;
+L10 = L7 and L9;

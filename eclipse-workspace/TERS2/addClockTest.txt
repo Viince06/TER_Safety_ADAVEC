@@ -1,0 +1,7 @@
+L1 = f;
+v = L14
+L2 = true;
+L3 = false;
+L4 = (case L1 of
+ | PRESENT :   L2
+ | _ :   L3);

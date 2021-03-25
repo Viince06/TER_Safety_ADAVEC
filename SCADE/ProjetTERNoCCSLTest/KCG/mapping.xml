@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--$ ANSYS SCADE Suite (R) Code Generator version Student 2021 R1 (build 20201118) 
+** Command: scadecg.exe -config D:/Projets/TERS2/TER_SafetyCriticalSystem/SCADE/ProjetTERNoCCSLTest/KCG/config.txt
+** Generation date: 2021-03-25T11:56:18
+*************************************************************$-->
+<mapping>
+  <config>
+    <option name="use_types" value="#off#"/>
+    <option name="imported_root_package" value="#off#"/>
+    <option name="root_package" value="#off#"/>
+    <option name="xml_basename" value="kcg_xml_filter_out.scade"/>
+    <option name="state_vector" value="#off#"/>
+    <option name="static" value="#off#"/>
+    <option name="separate_io_all" value="#off#"/>
+    <option name="no_separate_io" value="#off#"/>
+    <option name="separate_io" value="#off#"/>
+    <option name="warn_error" value="#off#"/>
+    <option name="short_circuit" value="#off#"/>
+    <option name="wrap_c_ops" value="#off#"/>
+    <option name="input_file"
+        value="D:/Programs Installed/ANSYS Inc/v211/SCADE Student/SCADE/libraries/SC65/libverif/libverif.xscade"/>
+    <option name="input_file"
+        value="D:/Programs Installed/ANSYS Inc/v211/SCADE Student/SCADE/libraries/SC65/libpwlinear/lut.xscade"/>
+    <option name="input_file"
+        value="D:/Programs Installed/ANSYS Inc/v211/SCADE Student/SCADE/libraries/SC65/libpwlinear/pwlinear.xscade"/>
+    <option name="input_file"
+        value="D:/Programs Installed/ANSYS Inc/v211/SCADE Student/SCADE/libraries/SC65/libmathext/mathext.xscade"/>
+    <option name="input_file"
+        value="D:/Programs Installed/ANSYS Inc/v211/SCADE Student/SCADE/libraries/SC65/libmath/math.xscade"/>
+    <option name="input_file"
+        value="D:/Programs Installed/ANSYS Inc/v211/SCADE Student/SCADE/libraries/SC65/libmath/vect.xscade"/>
+    <option name="input_file"
+        value="D:/Programs Installed/ANSYS Inc/v211/SCADE Student/SCADE/libraries/SC65/liblinear/filters.xscade"/>
+    <option name="input_file"
+        value="D:/Programs Installed/ANSYS Inc/v211/SCADE Student/SCADE/libraries/SC65/liblinear/linear.xscade"/>
+    <option name="input_file"
+        value="D:/Programs Installed/ANSYS Inc/v211/SCADE Student/SCADE/libraries/SC65/libdigital/TruthTables.xscade"/>
+    <option name="input_file"
+        value="D:/Programs Installed/ANSYS Inc/v211/SCADE Student/SCADE/libraries/SC65/libdigital/digital.xscade"/>
+    <option name="input_file"
+        value="D:/Projets/TERS2/TER_SafetyCriticalSystem/SCADE/ProjetTERNoCCSLTest/SubClockTEXT.xscade"/>
+    <option name="input_file" value="D:/Projets/TERS2/TER_SafetyCriticalSystem/SCADE/ProjetTERNoCCSLTest/SubClock.xscade"/>
+    <option name="input_file"
+        value="D:/Projets/TERS2/TER_SafetyCriticalSystem/SCADE/ProjetTERNoCCSLTest/ProjetTERNoCCSLTest.xscade"/>
+    <option name="probes" value="#off#"/>
+    <option name="debug" value="#off#"/>
+    <option name="no_observe" value="#off#"/>
+    <option name="observe" value="#off#"/>
+    <option name="user_config" value="./user_macros.h"/>
+    <option name="input_threshold" value="#off#"/>
+    <option name="header" value="#off#"/>
+    <option name="significance_length" value="31"/>
+    <option name="name_length" value="200"/>
+    <option name="globals_prefix" value="#off#"/>
+    <option name="keep_asserts" value="#off#"/>
+    <option name="global_root_context" value="#off#"/>
+    <option name="expall" value="#off#"/>
+    <option name="noexp" value="#off#"/>
+    <option name="exp" value="#off#"/>
+    <option name="target_dir" value="D:/Projets/TERS2/TER_SafetyCriticalSystem/SCADE/ProjetTERNoCCSLTest/KCG"/>
+    <option name="target" value="C"/>
+    <option name="root" value="NewSubClock"/>
+    <option name="auth" value="#off#"/>
+  </config>
+  <model>
+    <predefType id="1" name="bool"/>
+    <predefType id="2" name="char"/>
+    <predefType id="3" name="int8"/>
+    <predefType id="4" name="int16"/>
+    <predefType id="5" name="int32"/>
+    <predefType id="6" name="int64"/>
+    <predefType id="7" name="uint8"/>
+    <predefType id="8" name="uint16"/>
+    <predefType id="9" name="uint32"/>
+    <predefType id="10" name="uint64"/>
+    <predefType id="11" name="float32"/>
+    <predefType id="12" name="float64"/>
+    <predefType id="13" name="size"/>
+    <enum id="14" name="ClockStatus">
+      <value id="15" name="PRESENT" default="false"/>
+      <value id="16" name="ABSENT" default="false"/>
+      <value id="17" name="DEAD" default="false"/>
+    </enum>
+    <enum id="18" name="Strictness">
+      <value id="19" name="STRICT" default="false"/>
+      <value id="20" name="NONSTRICT" default="false"/>
+    </enum>
+    <enum id="21" name="XStrictness">
+      <value id="22" name="RNS" default="false"/>
+      <value id="23" name="LNS" default="false"/>
+      <value id="24" name="S" default="false"/>
+      <value id="25" name="NS" default="false"/>
+    </enum>
+    <operator id="26" name="NewSubClock" imported="false" root="true" expanded="false">
+      <input id="27" name="a" clock="false" type="14"/>
+      <input id="28" name="b" clock="false" type="14"/>
+      <output id="29" name="v" clock="false" type="1"/>
+    </operator>
+    <package id="30" name="digital"/>
+    <package id="31" name="truthtables">
+      <enum id="32" name="TruthTableValues">
+        <value id="33" name="T" default="false"/>
+        <value id="34" name="F" default="false"/>
+        <value id="35" name="X" default="false"/>
+      </enum>
+    </package>
+    <package id="36" name="linear"/>
+    <package id="37" name="filters"/>
+    <package id="38" name="vect"/>
+    <package id="39" name="math"/>
+    <package id="40" name="mathext">
+      <package id="41" name="mathextimpl"/>
+    </package>
+    <package id="42" name="pwlinear"/>
+    <package id="43" name="lut"/>
+    <package id="44" name="verif"/>
+  </model>
+  <generated>
+    <c>
+      <file id="45" name="NewSubClock.h">
+        <function id="46" name="NewSubClock_init">
+          <parameter id="47" name="outC" type="53" pointer="true"/>
+        </function>
+        <function id="48" name="NewSubClock_reset">
+          <parameter id="49" name="outC" type="53" pointer="true"/>
+        </function>
+        <function id="50" name="NewSubClock">
+          <parameter id="51" name="inC" type="55" pointer="true"/>
+          <parameter id="52" name="outC" type="53" pointer="true"/>
+        </function>
+        <struct id="53" name="outC_NewSubClock">
+          <field id="54" name="v" type="109" pointer="false"/>
+        </struct>
+        <struct id="55" name="inC_NewSubClock">
+          <field id="56" name="a" type="59" pointer="false"/>
+          <field id="57" name="b" type="59" pointer="false"/>
+        </struct>
+      </file>
+      <file id="58" name="kcg_types.h">
+        <enum id="59" name="ClockStatus" tagName="kcg_tag_ClockStatus">
+          <value id="60" name="PRESENT"/>
+          <value id="61" name="ABSENT"/>
+          <value id="62" name="DEAD"/>
+        </enum>
+        <enum id="63" name="Strictness" tagName="kcg_tag_Strictness">
+          <value id="64" name="STRICT"/>
+          <value id="65" name="NONSTRICT"/>
+        </enum>
+        <enum id="66" name="XStrictness" tagName="kcg_tag_XStrictness">
+          <value id="67" name="RNS"/>
+          <value id="68" name="LNS"/>
+          <value id="69" name="S"/>
+          <value id="70" name="NS"/>
+        </enum>
+        <enum id="71" name="TruthTableValues_truthtables" tagName="kcg_tag_TruthTableValues_truthtables">
+          <value id="72" name="T_truthtables"/>
+          <value id="73" name="F_truthtables"/>
+          <value id="74" name="X_truthtables"/>
+        </enum>
+        <macro id="75" name="kcg_assign_array"/>
+        <macro id="76" name="kcg_assign_struct"/>
+        <macro id="77" name="kcg_lnot_uint8"/>
+        <macro id="78" name="kcg_lnot_uint16"/>
+        <macro id="79" name="kcg_lnot_uint32"/>
+        <macro id="80" name="kcg_lnot_uint64"/>
+        <macro id="81" name="kcg_lsl_uint8"/>
+        <macro id="82" name="kcg_lsl_uint16"/>
+        <macro id="83" name="kcg_lsl_uint32"/>
+        <macro id="84" name="kcg_lsl_uint64"/>
+        <macro id="85" name="kcg_true"/>
+        <macro id="86" name="kcg_false"/>
+        <macro id="87" name="kcg_lit_int8"/>
+        <macro id="88" name="kcg_lit_int16"/>
+        <macro id="89" name="kcg_lit_int32"/>
+        <macro id="90" name="kcg_lit_int64"/>
+        <macro id="91" name="kcg_lit_uint8"/>
+        <macro id="92" name="kcg_lit_uint16"/>
+        <macro id="93" name="kcg_lit_uint32"/>
+        <macro id="94" name="kcg_lit_uint64"/>
+        <macro id="95" name="kcg_lit_size"/>
+        <macro id="96" name="kcg_lit_float64"/>
+        <macro id="97" name="kcg_lit_float32"/>
+        <predefType id="98" name="kcg_int8"/>
+        <predefType id="99" name="kcg_int16"/>
+        <predefType id="100" name="kcg_int32"/>
+        <predefType id="101" name="kcg_int64"/>
+        <predefType id="102" name="kcg_uint8"/>
+        <predefType id="103" name="kcg_uint16"/>
+        <predefType id="104" name="kcg_uint32"/>
+        <predefType id="105" name="kcg_uint64"/>
+        <predefType id="106" name="kcg_size"/>
+        <predefType id="107" name="kcg_float64"/>
+        <predefType id="108" name="kcg_float32"/>
+        <predefType id="109" name="kcg_bool"/>
+        <predefType id="110" name="kcg_char"/>
+        <macro id="111" name="KCG_MAPW_CPY"/>
+      </file>
+      <file id="112" name="kcg_consts.h"/>
+      <file id="113" name="kcg_sensors.h"/>
+    </c>
+    <map srcId="107" dstId="96" role="wrapped-lit"/>
+    <map srcId="108" dstId="97" role="wrapped-lit"/>
+    <map srcId="106" dstId="95" role="wrapped-lit"/>
+    <map srcId="105" dstId="94" role="wrapped-lit"/>
+    <map srcId="105" dstId="80" role="wrapped-lnot"/>
+    <map srcId="105" dstId="84" role="wrapped-lsl"/>
+    <map srcId="104" dstId="93" role="wrapped-lit"/>
+    <map srcId="104" dstId="79" role="wrapped-lnot"/>
+    <map srcId="104" dstId="83" role="wrapped-lsl"/>
+    <map srcId="103" dstId="92" role="wrapped-lit"/>
+    <map srcId="103" dstId="78" role="wrapped-lnot"/>
+    <map srcId="103" dstId="82" role="wrapped-lsl"/>
+    <map srcId="102" dstId="91" role="wrapped-lit"/>
+    <map srcId="102" dstId="77" role="wrapped-lnot"/>
+    <map srcId="102" dstId="81" role="wrapped-lsl"/>
+    <map srcId="101" dstId="90" role="wrapped-lit"/>
+    <map srcId="100" dstId="89" role="wrapped-lit"/>
+    <map srcId="99" dstId="88" role="wrapped-lit"/>
+    <map srcId="98" dstId="87" role="wrapped-lit"/>
+  </generated>
+  <map modelId="35" generatedId="74"/>
+  <map modelId="34" generatedId="73"/>
+  <map modelId="33" generatedId="72"/>
+  <map modelId="25" generatedId="70"/>
+  <map modelId="24" generatedId="69"/>
+  <map modelId="23" generatedId="68"/>
+  <map modelId="22" generatedId="67"/>
+  <map modelId="20" generatedId="65"/>
+  <map modelId="19" generatedId="64"/>
+  <map modelId="17" generatedId="62"/>
+  <map modelId="16" generatedId="61"/>
+  <map modelId="15" generatedId="60"/>
+  <map modelId="26" generatedId="47" role="context-parameter"/>
+  <map modelId="26" generatedId="46" role="init-method"/>
+  <map modelId="26" generatedId="49" role="context-parameter"/>
+  <map modelId="26" generatedId="48" role="reset-method"/>
+  <map modelId="26" generatedId="51" role="input-struct-parameter"/>
+  <map modelId="28" generatedId="57"/>
+  <map modelId="27" generatedId="56"/>
+  <map modelId="26" generatedId="55" role="input-struct-type"/>
+  <map modelId="26" generatedId="52" role="context-parameter"/>
+  <map modelId="29" generatedId="54"/>
+  <map modelId="26" generatedId="53" role="context-type"/>
+  <map modelId="26" generatedId="45" role="interface-file"/>
+  <map modelId="26" generatedId="50" role="cycle-method"/>
+  <map modelId="32" generatedId="71"/>
+  <map modelId="21" generatedId="66"/>
+  <map modelId="18" generatedId="63"/>
+  <map modelId="14" generatedId="59"/>
+  <map modelId="2" generatedId="110"/>
+  <map modelId="1" generatedId="109"/>
+  <map modelId="12" generatedId="107"/>
+  <map modelId="11" generatedId="108"/>
+  <map modelId="13" generatedId="106"/>
+  <map modelId="10" generatedId="105"/>
+  <map modelId="9" generatedId="104"/>
+  <map modelId="8" generatedId="103"/>
+  <map modelId="7" generatedId="102"/>
+  <map modelId="6" generatedId="101"/>
+  <map modelId="5" generatedId="100"/>
+  <map modelId="4" generatedId="99"/>
+  <map modelId="3" generatedId="98"/>
+</mapping>
+<!--$ ANSYS SCADE Suite (R) Code Generator version Student 2021 R1 (build 20201118) 
+** mapping.xml
+** Generation date: 2021-03-25T11:56:18
+*************************************************************$-->
