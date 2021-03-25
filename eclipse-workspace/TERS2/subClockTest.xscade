@@ -13,3 +13,5 @@ L8 = ( case L2 of
  | _ :   L6);
 L9 =  not L8;
 L10 = L7 and L9;
+L11 = true;
+L23 = c;

@@ -1,5 +1,0 @@
-*** Type Warning (WAR_151): Internal state expected
-  at file C:\Users\samue\AppData\Local\Temp\ScadeChecker\6672\checker_file.scade, line 35, character 0
-  at path NewSubClockTEXT/
- Node NewSubClockTEXT has no internal state
- (it should probably be declared as a function)

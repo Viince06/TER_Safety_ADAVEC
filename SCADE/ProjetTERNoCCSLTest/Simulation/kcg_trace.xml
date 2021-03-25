@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+  <Model commandLine="" date="">
+    <Option name="use_types" value="#off#"/>
+    <Option name="imported_root_package" value="#off#"/>
+    <Option name="root_package" value="#off#"/>
+    <Option name="xml_basename" value="kcg_xml_filter_out.scade"/>
+    <Option name="state_vector" value="#off#"/>
+    <Option name="static" value="#off#"/>
+    <Option name="separate_io_all" value="#off#"/>
+    <Option name="no_separate_io" value="#off#"/>
+    <Option name="separate_io" value="#off#"/>
+    <Option name="warn_error" value="#off#"/>
+    <Option name="short_circuit" value="#off#"/>
+    <Option name="wrap_c_ops" value="#off#"/>
+    <Option name="input_file" value="D:/Projets/TERS2/TER_SafetyCriticalSystem/SCADE/ProjetTERNoCCSLTest/Simulation/scade_model_without_unused.scade"/>
+    <Option name="probes" value="#on#"/>
+    <Option name="no_observe" value="#off#"/>
+    <Option name="observe" value="#off#"/>
+    <Option name="debug" value="#on#"/>
+    <Option name="user_config" value="./user_macros.h"/>
+    <Option name="input_threshold" value="#off#"/>
+    <Option name="header" value="#off#"/>
+    <Option name="significance_length" value="31"/>
+    <Option name="name_length" value="200"/>
+    <Option name="globals_prefix" value="#off#"/>
+    <Option name="keep_asserts" value="#off#"/>
+    <Option name="global_root_context" value="#off#"/>
+    <Option name="expall" value="#off#"/>
+    <Option name="noexp" value="#off#"/>
+    <Option name="exp" value="#off#"/>
+    <Option name="target_dir" value="D:/Projets/TERS2/TER_SafetyCriticalSystem/SCADE/ProjetTERNoCCSLTest/Simulation"/>
+    <Option name="target" value="C"/>
+    <Option name="root" value="Operator3"/>
+    <Option name="auth" value="#off#"/>
+    <EnumType scadeName="ClockStatus" targetName="ClockStatus">
+      <EnumVal scadeName="PRESENT" targetName="PRESENT"/>
+      <EnumVal scadeName="ABSENT" targetName="ABSENT"/>
+      <EnumVal scadeName="DEAD" targetName="DEAD"/>
+    </EnumType>
+    <RootNode headerFile="Operator3.h" scadeName="Operator3" targetCycleFct="Operator3" targetInitFct="Operator3_reset" targetInitializationFct="Operator3_init">
+      <Input inCtx="true" scadeName="a" scadeType="ClockStatus" targetName="a" targetType="ClockStatus"/>
+      <Input inCtx="true" scadeName="b" scadeType="ClockStatus" targetName="b" targetType="ClockStatus"/>
+      <Output inCtx="true" scadeName="v" scadeType="bool" targetName="v" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L2" scadeType="bool" targetName="_L2" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L3" scadeType="ClockStatus" targetName="_L3" targetType="ClockStatus"/>
+      <Local inCtx="true" scadeName="_L4" scadeType="ClockStatus" targetName="_L4" targetType="ClockStatus"/>
+      <NodeInstance instName="2" refName="NewSubClockTEXT" scadeName="NewSubClockTEXT">
+        <OutCtxVar targetName="Context_NewSubClockTEXT_2"/>
+      </NodeInstance>
+      <OutCtxType targetName="outC_Operator3"/>
+      <InCtxType targetName="inC_Operator3"/>
+    </RootNode>
+    <NoExpNode headerFile="NewSubClockTEXT.h" scadeName="NewSubClockTEXT" targetCycleFct="NewSubClockTEXT" targetInitFct="NewSubClockTEXT_reset" targetInitializationFct="NewSubClockTEXT_init">
+      <Input scadeName="a" scadeType="ClockStatus" targetName="a" targetType="ClockStatus"/>
+      <Input scadeName="b" scadeType="ClockStatus" targetName="b" targetType="ClockStatus"/>
+      <Output inCtx="true" scadeName="v" scadeType="bool" targetName="v" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="L1" scadeType="ClockStatus" targetName="L1" targetType="ClockStatus"/>
+      <Local inCtx="true" scadeName="L2" scadeType="ClockStatus" targetName="L2" targetType="ClockStatus"/>
+      <Local inCtx="true" scadeName="L3" scadeType="bool" targetName="L3" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="L4" scadeType="bool" targetName="L4" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="L5" scadeType="bool" targetName="L5" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="L6" scadeType="bool" targetName="L6" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="L7" scadeType="bool" targetName="L7" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="L8" scadeType="bool" targetName="L8" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="L9" scadeType="bool" targetName="L9" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="L10" scadeType="bool" targetName="L10" targetType="kcg_bool"/>
+      <OutCtxType targetName="outC_NewSubClockTEXT"/>
+    </NoExpNode>
+    <PredefType scadeName="int8" targetName="kcg_int8"/>
+    <PredefType scadeName="int16" targetName="kcg_int16"/>
+    <PredefType scadeName="int32" targetName="kcg_int32"/>
+    <PredefType scadeName="int64" targetName="kcg_int64"/>
+    <PredefType scadeName="uint8" targetName="kcg_uint8"/>
+    <PredefType scadeName="uint16" targetName="kcg_uint16"/>
+    <PredefType scadeName="uint32" targetName="kcg_uint32"/>
+    <PredefType scadeName="uint64" targetName="kcg_uint64"/>
+    <PredefType scadeName="size" targetName="kcg_size"/>
+    <PredefType scadeName="float32" targetName="kcg_float32"/>
+    <PredefType scadeName="float64" targetName="kcg_float64"/>
+    <PredefType scadeName="bool" targetName="kcg_bool"/>
+    <PredefType scadeName="char" targetName="kcg_char"/>
+  </Model>

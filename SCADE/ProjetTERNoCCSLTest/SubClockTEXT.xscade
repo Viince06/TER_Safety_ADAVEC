@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
 	<declarations>
-		<Operator kind="node" name="NewSubClockTEXT">
+		<Operator kind="function" name="NewSubClockTEXT">
 			<inputs>
 				<Variable name="a">
 					<type>
@@ -178,7 +178,7 @@
 						</IdExpression>
 					</right>
 					<pragmas>
-						<ed:Equation oid="!ed/9bf5/7036/3B88/605c6753e1"/>
+						<ed:Equation oid="!ed/4add/7018/3324/605cb6735fe5"/>
 					</pragmas>
 				</Equation>
 				<!-- L2 = b; -->
@@ -194,7 +194,7 @@
 						</IdExpression>
 					</right>
 					<pragmas>
-						<ed:Equation oid="!ed/9bf6/7036/3B88/605c67532e0b"/>
+						<ed:Equation oid="!ed/4ade/7018/3324/605cb6735737"/>
 					</pragmas>
 				</Equation>
 				<!-- v = L10; -->
@@ -210,7 +210,7 @@
 						</IdExpression>
 					</right>
 					<pragmas>
-						<ed:Equation oid="!ed/9bf7/7036/3B88/605c67536ea2"/>
+						<ed:Equation oid="!ed/4adf/7018/3324/605cb6735eac"/>
 					</pragmas>
 				</Equation>
 				<!-- L3 = true; -->
@@ -222,7 +222,7 @@
 						<ConstValue value="true"/>
 					</right>
 					<pragmas>
-						<ed:Equation oid="!ed/9bf8/7036/3B88/605c6753fce"/>
+						<ed:Equation oid="!ed/4ae0/7018/3324/605cb673423d"/>
 					</pragmas>
 				</Equation>
 				<!-- L4 = false; -->
@@ -234,7 +234,7 @@
 						<ConstValue value="false"/>
 					</right>
 					<pragmas>
-						<ed:Equation oid="!ed/9bf9/7036/3B88/605c675311e7"/>
+						<ed:Equation oid="!ed/4ae1/7018/3324/605cb673232d"/>
 					</pragmas>
 				</Equation>
 				<!-- L5 = true; -->
@@ -246,7 +246,7 @@
 						<ConstValue value="true"/>
 					</right>
 					<pragmas>
-						<ed:Equation oid="!ed/9bfa/7036/3B88/605c67536f73"/>
+						<ed:Equation oid="!ed/4ae2/7018/3324/605cb6733128"/>
 					</pragmas>
 				</Equation>
 				<!-- L6 = false; -->
@@ -258,7 +258,7 @@
 						<ConstValue value="false"/>
 					</right>
 					<pragmas>
-						<ed:Equation oid="!ed/9bfb/7036/3B88/605c67532d38"/>
+						<ed:Equation oid="!ed/4ae3/7018/3324/605cb67339c1"/>
 					</pragmas>
 				</Equation>
 				<!-- L7 = ( case L1 of  | PRESENT :   L3 | _ :   L4); -->
@@ -268,7 +268,7 @@
 					</lefts>
 					<right>
 						<!-- ( case L1 of  | PRESENT :   L3 | _ :   L4) -->
-						<CaseOp name="1">
+						<CaseOp name="3">
 							<switch>
 								<IdExpression>
 									<path>
@@ -299,7 +299,7 @@
 						</CaseOp>
 					</right>
 					<pragmas>
-						<ed:Equation oid="!ed/9bfc/7036/3B88/605c67532adf"/>
+						<ed:Equation oid="!ed/4ae4/7018/3324/605cb6737986"/>
 					</pragmas>
 				</Equation>
 				<!-- L8 = ( case L2 of  | PRESENT :   L5 | _ :   L6); -->
@@ -309,7 +309,7 @@
 					</lefts>
 					<right>
 						<!-- ( case L2 of  | PRESENT :   L5 | _ :   L6) -->
-						<CaseOp name="2">
+						<CaseOp name="4">
 							<switch>
 								<IdExpression>
 									<path>
@@ -340,7 +340,7 @@
 						</CaseOp>
 					</right>
 					<pragmas>
-						<ed:Equation oid="!ed/9bfd/7036/3B88/605c67531e78"/>
+						<ed:Equation oid="!ed/4ae5/7018/3324/605cb67319f6"/>
 					</pragmas>
 				</Equation>
 				<!-- L9 =  not L8; -->
@@ -350,7 +350,7 @@
 					</lefts>
 					<right>
 						<!--  not L8 -->
-						<UnaryOp name="1" operator="not">
+						<UnaryOp name="2" operator="not">
 							<operand>
 								<IdExpression>
 									<path>
@@ -361,7 +361,7 @@
 						</UnaryOp>
 					</right>
 					<pragmas>
-						<ed:Equation oid="!ed/9bfe/7036/3B88/605c67539b1"/>
+						<ed:Equation oid="!ed/4ae6/7018/3324/605cb673141b"/>
 					</pragmas>
 				</Equation>
 				<!-- L10 = L7 and L9; -->
@@ -371,7 +371,7 @@
 					</lefts>
 					<right>
 						<!-- L7 and L9 -->
-						<NAryOp name="1" operator="and">
+						<NAryOp name="2" operator="and">
 							<operands>
 								<IdExpression>
 									<path>
@@ -387,7 +387,7 @@
 						</NAryOp>
 					</right>
 					<pragmas>
-						<ed:Equation oid="!ed/9bff/7036/3B88/605c675312ed"/>
+						<ed:Equation oid="!ed/4ae7/7018/3324/605cb6736342"/>
 					</pragmas>
 				</Equation>
 			</data>
@@ -396,18 +396,35 @@
 					<diagrams>
 						<TextDiagram name="NewSubClockTEXT_1" landscape="false" format="A4 (210 297)" oid="!ed/9c0e/7036/3B88/605c676223c5">
 							<presentationElements>
-								<FlowTE presentable="!ed/9bf5/7036/3B88/605c6753e1"/>
-								<FlowTE presentable="!ed/9bf6/7036/3B88/605c67532e0b"/>
-								<FlowTE presentable="!ed/9bf7/7036/3B88/605c67536ea2"/>
-								<FlowTE presentable="!ed/9bf8/7036/3B88/605c6753fce"/>
-								<FlowTE presentable="!ed/9bf9/7036/3B88/605c675311e7"/>
-								<FlowTE presentable="!ed/9bfa/7036/3B88/605c67536f73"/>
-								<FlowTE presentable="!ed/9bfb/7036/3B88/605c67532d38"/>
-								<FlowTE presentable="!ed/9bfc/7036/3B88/605c67532adf"/>
-								<FlowTE presentable="!ed/9bfd/7036/3B88/605c67531e78"/>
-								<FlowTE presentable="!ed/9bfe/7036/3B88/605c67539b1"/>
-								<FlowTE presentable="!ed/9bff/7036/3B88/605c675312ed"/>
+								<FlowTE presentable="!ed/4add/7018/3324/605cb6735fe5"/>
+								<FlowTE presentable="!ed/4ade/7018/3324/605cb6735737"/>
+								<FlowTE presentable="!ed/4adf/7018/3324/605cb6735eac"/>
+								<FlowTE presentable="!ed/4ae0/7018/3324/605cb673423d"/>
+								<FlowTE presentable="!ed/4ae1/7018/3324/605cb673232d"/>
+								<FlowTE presentable="!ed/4ae2/7018/3324/605cb6733128"/>
+								<FlowTE presentable="!ed/4ae3/7018/3324/605cb67339c1"/>
+								<FlowTE presentable="!ed/4ae4/7018/3324/605cb6737986"/>
+								<FlowTE presentable="!ed/4ae5/7018/3324/605cb67319f6"/>
+								<FlowTE presentable="!ed/4ae6/7018/3324/605cb673141b"/>
+								<FlowTE presentable="!ed/4ae7/7018/3324/605cb6736342"/>
 							</presentationElements>
+							<textArea>
+								<TextArea text="L1 = a;&#xA;
+L2 = b;&#xA;
+v = L10;&#xA;
+L3 = true;&#xA;
+L4 = false;&#xA;
+L5 = true;&#xA;
+L6 = false;&#xA;
+L7 = ( case L1 of &#xA;
+ | PRESENT :   L3&#xA;
+ | _ :   L4);&#xA;
+L8 = ( case L2 of &#xA;
+ | PRESENT :   L5&#xA;
+ | _ :   L6);&#xA;
+L9 =  not L8;&#xA;
+L10 = L7 and L9;"/>
+							</textArea>
 						</TextDiagram>
 					</diagrams>
 				</ed:Operator>

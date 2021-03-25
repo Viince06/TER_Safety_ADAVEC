@@ -1,0 +1,252 @@
+
+type
+   #pragma ed <Type oid="!ed/9ac0/7036/3B88/605c665c5948"/>
+#end
+
+ClockStatus = enum {#pragma ed <Constant oid="!ed/9acd/7036/3B88/605c667641ab"/>
+#end
+PRESENT, #pragma ed <Constant oid="!ed/9ad6/7036/3B88/605c66826a45"/>
+#end
+ABSENT, #pragma ed <Constant oid="!ed/9add/7036/3B88/605c6683156f"/>
+#end
+DEAD};
+
+node #pragma ed <Operator oid="!ed/4a5c/7018/3324/605cac88375c">
+	<diagrams>
+		<NetDiagram name="Operator3_1" landscape="true" format="A4 (210 297)" oid="!ed/4a5d/7018/3324/605cac887b7">
+			<presentationElements>
+				<EquationGE presentable="!ed/4a78/7018/3324/605caccb6627">
+					<position>
+						<Point x="7646" y="3149"/>
+					</position>
+					<size>
+						<Size width="7371" height="5784"/>
+					</size>
+				</EquationGE>
+				<EquationGE presentable="!ed/4a7e/7018/3324/605cacd270f">
+					<position>
+						<Point x="1667" y="4419"/>
+					</position>
+					<size>
+						<Size width="264" height="502"/>
+					</size>
+				</EquationGE>
+				<EquationGE presentable="!ed/4a84/7018/3324/605cacd34e37">
+					<position>
+						<Point x="1429" y="7488"/>
+					</position>
+					<size>
+						<Size width="264" height="502"/>
+					</size>
+				</EquationGE>
+				<EquationGE presentable="!ed/4a8a/7018/3324/605cacd54ce8">
+					<position>
+						<Point x="20479" y="5768"/>
+					</position>
+					<size>
+						<Size width="317" height="503"/>
+					</size>
+				</EquationGE>
+				<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4a7e/7018/3324/605cacd270f" dstEquation="!ed/4a78/7018/3324/605caccb6627">
+					<positions>
+						<Point x="1931" y="4683"/>
+						<Point x="4789" y="4683"/>
+						<Point x="4789" y="5080"/>
+						<Point x="7646" y="5080"/>
+					</positions>
+				</Edge>
+				<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/4a84/7018/3324/605cacd34e37" dstEquation="!ed/4a78/7018/3324/605caccb6627">
+					<positions>
+						<Point x="1693" y="7752"/>
+						<Point x="4657" y="7752"/>
+						<Point x="4657" y="6985"/>
+						<Point x="7646" y="6985"/>
+					</positions>
+				</Edge>
+				<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4a78/7018/3324/605caccb6627" dstEquation="!ed/4a8a/7018/3324/605cacd54ce8">
+					<positions>
+						<Point x="15002" y="6033"/>
+						<Point x="17754" y="6033"/>
+						<Point x="17754" y="6033"/>
+						<Point x="20532" y="6033"/>
+					</positions>
+				</Edge>
+			</presentationElements>
+		</NetDiagram>
+	</diagrams>
+</Operator>
+#end
+
+Operator3(
+      #pragma ed    <Variable oid="!ed/4a6a/7018/3324/605cacbb6647"/>
+#end
+
+a : ClockStatus; 
+      #pragma ed    <Variable oid="!ed/4a71/7018/3324/605cacbd1c24"/>
+#end
+
+b : ClockStatus)
+returns (
+      #pragma ed    <Variable oid="!ed/4a77/7018/3324/605cacc07c45"/>
+#end
+
+v : bool)
+var
+      #pragma ed    <Variable oid="!ed/4a79/7018/3324/605caccb1915"/>
+#end
+
+_L2 : bool;
+      #pragma ed    <Variable oid="!ed/4a7f/7018/3324/605cacd25ee5"/>
+#end
+
+_L3 : ClockStatus;
+      #pragma ed    <Variable oid="!ed/4a85/7018/3324/605cacd381e"/>
+#end
+
+_L4 : ClockStatus;
+let
+   #pragma ed    <Equation oid="!ed/4a78/7018/3324/605caccb6627"/>
+#end
+
+   _L2 =  #2 NewSubClockTEXT(_L3, _L4);
+   #pragma ed    <Equation oid="!ed/4a7e/7018/3324/605cacd270f"/>
+#end
+
+   _L3 = a;
+   #pragma ed    <Equation oid="!ed/4a84/7018/3324/605cacd34e37"/>
+#end
+
+   _L4 = b;
+   #pragma ed    <Equation oid="!ed/4a8a/7018/3324/605cacd54ce8"/>
+#end
+
+   v = _L2;
+tel
+
+node #pragma ed <Operator oid="!ed/9bf4/7036/3B88/605c67531c81">
+	<diagrams>
+		<TextDiagram name="NewSubClockTEXT_1" landscape="false" format="A4 (210 297)" oid="!ed/9c0e/7036/3B88/605c676223c5">
+			<presentationElements>
+				<FlowTE presentable="!ed/9bf5/7036/3B88/605c6753e1"/>
+				<FlowTE presentable="!ed/9bf6/7036/3B88/605c67532e0b"/>
+				<FlowTE presentable="!ed/9bf7/7036/3B88/605c67536ea2"/>
+				<FlowTE presentable="!ed/9bf8/7036/3B88/605c6753fce"/>
+				<FlowTE presentable="!ed/9bf9/7036/3B88/605c675311e7"/>
+				<FlowTE presentable="!ed/9bfa/7036/3B88/605c67536f73"/>
+				<FlowTE presentable="!ed/9bfb/7036/3B88/605c67532d38"/>
+				<FlowTE presentable="!ed/9bfc/7036/3B88/605c67532adf"/>
+				<FlowTE presentable="!ed/9bfd/7036/3B88/605c67531e78"/>
+				<FlowTE presentable="!ed/9bfe/7036/3B88/605c67539b1"/>
+				<FlowTE presentable="!ed/9bff/7036/3B88/605c675312ed"/>
+			</presentationElements>
+		</TextDiagram>
+	</diagrams>
+</Operator>
+#end
+
+NewSubClockTEXT(
+      #pragma ed    <Variable oid="!ed/9c0c/7036/3B88/605c67532710"/>
+#end
+
+a : ClockStatus; 
+      #pragma ed    <Variable oid="!ed/9c0d/7036/3B88/605c675368b4"/>
+#end
+
+b : ClockStatus)
+returns (
+      #pragma ed    <Variable oid="!ed/9c0b/7036/3B88/605c675345d7"/>
+#end
+
+v : bool)
+var
+      #pragma ed    <Variable oid="!ed/9c01/7036/3B88/605c67532472"/>
+#end
+
+L1 : ClockStatus;
+      #pragma ed    <Variable oid="!ed/9c02/7036/3B88/605c675327b6"/>
+#end
+
+L2 : ClockStatus;
+      #pragma ed    <Variable oid="!ed/9c03/7036/3B88/605c67537140"/>
+#end
+
+L3 : bool;
+      #pragma ed    <Variable oid="!ed/9c04/7036/3B88/605c675362d4"/>
+#end
+
+L4 : bool;
+      #pragma ed    <Variable oid="!ed/9c05/7036/3B88/605c6753aef"/>
+#end
+
+L5 : bool;
+      #pragma ed    <Variable oid="!ed/9c06/7036/3B88/605c675325cb"/>
+#end
+
+L6 : bool;
+      #pragma ed    <Variable oid="!ed/9c07/7036/3B88/605c67533ea2"/>
+#end
+
+L7 : bool;
+      #pragma ed    <Variable oid="!ed/9c08/7036/3B88/605c6753f0a"/>
+#end
+
+L8 : bool;
+      #pragma ed    <Variable oid="!ed/9c09/7036/3B88/605c675377f"/>
+#end
+
+L9 : bool;
+      #pragma ed    <Variable oid="!ed/9c0a/7036/3B88/605c675371ca"/>
+#end
+
+L10 : bool;
+let
+   #pragma ed    <Equation oid="!ed/9bf5/7036/3B88/605c6753e1"/>
+#end
+
+   L1 = a;
+   #pragma ed    <Equation oid="!ed/9bf6/7036/3B88/605c67532e0b"/>
+#end
+
+   L2 = b;
+   #pragma ed    <Equation oid="!ed/9bf7/7036/3B88/605c67536ea2"/>
+#end
+
+   v = L10;
+   #pragma ed    <Equation oid="!ed/9bf8/7036/3B88/605c6753fce"/>
+#end
+
+   L3 = true;
+   #pragma ed    <Equation oid="!ed/9bf9/7036/3B88/605c675311e7"/>
+#end
+
+   L4 = false;
+   #pragma ed    <Equation oid="!ed/9bfa/7036/3B88/605c67536f73"/>
+#end
+
+   L5 = true;
+   #pragma ed    <Equation oid="!ed/9bfb/7036/3B88/605c67532d38"/>
+#end
+
+   L6 = false;
+   #pragma ed    <Equation oid="!ed/9bfc/7036/3B88/605c67532adf"/>
+#end
+
+   L7 =  #1 ( case L1 of 
+    | PRESENT :   L3
+    | _ :   L4);
+   #pragma ed    <Equation oid="!ed/9bfd/7036/3B88/605c67531e78"/>
+#end
+
+   L8 =  #2 ( case L2 of 
+    | PRESENT :   L5
+    | _ :   L6);
+   #pragma ed    <Equation oid="!ed/9bfe/7036/3B88/605c67539b1"/>
+#end
+
+   L9 =  #1  not L8;
+   #pragma ed    <Equation oid="!ed/9bff/7036/3B88/605c675312ed"/>
+#end
+
+   L10 = L7 #1  and L9;
+tel
+
