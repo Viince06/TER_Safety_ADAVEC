@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="Causality">
+	<pragmas>
+		<ed:Operator oid="!ed/4a0e/611A/3D1C/60649b662e25" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+			<diagrams>
+				<NetDiagram name="Causality_1" landscape="true" format="A4 (210 297)" oid="!ed/4a0f/611A/3D1C/60649b666ea9"/>
+			</diagrams>
+		</ed:Operator>
+	</pragmas>
+</Operator>

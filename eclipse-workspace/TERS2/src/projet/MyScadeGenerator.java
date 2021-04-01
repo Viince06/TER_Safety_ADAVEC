@@ -10,12 +10,12 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
   public void addClock(java.lang.String arg0) {
 	  PrintWriter outputfile = null;
 	  try {
-		  outputfile = new PrintWriter(new FileWriter("addClockTest.txt"));
+		  outputfile = new PrintWriter(new FileWriter("addClockTest.xscade"));
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
 	  outputfile.println("L1 = " + arg0 + ";");
-	  outputfile.println("v = L14");
+	  outputfile.println("v = L4");
 	  outputfile.println("L2 = true;");
 	  outputfile.println("L3 = false;");
 	  outputfile.println("L4 = (case L1 of");
@@ -28,7 +28,7 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
   public void subclock(java.lang.String arg0, java.lang.String arg1){
 	  PrintWriter outputfile = null;
 	  try {
-		  outputfile = new PrintWriter(new FileWriter("subClockTest.txt"));
+		  outputfile = new PrintWriter(new FileWriter("subClockTest.xscade"));
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
@@ -48,7 +48,6 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
 	  outputfile.println("L9 =  not L8;");
 	  outputfile.println("L10 = L7 and L9;");
 	  outputfile.close();
-
   }
   
   

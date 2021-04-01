@@ -1,0 +1,35 @@
+
+[STUDIO\TOOLS\CONFIGURATIONS\Code Generator]
+
+"D:\\Projets\\TERS2\\Project\\ProjectTER\\ProjectTER.etp"="KCG" 
+"D:\\Projets\\TERS2\\TER_SafetyCriticalSystem\\SCADE\\ProjectTER\\ProjectTER.etp"="KCG" 
+"D:\\Projets\\TERS2\\TER_SafetyCriticalSystem\\SCADE\\OLDScadeTERS2\\ProjectTER.etp"="KCG" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Metrics and Rules Checker]
+
+"D:\\Projets\\TERS2\\Project\\ProjectTER\\ProjectTER.etp"="MetricRule" 
+"D:\\Projets\\TERS2\\TER_SafetyCriticalSystem\\SCADE\\ProjectTER\\ProjectTER.etp"="MetricRule" 
+"D:\\Projets\\TERS2\\TER_SafetyCriticalSystem\\SCADE\\OLDScadeTERS2\\ProjectTER.etp"="MetricRule" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Reporter]
+
+"D:\\Projets\\TERS2\\Project\\ProjectTER\\ProjectTER.etp"="HTML" 
+"D:\\Projets\\TERS2\\TER_SafetyCriticalSystem\\SCADE\\ProjectTER\\ProjectTER.etp"="HTML" 
+"D:\\Projets\\TERS2\\TER_SafetyCriticalSystem\\SCADE\\OLDScadeTERS2\\ProjectTER.etp"="HTML" 
+
+[STUDIO\Workspace]
+
+"ActiveProject"="D:\\Projets\\TERS2\\TER_SafetyCriticalSystem\\SCADE\\OLDScadeTERS2\\ProjectTER.etp" 
+
+[SCADE\Editor\Shortcut]
+
+"groupNb"="0" 
+
+[SCADE\Editor\Tool]
+
+"UsePolyline"="false" 
+"TransitionKind"="strong" 
+
+[SCADE\Generator\Tool]
+
+"PragmaTarget"="" 

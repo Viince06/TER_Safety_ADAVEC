@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="Utils">
+			<declarations>
+				<Operator name="isPresent" href="isPresent.xscade"/>
+				<Operator name="Mg_delta" href="Mg_delta.xscade"/>
+				<Operator name="DecodeClockStatus" href="DecodeClockStatus.xscade"/>
+				<Operator name="EncodeClockStatus" href="EncodeClockStatus.xscade"/>
+				<Operator name="GtEqlt" href="GtEqlt.xscade"/>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/4aeb/611A/3D1C/60649d9b3648" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/4aec/611A/3D1C/60649d9b228f" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/4aed/611A/3D1C/60649d9b25f9" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/4aee/611A/3D1C/60649d9b71ec" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>
