@@ -19,3 +19,5 @@
 *.zip
 *.tar.gz
 *.rar
+
+eclipse-workspace/TERS2/.classpath
