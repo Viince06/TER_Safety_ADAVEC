@@ -10,7 +10,7 @@ Specification Human {
 			Let Health be Death + Drunk + Unconscious + Inebriated + Relaxed + Influenced
 
 
-			Let Focus be NotFocused + Inactive + Inattentive + LongDriving
+			Let Focus be NotFocused + Inactive + Inattentive + LongDriving 
 		
 		
 	]
