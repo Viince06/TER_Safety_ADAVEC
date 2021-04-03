@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<pragmas>
-    <ed:Operator xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" oid="!ed/5013/C88/2DC0/605357af165c">
-        <diagrams>
-            <NetDiagram format="A4 (210 297)" landscape="true" name="Operator1_1" oid="!ed/5014/C88/2DC0/605357af6129"/>
-        </diagrams>
-    </ed:Operator>
-</pragmas>

@@ -1,0 +1,9 @@
+Specification Modes {
+	Clock Autonomous, Manual, MRM [
+		Let finalMode be Autonomous + Manual + MRM
+		
+		//wanting a specific finalMode on the set
+		
+		Precedence finalMode <= Autonomous
+	]
+}

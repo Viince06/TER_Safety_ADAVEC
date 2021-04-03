@@ -1,0 +1,17 @@
+Specification Human {
+	Clock Death, Inactive, Drunk, NotFocused, Unconscious, Stressed,
+			Inattentive, Inebriated, LongDriving, Relaxed, StressedIntense, 
+			StressedModerate, Influenced [
+		
+
+			Let Stress be Stressed + StressedIntense + StressedModerate
+
+
+			Let Health be Death + Drunk + Unconscious + Inebriated + Relaxed + Influenced
+
+
+			Let Focus be NotFocused + Inactive + Inattentive + LongDriving
+		
+		
+	]
+}

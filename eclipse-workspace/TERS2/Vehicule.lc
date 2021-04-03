@@ -1,0 +1,11 @@
+Specification Vehicule {
+	Clock FaultySensor, NoIssue [
+		
+
+		Let Sensors be FaultySensor + NoIssue
+		
+		Precedence Sensors <= NoIssue
+		
+		
+	]
+}

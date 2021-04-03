@@ -1,3 +1,22 @@
 Specification Scenario1 {
-	Clock a, b, c
+	Clock true, fog, weather, day, night, rain, snow, 
+			nominal, automatic, manual, mrm, unconscious, seconds [
+		//SubClocking true <- fog  // Attempt 1
+		repeat fogTime every weather // Attempt 2
+		//manualMode = weather $ 1 on fogTime // Attempt Output
+		Let weather be rain + fog + snow + nominal
+		//Let timePeriod = union (day, night)
+		//Exclusion day # night
+		Precedence day < (max: 1) night
+		
+		Let mode be automatic + manual + mrm
+		Exclusion automatic # manual # mrm
+		
+		t = unconscious $ 10 on seconds
+		Precedence unconscious <= mrm <= t
+		
+		
+		Precedence day <= (max: 1) weather
+		
+	]
 }

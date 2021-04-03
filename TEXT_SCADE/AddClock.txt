@@ -1,0 +1,4 @@
+L1 = a;
+presence = L3;
+L3, L2 = Utils::DecodeClockStatus(L1);
+alive = L2;

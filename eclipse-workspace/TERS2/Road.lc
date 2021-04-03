@@ -1,0 +1,15 @@
+Specification Road {
+	Clock HighwayExit, Highway, Interurban, Urban, CountrySide [
+		
+
+		Let Normal be Highway + Interurban + Urban
+		
+		Precedence Normal <= Urban
+		
+		
+		Let Event be HighwayExit + CountrySide
+		
+		//If Scenario establishes Highway as a Event Road
+		Precedence Event <= Highway
+	]
+}

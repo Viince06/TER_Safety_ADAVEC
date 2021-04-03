@@ -1,0 +1,11 @@
+Specification Traffic {
+	Clock HeavyTraffic, Normal, StopAhead [
+		
+
+		Let Traffic be HeavyTraffic + Normal + StopAhead
+		
+		Precedence Traffic <= Normal
+		
+		
+	]
+}

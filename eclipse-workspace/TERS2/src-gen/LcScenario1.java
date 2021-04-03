@@ -9,9 +9,38 @@ public class LcScenario1 implements ISpecificationBuilder {
 	}
 	@Override
 	public void build(ISimpleSpecification simple) {
-		simple.addClock("a");
-		simple.addClock("b");
-		simple.addClock("c");
+		simple.addClock("true");
+		simple.addClock("fog");
+		simple.addClock("weather");
+		simple.addClock("day");
+		simple.addClock("night");
+		simple.addClock("rain");
+		simple.addClock("snow");
+		simple.addClock("nominal");
+		simple.addClock("automatic");
+		simple.addClock("manual");
+		simple.addClock("mrm");
+		simple.addClock("unconscious");
+		simple.addClock("seconds");
+		
+		simple.delayFor("fogTime", "weather", 0, -1, null);
+		
+		simple.union("weather", "rain", "fog", "snow", "nominal");
+		
+		simple.precedence("day", "night", 0, 1);
+		
+		simple.union("mode", "automatic", "manual", "mrm");
+		
+		simple.exclusion("automatic", "manual");
+		simple.exclusion("automatic", "mrm");
+		simple.exclusion("manual", "mrm");
+		
+		simple.delayFor("t", "unconscious", 10, -1, "seconds");
+		
+		simple.causality("unconscious", "mrm");
+		simple.causality("mrm", "t");
+		
+		simple.causality("day", "weather", 0, 1);
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()
