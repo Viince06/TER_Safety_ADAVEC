@@ -12,7 +12,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import java.io.File;
 
-public class InputEncapsulation {
+public class inputEncapsulation {
 	
 	public static void main(String argv[]) {
 

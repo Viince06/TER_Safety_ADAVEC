@@ -3,9 +3,9 @@ import fr.kairos.timesquare.ccsl.ISimpleSpecification;
 import fr.kairos.timesquare.ccsl.simple.IUtility;
 import fr.kairos.timesquare.ccsl.simple.ISpecificationBuilder;
 
-public class test implements ISpecificationBuilder {
-	static public test INSTANCE = new test();
-	private test () {
+public class Test implements ISpecificationBuilder {
+	static public Test INSTANCE = new Test();
+	private Test () {
 		// SINGLETON
 	}
 	@Override
