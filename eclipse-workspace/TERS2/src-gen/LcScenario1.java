@@ -9,38 +9,65 @@ public class LcScenario1 implements ISpecificationBuilder {
 	}
 	@Override
 	public void build(ISimpleSpecification simple) {
-		simple.addClock("true");
-		simple.addClock("fog");
-		simple.addClock("weather");
-		simple.addClock("day");
-		simple.addClock("night");
-		simple.addClock("rain");
-		simple.addClock("snow");
-		simple.addClock("nominal");
-		simple.addClock("automatic");
-		simple.addClock("manual");
-		simple.addClock("mrm");
-		simple.addClock("unconscious");
-		simple.addClock("seconds");
+		simple.addClock("Fog");
+		simple.addClock("Rain");
+		simple.addClock("Snow");
+		simple.addClock("Sunny");
+		simple.addClock("Night");
+		simple.addClock("HighwayExit");
+		simple.addClock("Highway");
+		simple.addClock("Interurban");
+		simple.addClock("Urban");
+		simple.addClock("CountrySide");
+		simple.addClock("HeavyTraffic");
+		simple.addClock("Light");
+		simple.addClock("StopAhead");
+		simple.addClock("FaultySensor");
+		simple.addClock("NoIssue");
+		simple.addClock("Stressed");
+		simple.addClock("StressedIntense");
+		simple.addClock("StressedModerate");
+		simple.addClock("Death");
+		simple.addClock("Drunk");
+		simple.addClock("Unconscious");
+		simple.addClock("Inebriated");
+		simple.addClock("Relaxed");
+		simple.addClock("Influenced");
+		simple.addClock("NotFocused");
+		simple.addClock("Inactive");
+		simple.addClock("Inattentive");
+		simple.addClock("LongDriving");
+		simple.addClock("Automatic");
+		simple.addClock("Manual");
+		simple.addClock("MRM");
 		
-		simple.delayFor("fogTime", "weather", 0, -1, null);
+		simple.union("DayTime", "Sunny", "Night");
 		
-		simple.union("weather", "rain", "fog", "snow", "nominal");
+		simple.causality("Sunny", "DayTime", 0, 1);
 		
-		simple.precedence("day", "night", 0, 1);
+		simple.union("Hazard", "Fog", "Rain", "Snow");
 		
-		simple.union("mode", "automatic", "manual", "mrm");
+		simple.causality("Hazard", "Fog");
 		
-		simple.exclusion("automatic", "manual");
-		simple.exclusion("automatic", "mrm");
-		simple.exclusion("manual", "mrm");
+		simple.union("Road", "Highway", "Interurban", "Urban");
 		
-		simple.delayFor("t", "unconscious", 10, -1, "seconds");
+		simple.causality("Road", "Interurban");
 		
-		simple.causality("unconscious", "mrm");
-		simple.causality("mrm", "t");
+		simple.union("Traffic", "HeavyTraffic", "Light", "StopAhead");
 		
-		simple.causality("day", "weather", 0, 1);
+		simple.causality("Traffic", "Light");
+		
+		simple.union("Sensors", "FaultySensor", "NoIssue");
+		
+		simple.causality("Sensors", "NoIssue");
+		
+		simple.union("Health", "Death", "Drunk", "Unconscious", "Inebriated", "Relaxed", "Influenced");
+		
+		simple.causality("Health", "Relaxed");
+		
+		simple.union("FinalMode", "Automatic", "Manual", "MRM");
+		
+		simple.causality("FinalMode", "Manual");
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()

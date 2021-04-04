@@ -11,12 +11,12 @@ public class LcTraffic implements ISpecificationBuilder {
 	@Override
 	public void build(ISimpleSpecification simple) {
 		simple.addClock("HeavyTraffic");
-		simple.addClock("Normal");
+		simple.addClock("Light");
 		simple.addClock("StopAhead");
 		
-		simple.union("Traffic", "HeavyTraffic", "Normal", "StopAhead");
+		simple.union("Traffic", "HeavyTraffic", "Light", "StopAhead");
 		
-		simple.causality("Traffic", "Normal");
+		simple.causality("Traffic", "Light");
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()

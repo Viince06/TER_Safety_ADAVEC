@@ -1,11 +1,10 @@
-package projet;
 import fr.kairos.timesquare.ccsl.ISimpleSpecification;
 import fr.kairos.timesquare.ccsl.simple.IUtility;
 import fr.kairos.timesquare.ccsl.simple.ISpecificationBuilder;
 
-public class LcScenario1 implements ISpecificationBuilder {
-	static public LcScenario1 INSTANCE = new LcScenario1();
-	private LcScenario1 () {
+public class LcScenario7 implements ISpecificationBuilder {
+	static public LcScenario7 INSTANCE = new LcScenario7();
+	private LcScenario7 () {
 		// SINGLETON
 	}
 	@Override
@@ -41,18 +40,15 @@ public class LcScenario1 implements ISpecificationBuilder {
 		simple.addClock("Automatic");
 		simple.addClock("Manual");
 		simple.addClock("MRM");
+		simple.addClock("Seconds");
 		
 		simple.union("DayTime", "Sunny", "Night");
 		
 		simple.causality("Sunny", "DayTime", 0, 1);
 		
-		simple.union("Hazard", "Fog", "Rain", "Snow");
-		
-		simple.causality("Hazard", "Fog");
-		
 		simple.union("Road", "Highway", "Interurban", "Urban");
 		
-		simple.causality("Road", "Interurban");
+		simple.causality("Road", "Urban");
 		
 		simple.union("Traffic", "HeavyTraffic", "Light", "StopAhead");
 		
@@ -74,7 +70,7 @@ public class LcScenario1 implements ISpecificationBuilder {
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()
 	};
 	public static void main(String[] args) {
-		String name = "Scenario1";
+		String name = "Scenario7";
 		for (IUtility u : utilities) {
 			u.treat(name, INSTANCE);
 		}

@@ -15,9 +15,9 @@ public class LcRoad implements ISpecificationBuilder {
 		simple.addClock("Urban");
 		simple.addClock("CountrySide");
 		
-		simple.union("Normal", "Highway", "Interurban", "Urban");
+		simple.union("Road", "Highway", "Interurban", "Urban");
 		
-		simple.causality("Normal", "Urban");
+		simple.causality("Road", "Urban");
 		
 		simple.union("Event", "HighwayExit", "CountrySide");
 		

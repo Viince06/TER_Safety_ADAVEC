@@ -2,9 +2,9 @@ Specification Road {
 	Clock HighwayExit, Highway, Interurban, Urban, CountrySide [
 		
 
-		Let Normal be Highway + Interurban + Urban
+		Let Road be Highway + Interurban + Urban
 		
-		Precedence Normal <= Urban
+		Precedence Road <= Urban
 		
 		
 		Let Event be HighwayExit + CountrySide

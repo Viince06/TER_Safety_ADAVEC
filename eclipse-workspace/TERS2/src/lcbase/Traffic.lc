@@ -1,10 +1,10 @@
 Specification Traffic {
-	Clock HeavyTraffic, Normal, StopAhead [
+	Clock HeavyTraffic, Light, StopAhead [
 		
 
-		Let Traffic be HeavyTraffic + Normal + StopAhead
+		Let Traffic be HeavyTraffic + Light + StopAhead
 		
-		Precedence Traffic <= Normal
+		Precedence Traffic <= Light
 		
 		
 	]
