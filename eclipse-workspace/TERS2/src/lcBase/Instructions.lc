@@ -18,5 +18,11 @@ Specification Instructions {
 		
 		Precedence day <= (max: 1) weather
 		
+		
+		// ScenarioA = Manual, No Transfer Planned
+		// ScenarioB = Manual, Transfer Possible
+		// ScenarioC = Automatic, No Transfer Planned
+		// ScenarioD = Automatic, Transfer Possible
+		
 	]
 }

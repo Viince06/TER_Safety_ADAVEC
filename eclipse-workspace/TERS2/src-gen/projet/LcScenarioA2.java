@@ -3,9 +3,9 @@ import fr.kairos.timesquare.ccsl.ISimpleSpecification;
 import fr.kairos.timesquare.ccsl.simple.IUtility;
 import fr.kairos.timesquare.ccsl.simple.ISpecificationBuilder;
 
-public class LcScenario4 implements ISpecificationBuilder {
-	static public LcScenario4 INSTANCE = new LcScenario4();
-	private LcScenario4 () {
+public class LcScenarioA2 implements ISpecificationBuilder {
+	static public LcScenarioA2 INSTANCE = new LcScenarioA2();
+	private LcScenarioA2 () {
 		// SINGLETON
 	}
 	@Override
@@ -41,11 +41,10 @@ public class LcScenario4 implements ISpecificationBuilder {
 		simple.addClock("Automatic");
 		simple.addClock("Manual");
 		simple.addClock("MRM");
-		simple.addClock("Seconds");
 		
 		simple.union("DayTime", "Sunny", "Night");
 		
-		simple.causality("Sunny", "DayTime", 0, 1);
+		simple.causality("Night", "DayTime", 0, 1);
 		
 		simple.union("Road", "Highway", "Interurban", "Urban");
 		
@@ -57,26 +56,21 @@ public class LcScenario4 implements ISpecificationBuilder {
 		
 		simple.union("Sensors", "FaultySensor", "NoIssue");
 		
-		simple.causality("Sensors", "NoIssue");
+		simple.causality("Sensors", "FaultySensor");
 		
 		simple.union("Health", "Death", "Drunk", "Unconscious", "Inebriated", "Relaxed", "Influenced");
 		
-		simple.causality("Health", "Drunk");
+		simple.causality("Health", "Relaxed");
 		
 		simple.union("FinalMode", "Automatic", "Manual", "MRM");
 		
-		simple.causality("FinalMode", "Automatic");
-		
-		simple.delayFor("Transfer", "Drunk", 5, -1, "Seconds");
-		
-		simple.causality("Drunk", "FinalMode");
-		simple.causality("FinalMode", "Transfer");
+		simple.causality("FinalMode", "Manual");
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()
 	};
 	public static void main(String[] args) {
-		String name = "Scenario4";
+		String name = "ScenarioA2";
 		for (IUtility u : utilities) {
 			u.treat(name, INSTANCE);
 		}

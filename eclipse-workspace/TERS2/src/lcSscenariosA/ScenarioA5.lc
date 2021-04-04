@@ -1,4 +1,4 @@
-Specification Scenario5 {
+Specification ScenarioA5 {
 	Clock Fog, Rain, Snow, Sunny, Night,  // Weather Clocks 
 			HighwayExit, Highway, Interurban, Urban, CountrySide,  // Road Clocks
 			HeavyTraffic, Light, StopAhead,  // Traffic Clocks

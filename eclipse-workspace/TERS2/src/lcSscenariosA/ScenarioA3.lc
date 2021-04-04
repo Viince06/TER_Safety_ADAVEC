@@ -1,4 +1,4 @@
-Specification Scenario4 {
+Specification ScenarioA3 {
 	Clock Fog, Rain, Snow, Sunny, Night,  // Weather Clocks 
 			HighwayExit, Highway, Interurban, Urban, CountrySide,  // Road Clocks
 			HeavyTraffic, Light, StopAhead,  // Traffic Clocks
@@ -6,10 +6,9 @@ Specification Scenario4 {
 			Stressed, StressedIntense, StressedModerate,				 //
 			Death, Drunk, Unconscious, Inebriated, Relaxed, Influenced  // Human Clocks
 			NotFocused, Inactive, Inattentive, LongDriving             //
-			Automatic, Manual, MRM  // Final Mode Clocks
-			Seconds [ // Time-based ultimatum
+			Automatic, Manual, MRM [ // Final Mode Clocks
 			
-			// Objective: Inform the driver that his driving abilities are impaired and that the vehicle is taking over
+			// Objective: Inform, reassure the driver and offer information on close resting areas
 			
 			// Weather
 			Let DayTime be Sunny + Night
@@ -19,6 +18,11 @@ Specification Scenario4 {
 			// Road
 			Let Road be Highway + Interurban + Urban
 			Precedence Road <= Urban
+			
+			Let Event be HighwayExit + CountrySide
+			Precedence Event <= Highway
+			
+			Precedence Road <= Event
 			
 			
 			// Traffic
@@ -32,18 +36,15 @@ Specification Scenario4 {
 			
 			
 			
-			// Human - Health ---------START TRIGGER-----------------
-			Let Health be Death + Drunk + Unconscious + Inebriated + Relaxed + Influenced
-			Precedence Health <= Drunk
+			// Human - Stress ---------START TRIGGER-----------------
+			Let Stress be Stressed + StressedIntense + StressedModerate
+			Precedence Stress <= Stressed
 			//------------------END TRIGGER--------------------
 			
 			
 			// FinalMode
 			Let FinalMode be Automatic + Manual + MRM
-			Precedence FinalMode <= Automatic
-			
-			Transfer = Drunk $ 5 on Seconds
-			Precedence Drunk <= FinalMode <= Transfer
+			Precedence FinalMode <= Manual
 			
 			
 

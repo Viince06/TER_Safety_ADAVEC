@@ -1,4 +1,4 @@
-Specification Scenario1 {
+Specification ScenarioA6 {
 	Clock Fog, Rain, Snow, Sunny, Night,  // Weather Clocks 
 			HighwayExit, Highway, Interurban, Urban, CountrySide,  // Road Clocks
 			HeavyTraffic, Light, StopAhead,  // Traffic Clocks
@@ -6,24 +6,22 @@ Specification Scenario1 {
 			Stressed, StressedIntense, StressedModerate,				 //
 			Death, Drunk, Unconscious, Inebriated, Relaxed, Influenced  // Human Clocks
 			NotFocused, Inactive, Inattentive, LongDriving             //
-			Automatic, Manual, MRM [ // Final Mode Clocks
+			Automatic, Manual, MRM  // Final Mode Clocks
+			Seconds [ // Time-based ultimatum
 			
-			// Objective: Inform the driver of the weather change so he could adapt his driving/itinerary
+			// Objective: Advise on how to reduce mental load and offer to transfer authority
 			
-			// Weather  ---------START TRIGGER-----------------
+			// Weather
 			Let DayTime be Sunny + Night
 			Precedence Sunny <= (max: 1) DayTime
-		
-		
+			
 			Let Hazard be Fog + Rain + Snow
-			//If Scenario establishes Fog as a condition
-			Precedence Hazard <= Fog
-			// ------------------END TRIGGER--------------------
-			
-			
+			Precedence Hazard <= Rain
+		
+		
 			// Road
 			Let Road be Highway + Interurban + Urban
-			Precedence Road <= Interurban
+			Precedence Road <= Urban
 			
 			
 			// Traffic
@@ -31,19 +29,24 @@ Specification Scenario1 {
 			Precedence Traffic <= Light
 			
 			
-			// Vehicle
+			// Vehicle  
 			Let Sensors be FaultySensor + NoIssue
 			Precedence Sensors <= NoIssue
 			
 			
-			// Human - Health
-			Let Health be Death + Drunk + Unconscious + Inebriated + Relaxed + Influenced
-			Precedence Health <= Relaxed
+			
+			// Human - Focus ---------START TRIGGER-----------------
+			Let Focus be NotFocused + Inactive + Inattentive + LongDriving 
+			Precedence Focus <= NotFocused
+			//------------------END TRIGGER--------------------
 			
 			
 			// FinalMode
 			Let FinalMode be Automatic + Manual + MRM
-			Precedence FinalMode <= Manual
+			Precedence FinalMode <= Automatic
+			
+			Transfer = NotFocused $ 5 on Seconds
+			Precedence Unconscious <= FinalMode <= Transfer
 			
 			
 

@@ -3,9 +3,9 @@ import fr.kairos.timesquare.ccsl.ISimpleSpecification;
 import fr.kairos.timesquare.ccsl.simple.IUtility;
 import fr.kairos.timesquare.ccsl.simple.ISpecificationBuilder;
 
-public class LcScenario6 implements ISpecificationBuilder {
-	static public LcScenario6 INSTANCE = new LcScenario6();
-	private LcScenario6 () {
+public class LcScenarioA3 implements ISpecificationBuilder {
+	static public LcScenarioA3 INSTANCE = new LcScenarioA3();
+	private LcScenarioA3 () {
 		// SINGLETON
 	}
 	@Override
@@ -41,19 +41,20 @@ public class LcScenario6 implements ISpecificationBuilder {
 		simple.addClock("Automatic");
 		simple.addClock("Manual");
 		simple.addClock("MRM");
-		simple.addClock("Seconds");
 		
 		simple.union("DayTime", "Sunny", "Night");
 		
 		simple.causality("Sunny", "DayTime", 0, 1);
 		
-		simple.union("Hazard", "Fog", "Rain", "Snow");
-		
-		simple.causality("Hazard", "Rain");
-		
 		simple.union("Road", "Highway", "Interurban", "Urban");
 		
 		simple.causality("Road", "Urban");
+		
+		simple.union("Event", "HighwayExit", "CountrySide");
+		
+		simple.causality("Event", "Highway");
+		
+		simple.causality("Road", "Event");
 		
 		simple.union("Traffic", "HeavyTraffic", "Light", "StopAhead");
 		
@@ -63,24 +64,19 @@ public class LcScenario6 implements ISpecificationBuilder {
 		
 		simple.causality("Sensors", "NoIssue");
 		
-		simple.union("Focus", "NotFocused", "Inactive", "Inattentive", "LongDriving");
+		simple.union("Stress", "Stressed", "StressedIntense", "StressedModerate");
 		
-		simple.causality("Focus", "NotFocused");
+		simple.causality("Stress", "Stressed");
 		
 		simple.union("FinalMode", "Automatic", "Manual", "MRM");
 		
-		simple.causality("FinalMode", "Automatic");
-		
-		simple.delayFor("Transfer", "NotFocused", 5, -1, "Seconds");
-		
-		simple.causality("Unconscious", "FinalMode");
-		simple.causality("FinalMode", "Transfer");
+		simple.causality("FinalMode", "Manual");
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()
 	};
 	public static void main(String[] args) {
-		String name = "Scenario6";
+		String name = "ScenarioA3";
 		for (IUtility u : utilities) {
 			u.treat(name, INSTANCE);
 		}

@@ -3,9 +3,9 @@ import fr.kairos.timesquare.ccsl.ISimpleSpecification;
 import fr.kairos.timesquare.ccsl.simple.IUtility;
 import fr.kairos.timesquare.ccsl.simple.ISpecificationBuilder;
 
-public class LcScenario7 implements ISpecificationBuilder {
-	static public LcScenario7 INSTANCE = new LcScenario7();
-	private LcScenario7 () {
+public class LcScenarioA7 implements ISpecificationBuilder {
+	static public LcScenarioA7 INSTANCE = new LcScenarioA7();
+	private LcScenarioA7 () {
 		// SINGLETON
 	}
 	@Override
@@ -71,7 +71,7 @@ public class LcScenario7 implements ISpecificationBuilder {
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()
 	};
 	public static void main(String[] args) {
-		String name = "Scenario7";
+		String name = "ScenarioA7";
 		for (IUtility u : utilities) {
 			u.treat(name, INSTANCE);
 		}

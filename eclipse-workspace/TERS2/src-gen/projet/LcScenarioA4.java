@@ -3,9 +3,9 @@ import fr.kairos.timesquare.ccsl.ISimpleSpecification;
 import fr.kairos.timesquare.ccsl.simple.IUtility;
 import fr.kairos.timesquare.ccsl.simple.ISpecificationBuilder;
 
-public class LcScenario5 implements ISpecificationBuilder {
-	static public LcScenario5 INSTANCE = new LcScenario5();
-	private LcScenario5 () {
+public class LcScenarioA4 implements ISpecificationBuilder {
+	static public LcScenarioA4 INSTANCE = new LcScenarioA4();
+	private LcScenarioA4 () {
 		// SINGLETON
 	}
 	@Override
@@ -61,22 +61,22 @@ public class LcScenario5 implements ISpecificationBuilder {
 		
 		simple.union("Health", "Death", "Drunk", "Unconscious", "Inebriated", "Relaxed", "Influenced");
 		
-		simple.causality("Health", "Unconscious");
+		simple.causality("Health", "Drunk");
 		
 		simple.union("FinalMode", "Automatic", "Manual", "MRM");
 		
-		simple.causality("FinalMode", "MRM");
+		simple.causality("FinalMode", "Automatic");
 		
-		simple.delayFor("Transfer", "Unconscious", 5, -1, "Seconds");
+		simple.delayFor("Transfer", "Drunk", 5, -1, "Seconds");
 		
-		simple.causality("Unconscious", "FinalMode");
+		simple.causality("Drunk", "FinalMode");
 		simple.causality("FinalMode", "Transfer");
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()
 	};
 	public static void main(String[] args) {
-		String name = "Scenario5";
+		String name = "ScenarioA4";
 		for (IUtility u : utilities) {
 			u.treat(name, INSTANCE);
 		}

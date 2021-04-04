@@ -1,10 +1,11 @@
+package projet;
 import fr.kairos.timesquare.ccsl.ISimpleSpecification;
 import fr.kairos.timesquare.ccsl.simple.IUtility;
 import fr.kairos.timesquare.ccsl.simple.ISpecificationBuilder;
 
-public class LcScenario3 implements ISpecificationBuilder {
-	static public LcScenario3 INSTANCE = new LcScenario3();
-	private LcScenario3 () {
+public class LcScenarioA6 implements ISpecificationBuilder {
+	static public LcScenarioA6 INSTANCE = new LcScenarioA6();
+	private LcScenarioA6 () {
 		// SINGLETON
 	}
 	@Override
@@ -40,20 +41,19 @@ public class LcScenario3 implements ISpecificationBuilder {
 		simple.addClock("Automatic");
 		simple.addClock("Manual");
 		simple.addClock("MRM");
+		simple.addClock("Seconds");
 		
 		simple.union("DayTime", "Sunny", "Night");
 		
 		simple.causality("Sunny", "DayTime", 0, 1);
 		
+		simple.union("Hazard", "Fog", "Rain", "Snow");
+		
+		simple.causality("Hazard", "Rain");
+		
 		simple.union("Road", "Highway", "Interurban", "Urban");
 		
 		simple.causality("Road", "Urban");
-		
-		simple.union("Event", "HighwayExit", "CountrySide");
-		
-		simple.causality("Event", "Highway");
-		
-		simple.causality("Road", "Event");
 		
 		simple.union("Traffic", "HeavyTraffic", "Light", "StopAhead");
 		
@@ -63,19 +63,24 @@ public class LcScenario3 implements ISpecificationBuilder {
 		
 		simple.causality("Sensors", "NoIssue");
 		
-		simple.union("Stress", "Stressed", "StressedIntense", "StressedModerate");
+		simple.union("Focus", "NotFocused", "Inactive", "Inattentive", "LongDriving");
 		
-		simple.causality("Stress", "Stressed");
+		simple.causality("Focus", "NotFocused");
 		
 		simple.union("FinalMode", "Automatic", "Manual", "MRM");
 		
-		simple.causality("FinalMode", "Manual");
+		simple.causality("FinalMode", "Automatic");
+		
+		simple.delayFor("Transfer", "NotFocused", 5, -1, "Seconds");
+		
+		simple.causality("Unconscious", "FinalMode");
+		simple.causality("FinalMode", "Transfer");
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()
 	};
 	public static void main(String[] args) {
-		String name = "Scenario3";
+		String name = "ScenarioA6";
 		for (IUtility u : utilities) {
 			u.treat(name, INSTANCE);
 		}

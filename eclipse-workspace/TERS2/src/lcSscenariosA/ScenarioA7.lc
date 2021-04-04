@@ -1,4 +1,4 @@
-Specification Scenario2 {
+Specification ScenarioA7 {
 	Clock Fog, Rain, Snow, Sunny, Night,  // Weather Clocks 
 			HighwayExit, Highway, Interurban, Urban, CountrySide,  // Road Clocks
 			HeavyTraffic, Light, StopAhead,  // Traffic Clocks
@@ -6,14 +6,15 @@ Specification Scenario2 {
 			Stressed, StressedIntense, StressedModerate,				 //
 			Death, Drunk, Unconscious, Inebriated, Relaxed, Influenced  // Human Clocks
 			NotFocused, Inactive, Inattentive, LongDriving             //
-			Automatic, Manual, MRM [ // Final Mode Clocks
+			Automatic, Manual, MRM  // Final Mode Clocks
+			Seconds [ // Time-based ultimatum
 			
-			// Objective: Inform the driver that something is wrong with the AD
+			// Objective: Nothing to do, proceed with the situation
 			
 			// Weather
 			Let DayTime be Sunny + Night
-			Precedence Night <= (max: 1) DayTime
-		
+			Precedence Sunny <= (max: 1) DayTime
+					
 		
 			// Road
 			Let Road be Highway + Interurban + Urban
@@ -25,10 +26,10 @@ Specification Scenario2 {
 			Precedence Traffic <= Light
 			
 			
-			// Vehicle  ---------START TRIGGER-----------------
+			// Vehicle  
 			Let Sensors be FaultySensor + NoIssue
-			Precedence Sensors <= FaultySensor
-			//------------------END TRIGGER--------------------
+			Precedence Sensors <= NoIssue
+			
 			
 			
 			// Human - Health

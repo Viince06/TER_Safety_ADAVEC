@@ -1,4 +1,4 @@
-Specification Scenario6 {
+Specification ScenarioA2 {
 	Clock Fog, Rain, Snow, Sunny, Night,  // Weather Clocks 
 			HighwayExit, Highway, Interurban, Urban, CountrySide,  // Road Clocks
 			HeavyTraffic, Light, StopAhead,  // Traffic Clocks
@@ -6,17 +6,13 @@ Specification Scenario6 {
 			Stressed, StressedIntense, StressedModerate,				 //
 			Death, Drunk, Unconscious, Inebriated, Relaxed, Influenced  // Human Clocks
 			NotFocused, Inactive, Inattentive, LongDriving             //
-			Automatic, Manual, MRM  // Final Mode Clocks
-			Seconds [ // Time-based ultimatum
+			Automatic, Manual, MRM [ // Final Mode Clocks
 			
-			// Objective: Advise on how to reduce mental load and offer to transfer authority
+			// Objective: Inform the driver that something is wrong with the AD
 			
 			// Weather
 			Let DayTime be Sunny + Night
-			Precedence Sunny <= (max: 1) DayTime
-			
-			Let Hazard be Fog + Rain + Snow
-			Precedence Hazard <= Rain
+			Precedence Night <= (max: 1) DayTime
 		
 		
 			// Road
@@ -29,24 +25,20 @@ Specification Scenario6 {
 			Precedence Traffic <= Light
 			
 			
-			// Vehicle  
+			// Vehicle  ---------START TRIGGER-----------------
 			Let Sensors be FaultySensor + NoIssue
-			Precedence Sensors <= NoIssue
-			
-			
-			
-			// Human - Focus ---------START TRIGGER-----------------
-			Let Focus be NotFocused + Inactive + Inattentive + LongDriving 
-			Precedence Focus <= NotFocused
+			Precedence Sensors <= FaultySensor
 			//------------------END TRIGGER--------------------
+			
+			
+			// Human - Health
+			Let Health be Death + Drunk + Unconscious + Inebriated + Relaxed + Influenced
+			Precedence Health <= Relaxed
 			
 			
 			// FinalMode
 			Let FinalMode be Automatic + Manual + MRM
-			Precedence FinalMode <= Automatic
-			
-			Transfer = NotFocused $ 5 on Seconds
-			Precedence Unconscious <= FinalMode <= Transfer
+			Precedence FinalMode <= Manual
 			
 			
 
