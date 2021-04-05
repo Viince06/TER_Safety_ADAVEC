@@ -49,6 +49,8 @@ public class LcScenarioA1 implements ISpecificationBuilder {
 		
 		simple.causality("Hazard", "Fog");
 		
+		simple.subclock("Sunny", "Hazard");
+		
 		simple.union("Road", "Highway", "Interurban", "Urban");
 		
 		simple.causality("Road", "Interurban");

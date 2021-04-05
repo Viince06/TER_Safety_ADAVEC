@@ -18,6 +18,8 @@ Specification ScenarioA1 {
 			Let Hazard be Fog + Rain + Snow
 			//If Scenario establishes Fog as a condition
 			Precedence Hazard <= Fog
+			
+			SubClocking Sunny <- Hazard  // Fog on this scenario, it might therefore be a subclock of time (or a Precedence)?
 			// ------------------END TRIGGER--------------------
 			
 			

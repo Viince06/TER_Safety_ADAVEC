@@ -22,7 +22,7 @@ Specification ScenarioA3 {
 			Let Event be HighwayExit + CountrySide
 			Precedence Event <= Highway
 			
-			Precedence Road <= Event
+			SubClocking Road <- Event  // Precedence or SubClock?
 			
 			
 			// Traffic
