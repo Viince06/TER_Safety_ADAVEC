@@ -1,4 +1,4 @@
-Specification ScenarioA3 {
+Specification ScenarioB5 {
 	Clock Fog, Rain, Snow, Sunny, Night,  // Weather Clocks 
 			HighwayExit, Highway, Interurban, Urban, CountrySide,  // Road Clocks
 			HeavyTraffic, Light, StopAhead,  // Traffic Clocks
@@ -6,9 +6,10 @@ Specification ScenarioA3 {
 			Stressed, StressedIntense, StressedModerate,				 //
 			Death, Drunk, Unconscious, Inebriated, Relaxed, Influenced  // Human Clocks
 			NotFocused, Inactive, Inattentive, LongDriving             //
-			Automatic, Manual, MRM [ // Final Mode Clocks
+			Automatic, Manual, MRM  // Final Mode Clocks
+			Seconds [ // Time-based ultimatum
 			
-			// Objective: Inform, reassure the driver and offer information on close resting areas
+			// Objective: Inform the driver and transfer authority
 			
 			// Weather
 			Let DayTime be Sunny + Night
@@ -18,11 +19,6 @@ Specification ScenarioA3 {
 			// Road
 			Let Road be Highway + Interurban + Urban
 			Precedence Road <= Urban
-			
-			Let Event be HighwayExit + CountrySide
-			Precedence Event <= CountrySide
-			
-			SubClocking Road <- Event  // Precedence or SubClock?
 			
 			
 			// Traffic
@@ -36,15 +32,18 @@ Specification ScenarioA3 {
 			
 			
 			
-			// Human - Stress ---------START TRIGGER-----------------
-			Let Stress be Stressed + StressedIntense + StressedModerate
-			Precedence Stress <= Stressed
+			// Human - Health ---------START TRIGGER-----------------
+			Let Health be Death + Drunk + Unconscious + Inebriated + Relaxed + Influenced
+			Precedence Health <= Influenced
 			//------------------END TRIGGER--------------------
 			
 			
 			// FinalMode
 			Let FinalMode be Automatic + Manual + MRM
-			Precedence FinalMode <= Manual
+			Precedence FinalMode <= Automatic
+			
+			Transfer = Influenced $ 5 on Seconds
+			Precedence Influenced <= FinalMode <= Transfer
 			
 			
 

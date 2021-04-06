@@ -2,9 +2,9 @@ import fr.kairos.timesquare.ccsl.ISimpleSpecification;
 import fr.kairos.timesquare.ccsl.simple.IUtility;
 import fr.kairos.timesquare.ccsl.simple.ISpecificationBuilder;
 
-public class LcScenarioA3 implements ISpecificationBuilder {
-	static public LcScenarioA3 INSTANCE = new LcScenarioA3();
-	private LcScenarioA3 () {
+public class LcScenarioB4 implements ISpecificationBuilder {
+	static public LcScenarioB4 INSTANCE = new LcScenarioB4();
+	private LcScenarioB4 () {
 		// SINGLETON
 	}
 	@Override
@@ -40,6 +40,7 @@ public class LcScenarioA3 implements ISpecificationBuilder {
 		simple.addClock("Automatic");
 		simple.addClock("Manual");
 		simple.addClock("MRM");
+		simple.addClock("Seconds");
 		
 		simple.union("DayTime", "Sunny", "Night");
 		
@@ -47,7 +48,7 @@ public class LcScenarioA3 implements ISpecificationBuilder {
 		
 		simple.union("Road", "Highway", "Interurban", "Urban");
 		
-		simple.causality("Road", "Urban");
+		simple.causality("Road", "Interurban");
 		
 		simple.union("Event", "HighwayExit", "CountrySide");
 		
@@ -63,19 +64,24 @@ public class LcScenarioA3 implements ISpecificationBuilder {
 		
 		simple.causality("Sensors", "NoIssue");
 		
-		simple.union("Stress", "Stressed", "StressedIntense", "StressedModerate");
+		simple.union("Health", "Death", "Drunk", "Unconscious", "Inebriated", "Relaxed", "Influenced");
 		
-		simple.causality("Stress", "Stressed");
+		simple.causality("Health", "Influenced");
 		
 		simple.union("FinalMode", "Automatic", "Manual", "MRM");
 		
-		simple.causality("FinalMode", "Manual");
+		simple.causality("FinalMode", "MRM");
+		
+		simple.delayFor("Transfer", "Influenced", 5, -1, "Seconds");
+		
+		simple.causality("Influenced", "FinalMode");
+		simple.causality("FinalMode", "Transfer");
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()
 	};
 	public static void main(String[] args) {
-		String name = "ScenarioA3";
+		String name = "ScenarioB4";
 		for (IUtility u : utilities) {
 			u.treat(name, INSTANCE);
 		}

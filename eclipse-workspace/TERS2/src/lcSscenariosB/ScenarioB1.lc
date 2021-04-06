@@ -1,4 +1,4 @@
-Specification ScenarioA3 {
+Specification ScenarioB1 {
 	Clock Fog, Rain, Snow, Sunny, Night,  // Weather Clocks 
 			HighwayExit, Highway, Interurban, Urban, CountrySide,  // Road Clocks
 			HeavyTraffic, Light, StopAhead,  // Traffic Clocks
@@ -8,21 +8,24 @@ Specification ScenarioA3 {
 			NotFocused, Inactive, Inattentive, LongDriving             //
 			Automatic, Manual, MRM [ // Final Mode Clocks
 			
-			// Objective: Inform, reassure the driver and offer information on close resting areas
+			// Objective: Inform the driver of the weather change and offer him to cancel the transfer
 			
-			// Weather
+			// Weather  ---------START TRIGGER-----------------
 			Let DayTime be Sunny + Night
 			Precedence Sunny <= (max: 1) DayTime
 		
 		
+			Let Hazard be Fog + Rain + Snow
+			//If Scenario establishes Fog as a condition
+			Precedence Hazard <= Rain
+			
+			SubClocking Sunny <- Hazard  // Fog on this scenario, it might therefore be a subclock of time (or a Precedence)?
+			// ------------------END TRIGGER--------------------
+			
+			
 			// Road
 			Let Road be Highway + Interurban + Urban
-			Precedence Road <= Urban
-			
-			Let Event be HighwayExit + CountrySide
-			Precedence Event <= CountrySide
-			
-			SubClocking Road <- Event  // Precedence or SubClock?
+			Precedence Road <= Highway
 			
 			
 			// Traffic
@@ -30,16 +33,14 @@ Specification ScenarioA3 {
 			Precedence Traffic <= Light
 			
 			
-			// Vehicle  
+			// Vehicle
 			Let Sensors be FaultySensor + NoIssue
 			Precedence Sensors <= NoIssue
 			
 			
-			
-			// Human - Stress ---------START TRIGGER-----------------
-			Let Stress be Stressed + StressedIntense + StressedModerate
-			Precedence Stress <= Stressed
-			//------------------END TRIGGER--------------------
+			// Human - Health
+			Let Health be Death + Drunk + Unconscious + Inebriated + Relaxed + Influenced
+			Precedence Health <= Relaxed
 			
 			
 			// FinalMode
