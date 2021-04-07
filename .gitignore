@@ -2,8 +2,8 @@
 **/logs
 **/*.log
 
-**/.metadata/*
-**/.metadata/.plugins/**
+# **/.metadata/*
+# **/.metadata/.plugins/**
 
 # BlueJ files
 *.ctxt
