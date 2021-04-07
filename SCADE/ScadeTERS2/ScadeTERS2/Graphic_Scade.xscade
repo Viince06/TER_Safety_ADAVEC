@@ -3,7 +3,7 @@
 	<declarations>
 		<Package name="Graphic_Scade">
 			<declarations>
-				<Operator name="Causality" href="Causality.xscade"/>
+				<Operator name="Causality_check" href="Causality.xscade"/>
 				<Operator name="DelayFor" href="DelayFor.xscade"/>
 				<Operator name="Exclusion_done" href="Exclusion.xscade"/>
 				<Operator name="Inf_done" href="Inf.xscade"/>
