@@ -1,1 +1,0 @@
-/* ProjetTERNoCCSLTest_mapping.h */
