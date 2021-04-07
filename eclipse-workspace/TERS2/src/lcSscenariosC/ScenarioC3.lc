@@ -1,29 +1,26 @@
-Specification ScenarioB8 {
+Specification ScenarioC3 {
 	Clock Fog, Rain, Snow, Sunny, Night,  // Weather Clocks 
 			HighwayExit, Highway, Interurban, Urban, CountrySide,  // Road Clocks
 			HeavyTraffic, Light, StopAhead,  // Traffic Clocks
 			FaultySensor, NoIssue,  // Vehicle Clocks
 			Stressed, StressedIntense, StressedModerate,				 //
 			Death, Drunk, Unconscious, Inebriated, Relaxed, Influenced  // Human Clocks
-			NotFocused, Inactive, Inattentive, LongDriving             //
-			Automatic, Manual, MRM  // Final Mode Clocks
-			Seconds [ // Time-based ultimatum
+			NotFocused, Inactive, Inattentive, LongDriving,             //
+			Automatic, Manual, MRM,  // Final Mode Clocks
+			Seconds [
 			
-			// Objective: Inform, advise and offer to cancel transfer authority 
+			// Objective: Inform and and offer to initiate authority transfer
 			
 			// Weather
 			Let DayTime be Sunny + Night
 			Precedence Sunny <= (max: 1) DayTime
 			
-			Let Hazard be Fog + Rain + Snow
-			Precedence Hazard <= Rain
-			
-			SubClocking DayTime <- Hazard 
-					
+		
 		
 			// Road
 			Let Road be Highway + Interurban + Urban
 			Precedence Road <= Urban
+			
 			
 			
 			// Traffic
@@ -31,23 +28,24 @@ Specification ScenarioB8 {
 			Precedence Traffic <= Light
 			
 			
-			// Vehicle  
+			// Vehicle  ---------START TRIGGER-----------------
 			Let Sensors be FaultySensor + NoIssue
-			Precedence Sensors <= NoIssue
+			Precedence Sensors <= FaultySensor
+			//------------------END TRIGGER--------------------
 			
 			
+			// Human - Stress 
+			Let Stress be Stressed + StressedIntense + StressedModerate
+			Precedence Stress <= StressedModerate
 			
-			// Human - Focus
-			Let Focus be NotFocused + Inactive + Inattentive + LongDriving 
-			Precedence Focus <= LongDriving
 			
 			
 			// FinalMode
 			Let FinalMode be Automatic + Manual + MRM
-			Precedence FinalMode <= Automatic
-			  
-			Transfer = LongDriving $ 5 on Seconds
-			Precedence LongDriving <= FinalMode <= Transfer
+			Precedence FinalMode <= Manual
+			
+			Transfer = StressedModerate $ 5 on Seconds
+			Precedence StressedModerate <= FinalMode <= Transfer
 			
 			
 

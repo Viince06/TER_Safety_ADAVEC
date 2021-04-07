@@ -3,9 +3,9 @@ import fr.kairos.timesquare.ccsl.ISimpleSpecification;
 import fr.kairos.timesquare.ccsl.simple.IUtility;
 import fr.kairos.timesquare.ccsl.simple.ISpecificationBuilder;
 
-public class LcScenarioA3 implements ISpecificationBuilder {
-	static public LcScenarioA3 INSTANCE = new LcScenarioA3();
-	private LcScenarioA3 () {
+public class LcScenarioC1 implements ISpecificationBuilder {
+	static public LcScenarioC1 INSTANCE = new LcScenarioC1();
+	private LcScenarioC1 () {
 		// SINGLETON
 	}
 	@Override
@@ -46,15 +46,15 @@ public class LcScenarioA3 implements ISpecificationBuilder {
 		
 		simple.causality("Sunny", "DayTime", 0, 1);
 		
+		simple.union("Hazard", "Fog", "Rain", "Snow");
+		
+		simple.causality("Hazard", "Snow");
+		
+		simple.subclock("Sunny", "Hazard");
+		
 		simple.union("Road", "Highway", "Interurban", "Urban");
 		
 		simple.causality("Road", "Urban");
-		
-		simple.union("Event", "HighwayExit", "CountrySide");
-		
-		simple.causality("Event", "CountrySide");
-		
-		simple.subclock("Road", "Event");
 		
 		simple.union("Traffic", "HeavyTraffic", "Light", "StopAhead");
 		
@@ -64,19 +64,19 @@ public class LcScenarioA3 implements ISpecificationBuilder {
 		
 		simple.causality("Sensors", "NoIssue");
 		
-		simple.union("Stress", "Stressed", "StressedIntense", "StressedModerate");
+		simple.union("Health", "Death", "Drunk", "Unconscious", "Inebriated", "Relaxed", "Influenced");
 		
-		simple.causality("Stress", "Stressed");
+		simple.causality("Health", "Relaxed");
 		
 		simple.union("FinalMode", "Automatic", "Manual", "MRM");
 		
-		simple.causality("FinalMode", "Manual");
+		simple.causality("FinalMode", "Automatic");
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()
 	};
 	public static void main(String[] args) {
-		String name = "ScenarioA3";
+		String name = "ScenarioC1";
 		for (IUtility u : utilities) {
 			u.treat(name, INSTANCE);
 		}

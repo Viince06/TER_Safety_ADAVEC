@@ -1,11 +1,10 @@
-package projet;
 import fr.kairos.timesquare.ccsl.ISimpleSpecification;
 import fr.kairos.timesquare.ccsl.simple.IUtility;
 import fr.kairos.timesquare.ccsl.simple.ISpecificationBuilder;
 
-public class LcScenarioA3 implements ISpecificationBuilder {
-	static public LcScenarioA3 INSTANCE = new LcScenarioA3();
-	private LcScenarioA3 () {
+public class LcScenarioD8 implements ISpecificationBuilder {
+	static public LcScenarioD8 INSTANCE = new LcScenarioD8();
+	private LcScenarioD8 () {
 		// SINGLETON
 	}
 	@Override
@@ -41,6 +40,7 @@ public class LcScenarioA3 implements ISpecificationBuilder {
 		simple.addClock("Automatic");
 		simple.addClock("Manual");
 		simple.addClock("MRM");
+		simple.addClock("Seconds");
 		
 		simple.union("DayTime", "Sunny", "Night");
 		
@@ -50,33 +50,27 @@ public class LcScenarioA3 implements ISpecificationBuilder {
 		
 		simple.causality("Road", "Urban");
 		
-		simple.union("Event", "HighwayExit", "CountrySide");
-		
-		simple.causality("Event", "CountrySide");
-		
-		simple.subclock("Road", "Event");
-		
 		simple.union("Traffic", "HeavyTraffic", "Light", "StopAhead");
 		
-		simple.causality("Traffic", "Light");
+		simple.causality("Traffic", "StopAhead");
 		
 		simple.union("Sensors", "FaultySensor", "NoIssue");
 		
 		simple.causality("Sensors", "NoIssue");
 		
-		simple.union("Stress", "Stressed", "StressedIntense", "StressedModerate");
+		simple.union("Health", "Death", "Drunk", "Unconscious", "Inebriated", "Relaxed", "Influenced");
 		
-		simple.causality("Stress", "Stressed");
+		simple.causality("Health", "Influenced");
 		
 		simple.union("FinalMode", "Automatic", "Manual", "MRM");
 		
-		simple.causality("FinalMode", "Manual");
+		simple.causality("FinalMode", "Automatic");
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()
 	};
 	public static void main(String[] args) {
-		String name = "ScenarioA3";
+		String name = "ScenarioD8";
 		for (IUtility u : utilities) {
 			u.treat(name, INSTANCE);
 		}

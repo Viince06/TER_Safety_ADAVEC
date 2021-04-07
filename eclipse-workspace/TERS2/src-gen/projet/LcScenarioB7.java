@@ -3,9 +3,9 @@ import fr.kairos.timesquare.ccsl.ISimpleSpecification;
 import fr.kairos.timesquare.ccsl.simple.IUtility;
 import fr.kairos.timesquare.ccsl.simple.ISpecificationBuilder;
 
-public class LcScenarioA3 implements ISpecificationBuilder {
-	static public LcScenarioA3 INSTANCE = new LcScenarioA3();
-	private LcScenarioA3 () {
+public class LcScenarioB7 implements ISpecificationBuilder {
+	static public LcScenarioB7 INSTANCE = new LcScenarioB7();
+	private LcScenarioB7 () {
 		// SINGLETON
 	}
 	@Override
@@ -41,20 +41,21 @@ public class LcScenarioA3 implements ISpecificationBuilder {
 		simple.addClock("Automatic");
 		simple.addClock("Manual");
 		simple.addClock("MRM");
+		simple.addClock("Seconds");
 		
 		simple.union("DayTime", "Sunny", "Night");
 		
 		simple.causality("Sunny", "DayTime", 0, 1);
 		
+		simple.union("Hazard", "Fog", "Rain", "Snow");
+		
+		simple.causality("Hazard", "Rain");
+		
+		simple.subclock("DayTime", "Hazard");
+		
 		simple.union("Road", "Highway", "Interurban", "Urban");
 		
 		simple.causality("Road", "Urban");
-		
-		simple.union("Event", "HighwayExit", "CountrySide");
-		
-		simple.causality("Event", "CountrySide");
-		
-		simple.subclock("Road", "Event");
 		
 		simple.union("Traffic", "HeavyTraffic", "Light", "StopAhead");
 		
@@ -64,19 +65,24 @@ public class LcScenarioA3 implements ISpecificationBuilder {
 		
 		simple.causality("Sensors", "NoIssue");
 		
-		simple.union("Stress", "Stressed", "StressedIntense", "StressedModerate");
+		simple.union("Focus", "NotFocused", "Inactive", "Inattentive", "LongDriving");
 		
-		simple.causality("Stress", "Stressed");
+		simple.causality("Focus", "LongDriving");
 		
 		simple.union("FinalMode", "Automatic", "Manual", "MRM");
 		
-		simple.causality("FinalMode", "Manual");
+		simple.causality("FinalMode", "Automatic");
+		
+		simple.delayFor("Transfer", "LongDriving", 5, -1, "Seconds");
+		
+		simple.causality("LongDriving", "FinalMode");
+		simple.causality("FinalMode", "Transfer");
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()
 	};
 	public static void main(String[] args) {
-		String name = "ScenarioA3";
+		String name = "ScenarioB7";
 		for (IUtility u : utilities) {
 			u.treat(name, INSTANCE);
 		}

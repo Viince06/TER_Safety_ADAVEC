@@ -1,4 +1,4 @@
-Specification ScenarioB8 {
+Specification ScenarioD8 {
 	Clock Fog, Rain, Snow, Sunny, Night,  // Weather Clocks 
 			HighwayExit, Highway, Interurban, Urban, CountrySide,  // Road Clocks
 			HeavyTraffic, Light, StopAhead,  // Traffic Clocks
@@ -9,17 +9,12 @@ Specification ScenarioB8 {
 			Automatic, Manual, MRM  // Final Mode Clocks
 			Seconds [ // Time-based ultimatum
 			
-			// Objective: Inform, advise and offer to cancel transfer authority 
+			// Objective: Inform that transfer has been canceled due to inability of driver
 			
 			// Weather
 			Let DayTime be Sunny + Night
 			Precedence Sunny <= (max: 1) DayTime
 			
-			Let Hazard be Fog + Rain + Snow
-			Precedence Hazard <= Rain
-			
-			SubClocking DayTime <- Hazard 
-					
 		
 			// Road
 			Let Road be Highway + Interurban + Urban
@@ -28,7 +23,7 @@ Specification ScenarioB8 {
 			
 			// Traffic
 			Let Traffic be HeavyTraffic + Light + StopAhead
-			Precedence Traffic <= Light
+			Precedence Traffic <= StopAhead
 			
 			
 			// Vehicle  
@@ -37,20 +32,15 @@ Specification ScenarioB8 {
 			
 			
 			
-			// Human - Focus
-			Let Focus be NotFocused + Inactive + Inattentive + LongDriving 
-			Precedence Focus <= LongDriving
+			// Human - Health ---------------START TRIGGER---------------------------
+			Let Health be Death + Drunk + Unconscious + Inebriated + Relaxed + Influenced
+			Precedence Health <= Influenced
+			// ---------------------END TRIGGER-----------------------------------
 			
 			
 			// FinalMode
 			Let FinalMode be Automatic + Manual + MRM
 			Precedence FinalMode <= Automatic
-			  
-			Transfer = LongDriving $ 5 on Seconds
-			Precedence LongDriving <= FinalMode <= Transfer
-			
-			
-
 		
 	]
 }
