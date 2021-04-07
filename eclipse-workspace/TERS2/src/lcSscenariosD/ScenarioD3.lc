@@ -48,8 +48,8 @@ Specification ScenarioD3 {
 			Let FinalMode be Automatic + Manual + MRM
 			Precedence FinalMode <= Manual
 			
-			Transfer = Relaxed $ 5 on Seconds
-			Precedence Relaxed <= FinalMode <= Transfer
+			Transfer = FaultySensor $ 5 on Seconds
+			Precedence FaultySensor <= FinalMode <= Transfer
 			
 			
 

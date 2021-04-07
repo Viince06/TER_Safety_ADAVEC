@@ -73,9 +73,9 @@ public class LcScenarioD1 implements ISpecificationBuilder {
 		
 		simple.causality("FinalMode", "Manual");
 		
-		simple.delayFor("Transfer", "Inactive", 5, -1, "Seconds");
+		simple.delayFor("Transfer", "HighwayExit", 5, -1, "Seconds");
 		
-		simple.causality("Inactive", "FinalMode");
+		simple.causality("HighwayExit", "FinalMode");
 		simple.causality("FinalMode", "Transfer");
 	}
 	private static IUtility[] utilities = { 

@@ -67,9 +67,9 @@ public class LcScenarioC3 implements ISpecificationBuilder {
 		
 		simple.causality("FinalMode", "Manual");
 		
-		simple.delayFor("Transfer", "StressedModerate", 5, -1, "Seconds");
+		simple.delayFor("Transfer", "FaultySensor", 5, -1, "Seconds");
 		
-		simple.causality("StressedModerate", "FinalMode");
+		simple.causality("FaultySensor", "FinalMode");
 		simple.causality("FinalMode", "Transfer");
 	}
 	private static IUtility[] utilities = { 

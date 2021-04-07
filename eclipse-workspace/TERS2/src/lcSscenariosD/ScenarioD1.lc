@@ -10,15 +10,15 @@ Specification ScenarioD1 {
 			Seconds [
 			// Objective: Inform the driver and proceed with transfer
 			
-			// Weather  ---------START TRIGGER-----------------
+			// Weather  
 			Let DayTime be Sunny + Night
 			Precedence Sunny <= (max: 1) DayTime
 		
 			
-			// ------------------END TRIGGER--------------------
 			
 			
-			// Road
+			
+			// Road  ---------START TRIGGER-----------------
 			Let Road be Highway + Interurban + Urban
 			Precedence Road <= Highway
 			
@@ -27,6 +27,7 @@ Specification ScenarioD1 {
 			
 			SubClocking Road <- Event
 			
+			// ------------------END TRIGGER--------------------
 			
 			
 			// Traffic
@@ -49,8 +50,8 @@ Specification ScenarioD1 {
 			Precedence FinalMode <= Manual
 			
 			
-			Transfer = Inactive $ 5 on Seconds
-			Precedence Inactive <= FinalMode <= Transfer
+			Transfer = HighwayExit $ 5 on Seconds
+			Precedence HighwayExit <= FinalMode <= Transfer
 
 
 		
