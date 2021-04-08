@@ -10,11 +10,13 @@
 				<Operator name="Intersection_done" href="Intersection.xscade"/>
 				<Operator name="Minus_done" href="Minus.xscade"/>
 				<Operator name="Periodic" href="Periodic.xscade"/>
-				<Operator name="Precedence_done_50" href="Precedence.xscade"/>
+				<Operator name="Precedence_done" href="Precedence.xscade"/>
 				<Operator name="SubClock_done" href="SubClock.xscade"/>
 				<Operator name="Sup_done" href="Sup.xscade"/>
 				<Operator name="Union_done" href="Union.xscade"/>
 				<Operator name="AddClock_done" href="AddClock.xscade"/>
+				<Operator name="Causality2" href="Causality_check1.xscade"/>
+				<Operator name="Precedence2" href="Precedence_done_51.xscade"/>
 			</declarations>
 			<pragmas>
 				<ed:Package oid="!ed/4a8f/611A/3D1C/60649d3242bb" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">

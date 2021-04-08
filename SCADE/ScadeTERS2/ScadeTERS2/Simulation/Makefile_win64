@@ -1,0 +1,69 @@
+#############################################################
+######    Begin of Makefile
+#############################################################
+
+SCADE=D:\Programs Installed\ANSYS Inc\v211\SCADE Student\SCADE\.
+
+SHELL=cmd.exe
+
+C_FLAGS = -pedantic
+
+all: Utils__InitMax.exe Utils__InitMax.dll 
+
+win64/InitMax_Utils.o: InitMax_Utils.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "InitMax_Utils.c" -o "win64\InitMax_Utils.o"
+
+win64/And3_Utils.o: And3_Utils.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "And3_Utils.c" -o "win64\And3_Utils.o"
+
+win64/kcg_types.o: kcg_types.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "kcg_types.c" -o "win64\kcg_types.o"
+
+win64/kcg_consts.o: kcg_consts.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "kcg_consts.c" -o "win64\kcg_consts.o"
+
+win64/ScadeTERS2_mapping.o: ScadeTERS2_mapping.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "ScadeTERS2_mapping.c" -o "win64\ScadeTERS2_mapping.o"
+
+win64/ScadeTERS2_type.o: ScadeTERS2_type.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "ScadeTERS2_type.c" -o "win64\ScadeTERS2_type.o"
+
+win64/SmuPredefConv.o: D:/Programs\ Installed/ANSYS\ Inc/v211/SCADE\ Student/SCADE/lib/C/SmuPredefConv.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "$(SCADE)\lib\C\SmuPredefConv.c" -o "win64\SmuPredefConv.o"
+
+win64/SmuConfig.o: D:/Programs\ Installed/ANSYS\ Inc/v211/SCADE\ Student/SCADE/lib/C/SmuConfig.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "$(SCADE)\lib\C\SmuConfig.c" -o "win64\SmuConfig.o"
+
+win64/SmuTypes.o: D:/Programs\ Installed/ANSYS\ Inc/v211/SCADE\ Student/SCADE/lib/C/SmuTypes.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "$(SCADE)\lib\C\SmuTypes.c" -o "win64\SmuTypes.o"
+
+win64/SmuLib.o: D:/Programs\ Installed/ANSYS\ Inc/v211/SCADE\ Student/SCADE/lib/C/SmuLib.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "$(SCADE)\lib\C\SmuLib.c" -o "win64\SmuLib.o"
+
+win64/SmuVTable.o: D:/Programs\ Installed/ANSYS\ Inc/v211/SCADE\ Student/SCADE/lib/C/SmuVTable.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "$(SCADE)\lib\C\SmuVTable.c" -o "win64\SmuVTable.o"
+
+win64/ScadeTERS2_interface.o: ScadeTERS2_interface.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "ScadeTERS2_interface.c" -o "win64\ScadeTERS2_interface.o"
+
+win64/SmuProxy.o: D:/Programs\ Installed/ANSYS\ Inc/v211/SCADE\ Student/SCADE/lib/C/SmuProxy.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "D:\Programs Installed\ANSYS Inc\v211\SCADE Student\SCADE\lib\C\SmuProxy.c" -o "win64\SmuProxy.o"
+
+Utils__InitMax.dll: win64/InitMax_Utils.o win64/And3_Utils.o win64/kcg_types.o win64/kcg_consts.o win64/ScadeTERS2_mapping.o win64/ScadeTERS2_type.o win64/SmuPredefConv.o win64/SmuConfig.o win64/SmuTypes.o win64/SmuLib.o win64/SmuVTable.o win64/ScadeTERS2_interface.o win64/SmuProxy.o SmuExport.def 
+	gcc -mwindows -mwin32 -shared -static-libgcc  "win64\InitMax_Utils.o" "win64\And3_Utils.o" "win64\kcg_types.o" "win64\kcg_consts.o" "win64\ScadeTERS2_mapping.o" "win64\ScadeTERS2_type.o" "win64\SmuPredefConv.o" "win64\SmuConfig.o" "win64\SmuTypes.o" "win64\SmuLib.o" "win64\SmuVTable.o" "win64\ScadeTERS2_interface.o" "win64\SmuProxy.o" -Wl,--output-def,"SmuExport.def" -lm -lwsock32 -m64 -o "Utils__InitMax.dll" 
+
+SmuExport.def: D:/Programs\ Installed/ANSYS\ Inc/v211/SCADE\ Student/SCADE/lib/C/SmuExport.def
+	copy "D:\Programs Installed\ANSYS Inc\v211\SCADE Student\SCADE\lib\C\SmuExport.def" "SmuExport.def"
+
+win64/ScadeTERS2_dll.o: ScadeTERS2_dll.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "ScadeTERS2_dll.c" -o "win64\ScadeTERS2_dll.o"
+
+win64/SmuMainWindows.o: D:/Programs\ Installed/ANSYS\ Inc/v211/SCADE\ Student/SCADE/lib/C/SmuMainWindows.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "D:\Programs Installed\ANSYS Inc\v211\SCADE Student\SCADE\lib\C\SmuMainWindows.c" -o "win64\SmuMainWindows.o"
+
+Utils__InitMax.exe: win64/ScadeTERS2_dll.o win64/SmuMainWindows.o 
+	gcc "win64\ScadeTERS2_dll.o" "win64\SmuMainWindows.o" -lm -lwsock32 -m64 -o "Utils__InitMax.exe" 
+
+#############################################################
+######    End of Makefile
+#############################################################

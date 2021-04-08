@@ -8,6 +8,8 @@
 				<Operator name="DecodeClockStatus" href="DecodeClockStatus.xscade"/>
 				<Operator name="EncodeClockStatus" href="EncodeClockStatus.xscade"/>
 				<Operator name="GtEqlt" href="GtEqlt.xscade"/>
+				<Operator name="InitMax" href="Operator6.xscade"/>
+				<Operator name="And3" href="InitMax1.xscade"/>
 			</declarations>
 			<pragmas>
 				<ed:Package oid="!ed/4aeb/611A/3D1C/60649d9b3648" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
