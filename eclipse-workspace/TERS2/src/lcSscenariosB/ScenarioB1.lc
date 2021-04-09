@@ -9,6 +9,7 @@ Specification ScenarioB1 {
 			Automatic, Manual, MRM [ // Final Mode Clocks
 			
 			// Objective: Inform the driver of the weather change and offer him to cancel the transfer
+			// Trigger: Rain starts pouring heavily
 			
 			// Weather  ---------START TRIGGER-----------------
 			Let DayTime be Sunny + Night
@@ -19,7 +20,7 @@ Specification ScenarioB1 {
 			//If Scenario establishes Fog as a condition
 			Precedence Hazard <= Rain
 			
-			SubClocking Sunny <- Hazard  // Fog on this scenario, it might therefore be a subclock of time (or a Precedence)?
+			SubClocking Sunny <- Hazard
 			// ------------------END TRIGGER--------------------
 			
 			

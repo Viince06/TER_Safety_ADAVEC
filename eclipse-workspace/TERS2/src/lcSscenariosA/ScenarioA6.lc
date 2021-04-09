@@ -10,6 +10,7 @@ Specification ScenarioA6 {
 			Seconds [ // Time-based ultimatum
 			
 			// Objective: Advise on how to reduce mental load and offer to transfer authority
+			// Trigger: Driver has high mental load
 			
 			// Weather
 			Let DayTime be Sunny + Night

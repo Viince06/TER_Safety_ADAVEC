@@ -9,6 +9,7 @@ Specification ScenarioC1 {
 			Automatic, Manual, MRM [ // Final Mode Clocks
 			
 			// Objective: Inform the driver of the weather change and offer to initiate authority transfer
+			// Trigger: Snow appears
 			
 			// Weather  ---------START TRIGGER-----------------
 			Let DayTime be Sunny + Night

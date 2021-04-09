@@ -9,6 +9,7 @@ Specification ScenarioA1 {
 			Automatic, Manual, MRM [ // Final Mode Clocks
 			
 			// Objective: Inform the driver of the weather change so he could adapt his driving/itinerary
+			// Trigger: Fog suddenly appears
 			
 			// Weather  ---------START TRIGGER-----------------
 			Let DayTime be Sunny + Night

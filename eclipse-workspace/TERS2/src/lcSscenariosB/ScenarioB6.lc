@@ -10,6 +10,7 @@ Specification ScenarioB6 {
 			Seconds [ // Time-based ultimatum
 			
 			// Objective: Cancel the transfer and perform a MRM
+			// Trigger: Driver losses consciousness
 			
 			// Weather
 			Let DayTime be Sunny + Night

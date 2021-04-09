@@ -10,6 +10,7 @@ Specification ScenarioA4 {
 			Seconds [ // Time-based ultimatum
 			
 			// Objective: Inform the driver that his driving abilities are impaired and that the vehicle is taking over
+			// Trigger: Driver has been drinking
 			
 			// Weather
 			Let DayTime be Sunny + Night

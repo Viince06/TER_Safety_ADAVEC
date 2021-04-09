@@ -10,6 +10,7 @@ Specification ScenarioC8 {
 			Seconds [ // Time-based ultimatum
 			
 			// Objective: Inform the driver and initiate transfer to keep driver invested
+			// Trigger: Driving hasn't been driving for a long time
 			
 			// Weather
 			Let DayTime be Sunny + Night

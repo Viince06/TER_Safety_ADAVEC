@@ -9,6 +9,7 @@ Specification ScenarioD2 {
 			Automatic, Manual, MRM [ // Final Mode Clocks
 			
 			// Objective: Inform, advise and offer to keep authority 
+			// Trigger: Driver has high mental load
 			
 			// Weather
 			Let DayTime be Sunny + Night

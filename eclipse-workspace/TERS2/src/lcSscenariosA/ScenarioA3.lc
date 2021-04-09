@@ -9,6 +9,7 @@ Specification ScenarioA3 {
 			Automatic, Manual, MRM [ // Final Mode Clocks
 			
 			// Objective: Inform, reassure the driver and offer information on close resting areas
+			// Trigger: Driver becomes stressed beyond allowed level
 			
 			// Weather
 			Let DayTime be Sunny + Night

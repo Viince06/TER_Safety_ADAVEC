@@ -10,6 +10,7 @@ Specification ScenarioA7 {
 			Seconds [ // Time-based ultimatum
 			
 			// Objective: Nothing to do, proceed with the situation
+			// Trigger: None
 			
 			// Weather
 			Let DayTime be Sunny + Night

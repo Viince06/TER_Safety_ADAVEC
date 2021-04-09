@@ -9,6 +9,7 @@ Specification ScenarioB2 {
 			Automatic, Manual, MRM [ // Final Mode Clocks
 			
 			// Objective: Inform and offer to cancel transfer
+			// Trigger: Lidar doesn't produce usable data
 			
 			// Weather
 			Let DayTime be Sunny + Night

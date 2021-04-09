@@ -10,6 +10,7 @@ Specification ScenarioC4 {
 			Seconds [ // Time-based ultimatum
 			
 			// Objective: Perform MRM and call for help
+			// Trigger: Driver dies
 			
 			// Weather
 			Let DayTime be Sunny + Night

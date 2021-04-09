@@ -10,6 +10,7 @@ Specification ScenarioC2 {
 			Seconds [
 			
 			// Objective: Inform and MRM if necessary
+			// Trigger: Driver has been drinking
 			
 			// Weather
 			Let DayTime be Sunny + Night

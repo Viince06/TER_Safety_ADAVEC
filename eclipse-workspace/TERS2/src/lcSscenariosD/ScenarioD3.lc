@@ -10,6 +10,7 @@ Specification ScenarioD3 {
 			Seconds [
 			
 			// Objective: Inform the driver and proceed with transfer
+			// Trigger: One of the radar doesn't send data anymore
 			
 			// Weather
 			Let DayTime be Sunny + Night

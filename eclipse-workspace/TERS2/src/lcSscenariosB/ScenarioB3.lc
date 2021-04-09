@@ -10,6 +10,7 @@ Specification ScenarioB3 {
 			Seconds [
 			
 			// Objective: Inform and offer MRM because the faulty sensors makes it impossible for the AD to take over
+			// Trigger: Driver is fatigued
 			
 			// Weather
 			Let DayTime be Sunny + Night

@@ -10,6 +10,7 @@ Specification ScenarioC3 {
 			Seconds [
 			
 			// Objective: Inform and and offer to initiate authority transfer
+			// Trigger: One of the radar doesn't send data anymore 
 			
 			// Weather
 			Let DayTime be Sunny + Night

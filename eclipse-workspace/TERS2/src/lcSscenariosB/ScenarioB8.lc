@@ -10,6 +10,7 @@ Specification ScenarioB8 {
 			Seconds [ // Time-based ultimatum
 			
 			// Objective: Inform, advise and offer to cancel transfer authority 
+			// Trigger: Driving has been driving for a long time
 			
 			// Weather
 			Let DayTime be Sunny + Night

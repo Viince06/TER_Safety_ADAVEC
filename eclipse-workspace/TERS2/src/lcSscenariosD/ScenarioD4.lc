@@ -10,6 +10,7 @@ Specification ScenarioD4 {
 			Seconds [ // Time-based ultimatum
 			
 			// Objective: Inform and proceed authority transfer
+			// Trigger: Driving hasn't been driving for a long time
 			
 			// Weather
 			Let DayTime be Sunny + Night

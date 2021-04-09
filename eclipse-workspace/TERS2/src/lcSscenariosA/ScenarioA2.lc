@@ -9,6 +9,7 @@ Specification ScenarioA2 {
 			Automatic, Manual, MRM [ // Final Mode Clocks
 			
 			// Objective: Inform the driver that something is wrong with the AD
+			// Trigger: One of the radar doesn't send data anymore
 			
 			// Weather
 			Let DayTime be Sunny + Night

@@ -10,6 +10,7 @@ Specification ScenarioD8 {
 			Seconds [ // Time-based ultimatum
 			
 			// Objective: Inform that transfer has been canceled due to inability of driver
+			// Trigger: Driver is high
 			
 			// Weather
 			Let DayTime be Sunny + Night

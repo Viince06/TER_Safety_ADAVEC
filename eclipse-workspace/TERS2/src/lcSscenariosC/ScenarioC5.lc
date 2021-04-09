@@ -10,6 +10,7 @@ Specification ScenarioC5 {
 			Seconds [ // Time-based ultimatum
 			
 			// Objective: Inform, advise and offer to transfer authority
+			// Trigger: Driver becomes stressed beyond allowed level
 			
 			// Weather
 			Let DayTime be Sunny + Night

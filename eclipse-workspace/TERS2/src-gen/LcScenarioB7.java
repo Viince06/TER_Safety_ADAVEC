@@ -46,12 +46,6 @@ public class LcScenarioB7 implements ISpecificationBuilder {
 		
 		simple.causality("Sunny", "DayTime", 0, 1);
 		
-		simple.union("Hazard", "Fog", "Rain", "Snow");
-		
-		simple.causality("Hazard", "Rain");
-		
-		simple.subclock("DayTime", "Hazard");
-		
 		simple.union("Road", "Highway", "Interurban", "Urban");
 		
 		simple.causality("Road", "Urban");
@@ -64,17 +58,17 @@ public class LcScenarioB7 implements ISpecificationBuilder {
 		
 		simple.causality("Sensors", "NoIssue");
 		
-		simple.union("Focus", "NotFocused", "Inactive", "Inattentive", "LongDriving");
+		simple.union("Health", "Death", "Drunk", "Unconscious", "Inebriated", "Relaxed", "Influenced");
 		
-		simple.causality("Focus", "LongDriving");
+		simple.causality("Health", "Relaxed");
 		
 		simple.union("FinalMode", "Automatic", "Manual", "MRM");
 		
 		simple.causality("FinalMode", "Automatic");
 		
-		simple.delayFor("Transfer", "LongDriving", 5, -1, "Seconds");
+		simple.delayFor("Transfer", "Relaxed", 5, -1, "Seconds");
 		
-		simple.causality("LongDriving", "FinalMode");
+		simple.causality("Relaxed", "FinalMode");
 		simple.causality("FinalMode", "Transfer");
 	}
 	private static IUtility[] utilities = { 
