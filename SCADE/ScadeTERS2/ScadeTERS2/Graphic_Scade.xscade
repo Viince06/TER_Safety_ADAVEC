@@ -17,6 +17,8 @@
 				<Operator name="AddClock_done" href="AddClock.xscade"/>
 				<Operator name="Causality2_check" href="Causality2.xscade"/>
 				<Operator name="Precedence2_check" href="Precedence2.xscade"/>
+				<Operator name="CausalityA_check" href="CausalityA_check.xscade"/>
+				<Operator name="CausalityA2_check" href="CausalityA2_check.xscade"/>
 			</declarations>
 			<pragmas>
 				<ed:Package oid="!ed/4a8f/611A/3D1C/60649d3242bb" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">

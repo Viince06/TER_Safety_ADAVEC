@@ -4,6 +4,23 @@
 #include "SmuTypes.h"
 
 /****************************************************************
+ ** ClockStatus 
+ ****************************************************************/
+extern int ClockStatus_to_string(const void *pValue, PFN_STR_APPEND pfnStrAppend, void *pStrObj);
+extern int check_ClockStatus_string(const char *str, char **endptr);
+extern int string_to_ClockStatus(const char *str, void *pValue, char **endptr);
+extern int is_ClockStatus_double_conversion_allowed();
+extern int ClockStatus_to_double(const void *pValue, double *nValue);
+extern int is_ClockStatus_long_conversion_allowed();
+extern int ClockStatus_to_long(const void *pValue, long *nValue);
+extern void compare_ClockStatus(int *nStatus, const void *pValue1, const void *pValue2, SimTolerance *pTol, const char *pszPath, PFN_STR_LIST_APPEND pfnStrListAppend, void *pListErrPaths);
+extern int get_ClockStatus_signature(PFN_STR_APPEND pfnStrAppend, void *pStrObj);
+extern int init_ClockStatus(void *pValue);
+extern int release_ClockStatus(void *pValue);
+extern int copy_ClockStatus(void *pToValue, const void *pFromValue);
+extern SimTypeUtils _Type_ClockStatus_Utils;
+
+/****************************************************************
  ** kcg_bool 
  ****************************************************************/
 extern int kcg_bool_to_string(const void *pValue, PFN_STR_APPEND pfnStrAppend, void *pStrObj);

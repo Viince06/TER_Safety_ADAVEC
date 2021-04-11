@@ -19,6 +19,158 @@ char strDefaultRealFormat[] = "%.5g"; /* (from .etp) */
 #include "kcg_consts.h"
 
 /****************************************************************
+ ** ClockStatus 
+ ****************************************************************/
+
+#ifdef __cplusplus
+  #ifdef pSimClockStatusVTable_defined
+    extern struct SimTypeVTable *pSimClockStatusVTable;
+  #else 
+    struct SimTypeVTable *pSimClockStatusVTable = NULL;
+  #endif
+#else
+  struct SimTypeVTable *pSimClockStatusVTable;
+#endif
+
+static SimEnumValUtils ClockStatus_values[] = {
+    { "PRESENT", PRESENT},
+    { "PRESENT", PRESENT},
+    { "ABSENT", ABSENT},
+    { "ABSENT", ABSENT},
+    { "DEAD", DEAD},
+    { "DEAD", DEAD},
+};
+const int ClockStatus_nb_values = 6;
+
+int ClockStatus_to_string(const void *pValue, PFN_STR_APPEND pfnStrAppend, void *pStrObj)
+{
+    if (pSimClockStatusVTable != NULL
+        && pSimClockStatusVTable->m_pfnGetConvInfo(SptString, SptNone) == 1) {
+       return pfnStrAppend(*(char**)pSimClockStatusVTable->m_pfnToType(SptString, pValue), pStrObj);
+    }
+    return pConverter->m_pfnEnumToString(*(ClockStatus*)pValue, ClockStatus_values, ClockStatus_nb_values, pfnStrAppend, pStrObj); 
+}
+
+int check_ClockStatus_string(const char *str, char **endptr)
+{
+    static ClockStatus rTemp;
+    return string_to_ClockStatus(str, (void*)&rTemp, endptr);
+}
+
+int string_to_ClockStatus(const char *str, void *pValue, char **endptr)
+{
+    int nRet = 0;
+    skip_whitespace(str);
+    if (pSimClockStatusVTable != NULL) {
+        nRet = string_to_VTable(str, pSimClockStatusVTable, pValue, endptr);
+    }
+    if (nRet == 0) {
+        int nTemp = 0;
+        nRet = pConverter->m_pfnStringToEnum(str, &nTemp, ClockStatus_values, ClockStatus_nb_values, endptr);
+        if (pValue != NULL && nRet != 0)
+            *(ClockStatus*)pValue = (ClockStatus)nTemp;
+    }
+    return nRet;
+}
+
+int is_ClockStatus_double_conversion_allowed()
+{
+    if (pSimClockStatusVTable != NULL) {
+        return is_VTable_double_conversion_allowed(pSimClockStatusVTable);
+    }
+    return 1;
+}
+
+int ClockStatus_to_double(const void *pValue, double *nValue)
+{
+    if (pSimClockStatusVTable != NULL) {
+        return VTable_to_double(pValue, pSimClockStatusVTable, nValue);
+    }
+    *nValue = (double)*((ClockStatus*)pValue);
+    return 1;
+}
+
+int is_ClockStatus_long_conversion_allowed()
+{
+    if (pSimClockStatusVTable != NULL) {
+        return is_VTable_long_conversion_allowed(pSimClockStatusVTable);
+    }
+    return 1;
+}
+
+int ClockStatus_to_long(const void *pValue, long *nValue)
+{
+    if (pSimClockStatusVTable != NULL) {
+        return VTable_to_long(pValue, pSimClockStatusVTable, nValue);
+    }
+    *nValue = (long)*((ClockStatus*)pValue);
+    return 1;
+}
+
+void compare_ClockStatus(int *pResult, const void *pValue1, const void *pValue2, SimTolerance *pTol, const char *pszPath, PFN_STR_LIST_APPEND pfnStrListAppend, void *pListErrPaths)
+{
+    int unitResult = 0;
+    /* Customized comparison */
+    if (pSimClockStatusVTable != NULL
+        && pSimClockStatusVTable->m_version >= Scv612
+        && pSimClockStatusVTable->m_pfnCompare != NULL) {
+        if (pSimClockStatusVTable->m_version >= Scv65) {
+            /* R15 and higher: VTable Compare function shall UPDATE *pResult global flag (*pResult |= SIM_CMP_RES_LT/...): */
+            unitResult = pSimClockStatusVTable->m_pfnCompare(pResult, pValue1, pValue2);
+        } else {
+            /* Before R15: VTable Compare function shall SET *pResult global flag (*pResult = -1/1/0): */
+            pSimClockStatusVTable->m_pfnCompare(&unitResult, pValue1, pValue2);
+            updateCompareResult(unitResult, pResult);
+        }
+    } else {
+        /* Predefined comparison */
+        unitResult = predef_compare_enum(pResult, (int)(*(ClockStatus*)pValue1), (int)(*(ClockStatus*)pValue2));
+    }
+    UNUSED(pTol);
+    if (unitResult != 0 && pfnStrListAppend != NULL && pszPath != NULL && *pszPath != 0 && pListErrPaths != NULL)
+        pfnStrListAppend(pszPath, pListErrPaths);
+}
+
+int get_ClockStatus_signature(PFN_STR_APPEND pfnStrAppend, void *pStrObj)
+{
+    return pConverter->m_pfnGetEnumSignature(ClockStatus_values, ClockStatus_nb_values, pfnStrAppend, pStrObj);
+}
+
+int init_ClockStatus(void *pValue)
+{
+    *(ClockStatus*)pValue = PRESENT;
+    return 1;
+}
+
+int release_ClockStatus(void *pValue)
+{
+    UNUSED(pValue);
+    return 1;
+}
+
+int copy_ClockStatus(void *pToValue, const void *pFromValue)
+{
+    *((ClockStatus*)pToValue) = *((ClockStatus*)pFromValue);
+    return 1;
+}
+
+SimTypeUtils _Type_ClockStatus_Utils = {
+    ClockStatus_to_string,
+    check_ClockStatus_string,
+    string_to_ClockStatus,
+    is_ClockStatus_double_conversion_allowed,
+    ClockStatus_to_double,
+    is_ClockStatus_long_conversion_allowed,
+    ClockStatus_to_long,
+    compare_ClockStatus,
+    get_ClockStatus_signature,
+    init_ClockStatus,
+    release_ClockStatus,
+    copy_ClockStatus,
+    sizeof(ClockStatus)
+};
+
+/****************************************************************
  ** kcg_bool 
  ****************************************************************/
 

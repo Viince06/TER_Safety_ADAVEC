@@ -7,25 +7,22 @@
 #define UNUSED(x) (void)(x)
 /* context */
 
-inC_InitMax_Utils inputs_ctx;
-static inC_InitMax_Utils inputs_ctx_execute;
-outC_InitMax_Utils outputs_ctx;
+inC_CausalityA_check_Graphic_Scade inputs_ctx;
+static inC_CausalityA_check_Graphic_Scade inputs_ctx_execute;
+outC_CausalityA_check_Graphic_Scade outputs_ctx;
 
 static void _SCSIM_RestoreInterface(void) {
-    init_kcg_int32(&inputs_ctx.init);
-    init_kcg_int32(&inputs_ctx_execute.init);
-    init_kcg_int32(&inputs_ctx.max);
-    init_kcg_int32(&inputs_ctx_execute.max);
-    init_kcg_bool(&inputs_ctx.vin);
-    init_kcg_bool(&inputs_ctx_execute.vin);
+    init_ClockStatus(&inputs_ctx.a);
+    init_ClockStatus(&inputs_ctx_execute.a);
+    init_ClockStatus(&inputs_ctx.b);
+    init_ClockStatus(&inputs_ctx_execute.b);
     memset((void*)&outputs_ctx, 0, sizeof(outputs_ctx));
 }
 
 static void _SCSIM_ExecuteInterface(void) {
     pSimulator->m_pfnAcquireValueMutex(pSimulator);
-    inputs_ctx_execute.init = inputs_ctx.init;
-    inputs_ctx_execute.max = inputs_ctx.max;
-    inputs_ctx_execute.vin = inputs_ctx.vin;
+    inputs_ctx_execute.a = inputs_ctx.a;
+    inputs_ctx_execute.b = inputs_ctx.b;
     pSimulator->m_pfnReleaseValueMutex(pSimulator);
 }
 
@@ -35,7 +32,7 @@ extern "C" {
 
 const int  rt_version = Srtv62;
 
-const char* _SCSIM_CheckSum = "85716315080d88084c568cabebfab24f";
+const char* _SCSIM_CheckSum = "ae24a7e89e2a9897241dd86f16fd4ed5";
 const char* _SCSIM_SmuTypesCheckSum = "612a6f2dec6abe526bcaa0632c507adf";
 
 /* simulation */
@@ -47,7 +44,7 @@ int SimInit(void) {
     BeforeSimInit();
 #endif
 #ifndef KCG_USER_DEFINED_INIT
-    InitMax_init_Utils(&outputs_ctx);
+    CausalityA_check_init_Graphic_Scade(&outputs_ctx);
     nRet = 1;
 #else
     nRet = 0;
@@ -65,7 +62,7 @@ int SimReset(void) {
     BeforeSimInit();
 #endif
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-    InitMax_reset_Utils(&outputs_ctx);
+    CausalityA_check_reset_Graphic_Scade(&outputs_ctx);
     nRet = 1;
 #else
     nRet = 0;
@@ -77,21 +74,21 @@ int SimReset(void) {
 }
 
 #ifdef __cplusplus
-    #ifdef pSimoutC_InitMax_UtilsCIVTable_defined
-        extern struct SimCustomInitVTable *pSimoutC_InitMax_UtilsCIVTable;
+    #ifdef pSimoutC_CausalityA_check_Graphic_ScadeCIVTable_defined
+        extern struct SimCustomInitVTable *pSimoutC_CausalityA_check_Graphic_ScadeCIVTable;
     #else 
-        struct SimCustomInitVTable *pSimoutC_InitMax_UtilsCIVTable = NULL;
+        struct SimCustomInitVTable *pSimoutC_CausalityA_check_Graphic_ScadeCIVTable = NULL;
     #endif
 #else
-    struct SimCustomInitVTable *pSimoutC_InitMax_UtilsCIVTable;
+    struct SimCustomInitVTable *pSimoutC_CausalityA_check_Graphic_ScadeCIVTable;
 #endif
 
 int SimCustomInit(void) {
     int nRet = 0;
-    if (pSimoutC_InitMax_UtilsCIVTable != NULL && 
-        pSimoutC_InitMax_UtilsCIVTable->m_pfnCustomInit != NULL) {
+    if (pSimoutC_CausalityA_check_Graphic_ScadeCIVTable != NULL && 
+        pSimoutC_CausalityA_check_Graphic_ScadeCIVTable->m_pfnCustomInit != NULL) {
         /* VTable function provided => call it */
-        nRet = pSimoutC_InitMax_UtilsCIVTable->m_pfnCustomInit ((void*)&outputs_ctx);
+        nRet = pSimoutC_CausalityA_check_Graphic_ScadeCIVTable->m_pfnCustomInit ((void*)&outputs_ctx);
     }
     else {
         /* VTable misssing => error */
@@ -110,7 +107,7 @@ int SimStep(void) {
         BeforeSimStep();
 #endif
     _SCSIM_ExecuteInterface();
-    InitMax_Utils(&inputs_ctx_execute, &outputs_ctx);
+    CausalityA_check_Graphic_Scade(&inputs_ctx_execute, &outputs_ctx);
 #ifdef EXTENDED_SIM
     AfterSimStep();
 #endif
@@ -142,8 +139,8 @@ void SsmConnectExternalInputs(int bConnect) {
 
 int SsmGetDumpSize(void) {
     int nSize = 0;
-    nSize += sizeof(inC_InitMax_Utils);
-    nSize += sizeof(outC_InitMax_Utils);
+    nSize += sizeof(inC_CausalityA_check_Graphic_Scade);
+    nSize += sizeof(outC_CausalityA_check_Graphic_Scade);
 #ifdef EXTENDED_SIM
     nSize += ExtendedGetDumpSize();
 #endif
@@ -152,10 +149,10 @@ int SsmGetDumpSize(void) {
 
 void SsmGatherDumpData(char * pData) {
     char* pCurrent = pData;
-    memcpy(pCurrent, &inputs_ctx, sizeof(inC_InitMax_Utils));
-    pCurrent += sizeof(inC_InitMax_Utils);
-    memcpy(pCurrent, &outputs_ctx, sizeof(outC_InitMax_Utils));
-    pCurrent += sizeof(outC_InitMax_Utils);
+    memcpy(pCurrent, &inputs_ctx, sizeof(inC_CausalityA_check_Graphic_Scade));
+    pCurrent += sizeof(inC_CausalityA_check_Graphic_Scade);
+    memcpy(pCurrent, &outputs_ctx, sizeof(outC_CausalityA_check_Graphic_Scade));
+    pCurrent += sizeof(outC_CausalityA_check_Graphic_Scade);
 #ifdef EXTENDED_SIM
     ExtendedGatherDumpData(pCurrent);
 #endif
@@ -163,10 +160,10 @@ void SsmGatherDumpData(char * pData) {
 
 void SsmRestoreDumpData(const char * pData) {
     const char* pCurrent = pData;
-    memcpy(&inputs_ctx, pCurrent, sizeof(inC_InitMax_Utils));
-    pCurrent += sizeof(inC_InitMax_Utils);
-    memcpy(&outputs_ctx, pCurrent, sizeof(outC_InitMax_Utils));
-    pCurrent += sizeof(outC_InitMax_Utils);
+    memcpy(&inputs_ctx, pCurrent, sizeof(inC_CausalityA_check_Graphic_Scade));
+    pCurrent += sizeof(inC_CausalityA_check_Graphic_Scade);
+    memcpy(&outputs_ctx, pCurrent, sizeof(outC_CausalityA_check_Graphic_Scade));
+    pCurrent += sizeof(outC_CausalityA_check_Graphic_Scade);
 #ifdef EXTENDED_SIM
     ExtendedRestoreDumpData(pCurrent);
 #endif

@@ -1,6 +1,6 @@
 /* $ ANSYS SCADE Suite (R) Code Generator version Student 2021 R1 (build 20201118) 
 ** Command: scadecg.exe -config D:/Projets/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/config.txt
-** Generation date: 2021-04-08T12:53:31
+** Generation date: 2021-04-10T12:26:36
 *************************************************************$ */
 #ifndef _KCG_TYPES_H_
 #define _KCG_TYPES_H_
@@ -176,9 +176,11 @@ typedef signed char kcg_int8;
 #define kcg_assign_array kcg_assign
 #endif /* kcg_assign_array */
 
+/* ClockStatus/ */
+typedef enum kcg_tag_ClockStatus { PRESENT, ABSENT, DEAD } ClockStatus;
 #endif /* _KCG_TYPES_H_ */
 /* $ ANSYS SCADE Suite (R) Code Generator version Student 2021 R1 (build 20201118) 
 ** kcg_types.h
-** Generation date: 2021-04-08T12:53:31
+** Generation date: 2021-04-10T12:26:36
 *************************************************************$ */
 

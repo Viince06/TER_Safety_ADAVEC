@@ -3,12 +3,12 @@
 
 #include "kcg_sensors.h"
 #include "SmuProxy.h"
-#include "InitMax_Utils.h"
+#include "CausalityA_check_Graphic_Scade.h"
 
 /* context */
 
-extern inC_InitMax_Utils inputs_ctx;
-extern outC_InitMax_Utils outputs_ctx;
+extern inC_CausalityA_check_Graphic_Scade inputs_ctx;
+extern outC_CausalityA_check_Graphic_Scade outputs_ctx;
 
 #ifdef __cplusplus
 extern "C" {

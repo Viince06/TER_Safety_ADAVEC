@@ -30,47 +30,43 @@
     <Option name="exp" value="#off#"/>
     <Option name="target_dir" value="D:/Projets/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation"/>
     <Option name="target" value="C"/>
-    <Option name="root" value="Utils::InitMax"/>
+    <Option name="root" value="Graphic_Scade::CausalityA_check"/>
     <Option name="auth" value="#off#"/>
-    <Package scadeName="Utils">
-      <RootNode headerFile="InitMax_Utils.h" scadeName="InitMax" targetCycleFct="InitMax_Utils" targetInitFct="InitMax_reset_Utils" targetInitializationFct="InitMax_init_Utils">
-        <Input inCtx="true" scadeName="init" scadeType="int32" targetName="init" targetType="kcg_int32"/>
-        <Input inCtx="true" scadeName="max" scadeType="int32" targetName="max" targetType="kcg_int32"/>
-        <Input inCtx="true" scadeName="vin" scadeType="bool" targetName="vin" targetType="kcg_bool"/>
-        <Output inCtx="true" scadeName="vout" scadeType="bool" targetName="vout" targetType="kcg_bool"/>
-        <Local inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1" targetType="kcg_bool"/>
-        <Local inCtx="true" scadeName="_L4" scadeType="int32" targetName="_L4" targetType="kcg_int32"/>
-        <Local inCtx="true" scadeName="_L5" scadeType="int32" targetName="_L5" targetType="kcg_int32"/>
-        <Local inCtx="true" scadeName="_L7" scadeType="int32" targetName="_L7" targetType="kcg_int32"/>
-        <Local inCtx="true" scadeName="_L8" scadeType="int32" targetName="_L8" targetType="kcg_int32"/>
-        <Local inCtx="true" scadeName="_L9" scadeType="int32" targetName="_L9" targetType="kcg_int32"/>
-        <Local inCtx="true" scadeName="_L10" scadeType="int32" targetName="_L10" targetType="kcg_int32"/>
+    <EnumType scadeName="ClockStatus" targetName="ClockStatus">
+      <EnumVal scadeName="PRESENT" targetName="PRESENT"/>
+      <EnumVal scadeName="ABSENT" targetName="ABSENT"/>
+      <EnumVal scadeName="DEAD" targetName="DEAD"/>
+    </EnumType>
+    <Package scadeName="Graphic_Scade">
+      <RootNode headerFile="CausalityA_check_Graphic_Scade.h" scadeName="CausalityA_check" targetCycleFct="CausalityA_check_Graphic_Scade" targetInitFct="CausalityA_check_reset_Graphic_Scade" targetInitializationFct="CausalityA_check_init_Graphic_Scade">
+        <Input inCtx="true" scadeName="a" scadeType="ClockStatus" targetName="a" targetType="ClockStatus"/>
+        <Input inCtx="true" scadeName="b" scadeType="ClockStatus" targetName="b" targetType="ClockStatus"/>
+        <Output inCtx="true" scadeName="v" scadeType="bool" targetName="v" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L1" scadeType="ClockStatus" targetName="_L1" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L3" scadeType="bool" targetName="_L3" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L7" scadeType="bool" targetName="_L7" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L8" scadeType="bool" targetName="_L8" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L9" scadeType="ClockStatus" targetName="_L9" targetType="ClockStatus"/>
         <Local inCtx="true" scadeName="_L11" scadeType="bool" targetName="_L11" targetType="kcg_bool"/>
-        <Local inCtx="true" scadeName="_L12" scadeType="bool" targetName="_L12" targetType="kcg_bool"/>
-        <Local inCtx="true" scadeName="_L13" scadeType="bool" targetName="_L13" targetType="kcg_bool"/>
-        <FbyOp instName="1">
-          <Init inCtx="true" targetName="init" targetType="kcg_bool"/>
-          <Memory inCtx="true" targetName="_L5" targetType="kcg_int32"/>
-        </FbyOp>
-        <NodeInstance instName="1" refName="And3_Utils" scadeName="Utils::And3">
-          <OutCtxVar targetName="Context_And3_1"/>
+        <NodeInstance instName="1" refName="isPresent_Utils" scadeName="Utils::isPresent">
+          <OutCtxVar targetName="Context_isPresent_1"/>
         </NodeInstance>
-        <Init inCtx="true" targetName="init" targetType="kcg_bool"/>
-        <Memory inCtx="true" targetName="_L5" targetType="kcg_int32"/>
-        <OutCtxType targetName="outC_InitMax_Utils"/>
-        <InCtxType targetName="inC_InitMax_Utils"/>
+        <NodeInstance instName="4" refName="isPresent_Utils" scadeName="Utils::isPresent">
+          <OutCtxVar targetName="Context_isPresent_4"/>
+        </NodeInstance>
+        <OutCtxType targetName="outC_CausalityA_check_Graphic_Scade"/>
+        <InCtxType targetName="inC_CausalityA_check_Graphic_Scade"/>
       </RootNode>
-      <NoExpNode headerFile="And3_Utils.h" scadeName="And3" targetCycleFct="And3_Utils" targetInitFct="And3_reset_Utils" targetInitializationFct="And3_init_Utils">
-        <Input scadeName="a" scadeType="bool" targetName="a" targetType="kcg_bool"/>
-        <Input scadeName="b" scadeType="bool" targetName="b" targetType="kcg_bool"/>
-        <Input scadeName="c" scadeType="bool" targetName="c" targetType="kcg_bool"/>
-        <Output inCtx="true" scadeName="z" scadeType="bool" targetName="z" targetType="kcg_bool"/>
-        <Local inCtx="true" scadeName="_L11" scadeType="bool" targetName="_L11" targetType="kcg_bool"/>
-        <Local inCtx="true" scadeName="_L12" scadeType="bool" targetName="_L12" targetType="kcg_bool"/>
-        <Local inCtx="true" scadeName="_L13" scadeType="bool" targetName="_L13" targetType="kcg_bool"/>
-        <Local inCtx="true" scadeName="_L14" scadeType="bool" targetName="_L14" targetType="kcg_bool"/>
-        <Local inCtx="true" scadeName="_L15" scadeType="bool" targetName="_L15" targetType="kcg_bool"/>
-        <OutCtxType targetName="outC_And3_Utils"/>
+    </Package>
+    <Package scadeName="Utils">
+      <NoExpNode headerFile="isPresent_Utils.h" scadeName="isPresent" targetCycleFct="isPresent_Utils" targetInitFct="isPresent_reset_Utils" targetInitializationFct="isPresent_init_Utils">
+        <Input scadeName="a" scadeType="ClockStatus" targetName="a" targetType="ClockStatus"/>
+        <Output inCtx="true" scadeName="presence" scadeType="bool" targetName="presence" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L1" scadeType="ClockStatus" targetName="_L1" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L2" scadeType="bool" targetName="_L2" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L3" scadeType="bool" targetName="_L3" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L4" scadeType="bool" targetName="_L4" targetType="kcg_bool"/>
+        <OutCtxType targetName="outC_isPresent_Utils"/>
       </NoExpNode>
     </Package>
     <PredefType scadeName="int8" targetName="kcg_int8"/>
