@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="Periodic">
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="Periodic_TODO">
 	<pragmas>
 		<ed:Operator oid="!ed/4a3e/611A/3D1C/60649b676940" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
 			<diagrams>
-				<NetDiagram name="Periodic_1" landscape="true" format="A4 (210 297)" oid="!ed/4a3f/611A/3D1C/60649b6777"/>
+				<NetDiagram name="Periodic_TODO_1" landscape="true" format="A4 (210 297)" oid="!ed/4a3f/611A/3D1C/60649b6777"/>
 			</diagrams>
 		</ed:Operator>
 	</pragmas>

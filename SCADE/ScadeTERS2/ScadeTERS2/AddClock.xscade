@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="AddClock_done">
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="AddClock">
 	<inputs>
 		<Variable name="a">
 			<type>
@@ -160,7 +160,7 @@
 	<pragmas>
 		<ed:Operator oid="!ed/49ee/611A/3D1C/60649b35616a" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
 			<diagrams>
-				<NetDiagram name="AddClock_done_1" landscape="true" format="A4 (210 297)" oid="!ed/49ef/611A/3D1C/60649b352e55">
+				<NetDiagram name="AddClock_1" landscape="true" format="A4 (210 297)" oid="!ed/49ef/611A/3D1C/60649b352e55">
 					<presentationElements>
 						<EquationGE presentable="!ed/4ca5/3062/1B34/6065852f1004">
 							<position>

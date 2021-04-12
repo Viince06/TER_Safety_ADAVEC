@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="node" name="Sup_done">
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="node" name="Sup">
 	<inputs>
 		<Variable name="a">
 			<type>
@@ -1508,7 +1508,7 @@
 	<pragmas>
 		<ed:Operator oid="!ed/4a1e/611A/3D1C/60649b665ca2" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
 			<diagrams>
-				<NetDiagram name="Sup_done_1" landscape="true" format="A4 (210 297)" oid="!ed/4a1f/611A/3D1C/60649b664dec">
+				<NetDiagram name="Sup_1" landscape="true" format="A4 (210 297)" oid="!ed/4a1f/611A/3D1C/60649b664dec">
 					<presentationElements>
 						<EquationGE presentable="!ed/5448/611A/3D1C/6064dbfc1e92">
 							<position>

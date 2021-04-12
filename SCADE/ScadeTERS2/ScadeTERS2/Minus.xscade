@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="Minus_done">
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="Minus">
 	<inputs>
 		<Variable name="a">
 			<type>
@@ -390,7 +390,7 @@
 	<pragmas>
 		<ed:Operator oid="!ed/4a36/611A/3D1C/60649b6649a1" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
 			<diagrams>
-				<NetDiagram name="Minus_done_1" landscape="true" format="A4 (210 297)" oid="!ed/4a37/611A/3D1C/60649b66699d">
+				<NetDiagram name="Minus_1" landscape="true" format="A4 (210 297)" oid="!ed/4a37/611A/3D1C/60649b66699d">
 					<presentationElements>
 						<EquationGE presentable="!ed/5a24/611A/3D1C/6064e4d325e2">
 							<position>

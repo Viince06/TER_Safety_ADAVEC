@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="node" name="Precedence_done">
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="node" name="Precedence">
 	<inputs>
 		<Variable name="a">
 			<type>
@@ -532,7 +532,7 @@
 	<pragmas>
 		<ed:Operator oid="!ed/4a06/611A/3D1C/60649b65d18" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
 			<diagrams>
-				<NetDiagram name="Precedence_done_1" landscape="true" format="A4 (210 297)" oid="!ed/4a07/611A/3D1C/60649b653510">
+				<NetDiagram name="Precedence_1" landscape="true" format="A4 (210 297)" oid="!ed/4a07/611A/3D1C/60649b653510">
 					<presentationElements>
 						<EquationGE presentable="!ed/4d51/611A/3D1C/6064a2751380">
 							<position>

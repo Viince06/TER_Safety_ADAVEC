@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="247" defaultConfiguration="23">
+<Project id="1" oid_count="257" defaultConfiguration="23">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -316,13 +316,6 @@
 			<elements>
 				<Folder id="13" extensions="xscade;scade" name="Separate Files">
 					<elements>
-						<FileRef id="103" persistAs="Causality.xscade">
-							<props>
-								<Prop id="102" name="@SCADE:NONROOT">
-									<value>true</value>
-								</Prop>
-							</props>
-						</FileRef>
 						<FileRef id="105" persistAs="DelayFor.xscade">
 							<props>
 								<Prop id="104" name="@SCADE:NONROOT">
@@ -435,13 +428,6 @@
 								</Prop>
 							</props>
 						</FileRef>
-						<FileRef id="233" persistAs="Causality2.xscade">
-							<props>
-								<Prop id="232" name="@SCADE:NONROOT">
-									<value>true</value>
-								</Prop>
-							</props>
-						</FileRef>
 						<FileRef id="235" persistAs="Precedence2.xscade">
 							<props>
 								<Prop id="234" name="@SCADE:NONROOT">
@@ -463,16 +449,16 @@
 								</Prop>
 							</props>
 						</FileRef>
-						<FileRef id="243" persistAs="CausalityA_check.xscade">
+						<FileRef id="253" persistAs="Causality2.xscade">
 							<props>
-								<Prop id="242" name="@SCADE:NONROOT">
+								<Prop id="252" name="@SCADE:NONROOT">
 									<value>true</value>
 								</Prop>
 							</props>
 						</FileRef>
-						<FileRef id="247" persistAs="CausalityA2_check.xscade">
+						<FileRef id="255" persistAs="Causality.xscade">
 							<props>
-								<Prop id="246" name="@SCADE:NONROOT">
+								<Prop id="254" name="@SCADE:NONROOT">
 									<value>true</value>
 								</Prop>
 							</props>

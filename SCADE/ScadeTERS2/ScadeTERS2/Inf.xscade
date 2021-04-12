@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="node" name="Inf_done">
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="node" name="Inf">
 	<inputs>
 		<Variable name="a">
 			<type>
@@ -1057,7 +1057,7 @@
 	<pragmas>
 		<ed:Operator oid="!ed/4a16/611A/3D1C/60649b666173" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
 			<diagrams>
-				<NetDiagram name="Inf_done_1" landscape="true" format="A4 (210 297)" oid="!ed/4a17/611A/3D1C/60649b66714">
+				<NetDiagram name="Inf_1" landscape="true" format="A4 (210 297)" oid="!ed/4a17/611A/3D1C/60649b66714">
 					<presentationElements>
 						<StateMachineGE presentable="!ed/4f6b/611A/3D1C/6064ac692176">
 							<position>

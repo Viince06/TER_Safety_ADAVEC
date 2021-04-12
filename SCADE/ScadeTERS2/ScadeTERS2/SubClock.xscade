@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="SubClock_done">
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="SubClock">
 	<inputs>
 		<Variable name="a">
 			<type>
@@ -270,7 +270,7 @@
 	<pragmas>
 		<ed:Operator oid="!ed/49f6/611A/3D1C/60649b65187b" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
 			<diagrams>
-				<NetDiagram name="SubClock_done_1" landscape="true" format="A4 (210 297)" oid="!ed/49f7/611A/3D1C/60649b656826">
+				<NetDiagram name="SubClock_1" landscape="true" format="A4 (210 297)" oid="!ed/49f7/611A/3D1C/60649b656826">
 					<presentationElements>
 						<EquationGE presentable="!ed/4a6d/611A/3D1C/60649cc91a8d">
 							<position>

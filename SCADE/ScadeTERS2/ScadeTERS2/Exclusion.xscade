@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="Exclusion_done">
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="Exclusion">
 	<inputs>
 		<Variable name="a">
 			<type>
@@ -237,7 +237,7 @@
 	<pragmas>
 		<ed:Operator oid="!ed/49fe/611A/3D1C/60649b656a9e" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
 			<diagrams>
-				<NetDiagram name="Exclusion_done_1" landscape="true" format="A4 (210 297)" oid="!ed/49ff/611A/3D1C/60649b6574d5">
+				<NetDiagram name="Exclusion_1" landscape="true" format="A4 (210 297)" oid="!ed/49ff/611A/3D1C/60649b6574d5">
 					<presentationElements>
 						<EquationGE presentable="!ed/4bfb/611A/3D1C/6064a0886606">
 							<position>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="Intersection_done">
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="Intersection">
 	<inputs>
 		<Variable name="b">
 			<type>
@@ -379,7 +379,7 @@
 	<pragmas>
 		<ed:Operator oid="!ed/4a2e/611A/3D1C/60649b6645f5" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
 			<diagrams>
-				<NetDiagram name="Intersection_done_1" landscape="true" format="A4 (210 297)" oid="!ed/4a2f/611A/3D1C/60649b6666fd">
+				<NetDiagram name="Intersection_1" landscape="true" format="A4 (210 297)" oid="!ed/4a2f/611A/3D1C/60649b6666fd">
 					<presentationElements>
 						<EquationGE presentable="!ed/5ac8/611A/3D1C/6064e65f7870">
 							<position>
