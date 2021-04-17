@@ -1,7 +1,0 @@
-L1 = a;
-L2 = b;
-v = L4;
-L3 =  not L6;
-L4 = L5 and L3;
-L5 = Utils::isPresent(L1);
-L6 = Utils::isPresent(L2);

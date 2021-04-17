@@ -1,0 +1,4 @@
+L2, L1 = AddClock(L3);
+L3 = f;
+presence = L2;
+alive = L1;

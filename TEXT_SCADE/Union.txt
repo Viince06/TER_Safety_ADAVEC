@@ -1,9 +1,0 @@
-L1 = a;
-L2 = b;
-L4, L3 = Utils::DecodeClockStatus(L1);
-L5 = L4 or L8;
-L6 = L3 or L7;
-L8, L7 = Utils::DecodeClockStatus(L2);
-L9 =  not L6;
-L10 = Utils::EncodeClockStatus(L5, L9);
-c = L10;

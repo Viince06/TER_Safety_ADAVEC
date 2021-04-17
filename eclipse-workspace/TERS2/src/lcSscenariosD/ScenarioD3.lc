@@ -19,7 +19,7 @@ Specification ScenarioD3 {
 		
 			// Road
 			Let Road be Highway + Interurban + Urban
-			Precedence Road <= Highway
+			//Precedence Road <= Highway
 			
 			Let Event be HighwayExit + CountrySide
 			Precedence Event <= HighwayExit

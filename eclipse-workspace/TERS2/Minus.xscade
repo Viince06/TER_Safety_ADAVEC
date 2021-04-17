@@ -1,0 +1,4 @@
+L1 = Minus(L2, L3);
+L2 = test3;
+L3 = [Ljava.lang.String;@2471cca7;
+c = L1;

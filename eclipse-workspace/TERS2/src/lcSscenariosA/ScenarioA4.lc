@@ -13,13 +13,14 @@ Specification ScenarioA4 {
 			// Trigger: Driver has been drinking
 			
 			// Weather
-			Let DayTime be Sunny + Night
-			Precedence Sunny <= (max: 1) DayTime
+			Let DayTime be Sunny + Night  // UTILE SI ON PEUT PROFITER DE L'INFORMATION DONNEE
+			Precedence Sunny < (max: 1) Night
 		
 		
 			// Road
 			Let Road be Highway + Interurban + Urban
-			Precedence Road <= Urban
+			Precedence Road <= Urban  // TAUTOLOGIQUE
+			Exclusion Highway # Interurban # Urban
 			
 			
 			// Traffic

@@ -1,0 +1,16 @@
+L1 = a;
+L2 = b;
+L3 = kind;
+v = L8;
+L4 = Utils::isPresent(L1);
+L5 = Utils::isPresent(L2);
+L6 =  not L4;
+L7 = ( case L3 of 
+ | STRICT :   L9
+ | NONSTRICT :   L6);
+L8 = L10 and L7;
+L9 = true;
+L10 = L11 and L5;
+L11 = L12 = L13;
+L12 = Utils::Mg_delta(L4, L5);
+L13 = 0;

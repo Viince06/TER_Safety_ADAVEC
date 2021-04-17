@@ -21,3 +21,5 @@
 *.rar
 
 eclipse-workspace/TERS2/.classpath
+
+*.index

@@ -48,8 +48,6 @@ public class LcScenarioD3 implements ISpecificationBuilder {
 		
 		simple.union("Road", "Highway", "Interurban", "Urban");
 		
-		simple.causality("Road", "Highway");
-		
 		simple.union("Event", "HighwayExit", "CountrySide");
 		
 		simple.causality("Event", "HighwayExit");

@@ -1,0 +1,82 @@
+L30 = a;
+L31 = b;
+c = L36;
+L33, L32 = Utils::DecodeClockStatus(L30);
+pa = L33;
+aa = L32;
+L35, L34 = Utils::DecodeClockStatus(L31);
+ab = L34;
+pb = L35;
+L36 = Utils::EncodeClockStatus(L38, L37);
+L37 = ac;
+L38 = pc;
+automaton SM1
+   initial state Running
+   var
+      L1 : int32;
+      L2 : int32;
+      L3 : bool;
+      L4 : bool;
+      L5 : bool;
+      L6 : bool;
+      L7 : bool;
+      L8 : bool;
+      L9 : bool;
+      L10 : bool;
+      L11 : bool;
+      L12 : bool;
+      L13 : bool;
+      L14 : bool;
+      L15 : int32;
+      L16 : bool;
+      L17 : int32;
+      L18 : int32;
+      L19 : bool;
+      L20 : bool;
+      L21 : bool;
+      L22 : bool;
+      L23 : bool;
+      L24 : bool;
+      L25 : bool;
+      L26 : bool;
+      L27 : bool;
+      L28 : bool;
+      L29 : bool;
+   let
+      L1 = delta;
+      L2 = 0;
+      L5, L4, L3 = Utils::GtEqlt(L1, L2);
+      L6 = ab;
+      L7 =  not L6;
+      L8 = L7 and L5;
+      L9 = L8 or L12;
+      die = L9;
+      L10 = aa;
+      L11 =  not L10;
+      L12 = L3 and L11;
+      _ = L4;
+      L13 = pa;
+      L14 = pb;
+      L15 = Utils::Mg_delta(L13, L14);
+      delta = L15;
+      L16 = true;
+      ac = L16;
+      L17 = delta;
+      L18 = 0;
+      L21, L20, L19 = Utils::GtEqlt(L17, L18);
+      L22 = L21 and L26;
+      L23 = L22 or L25;
+      L24 = L23 or L29;
+      pc = L24;
+      L25 = L20 and L27;
+      L26 = pb;
+      L27 = L26 and L28;
+      L28 = pa;
+      L29 = L28 and L19;
+   tel
+   until
+      if die do 
+         restart Dead;
+
+   state Dead
+returns .. ;

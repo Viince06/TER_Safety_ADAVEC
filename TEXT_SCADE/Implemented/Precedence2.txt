@@ -1,0 +1,7 @@
+L1 = Precedence2(L2, L3, L4, L5, L6);
+L2 = a;
+L3 = b;
+L4 = init;
+L5 = max;
+L6 = kind;
+v = L1;

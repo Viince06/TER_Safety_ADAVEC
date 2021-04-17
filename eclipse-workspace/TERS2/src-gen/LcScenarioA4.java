@@ -44,11 +44,15 @@ public class LcScenarioA4 implements ISpecificationBuilder {
 		
 		simple.union("DayTime", "Sunny", "Night");
 		
-		simple.causality("Sunny", "DayTime", 0, 1);
+		simple.precedence("Sunny", "Night", 0, 1);
 		
 		simple.union("Road", "Highway", "Interurban", "Urban");
 		
 		simple.causality("Road", "Urban");
+		
+		simple.exclusion("Highway", "Interurban");
+		simple.exclusion("Highway", "Urban");
+		simple.exclusion("Interurban", "Urban");
 		
 		simple.union("Traffic", "HeavyTraffic", "Light", "StopAhead");
 		

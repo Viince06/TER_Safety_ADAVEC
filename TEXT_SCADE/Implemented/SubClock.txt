@@ -1,0 +1,4 @@
+L1 = SubClock(L2, L3);
+L2 = a;
+L3 = b;
+v = L1;
