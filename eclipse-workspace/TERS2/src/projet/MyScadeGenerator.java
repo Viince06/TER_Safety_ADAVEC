@@ -1,5 +1,6 @@
 package projet;
 
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,9 +11,9 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
   
   // Method descriptor #6 (Ljava/lang/String;)V
   public void addClock(java.lang.String arg0) {
-	  PrintWriter outputfile = null;
+      PrintWriter outputfile = null;
 	  try {
-		  outputfile = new PrintWriter(new FileWriter("AddClock.xscade"));
+		  outputfile = new PrintWriter(new BufferedWriter(new FileWriter("FinalTest.xscade", true)));
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
@@ -27,7 +28,7 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
   public void subclock(java.lang.String arg0, java.lang.String arg1){
 	  PrintWriter outputfile = null;
 	  try {
-		  outputfile = new PrintWriter(new FileWriter("SubClock.xscade"));
+		  outputfile = new PrintWriter(new BufferedWriter(new FileWriter("FinalTest.xscade", true)));
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
@@ -42,7 +43,7 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
   public void exclusion(java.lang.String arg0, java.lang.String arg1){
 	  PrintWriter outputfile = null;
 	  try {
-		  outputfile = new PrintWriter(new FileWriter("Exclusion.xscade"));
+		  outputfile = new PrintWriter(new BufferedWriter(new FileWriter("FinalTest.xscade", true)));
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
@@ -58,7 +59,7 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
   public void precedence(java.lang.String arg0, java.lang.String arg1){
 	  PrintWriter outputfile = null;
 	  try {
-		  outputfile = new PrintWriter(new FileWriter("Precedence.xscade"));
+		  outputfile = new PrintWriter(new BufferedWriter(new FileWriter("FinalTest.xscade", true)));
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
@@ -75,7 +76,7 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
   public void precedence(java.lang.String arg0, java.lang.String arg1, int arg2, int arg3){
 	  PrintWriter outputfile = null;
 	  try {
-		  outputfile = new PrintWriter(new FileWriter("Precedence2.xscade"));
+		  outputfile = new PrintWriter(new BufferedWriter(new FileWriter("FinalTest.xscade", true)));
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
@@ -94,7 +95,7 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
   public void causality(java.lang.String arg0, java.lang.String arg1){
 	  PrintWriter outputfile = null;
 	  try {
-		  outputfile = new PrintWriter(new FileWriter("Causality.xscade"));
+		  outputfile = new PrintWriter(new BufferedWriter(new FileWriter("FinalTest.xscade", true)));
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
@@ -111,7 +112,7 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
   public void causality(java.lang.String arg0, java.lang.String arg1, int arg2, int arg3){
 	  PrintWriter outputfile = null;
 	  try {
-		  outputfile = new PrintWriter(new FileWriter("Causality2.xscade"));
+		  outputfile = new PrintWriter(new BufferedWriter(new FileWriter("FinalTest.xscade", true)));
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
@@ -129,7 +130,7 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
   public void inf(java.lang.String arg0, java.lang.String... arg1){
 	  PrintWriter outputfile = null;
 	  try {
-		  outputfile = new PrintWriter(new FileWriter("Inf.xscade"));
+		  outputfile = new PrintWriter(new BufferedWriter(new FileWriter("FinalTest.xscade", true)));
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }	  
@@ -145,7 +146,7 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
   public void sup(java.lang.String arg0, java.lang.String... arg1){
 	  PrintWriter outputfile = null;
 	  try {
-		  outputfile = new PrintWriter(new FileWriter("Sup.xscade"));
+		  outputfile = new PrintWriter(new BufferedWriter(new FileWriter("FinalTest.xscade", true)));
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }	  
@@ -161,7 +162,7 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
   public void union(java.lang.String arg0, java.lang.String... arg1){
 	  PrintWriter outputfile = null;
 	  try {
-		  outputfile = new PrintWriter(new FileWriter("Union.xscade"));
+		  outputfile = new PrintWriter(new BufferedWriter(new FileWriter("FinalTest.xscade", true)));
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
@@ -177,7 +178,7 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
   public void intersection(java.lang.String arg0, java.lang.String... arg1){
 	  PrintWriter outputfile = null;
 	  try {
-		  outputfile = new PrintWriter(new FileWriter("Intersection.xscade"));
+		  outputfile = new PrintWriter(new BufferedWriter(new FileWriter("FinalTest.xscade", true)));
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
@@ -193,7 +194,7 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
   public void minus(java.lang.String arg0, java.lang.String... arg1){
 	  PrintWriter outputfile = null;
 	  try {
-		  outputfile = new PrintWriter(new FileWriter("Minus.xscade"));
+		  outputfile = new PrintWriter(new BufferedWriter(new FileWriter("FinalTest.xscade", true)));
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
@@ -208,7 +209,7 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
   public void periodic(java.lang.String arg0, java.lang.String arg1, int arg2, int arg3, int arg4){
 	  PrintWriter outputfile = null;
 	  try {
-		  outputfile = new PrintWriter(new FileWriter("Periodic.xscade"));
+		  outputfile = new PrintWriter(new BufferedWriter(new FileWriter("FinalTest.xscade", true)));
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
@@ -227,7 +228,7 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
   public void delayFor(java.lang.String arg0, java.lang.String arg1, int arg2, int arg3, java.lang.String arg4){
 	  PrintWriter outputfile = null;
 	  try {
-		  outputfile = new PrintWriter(new FileWriter("DelayFor.xscade"));
+		  outputfile = new PrintWriter(new BufferedWriter(new FileWriter("FinalTest.xscade", true)));
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }

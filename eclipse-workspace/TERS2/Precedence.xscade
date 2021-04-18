@@ -1,5 +1,0 @@
-L1 = Precedence(L2, L3, L4);
-L2 = a;
-L3 = b;
-L4 = kind;
-v = L1;
