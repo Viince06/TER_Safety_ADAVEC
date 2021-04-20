@@ -13,33 +13,28 @@ Specification ScenarioA2 {
 			
 			// Weather
 			Let DayTime be Sunny + Night
-			Precedence Night <= (max: 1) DayTime
+			Precedence Night <= (max: 1) Night
 		
 		
 			// Road
 			Let Road be Highway + Interurban + Urban
-			Precedence Road <= Urban
 			
 			
 			// Traffic
 			Let Traffic be HeavyTraffic + Light + StopAhead
-			Precedence Traffic <= Light
 			
 			
 			// Vehicle  ---------START TRIGGER-----------------
 			Let Sensors be FaultySensor + NoIssue
-			Precedence Sensors <= FaultySensor
 			//------------------END TRIGGER--------------------
 			
 			
 			// Human - Health
 			Let Health be Death + Drunk + Unconscious + Inebriated + Relaxed + Influenced
-			Precedence Health <= Relaxed
 			
 			
 			// FinalMode
 			Let FinalMode be Automatic + Manual + MRM
-			Precedence FinalMode <= Manual
 			
 			
 

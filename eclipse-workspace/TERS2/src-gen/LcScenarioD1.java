@@ -44,38 +44,26 @@ public class LcScenarioD1 implements ISpecificationBuilder {
 		
 		simple.union("DayTime", "Sunny", "Night");
 		
-		simple.causality("Sunny", "DayTime", 0, 1);
+		simple.causality("Sunny", "Night", 0, 1);
 		
 		simple.union("Road", "Highway", "Interurban", "Urban");
 		
-		simple.causality("Road", "Highway");
-		
 		simple.union("Event", "HighwayExit", "CountrySide");
 		
-		simple.causality("Event", "HighwayExit");
-		
-		simple.subclock("Road", "Event");
+		simple.subclock("Highway", "HighwayExit");
 		
 		simple.union("Traffic", "HeavyTraffic", "Light", "StopAhead");
 		
-		simple.causality("Traffic", "Light");
-		
 		simple.union("Sensors", "FaultySensor", "NoIssue");
-		
-		simple.causality("Sensors", "NoIssue");
 		
 		simple.union("Health", "Death", "Drunk", "Unconscious", "Inebriated", "Relaxed", "Influenced");
 		
-		simple.causality("Health", "Relaxed");
-		
 		simple.union("FinalMode", "Automatic", "Manual", "MRM");
-		
-		simple.causality("FinalMode", "Manual");
 		
 		simple.delayFor("Transfer", "HighwayExit", 5, -1, "Seconds");
 		
-		simple.causality("HighwayExit", "FinalMode");
-		simple.causality("FinalMode", "Transfer");
+		simple.causality("HighwayExit", "Manual");
+		simple.causality("Manual", "Transfer");
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()

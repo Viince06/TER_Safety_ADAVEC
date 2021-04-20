@@ -14,40 +14,34 @@ Specification ScenarioA6 {
 			
 			// Weather
 			Let DayTime be Sunny + Night
-			Precedence Sunny <= (max: 1) DayTime
+			Precedence Sunny <= (max: 1) Night
 			
 			Let Hazard be Fog + Rain + Snow
-			Precedence Hazard <= Rain
 		
 		
 			// Road
 			Let Road be Highway + Interurban + Urban
-			Precedence Road <= Urban
 			
 			
 			// Traffic
 			Let Traffic be HeavyTraffic + Light + StopAhead
-			Precedence Traffic <= Light
 			
 			
 			// Vehicle  
 			Let Sensors be FaultySensor + NoIssue
-			Precedence Sensors <= NoIssue
 			
 			
 			
 			// Human - Focus ---------START TRIGGER-----------------
 			Let Focus be NotFocused + Inactive + Inattentive + LongDriving 
-			Precedence Focus <= NotFocused
 			//------------------END TRIGGER--------------------
 			
 			
 			// FinalMode
 			Let FinalMode be Automatic + Manual + MRM
-			Precedence FinalMode <= Automatic
 			
 			Transfer = NotFocused $ 5 on Seconds
-			Precedence Unconscious <= FinalMode <= Transfer
+			Precedence NotFocused <= Automatic <= Transfer
 			
 			
 

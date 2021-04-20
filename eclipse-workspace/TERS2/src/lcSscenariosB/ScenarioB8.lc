@@ -14,41 +14,35 @@ Specification ScenarioB8 {
 			
 			// Weather
 			Let DayTime be Sunny + Night
-			Precedence Sunny <= (max: 1) DayTime
+			Precedence Sunny <= (max: 1) Night
 			
 			Let Hazard be Fog + Rain + Snow
-			Precedence Hazard <= Rain
 			
-			SubClocking DayTime <- Hazard 
+			SubClocking Sunny <- Rain 
 					
 		
 			// Road
 			Let Road be Highway + Interurban + Urban
-			Precedence Road <= Urban
 			
 			
 			// Traffic
 			Let Traffic be HeavyTraffic + Light + StopAhead
-			Precedence Traffic <= Light
 			
 			
 			// Vehicle  
 			Let Sensors be FaultySensor + NoIssue
-			Precedence Sensors <= NoIssue
 			
 			
 			
 			// Human - Focus
 			Let Focus be NotFocused + Inactive + Inattentive + LongDriving 
-			Precedence Focus <= LongDriving
 			
 			
 			// FinalMode
 			Let FinalMode be Automatic + Manual + MRM
-			Precedence FinalMode <= Automatic
 			  
 			Transfer = LongDriving $ 5 on Seconds
-			Precedence LongDriving <= FinalMode <= Transfer
+			Precedence LongDriving <= Automatic <= Transfer
 			
 			
 

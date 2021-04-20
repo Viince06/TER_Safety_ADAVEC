@@ -14,39 +14,34 @@ Specification ScenarioD4 {
 			
 			// Weather
 			Let DayTime be Sunny + Night
-			Precedence Sunny <= (max: 1) DayTime
+			Precedence Sunny <= (max: 1) Night
 		
 		
 			// Road
 			Let Road be Highway + Interurban + Urban
-			Precedence Road <= Urban
 		
 			
 			
 			// Traffic
 			Let Traffic be HeavyTraffic + Light + StopAhead
-			Precedence Traffic <= Light
 			
 			
 			
 			// Vehicle  
 			Let Sensors be FaultySensor + NoIssue
-			Precedence Sensors <= NoIssue
 			
 			
 			
 			// Human - Focus ---------START TRIGGER-----------------
 			Let Focus be NotFocused + Inactive + Inattentive + LongDriving 
-			Precedence Focus <= Inactive
 			//------------------END TRIGGER--------------------
 			
 			
 			// FinalMode
 			Let FinalMode be Automatic + Manual + MRM
-			Precedence FinalMode <= Manual
 			
 			Transfer = Inactive $ 5 on Seconds
-			Precedence Inactive <= FinalMode <= Transfer
+			Precedence Inactive <= Manual <= Transfer
 			
 			
 

@@ -14,43 +14,37 @@ Specification ScenarioB4 {
 			
 			// Weather
 			Let DayTime be Sunny + Night
-			Precedence Sunny <= (max: 1) DayTime
+			Precedence Sunny <= (max: 1) Night
 		
 		
 			// Road
 			Let Road be Highway + Interurban + Urban
-			Precedence Road <= Interurban
 			
 			Let Event be HighwayExit + CountrySide
-			Precedence Event <= CountrySide
 			
-			SubClocking Road <- Event
+			SubClocking Road <- CountrySide
 			
 			
 			// Traffic
 			Let Traffic be HeavyTraffic + Light + StopAhead
-			Precedence Traffic <= Light
 			
 			
 			
 			// Vehicle  
 			Let Sensors be FaultySensor + NoIssue
-			Precedence Sensors <= NoIssue
 			
 			
 			
 			// Human - Health ---------START TRIGGER-----------------
 			Let Health be Death + Drunk + Unconscious + Inebriated + Relaxed + Influenced
-			Precedence Health <= Influenced
 			//------------------END TRIGGER--------------------
 			
 			
 			// FinalMode
 			Let FinalMode be Automatic + Manual + MRM
-			Precedence FinalMode <= MRM
 			
 			Transfer = Influenced $ 5 on Seconds
-			Precedence Influenced <= FinalMode <= Transfer
+			Precedence Influenced <= MRM <= Transfer
 			
 			
 

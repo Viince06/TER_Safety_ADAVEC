@@ -14,39 +14,34 @@ Specification ScenarioC3 {
 			
 			// Weather
 			Let DayTime be Sunny + Night
-			Precedence Sunny <= (max: 1) DayTime
+			Precedence Sunny <= (max: 1) Night
 			
 		
 		
 			// Road
 			Let Road be Highway + Interurban + Urban
-			Precedence Road <= Urban
 			
 			
 			
 			// Traffic
 			Let Traffic be HeavyTraffic + Light + StopAhead
-			Precedence Traffic <= Light
 			
 			
 			// Vehicle  ---------START TRIGGER-----------------
 			Let Sensors be FaultySensor + NoIssue
-			Precedence Sensors <= FaultySensor
 			//------------------END TRIGGER--------------------
 			
 			
 			// Human - Stress 
 			Let Stress be Stressed + StressedIntense + StressedModerate
-			Precedence Stress <= StressedModerate
 			
 			
 			
 			// FinalMode
 			Let FinalMode be Automatic + Manual + MRM
-			Precedence FinalMode <= Manual
 			
 			Transfer = FaultySensor $ 5 on Seconds
-			Precedence FaultySensor <= FinalMode <= Transfer
+			Precedence FaultySensor <= Manual <= Transfer
 			
 			
 

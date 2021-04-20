@@ -13,12 +13,10 @@ Specification ScenarioB1 {
 			
 			// Weather  ---------START TRIGGER-----------------
 			Let DayTime be Sunny + Night
-			Precedence Sunny <= (max: 1) DayTime
+			Precedence Sunny <= (max: 1) Night
 		
 		
 			Let Hazard be Fog + Rain + Snow
-			//If Scenario establishes Fog as a condition
-			Precedence Hazard <= Rain
 			
 			SubClocking Sunny <- Hazard
 			// ------------------END TRIGGER--------------------
@@ -26,27 +24,22 @@ Specification ScenarioB1 {
 			
 			// Road
 			Let Road be Highway + Interurban + Urban
-			Precedence Road <= Highway
 			
 			
 			// Traffic
 			Let Traffic be HeavyTraffic + Light + StopAhead
-			Precedence Traffic <= Light
 			
 			
 			// Vehicle
 			Let Sensors be FaultySensor + NoIssue
-			Precedence Sensors <= NoIssue
 			
 			
 			// Human - Health
 			Let Health be Death + Drunk + Unconscious + Inebriated + Relaxed + Influenced
-			Precedence Health <= Relaxed
 			
 			
 			// FinalMode
 			Let FinalMode be Automatic + Manual + MRM
-			Precedence FinalMode <= Manual
 			
 			
 

@@ -13,39 +13,33 @@ Specification ScenarioA3 {
 			
 			// Weather
 			Let DayTime be Sunny + Night
-			Precedence Sunny <= (max: 1) DayTime
+			Precedence Sunny <= (max: 1) Night
 		
 		
 			// Road
 			Let Road be Highway + Interurban + Urban
-			Precedence Road <= Urban
 			
 			Let Event be HighwayExit + CountrySide
-			Precedence Event <= CountrySide
 			
 			SubClocking Road <- Event  // Precedence or SubClock?
 			
 			
 			// Traffic
 			Let Traffic be HeavyTraffic + Light + StopAhead
-			Precedence Traffic <= Light
 			
 			
 			// Vehicle  
 			Let Sensors be FaultySensor + NoIssue
-			Precedence Sensors <= NoIssue
 			
 			
 			
 			// Human - Stress ---------START TRIGGER-----------------
 			Let Stress be Stressed + StressedIntense + StressedModerate
-			Precedence Stress <= Stressed
 			//------------------END TRIGGER--------------------
 			
 			
 			// FinalMode
 			Let FinalMode be Automatic + Manual + MRM
-			Precedence FinalMode <= Manual
 			
 			
 

@@ -19,33 +19,28 @@ Specification ScenarioA4 {
 		
 			// Road
 			Let Road be Highway + Interurban + Urban
-			Precedence Road <= Urban  // TAUTOLOGIQUE
 			Exclusion Highway # Interurban # Urban
 			
 			
 			// Traffic
 			Let Traffic be HeavyTraffic + Light + StopAhead
-			Precedence Traffic <= Light
 			
 			
 			// Vehicle  
 			Let Sensors be FaultySensor + NoIssue
-			Precedence Sensors <= NoIssue
 			
 			
 			
 			// Human - Health ---------START TRIGGER-----------------
 			Let Health be Death + Drunk + Unconscious + Inebriated + Relaxed + Influenced
-			Precedence Health <= Drunk
 			//------------------END TRIGGER--------------------
 			
 			
 			// FinalMode
 			Let FinalMode be Automatic + Manual + MRM
-			Precedence FinalMode <= Automatic
 			
 			Transfer = Drunk $ 5 on Seconds
-			Precedence Drunk <= FinalMode <= Transfer
+			Precedence Drunk <= Automatic <= Transfer
 			
 			
 
