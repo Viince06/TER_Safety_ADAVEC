@@ -17,11 +17,11 @@ public class LcWeather implements ISpecificationBuilder {
 		
 		simple.union("Normal", "Day", "Night");
 		
-		simple.causality("Day", "Normal", 0, 1);
+		simple.causality("Day", "Night", 0, 1);
 		
 		simple.union("Hazard", "Fog", "Rain", "Snow");
 		
-		simple.causality("Hazard", "Fog");
+		simple.exclusion("Rain", "Snow");
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()

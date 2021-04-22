@@ -3,13 +3,20 @@ Specification Road {
 		
 
 		Let Road be Highway + Interurban + Urban
-		
-		Precedence Road <= Urban
+		Exclusion Highway # Interurban # Urban  // A current road can only be one of these, not both in the same time
 		
 		
 		Let Event be HighwayExit + CountrySide
+		Exclusion HighwayExit # CountrySide
 		
-		//If Scenario establishes Highway as a Event Road
-		Precedence Event <= Highway
+		Precedence Highway < HighwayExit  // When we exit the highway, we can't go everywhere else
+		
+		
+		Let NormalRoad be Road minus Highway
+		Precedence HighwayExit < NormalRoad  // When we exit the highway exit, we will go either on Urban or Interurban road
+		
+		Precedence CountrySide <= Interurban // Assuming a CountrySide is only on an Interurban road, 
+											//we may backtrack in CountrySide or we may proceed into the Interurban road
+		
 	]
 }

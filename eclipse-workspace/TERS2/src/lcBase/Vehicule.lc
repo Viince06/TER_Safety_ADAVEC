@@ -1,10 +1,8 @@
 Specification Vehicule {
 	Clock FaultySensor, NoIssue [
-		
 
 		Let Sensors be FaultySensor + NoIssue
-		
-		Precedence Sensors <= NoIssue
+		Exclusion FaultySensor # NoIssue // Opposite cases
 		
 		
 	]

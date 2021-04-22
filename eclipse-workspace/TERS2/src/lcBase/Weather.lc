@@ -1,16 +1,14 @@
 Specification Weather {
 	Clock Fog, Rain, Snow, Day, Night [
 		
-		// Splitting between weather conditions and normal weather
 
 		Let Normal be Day + Night
-		
-		Precedence Day <= (max: 1) Normal
+		Precedence Day <= (max: 1) Night
 		
 		
 		Let Hazard be Fog + Rain + Snow
+		Exclusion Rain # Snow  // There can't be both, it's strictly dependent on °C
 		
-		//If Scenario establishes Fog as a condition
-		Precedence Hazard <= Fog
+		
 	]
 }

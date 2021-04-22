@@ -14,7 +14,7 @@ public class LcVehicule implements ISpecificationBuilder {
 		
 		simple.union("Sensors", "FaultySensor", "NoIssue");
 		
-		simple.causality("Sensors", "NoIssue");
+		simple.exclusion("FaultySensor", "NoIssue");
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()

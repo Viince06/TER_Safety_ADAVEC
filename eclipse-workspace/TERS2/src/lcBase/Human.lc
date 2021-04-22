@@ -5,12 +5,22 @@ Specification Human {
 		
 
 			Let Stress be Stressed + StressedIntense + StressedModerate
+			Precedence Stress <= StressedIntense  // From a generic Stress to an intense one
+			Precedence Stress <= StressedModerate // From a generic Stress to a moderate one
+			Precedence StressedModerate < StressedIntense // Once we're stressed, we may be even more stressed
 
 
-			Let Health be Death + Drunk + Unconscious + Inebriated + Relaxed + Influenced
+			Let Health be Death + Drunk + Unconscious + Inebriated + Influenced
+			Precedence Drunk <= Inebriated  // Being happy due to having drank too much
+			Precedence Drunk <= Unconscious  // Or KO due to having drank WAY too much
+			Precedence Influenced <= Unconscious // If the influence gets higher and higher while driving
+			Precedence Unconscious < (max: 31536000) Death // If Unconscious for way too much time
+			
 
 
-			Let Focus be NotFocused + Inactive + Inattentive + LongDriving 
+			Let Focus be Relaxed + NotFocused + Inactive + Inattentive + LongDriving   // Relaxed = Focused
+			Precedence LongDriving <= NotFocused  // Being tired after a long driving session
+			Precedence Inactive <= Inattentive   // Being not careful as the vehicle is in Automatic Mode
 		
 		
 	]

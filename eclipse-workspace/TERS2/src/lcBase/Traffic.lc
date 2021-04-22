@@ -1,11 +1,12 @@
 Specification Traffic {
 	Clock HeavyTraffic, Light, StopAhead [
 		
-
 		Let Traffic be HeavyTraffic + Light + StopAhead
+		Exclusion HeavyTraffic # Light # StopAhead
 		
-		Precedence Traffic <= Light
-		
+		Precedence Light <= StopAhead      // On Light Traffic, a vehicle may suddenly stop. Once it restarts, traffic may be light as before...
+		Precedence StopAhead <= HeavyTraffic  // ...or it can generate an Heavy Traffic!
+		Precedence HeavyTraffic < Light      // Once circulation starts to flow, the traffic dissipates into a light one
 		
 	]
 }

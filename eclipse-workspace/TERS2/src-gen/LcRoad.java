@@ -17,11 +17,21 @@ public class LcRoad implements ISpecificationBuilder {
 		
 		simple.union("Road", "Highway", "Interurban", "Urban");
 		
-		simple.causality("Road", "Urban");
+		simple.exclusion("Highway", "Interurban");
+		simple.exclusion("Highway", "Urban");
+		simple.exclusion("Interurban", "Urban");
 		
 		simple.union("Event", "HighwayExit", "CountrySide");
 		
-		simple.causality("Event", "Highway");
+		simple.exclusion("HighwayExit", "CountrySide");
+		
+		simple.precedence("Highway", "HighwayExit");
+		
+		simple.minus("NormalRoad", "Road", "Highway");
+		
+		simple.precedence("HighwayExit", "NormalRoad");
+		
+		simple.causality("CountrySide", "Interurban");
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()

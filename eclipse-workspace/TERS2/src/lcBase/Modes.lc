@@ -1,9 +1,14 @@
 Specification Modes {
-	Clock Autonomous, Manual, MRM [
-		Let finalMode be Autonomous + Manual + MRM
+	Clock Automatic, Manual, MRM, ReactionTime, GenericTrigger [
 		
-		//wanting a specific finalMode on the set
+		Let StartMode be Automatic + Manual + MRM
+		Let FinalMode be Automatic + Manual + MRM
+		Exclusion Automatic # Manual # MRM
 		
-		Precedence finalMode <= Autonomous
+		
+		transfer = GenericTrigger sampledOn ReactionTime  // Hidden Constant attempt
+		Precedence StartMode <= GenericTrigger <= FinalMode <= transfer  //Modes and trigger to specify
+		
+		
 	]
 }

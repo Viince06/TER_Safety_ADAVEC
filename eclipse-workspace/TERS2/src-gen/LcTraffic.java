@@ -15,7 +15,15 @@ public class LcTraffic implements ISpecificationBuilder {
 		
 		simple.union("Traffic", "HeavyTraffic", "Light", "StopAhead");
 		
-		simple.causality("Traffic", "Light");
+		simple.exclusion("HeavyTraffic", "Light");
+		simple.exclusion("HeavyTraffic", "StopAhead");
+		simple.exclusion("Light", "StopAhead");
+		
+		simple.causality("Light", "StopAhead");
+		
+		simple.causality("StopAhead", "HeavyTraffic");
+		
+		simple.precedence("HeavyTraffic", "Light");
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()

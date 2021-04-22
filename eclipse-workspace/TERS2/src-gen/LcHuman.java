@@ -25,9 +25,27 @@ public class LcHuman implements ISpecificationBuilder {
 		
 		simple.union("Stress", "Stressed", "StressedIntense", "StressedModerate");
 		
-		simple.union("Health", "Death", "Drunk", "Unconscious", "Inebriated", "Relaxed", "Influenced");
+		simple.causality("Stress", "StressedIntense");
 		
-		simple.union("Focus", "NotFocused", "Inactive", "Inattentive", "LongDriving");
+		simple.causality("Stress", "StressedModerate");
+		
+		simple.precedence("StressedModerate", "StressedIntense");
+		
+		simple.union("Health", "Death", "Drunk", "Unconscious", "Inebriated", "Influenced");
+		
+		simple.causality("Drunk", "Inebriated");
+		
+		simple.causality("Drunk", "Unconscious");
+		
+		simple.causality("Influenced", "Unconscious");
+		
+		simple.precedence("Unconscious", "Death", 0, 31536000);
+		
+		simple.union("Focus", "Relaxed", "NotFocused", "Inactive", "Inattentive", "LongDriving");
+		
+		simple.causality("LongDriving", "NotFocused");
+		
+		simple.causality("Inactive", "Inattentive");
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()
