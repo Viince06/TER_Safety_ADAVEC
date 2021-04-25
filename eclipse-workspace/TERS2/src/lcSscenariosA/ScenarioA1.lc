@@ -17,7 +17,6 @@ Specification ScenarioA1 {
 		
 		
 			Let Hazard be Fog + Rain + Snow
-			SubClocking Sunny <- Fog  
 			// ------------------END TRIGGER--------------------
 			
 			

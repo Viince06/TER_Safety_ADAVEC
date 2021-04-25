@@ -4,11 +4,14 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecification {
 	
-	
-  
+	int count;
+	Map<String, String> map = new HashMap<String, String>();
+
   // Method descriptor #6 (Ljava/lang/String;)V
   public void addClock(java.lang.String arg0) {
       PrintWriter outputfile = null;
@@ -17,7 +20,7 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
-	  outputfile.println("L2, L1 = AddClock(L3);");
+	  outputfile.println("L2, L1 = AddClock(L3);");	
 	  outputfile.println("L3 = " + arg0 + ";");
 	  outputfile.println("presence = L2;");
 	  outputfile.println("alive = L1;");

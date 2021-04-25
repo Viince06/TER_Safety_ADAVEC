@@ -23,7 +23,7 @@ public class LcTraffic implements ISpecificationBuilder {
 		
 		simple.causality("StopAhead", "HeavyTraffic");
 		
-		simple.precedence("HeavyTraffic", "Light");
+		simple.precedence("HeavyTraffic", "Light", 1, 1);
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()

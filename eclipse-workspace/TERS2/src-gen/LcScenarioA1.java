@@ -47,8 +47,6 @@ public class LcScenarioA1 implements ISpecificationBuilder {
 		
 		simple.union("Hazard", "Fog", "Rain", "Snow");
 		
-		simple.subclock("Sunny", "Fog");
-		
 		simple.union("Road", "Highway", "Interurban", "Urban");
 		
 		simple.union("Traffic", "HeavyTraffic", "Light", "StopAhead");

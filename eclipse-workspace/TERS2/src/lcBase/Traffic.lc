@@ -6,7 +6,7 @@ Specification Traffic {
 		
 		Precedence Light <= StopAhead      // On Light Traffic, a vehicle may suddenly stop. Once it restarts, traffic may be light as before...
 		Precedence StopAhead <= HeavyTraffic  // ...or it can generate an Heavy Traffic!
-		Precedence HeavyTraffic < Light      // Once circulation starts to flow, the traffic dissipates into a light one
+		Precedence HeavyTraffic < (init: 1 max: 1) Light      // Once circulation starts to flow, the traffic dissipates into a light one
 		
 	]
 }

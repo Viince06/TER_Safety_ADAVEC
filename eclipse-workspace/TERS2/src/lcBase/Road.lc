@@ -1,6 +1,9 @@
 Specification Road {
-	Clock HighwayExit, Highway, Interurban, Urban, CountrySide [
+	Clock HighwayExit, Highway, Interurban, Urban, CountrySide, 
+		HighwayNotExit, Exit, ExitSign [
 		
+
+		//Highway -> HighwayEnter
 
 		Let Road be Highway + Interurban + Urban
 		Exclusion Highway # Interurban # Urban  // A current road can only be one of these, not both in the same time
@@ -9,13 +12,21 @@ Specification Road {
 		Let Event be HighwayExit + CountrySide
 		Exclusion HighwayExit # CountrySide
 		
-		Precedence Highway < HighwayExit  // When we exit the highway, we can't go everywhere else
+		Let AllExits be HighwayExit + HighwayNotExit
+		Exclusion HighwayExit # HighwayNotExit
+		
+		
+		Let HighwaySign be Exit + ExitSign
+		SubClocking ExitSign <- Exit
+		
+		
+		Precedence Highway < (max: 1) HighwayExit  // When we exit the highway, we can't go everywhere else
 		
 		
 		Let NormalRoad be Road minus Highway
 		Precedence HighwayExit < NormalRoad  // When we exit the highway exit, we will go either on Urban or Interurban road
 		
-		Precedence CountrySide <= Interurban // Assuming a CountrySide is only on an Interurban road, 
+		//Precedence CountrySide <= Interurban // Assuming a CountrySide is only on an Interurban road, 
 											//we may backtrack in CountrySide or we may proceed into the Interurban road
 		
 	]

@@ -14,6 +14,9 @@ public class LcRoad implements ISpecificationBuilder {
 		simple.addClock("Interurban");
 		simple.addClock("Urban");
 		simple.addClock("CountrySide");
+		simple.addClock("HighwayNotExit");
+		simple.addClock("Exit");
+		simple.addClock("ExitSign");
 		
 		simple.union("Road", "Highway", "Interurban", "Urban");
 		
@@ -25,13 +28,19 @@ public class LcRoad implements ISpecificationBuilder {
 		
 		simple.exclusion("HighwayExit", "CountrySide");
 		
-		simple.precedence("Highway", "HighwayExit");
+		simple.union("AllExits", "HighwayExit", "HighwayNotExit");
+		
+		simple.exclusion("HighwayExit", "HighwayNotExit");
+		
+		simple.union("HighwaySign", "Exit", "ExitSign");
+		
+		simple.subclock("ExitSign", "Exit");
+		
+		simple.precedence("Highway", "HighwayExit", 0, 1);
 		
 		simple.minus("NormalRoad", "Road", "Highway");
 		
 		simple.precedence("HighwayExit", "NormalRoad");
-		
-		simple.causality("CountrySide", "Interurban");
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()
