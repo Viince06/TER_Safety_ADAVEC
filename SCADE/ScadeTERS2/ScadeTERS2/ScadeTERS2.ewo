@@ -2,18 +2,21 @@
 [STUDIO\TOOLS\CONFIGURATIONS\Code Generator]
 
 "D:\\Projets\\TERS2\\TER_SafetyCriticalSystem\\SCADE\\ScadeTERS2\\ScadeTERS2\\ScadeTERS2.etp"="Simulation" 
+"D:\\Projets\\S2\\TERS2\\TER_SafetyCriticalSystem\\SCADE\\ScadeTERS2\\ScadeTERS2\\ScadeTERS2.etp"="KCG" 
 
 [STUDIO\TOOLS\CONFIGURATIONS\Metrics and Rules Checker]
 
 "D:\\Projets\\TERS2\\TER_SafetyCriticalSystem\\SCADE\\ScadeTERS2\\ScadeTERS2\\ScadeTERS2.etp"="MetricRule" 
+"D:\\Projets\\S2\\TERS2\\TER_SafetyCriticalSystem\\SCADE\\ScadeTERS2\\ScadeTERS2\\ScadeTERS2.etp"="MetricRule" 
 
 [STUDIO\TOOLS\CONFIGURATIONS\Reporter]
 
 "D:\\Projets\\TERS2\\TER_SafetyCriticalSystem\\SCADE\\ScadeTERS2\\ScadeTERS2\\ScadeTERS2.etp"="HTML" 
+"D:\\Projets\\S2\\TERS2\\TER_SafetyCriticalSystem\\SCADE\\ScadeTERS2\\ScadeTERS2\\ScadeTERS2.etp"="HTML" 
 
 [STUDIO\Workspace]
 
-"ActiveProject"="D:\\Projets\\TERS2\\TER_SafetyCriticalSystem\\SCADE\\ScadeTERS2\\ScadeTERS2\\ScadeTERS2.etp" 
+"ActiveProject"="D:\\Projets\\S2\\TERS2\\TER_SafetyCriticalSystem\\SCADE\\ScadeTERS2\\ScadeTERS2\\ScadeTERS2.etp" 
 
 [SCADE\Editor\Shortcut]
 
