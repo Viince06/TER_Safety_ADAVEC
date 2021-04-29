@@ -1,0 +1,100 @@
+Specification ChangeModes {
+	// IMPORTING EVERY CLOCK
+	Clock Fog, Rain, Snow,   										// Weather Event
+		  Day, Night 												// Weather Nominal
+		  FaultySensor, NoSensorIssue 								// Vehicle Sensors
+		  HeavyTraffic, LightTraffic, StopAhead  					// Traffic Events 
+		  Highway, Interurban, Urban 								// Road Nominal
+		  CountrySide, HighwayExit, HighwayNotExit, Exit, ExitSign  // Road Event
+		  Automatic, Manual, MRM, ReactionTime				 		// Modes 
+		  Death, Inactive, Drunk, NotFocused, Unconscious, Stressed // Human 
+		  Inattentive, LongDriving, Relaxed, Influenced [
+		  
+		  
+		//-------------------------------WEATHER CONTEXT---------------------------
+		Let NormalWeather be Day + Night
+		Precedence Day <= (max: 1) Night
+		
+		Let Hazard be Fog + Rain + Snow
+		Exclusion Rain # Snow
+		//---------------------------VEHICLE CONTEXT-------------------------------
+		Let Sensors be FaultySensor + NoSensorIssue
+		Exclusion FaultySensor # NoSensorIssue
+		//--------------------------TRAFFIC CONTEXT--------------------------------
+		Let Traffic be HeavyTraffic + LightTraffic + StopAhead
+		Exclusion HeavyTraffic # LightTraffic # StopAhead
+		
+		Precedence LightTraffic <= StopAhead
+		Precedence StopAhead <= HeavyTraffic
+		Precedence HeavyTraffic < (init: 1 max: 1) LightTraffic
+		//----------------------------ROAD CONTEXT---------------------------------
+		Let Road be Highway + Interurban + Urban
+		Exclusion Highway # Interurban # Urban 		
+		
+		Let Event be HighwayExit + CountrySide
+		Exclusion HighwayExit # CountrySide
+		
+		Let AllExits be HighwayExit + HighwayNotExit
+		Exclusion HighwayExit # HighwayNotExit
+				
+		Let HighwaySign be Exit + ExitSign
+		SubClocking ExitSign <- Exit		
+		
+		Precedence Highway < (max: 1) HighwayExit
+				
+		Let NormalRoad be Road minus Highway
+		Precedence HighwayExit < NormalRoad
+		//-----------------------------HUMAN CONTEXT-------------------------------
+		Let Health be Death + Drunk + Unconscious + Stressed + Influenced
+		Precedence Drunk <= Unconscious
+		Precedence Influenced <= Unconscious 
+		Precedence Unconscious < (max: 31536000) Death 			
+
+		Let Focus be Relaxed + NotFocused + Inactive + Inattentive + LongDriving 
+		Precedence LongDriving <= NotFocused
+		Precedence Inactive <= Inattentive
+		//-----------------------MODES CONTEXT------------------------------------
+		Let StartMode be Automatic + Manual + MRM
+		Let FinalMode be Automatic + Manual + MRM
+		Exclusion Automatic # Manual # MRM
+		
+		Let ManualToMRM1 be Manual * Rain * HeavyTraffic * FaultySensor * LongDriving
+		Let ManualToMRM2 be Manual * Unconscious
+		Let ManualToMRM3 be Manual * CountrySide * Influenced
+		
+		Let AutomaToMRM1 be Automatic * Rain * Drunk
+		Let AutomaToMRM2 be Automatic * Unconscious
+		Let AutomaToMRM3 be Automatic * Death
+		
+		Let AutomaToManual1 be Automatic * Inactive
+		Let AutomaToManual2 be Automatic * FaultySensor * Stressed
+		Let AutomaToManual3 be Automatic * HighwayExit
+		Let AutomaToManual4 be Automatic * HighwayExit * FaultySensor
+		
+		Let ManualToAutoma1 be Manual * Rain * NotFocused
+		Let ManualToAutoma2 be Manual * Rain * LongDriving
+		Let ManualToAutoma3 be Manual * Drunk
+		Let ManualToAutoma4 be Manual * Influenced
+		
+		//MERGING AND CHANGING MODES
+		Let ManualToMRM be ManualToMRM1 + ManualToMRM2 + ManualToMRM3
+		Let AutomaToMRM be AutomaToMRM1 + AutomaToMRM2 + AutomaToMRM3
+		Let AutomaToManual be AutomaToManual1 + AutomaToManual2 + AutomaToManual3 + AutomaToManual4
+		Let ManualToAutoma be ManualToAutoma1 + ManualToAutoma2 + ManualToAutoma3 + ManualToAutoma4	
+		
+		
+		transfer1 = ManualToMRM sampledOn ReactionTime  
+		Precedence Manual <= ManualToMRM <= MRM <= transfer1
+		
+		transfer2 = AutomaToMRM sampledOn ReactionTime
+		Precedence Automatic <= AutomaToMRM <= MRM <= transfer2
+		 
+		transfer3 = AutomaToManual sampledOn ReactionTime
+		Precedence Automatic <= AutomaToManual <= Manual <= transfer3 
+		
+		transfer4 = ManualToAutoma sampledOn ReactionTime
+		Precedence Manual <= ManualToAutoma <= Automatic <= transfer4
+		
+		
+	]
+}
