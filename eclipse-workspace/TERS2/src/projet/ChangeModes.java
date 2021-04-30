@@ -1,4 +1,9 @@
 package projet;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import fr.kairos.timesquare.ccsl.ISimpleSpecification;
 import fr.kairos.timesquare.ccsl.simple.IUtility;
 import fr.kairos.timesquare.ccsl.simple.ISpecificationBuilder;
@@ -178,9 +183,21 @@ public class ChangeModes implements ISpecificationBuilder {
 	};
 	public static void main(String[] args) {
 		String name = "ChangeModes";
+		Path fileToDeletePath = Paths.get(name + ".xscade");
+		
 		for (IUtility u : utilities) {
 			u.treat(name, INSTANCE);
 		}
+
+		try {
+			Files.delete(fileToDeletePath);
+			System.out.println("DELETED EXISTING FILE");
+		} catch (IOException e) {
+			System.out.println("FILE DOES NOT EXIST");
+		}
+
+		System.out.println("GENERATING NEW FILE");
 		INSTANCE.build(new MyScadeGenerator());
+		System.out.println("FILE GENERATED SUCCESFULLY");
 	}
 }

@@ -7,7 +7,7 @@ Specification Human {
 			Let Stress be Stressed + StressedIntense + StressedModerate
 			Precedence Stress <= StressedIntense  // From a generic Stress to an intense one
 			Precedence Stress <= StressedModerate // From a generic Stress to a moderate one
-			Precedence StressedModerate < StressedIntense // Once we're stressed, we may be even more stressed
+			Precedence StressedModerate < StressedIntense // Once we're stressed, we may be even more stressed 
 
 
 			Let Health be Death + Drunk + Unconscious + Inebriated + Influenced

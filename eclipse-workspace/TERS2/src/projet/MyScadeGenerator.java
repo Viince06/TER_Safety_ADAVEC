@@ -4,15 +4,11 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecification {
 	
-	int count;
-	Map<String, String> map = new HashMap<String, String>();
-	ArrayList<String> stockList = new ArrayList<String>();
+	int countL;
+	int countO;
 	String destinationFile = "ChangeModes.xscade";
 
   // Method descriptor #6 (Ljava/lang/String;)V
@@ -23,16 +19,14 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
-	  outputfile.println("L1 = " + arg0 + ";");	
-	  outputfile.println("L2 = AddClock1(L1);");
-	  outputfile.println("v = L2;");
+	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
+	  outputfile.println("L" + ++countL + " = AddClock1(L" + (countL - 1) + ");");
+	  outputfile.println("O" + ++countO + " = L" + countL + ";");
 	  outputfile.close();
 	  
-	  //map.put("L1", arg0);
-	  
-	  stockList.add("L1 = " + arg0 + ";");
-	  stockList.add("L2 = AddClock1(L1);");
-	  stockList.add("v = L2;");
+	  //stockList.add("L1 = " + arg0 + ";");
+	  //stockList.add("L2 = AddClock1(L1);");
+	  //stockList.add("v = L2;");
   }
   
   // Method descriptor #8 (Ljava/lang/String;Ljava/lang/String;)V
@@ -43,10 +37,10 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
-	  outputfile.println("L1 = " + arg0 + ";");
-	  outputfile.println("L2 = " + arg1 + ";");
-	  outputfile.println("L3 = SubClock(L1, L2);");
-	  outputfile.println("v = L3;");
+	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg1 + ";");
+	  outputfile.println("L" + ++countL + " = SubClock(L" + (countL - 2) + ", L" + (countL - 1) + ");");
+	  outputfile.println("O" + ++countO + " = L" + countL + ";");
 	  outputfile.close();
   }
   
@@ -58,10 +52,10 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
-	  outputfile.println("L1 = " + arg0 + ";");
-	  outputfile.println("L2 = " + arg1 + ";");
-	  outputfile.println("L3 = Exclusion(L1, L2);");
-	  outputfile.println("v = L3;");
+	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg1 + ";");
+	  outputfile.println("L" + ++countL + " = Exclusion(L" + (countL - 2) + ", L" + (countL - 1) + ");");
+	  outputfile.println("O" + ++countO + " = L" + countL + ";");
 	  outputfile.close();
   }
   
@@ -74,11 +68,11 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
-	  outputfile.println("L1 = " + arg0 + ";");
-	  outputfile.println("L2 = " + arg1 + ";");
-	  outputfile.println("L3 = kind;");
-	  outputfile.println("L4 = Precedence(L1, L2, L3);");
-	  outputfile.println("v = L4;");
+	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg1 + ";");
+	  outputfile.println("L" + ++countL + " = kind;");
+	  outputfile.println("L" + ++countL + " = Precedence(L" + (countL - 3) + ", L" + (countL - 2) + ", L" + (countL - 1) + ");");
+	  outputfile.println("O" + ++countO + " = L" + countL + ";");
 	  outputfile.close();
   }
   
@@ -91,13 +85,13 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
-	  outputfile.println("L1 = " + arg0 + ";");
-	  outputfile.println("L2 = " + arg1 + ";");
-	  outputfile.println("L3 = " + arg2 + ";");
-	  outputfile.println("L4 = " + arg3 + ";");
-	  outputfile.println("L5 = kind");
-	  outputfile.println("L6 = Precedence2(L1, L2, L3, L4, L5);");
-	  outputfile.println("v = L6");
+	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg1 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg2 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg3 + ";");
+	  outputfile.println("L" + ++countL + " = kind;");
+	  outputfile.println("L" + ++countL + " = Precedence2(L" + (countL - 5) + ", L" + (countL - 4) + ", L" + (countL - 3) + ", L" + (countL - 2) + ", L" + (countL - 1) + ");");
+	  outputfile.println("O" + ++countO + " = L" + countL + ";");
 	  outputfile.close();
   }
   
@@ -110,11 +104,11 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
-	  outputfile.println("L1 = " + arg0 + ";");
-	  outputfile.println("L2 = " + arg1 + ";");
-	  outputfile.println("L3 = kind;");
-	  outputfile.println("L4 = Causality(L1, L2, L3);");
-	  outputfile.println("v = L4;");
+	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg1 + ";");
+	  outputfile.println("L" + ++countL + " = kind;");
+	  outputfile.println("L" + ++countL + " = Casuality(L" + (countL - 3) + ", L" + (countL - 2) + ", L" + (countL - 1) + ");");
+	  outputfile.println("O" + ++countO + " = L" + countL + ";");
 	  outputfile.close();
   }
   
@@ -127,13 +121,13 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
-	  outputfile.println("L1 = " + arg0 + ";");
-	  outputfile.println("L2 = " + arg1 + ";");
-	  outputfile.println("L3 = " + arg2 + ";");
-	  outputfile.println("L4 = " + arg3 + ";");
-	  outputfile.println("L5 = kind");
-	  outputfile.println("L6 = Causality2(L1, L2, L3, L4, L5);");
-	  outputfile.println("v = L6");
+	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg1 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg2 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg3 + ";");
+	  outputfile.println("L" + ++countL + " = kind;");
+	  outputfile.println("L" + ++countL + " = Causality2(L" + (countL - 5) + ", L" + (countL - 4) + ", L" + (countL - 3) + ", L" + (countL - 2) + ", L" + (countL - 1) + ");");
+	  outputfile.println("O" + ++countO + " = L" + countL + ";");
 	  outputfile.close();
   }
   
@@ -145,10 +139,10 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }	  
-	  outputfile.println("L1 = " + arg0 + ";");
-	  outputfile.println("L2 = " + arg1 + ";");
-	  outputfile.println("L3 = Inf(L1, L2);");
-	  outputfile.println("c = L3;");
+	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg1 + ";");
+	  outputfile.println("L" + ++countL + " = Inf(L" + (countL - 2) + ", L" + (countL - 1) + ");");
+	  outputfile.println("O" + ++countO + " = L" + countL + ";");
 	  outputfile.close();
   }
   
@@ -161,10 +155,10 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }	  
-	  outputfile.println("L1 = " + arg0 + ";");
-	  outputfile.println("L2 = " + arg1 + ";");
-	  outputfile.println("L3 = Sup(L1, L2);");
-	  outputfile.println("c = L3;");
+	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg1 + ";");
+	  outputfile.println("L" + ++countL + " = Sup(L" + (countL - 2) + ", L" + (countL - 1) + ");");
+	  outputfile.println("O" + ++countO + " = L" + countL + ";");
 	  outputfile.close();
   }
   
@@ -177,10 +171,10 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
-	  outputfile.println("L1 = " + arg0 + ";");
-	  outputfile.println("L2 = " + arg1 + ";");
-	  outputfile.println("L3 = Union(L1, L2);");
-	  outputfile.println("c = L3;");
+	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg1 + ";");
+	  outputfile.println("L" + ++countL + " = Union(L" + (countL - 2) + ", L" + (countL - 1) + ");");
+	  outputfile.println("O" + ++countO + " = L" + countL + ";");
 	  outputfile.close();
   }
   
@@ -193,10 +187,10 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
-	  outputfile.println("L1 = " + arg0 + ";");
-	  outputfile.println("L2 = " + arg1 + ";");
-	  outputfile.println("L3 = Intersection(L1, L2);");
-	  outputfile.println("c = L3;");
+	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg1 + ";");
+	  outputfile.println("L" + ++countL + " = Intersection(L" + (countL - 2) + ", L" + (countL - 1) + ");");
+	  outputfile.println("O" + ++countO + " = L" + countL + ";");
 	  outputfile.close();
   }
   
@@ -209,10 +203,10 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
-	  outputfile.println("L1 = " + arg0 + ";");
-	  outputfile.println("L2 = " + arg1 + ";");
-	  outputfile.println("L3 = Minus(L1, L2);");
-	  outputfile.println("c = L3;");
+	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg1 + ";");
+	  outputfile.println("L" + ++countL + " = Minus(L" + (countL - 2) + ", L" + (countL - 1) + ");");
+	  outputfile.println("O" + ++countO + " = L" + countL + ";");
 	  outputfile.close();
   }
   
@@ -224,13 +218,13 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
-	  outputfile.println("L1 = " + arg0 + ";");
-	  outputfile.println("L2 = " + arg1 + ";");
-	  outputfile.println("L3 = " + arg2 + ";");
-	  outputfile.println("L4 = " + arg3 + ";");
-	  outputfile.println("L5 = " + arg4 + ";");
-	  outputfile.println("L6 = Periodic(L1, L2, L3, L4, L5);");
-	  outputfile.println("v = L6;");
+	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg1 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg2 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg3 + ";");
+	  outputfile.println("L" + ++countL + " = kind;");
+	  outputfile.println("L" + ++countL + " = Periodic(L" + (countL - 5) + ", L" + (countL - 4) + ", L" + (countL - 3) + ", L" + (countL - 2) + ", L" + (countL - 1) + ");");
+	  outputfile.println("O" + ++countO + " = L" + countL + ";");
 	  outputfile.close();
   }
   
@@ -243,16 +237,14 @@ public class MyScadeGenerator implements fr.kairos.timesquare.ccsl.ISimpleSpecif
 		    } catch (IOException e) {
 		            e.printStackTrace();
 		    }
-	  outputfile.println("L1 = " + arg0 + ";");
-	  outputfile.println("L2 = " + arg1 + ";");
-	  outputfile.println("L3 = " + arg2 + ";");
-	  outputfile.println("L4 = " + arg3 + ";");
-	  outputfile.println("L5 = " + arg4 + ";");
-	  outputfile.println("L6 = DelayFor(L1, L2, L3, L4, L5);");
-	  outputfile.println("v = L6;");
+	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg1 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg2 + ";");
+	  outputfile.println("L" + ++countL + " = " + arg3 + ";");
+	  outputfile.println("L" + ++countL + " = kind;");
+	  outputfile.println("L" + ++countL + " = DelayFor(L" + (countL - 5) + ", L" + (countL - 4) + ", L" + (countL - 3) + ", L" + (countL - 2) + ", L" + (countL - 1) + ");");
+	  outputfile.println("O" + ++countO + " = L" + countL + ";");
 	  outputfile.close();
   }
-  
-  
-  // TODO public void show(ArrayList<String> list) ???
+ 
 }
