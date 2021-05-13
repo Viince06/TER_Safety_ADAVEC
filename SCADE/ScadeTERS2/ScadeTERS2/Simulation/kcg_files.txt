@@ -1,0 +1,15 @@
+mapping.xml
+kcg_metrics.txt
+Union1_Graphic_Scade.c
+Union_Graphic_Scade.c
+EncodeClockStatus_Utils.c
+DecodeClockStatus_Utils.c
+Union1_Graphic_Scade.h
+Union_Graphic_Scade.h
+EncodeClockStatus_Utils.h
+DecodeClockStatus_Utils.h
+kcg_types.h
+kcg_consts.h
+kcg_sensors.h
+kcg_types.c
+kcg_consts.c

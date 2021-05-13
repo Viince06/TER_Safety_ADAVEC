@@ -51,7 +51,7 @@
 		</Variable>
 	</inputs>
 	<outputs>
-		<Variable name="v">
+		<Variable name="o">
 			<type>
 				<NamedType>
 					<type>

@@ -8,13 +8,19 @@ SHELL=cmd.exe
 
 C_FLAGS = -pedantic
 
-all: Graphic_Scade__CausalityA_check.exe Graphic_Scade__CausalityA_check.dll 
+all: Graphic_Scade__Union1.exe Graphic_Scade__Union1.dll 
 
-win64/CausalityA_check_Graphic_Scade.o: CausalityA_check_Graphic_Scade.c
-	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "CausalityA_check_Graphic_Scade.c" -o "win64\CausalityA_check_Graphic_Scade.o"
+win64/Union1_Graphic_Scade.o: Union1_Graphic_Scade.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "Union1_Graphic_Scade.c" -o "win64\Union1_Graphic_Scade.o"
 
-win64/isPresent_Utils.o: isPresent_Utils.c
-	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "isPresent_Utils.c" -o "win64\isPresent_Utils.o"
+win64/Union_Graphic_Scade.o: Union_Graphic_Scade.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "Union_Graphic_Scade.c" -o "win64\Union_Graphic_Scade.o"
+
+win64/EncodeClockStatus_Utils.o: EncodeClockStatus_Utils.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "EncodeClockStatus_Utils.c" -o "win64\EncodeClockStatus_Utils.o"
+
+win64/DecodeClockStatus_Utils.o: DecodeClockStatus_Utils.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "DecodeClockStatus_Utils.c" -o "win64\DecodeClockStatus_Utils.o"
 
 win64/kcg_types.o: kcg_types.c
 	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "kcg_types.c" -o "win64\kcg_types.o"
@@ -49,8 +55,8 @@ win64/ScadeTERS2_interface.o: ScadeTERS2_interface.c
 win64/SmuProxy.o: D:/Programs\ Installed/ANSYS\ Inc/v211/SCADE\ Student/SCADE/lib/C/SmuProxy.c
 	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "D:\Programs Installed\ANSYS Inc\v211\SCADE Student\SCADE\lib\C\SmuProxy.c" -o "win64\SmuProxy.o"
 
-Graphic_Scade__CausalityA_check.dll: win64/CausalityA_check_Graphic_Scade.o win64/isPresent_Utils.o win64/kcg_types.o win64/kcg_consts.o win64/ScadeTERS2_mapping.o win64/ScadeTERS2_type.o win64/SmuPredefConv.o win64/SmuConfig.o win64/SmuTypes.o win64/SmuLib.o win64/SmuVTable.o win64/ScadeTERS2_interface.o win64/SmuProxy.o SmuExport.def 
-	gcc -mwindows -mwin32 -shared -static-libgcc  "win64\CausalityA_check_Graphic_Scade.o" "win64\isPresent_Utils.o" "win64\kcg_types.o" "win64\kcg_consts.o" "win64\ScadeTERS2_mapping.o" "win64\ScadeTERS2_type.o" "win64\SmuPredefConv.o" "win64\SmuConfig.o" "win64\SmuTypes.o" "win64\SmuLib.o" "win64\SmuVTable.o" "win64\ScadeTERS2_interface.o" "win64\SmuProxy.o" -Wl,--output-def,"SmuExport.def" -lm -lwsock32 -m64 -o "Graphic_Scade__CausalityA_check.dll" 
+Graphic_Scade__Union1.dll: win64/Union1_Graphic_Scade.o win64/Union_Graphic_Scade.o win64/EncodeClockStatus_Utils.o win64/DecodeClockStatus_Utils.o win64/kcg_types.o win64/kcg_consts.o win64/ScadeTERS2_mapping.o win64/ScadeTERS2_type.o win64/SmuPredefConv.o win64/SmuConfig.o win64/SmuTypes.o win64/SmuLib.o win64/SmuVTable.o win64/ScadeTERS2_interface.o win64/SmuProxy.o SmuExport.def 
+	gcc -mwindows -mwin32 -shared -static-libgcc  "win64\Union1_Graphic_Scade.o" "win64\Union_Graphic_Scade.o" "win64\EncodeClockStatus_Utils.o" "win64\DecodeClockStatus_Utils.o" "win64\kcg_types.o" "win64\kcg_consts.o" "win64\ScadeTERS2_mapping.o" "win64\ScadeTERS2_type.o" "win64\SmuPredefConv.o" "win64\SmuConfig.o" "win64\SmuTypes.o" "win64\SmuLib.o" "win64\SmuVTable.o" "win64\ScadeTERS2_interface.o" "win64\SmuProxy.o" -Wl,--output-def,"SmuExport.def" -lm -lwsock32 -m64 -o "Graphic_Scade__Union1.dll" 
 
 SmuExport.def: D:/Programs\ Installed/ANSYS\ Inc/v211/SCADE\ Student/SCADE/lib/C/SmuExport.def
 	copy "D:\Programs Installed\ANSYS Inc\v211\SCADE Student\SCADE\lib\C\SmuExport.def" "SmuExport.def"
@@ -61,8 +67,8 @@ win64/ScadeTERS2_dll.o: ScadeTERS2_dll.c
 win64/SmuMainWindows.o: D:/Programs\ Installed/ANSYS\ Inc/v211/SCADE\ Student/SCADE/lib/C/SmuMainWindows.c
 	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "D:\Programs Installed\ANSYS Inc\v211\SCADE Student\SCADE\lib\C\SmuMainWindows.c" -o "win64\SmuMainWindows.o"
 
-Graphic_Scade__CausalityA_check.exe: win64/ScadeTERS2_dll.o win64/SmuMainWindows.o 
-	gcc "win64\ScadeTERS2_dll.o" "win64\SmuMainWindows.o" -lm -lwsock32 -m64 -o "Graphic_Scade__CausalityA_check.exe" 
+Graphic_Scade__Union1.exe: win64/ScadeTERS2_dll.o win64/SmuMainWindows.o 
+	gcc "win64\ScadeTERS2_dll.o" "win64\SmuMainWindows.o" -lm -lwsock32 -m64 -o "Graphic_Scade__Union1.exe" 
 
 #############################################################
 ######    End of Makefile

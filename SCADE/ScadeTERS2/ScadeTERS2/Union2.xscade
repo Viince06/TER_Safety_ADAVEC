@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="Union2">
+	<inputs>
+		<Variable name="a">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/4f85/2E64/3F6C/6093e2372786"/>
+			</pragmas>
+		</Variable>
+		<Variable name="bArray">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ArrayClock4"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/4f86/2E64/3F6C/6093e237400"/>
+			</pragmas>
+		</Variable>
+	</inputs>
+	<outputs>
+		<Variable name="o">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/4f84/2E64/3F6C/6093e2373ab"/>
+			</pragmas>
+		</Variable>
+	</outputs>
+	<locals>
+		<Variable name="L1">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/4f8e/2E64/3F6C/6093e26417a9"/>
+			</pragmas>
+		</Variable>
+		<Variable name="L2">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/4f94/2E64/3F6C/6093e26a1543"/>
+			</pragmas>
+		</Variable>
+		<Variable name="L3">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ArrayClock4"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/4f9a/2E64/3F6C/6093e26c1bb4"/>
+			</pragmas>
+		</Variable>
+	</locals>
+	<data>
+		<!-- L1 = Union1(L2, L3); -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L1"/>
+			</lefts>
+			<right>
+				<!-- Union1(L2, L3) -->
+				<CallExpression>
+					<operator>
+						<OpCall name="1">
+							<operator>
+								<OperatorRef name="Union1"/>
+							</operator>
+						</OpCall>
+					</operator>
+					<callParameters>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="L2"/>
+							</path>
+						</IdExpression>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="L3"/>
+							</path>
+						</IdExpression>
+					</callParameters>
+				</CallExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/4f8d/2E64/3F6C/6093e2642675"/>
+			</pragmas>
+		</Equation>
+		<!-- L2 = a; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L2"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="a"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/4f93/2E64/3F6C/6093e26a3489"/>
+			</pragmas>
+		</Equation>
+		<!-- L3 = bArray; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L3"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="bArray"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/4f99/2E64/3F6C/6093e26c556f"/>
+			</pragmas>
+		</Equation>
+		<!-- o = L1; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="o"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="L1"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/4f9f/2E64/3F6C/6093e26d122"/>
+			</pragmas>
+		</Equation>
+	</data>
+	<pragmas>
+		<ed:Operator oid="!ed/4f70/2E64/3F6C/6093e2376942" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+			<diagrams>
+				<TextDiagram name="Union2_1" landscape="false" format="A4 (210 297)" oid="!ed/4fa4/2E64/3F6C/6093e29334a">
+					<presentationElements>
+						<FlowTE presentable="!ed/4f8d/2E64/3F6C/6093e2642675"/>
+						<FlowTE presentable="!ed/4f93/2E64/3F6C/6093e26a3489"/>
+						<FlowTE presentable="!ed/4f99/2E64/3F6C/6093e26c556f"/>
+						<FlowTE presentable="!ed/4f9f/2E64/3F6C/6093e26d122"/>
+					</presentationElements>
+				</TextDiagram>
+			</diagrams>
+		</ed:Operator>
+	</pragmas>
+</Operator>

@@ -2,7 +2,7 @@
 [STUDIO\TOOLS\CONFIGURATIONS\Code Generator]
 
 "D:\\Projets\\TERS2\\TER_SafetyCriticalSystem\\SCADE\\ScadeTERS2\\ScadeTERS2\\ScadeTERS2.etp"="Simulation" 
-"D:\\Projets\\S2\\TERS2\\TER_SafetyCriticalSystem\\SCADE\\ScadeTERS2\\ScadeTERS2\\ScadeTERS2.etp"="KCG" 
+"D:\\Projets\\S2\\TERS2\\TER_SafetyCriticalSystem\\SCADE\\ScadeTERS2\\ScadeTERS2\\ScadeTERS2.etp"="Simulation" 
 
 [STUDIO\TOOLS\CONFIGURATIONS\Metrics and Rules Checker]
 
@@ -67,3 +67,12 @@
 [SCADE\Simulator\TclBreakpoint]
 
 "Count"="0" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Timing and Stack Analysis Tools]
+
+"D:\\Projets\\S2\\TERS2\\TER_SafetyCriticalSystem\\SCADE\\ScadeTERS2\\ScadeTERS2\\ScadeTERS2.etp"="KCG" 
+
+[SCADE\Diff\Tool]
+
+"LastProject1"="" 
+"LastProject2"="" 

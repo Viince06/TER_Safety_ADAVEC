@@ -1,12 +1,10 @@
 package projet;
+import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 import fr.kairos.timesquare.ccsl.ISimpleSpecification;
-import fr.kairos.timesquare.ccsl.simple.IUtility;
 import fr.kairos.timesquare.ccsl.simple.ISpecificationBuilder;
+import fr.kairos.timesquare.ccsl.simple.IUtility;
 
 public class ChangeModes implements ISpecificationBuilder {
 	static public ChangeModes INSTANCE = new ChangeModes();
@@ -181,23 +179,18 @@ public class ChangeModes implements ISpecificationBuilder {
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()
 	};
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		String name = "ChangeModes";
-		Path fileToDeletePath = Paths.get(name + ".xscade");
-		
+		String fileName = name + ".xscade";
+		File filePath = new File(fileName);
+				
 		for (IUtility u : utilities) {
 			u.treat(name, INSTANCE);
 		}
 
-		try {
-			Files.delete(fileToDeletePath);
-			System.out.println("DELETED EXISTING FILE");
-		} catch (IOException e) {
-			System.out.println("FILE DOES NOT EXIST");
-		}
-
-		System.out.println("GENERATING NEW FILE");
-		INSTANCE.build(new MyScadeGenerator());
+		MyScadeGenerator myScadeGen = new MyScadeGenerator(filePath);
+		INSTANCE.build(myScadeGen);
+		myScadeGen.close();
 		System.out.println("FILE GENERATED SUCCESFULLY");
 	}
 }

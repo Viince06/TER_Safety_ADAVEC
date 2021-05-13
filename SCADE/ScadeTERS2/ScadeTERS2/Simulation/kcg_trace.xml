@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+  <Model commandLine="" date="">
+    <Option name="use_types" value="#off#"/>
+    <Option name="imported_root_package" value="#off#"/>
+    <Option name="root_package" value="#off#"/>
+    <Option name="xml_basename" value="kcg_xml_filter_out.scade"/>
+    <Option name="state_vector" value="#off#"/>
+    <Option name="static" value="#off#"/>
+    <Option name="separate_io_all" value="#off#"/>
+    <Option name="no_separate_io" value="#off#"/>
+    <Option name="separate_io" value="#off#"/>
+    <Option name="warn_error" value="#off#"/>
+    <Option name="short_circuit" value="#off#"/>
+    <Option name="wrap_c_ops" value="#off#"/>
+    <Option name="input_file" value="D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/scade_model_without_unused.scade"/>
+    <Option name="probes" value="#on#"/>
+    <Option name="no_observe" value="#off#"/>
+    <Option name="observe" value="#off#"/>
+    <Option name="debug" value="#on#"/>
+    <Option name="user_config" value="./user_macros.h"/>
+    <Option name="input_threshold" value="#off#"/>
+    <Option name="header" value="#off#"/>
+    <Option name="significance_length" value="31"/>
+    <Option name="name_length" value="200"/>
+    <Option name="globals_prefix" value="#off#"/>
+    <Option name="keep_asserts" value="#off#"/>
+    <Option name="global_root_context" value="#off#"/>
+    <Option name="expall" value="#off#"/>
+    <Option name="noexp" value="#off#"/>
+    <Option name="exp" value="#off#"/>
+    <Option name="target_dir" value="D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation"/>
+    <Option name="target" value="C"/>
+    <Option name="root" value="Graphic_Scade::Union1"/>
+    <Option name="auth" value="#off#"/>
+    <EnumType scadeName="ClockStatus" targetName="ClockStatus">
+      <EnumVal scadeName="PRESENT" targetName="PRESENT"/>
+      <EnumVal scadeName="ABSENT" targetName="ABSENT"/>
+      <EnumVal scadeName="DEAD" targetName="DEAD"/>
+    </EnumType>
+    <NamedType refType="ArrayClock4" scadeName="ArrayClock4" targetName="ArrayClock4"/>
+    <Package scadeName="Graphic_Scade">
+      <RootNode headerFile="Union1_Graphic_Scade.h" scadeName="Union1" targetCycleFct="Union1_Graphic_Scade" targetInitFct="Union1_reset_Graphic_Scade" targetInitializationFct="Union1_init_Graphic_Scade">
+        <Input inCtx="true" scadeName="a" scadeType="ClockStatus" targetName="a" targetType="ClockStatus"/>
+        <Input inCtx="true" scadeName="bArray" scadeType="ArrayClock4" targetName="bArray" targetType="ArrayClock4"/>
+        <Output inCtx="true" scadeName="o" scadeType="ClockStatus" targetName="o" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L34" scadeType="ClockStatus" targetName="_L34" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L33" scadeType="ClockStatus" targetName="_L33" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L32" scadeType="ClockStatus" targetName="_L32" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L24" scadeType="ClockStatus" targetName="_L24" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L23" scadeType="ArrayClock4" targetName="_L23" targetType="ArrayClock4"/>
+        <Local inCtx="true" scadeName="_L22" scadeType="ClockStatus" targetName="_L22" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L21" scadeType="ClockStatus" targetName="_L21" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L37" scadeType="ClockStatus" targetName="_L37" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L36" scadeType="ClockStatus" targetName="_L36" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L35" scadeType="ClockStatus" targetName="_L35" targetType="ClockStatus"/>
+        <NodeInstance instName="4" refName="Union_Graphic_Scade" scadeName="Graphic_Scade::Union">
+          <OutCtxVar targetName="Context_Union_4"/>
+        </NodeInstance>
+        <NodeInstance instName="3" refName="Union_Graphic_Scade" scadeName="Graphic_Scade::Union">
+          <OutCtxVar targetName="Context_Union_3"/>
+        </NodeInstance>
+        <NodeInstance instName="2" refName="Union_Graphic_Scade" scadeName="Graphic_Scade::Union">
+          <OutCtxVar targetName="Context_Union_2"/>
+        </NodeInstance>
+        <NodeInstance instName="1" refName="Union_Graphic_Scade" scadeName="Graphic_Scade::Union">
+          <OutCtxVar targetName="Context_Union_1"/>
+        </NodeInstance>
+        <OutCtxType targetName="outC_Union1_Graphic_Scade"/>
+        <InCtxType targetName="inC_Union1_Graphic_Scade"/>
+      </RootNode>
+      <NoExpNode headerFile="Union_Graphic_Scade.h" scadeName="Union" targetCycleFct="Union_Graphic_Scade" targetInitFct="Union_reset_Graphic_Scade" targetInitializationFct="Union_init_Graphic_Scade">
+        <Input scadeName="a" scadeType="ClockStatus" targetName="a" targetType="ClockStatus"/>
+        <Input scadeName="b" scadeType="ClockStatus" targetName="b" targetType="ClockStatus"/>
+        <Output inCtx="true" scadeName="o" scadeType="ClockStatus" targetName="o" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L1" scadeType="ClockStatus" targetName="_L1" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L4" scadeType="bool" targetName="_L4" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L3" scadeType="bool" targetName="_L3" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L5" scadeType="bool" targetName="_L5" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L6" scadeType="bool" targetName="_L6" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L8" scadeType="bool" targetName="_L8" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L7" scadeType="bool" targetName="_L7" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L9" scadeType="bool" targetName="_L9" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L10" scadeType="ClockStatus" targetName="_L10" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L20" scadeType="ClockStatus" targetName="_L20" targetType="ClockStatus"/>
+        <NodeInstance instName="1" refName="DecodeClockStatus_Utils" scadeName="Utils::DecodeClockStatus">
+          <OutCtxVar targetName="Context_DecodeClockStatus_1"/>
+        </NodeInstance>
+        <NodeInstance instName="2" refName="DecodeClockStatus_Utils" scadeName="Utils::DecodeClockStatus">
+          <OutCtxVar targetName="Context_DecodeClockStatus_2"/>
+        </NodeInstance>
+        <NodeInstance instName="1" refName="EncodeClockStatus_Utils" scadeName="Utils::EncodeClockStatus">
+          <OutCtxVar targetName="Context_EncodeClockStatus_1"/>
+        </NodeInstance>
+        <OutCtxType targetName="outC_Union_Graphic_Scade"/>
+      </NoExpNode>
+    </Package>
+    <Package scadeName="Utils">
+      <NoExpNode headerFile="DecodeClockStatus_Utils.h" scadeName="DecodeClockStatus" targetCycleFct="DecodeClockStatus_Utils" targetInitFct="DecodeClockStatus_reset_Utils" targetInitializationFct="DecodeClockStatus_init_Utils">
+        <Input scadeName="c" scadeType="ClockStatus" targetName="c" targetType="ClockStatus"/>
+        <Output inCtx="true" scadeName="presence" scadeType="bool" targetName="presence" targetType="kcg_bool"/>
+        <Output inCtx="true" scadeName="alive" scadeType="bool" targetName="alive" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L1" scadeType="ClockStatus" targetName="_L1" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L2" scadeType="bool" targetName="_L2" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L3" scadeType="bool" targetName="_L3" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L4" scadeType="bool" targetName="_L4" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L5" scadeType="bool" targetName="_L5" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L6" scadeType="bool" targetName="_L6" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L7" scadeType="bool" targetName="_L7" targetType="kcg_bool"/>
+        <OutCtxType targetName="outC_DecodeClockStatus_Utils"/>
+      </NoExpNode>
+      <NoExpNode headerFile="EncodeClockStatus_Utils.h" scadeName="EncodeClockStatus" targetCycleFct="EncodeClockStatus_Utils" targetInitFct="EncodeClockStatus_reset_Utils" targetInitializationFct="EncodeClockStatus_init_Utils">
+        <Input scadeName="presence" scadeType="bool" targetName="presence" targetType="kcg_bool"/>
+        <Input scadeName="alive" scadeType="bool" targetName="alive" targetType="kcg_bool"/>
+        <Output inCtx="true" scadeName="c" scadeType="ClockStatus" targetName="c" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L2" scadeType="bool" targetName="_L2" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L3" scadeType="ClockStatus" targetName="_L3" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L4" scadeType="ClockStatus" targetName="_L4" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L5" scadeType="ClockStatus" targetName="_L5" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L6" scadeType="ClockStatus" targetName="_L6" targetType="ClockStatus"/>
+        <Local inCtx="true" scadeName="_L7" scadeType="ClockStatus" targetName="_L7" targetType="ClockStatus"/>
+        <OutCtxType targetName="outC_EncodeClockStatus_Utils"/>
+      </NoExpNode>
+    </Package>
+    <ArrayType cellType="ClockStatus" size="4" targetCompFct="kcg_comp_ArrayClock4" targetCopyFct="kcg_copy_ArrayClock4" targetName="ArrayClock4"/>
+    <PredefType scadeName="int8" targetName="kcg_int8"/>
+    <PredefType scadeName="int16" targetName="kcg_int16"/>
+    <PredefType scadeName="int32" targetName="kcg_int32"/>
+    <PredefType scadeName="int64" targetName="kcg_int64"/>
+    <PredefType scadeName="uint8" targetName="kcg_uint8"/>
+    <PredefType scadeName="uint16" targetName="kcg_uint16"/>
+    <PredefType scadeName="uint32" targetName="kcg_uint32"/>
+    <PredefType scadeName="uint64" targetName="kcg_uint64"/>
+    <PredefType scadeName="size" targetName="kcg_size"/>
+    <PredefType scadeName="float32" targetName="kcg_float32"/>
+    <PredefType scadeName="float64" targetName="kcg_float64"/>
+    <PredefType scadeName="bool" targetName="kcg_bool"/>
+    <PredefType scadeName="char" targetName="kcg_char"/>
+  </Model>

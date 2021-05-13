@@ -1,0 +1,17 @@
+Specification SMModes { 
+	Clock Automatic, Manual, MRM, ReactionTime, GenericTrigger [
+		 
+		 
+		Let StartMode be Automatic + Manual + MRM
+		Let FinalMode be Automatic + Manual + MRM
+		Exclusion Automatic # Manual # MRM 
+		 
+		
+		//Let GeneralContext be WeatherC + RoadC + TrafficC + VehicleC + HumanC
+		
+		transfer = GenericTrigger sampledOn ReactionTime  // Hidden Constant attempt
+		Precedence StartMode <= GenericTrigger <= FinalMode <= transfer  //Modes and trigger to specify
+		 
+		 
+	]
+}

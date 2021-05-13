@@ -13,11 +13,11 @@
 				<Operator name="SubClock" href="SubClock.xscade"/>
 				<Operator name="Sup" href="Sup.xscade"/>
 				<Operator name="Union" href="Union.xscade"/>
-				<Operator name="AddClock" href="AddClock.xscade"/>
 				<Operator name="Precedence2" href="Precedence2.xscade"/>
 				<Operator name="Causality" href="Causality.xscade"/>
 				<Operator name="Causality2" href="Causality2.xscade"/>
-				<Operator name="AddClock1" href="AddClock1.xscade"/>
+				<Operator name="Union4" href="Union4.xscade"/>
+				<Operator name="Intersection4" href="Union5.xscade"/>
 			</declarations>
 			<pragmas>
 				<ed:Package oid="!ed/4a8f/611A/3D1C/60649d3242bb" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">

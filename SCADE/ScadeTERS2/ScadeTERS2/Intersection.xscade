@@ -27,7 +27,7 @@
 		</Variable>
 	</inputs>
 	<outputs>
-		<Variable name="c">
+		<Variable name="o">
 			<type>
 				<NamedType>
 					<type>
@@ -244,10 +244,10 @@
 				<ed:Equation oid="!ed/5acc/611A/3D1C/6064e65f5884"/>
 			</pragmas>
 		</Equation>
-		<!-- c = _L10; -->
+		<!-- o = _L10; -->
 		<Equation>
 			<lefts>
-				<VariableRef name="c"/>
+				<VariableRef name="o"/>
 			</lefts>
 			<right>
 				<IdExpression>

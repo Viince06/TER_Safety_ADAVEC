@@ -79,5 +79,24 @@
 				<ed:Type oid="!ed/49c0/611A/3D1C/60649ad4162c"/>
 			</pragmas>
 		</Type>
+		<Type name="ArrayClock5">
+			<definition>
+				<Table>
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="ClockStatus"/>
+							</type>
+						</NamedType>
+					</type>
+					<size>
+						<ConstValue value="5"/>
+					</size>
+				</Table>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/4fcd/2E64/3F6C/6093ea36345e"/>
+			</pragmas>
+		</Type>
 	</declarations>
 </File>
