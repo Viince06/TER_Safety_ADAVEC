@@ -93,72 +93,86 @@ public void close() {
   
   // Method descriptor #14 (Ljava/lang/String;[Ljava/lang/String;)V
   public void inf(java.lang.String arg0, java.lang.String... arg1){
-	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
-	  outputfile.println("L" + ++countL + " = " + Arrays.toString(arg1) + ";");
-	  outputfile.println("L" + ++countL + " = Inf(L" + (countL - 2) + ", L" + (countL - 1) + ");");
-	  outputfile.println("O" + ++countO + " = L" + countL + ";");
+	  int n = arg1.length;
+	  if (n == 1) {
+		  outputfile.println("L" + ++countL + " = " + arg0 + ";");
+		  outputfile.println("L" + ++countL + " = " + arg1[0] + ";");
+		  outputfile.println("L" + ++countL + " = Inf(L" + (countL - 2) + ", L" + (countL - 1) + ");");
+		  outputfile.println("O" + ++countO + " = L" + countL + ";");
+	  } else {
+		  String[] left = Arrays.copyOfRange(arg1, 0, n/2);
+		  String[] right = Arrays.copyOfRange(arg1, n/2, n);
+		  inf(arg0, left);
+		  inf(arg0, right);
+	  }
   }
   
   
   // Method descriptor #14 (Ljava/lang/String;[Ljava/lang/String;)V
   public void sup(java.lang.String arg0, java.lang.String... arg1){
-	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
-	  outputfile.println("L" + ++countL + " = " + Arrays.toString(arg1) + ";");
-	  outputfile.println("L" + ++countL + " = Sup(L" + (countL - 2) + ", L" + (countL - 1) + ");");
-	  outputfile.println("O" + ++countO + " = L" + countL + ";");
-  }
-  
-/*  public String makeUnion(java.lang.String arg0, java.lang.String... arg1) {
-	  int n = arg1.length + 1;
+	  int n = arg1.length;
 	  if (n == 1) {
-		  return union(arg0, arg1);
+		  outputfile.println("L" + ++countL + " = " + arg0 + ";");
+		  outputfile.println("L" + ++countL + " = " + arg1[0] + ";");
+		  outputfile.println("L" + ++countL + " = Sup(L" + (countL - 2) + ", L" + (countL - 1) + ");");
+		  outputfile.println("O" + ++countO + " = L" + countL + ";");
 	  } else {
-		  n --;
-		  return (union(arg1[n], makeUnion(arg0, arg1[n-1])));
+		  String[] left = Arrays.copyOfRange(arg1, 0, n/2);
+		  String[] right = Arrays.copyOfRange(arg1, n/2, n);
+		  sup(arg0, left);
+		  sup(arg0, right);
 	  }
-  } 
-  
-  public <T> List<T> union(List<T> list1, List<T> list2) {
-      Set<T> set = new HashSet<T>();
-
-      set.addAll(list1);
-      set.addAll(list2);
-
-      return new ArrayList<T>(set);
   }
   
-  */
+	
   // Method descriptor #14 (Ljava/lang/String;[Ljava/lang/String;)V
   public void union(java.lang.String arg0, java.lang.String... arg1){
 	  int n = arg1.length;
 	  if (n == 1) {
 		  outputfile.println("L" + ++countL + " = " + arg0 + ";");
-		  outputfile.println("L" + ++countL + " = " + arg1 + ";");
+		  outputfile.println("L" + ++countL + " = " + arg1[0] + ";");
 		  outputfile.println("L" + ++countL + " = Union(L" + (countL - 2) + ", L" + (countL - 1) + ");");
 		  outputfile.println("O" + ++countO + " = L" + countL + ";");
 	  } else {
-		 // union(arg0, arg1[0 ... (n-1)]); // Linear Idea
-		  union(arg0, arg1[n-1]);
+		  String[] left = Arrays.copyOfRange(arg1, 0, n/2);
+		  String[] right = Arrays.copyOfRange(arg1, n/2, n);
+		  union(arg0, left);
+		  union(arg0, right);
 	  }
-
   }
   
   
   // Method descriptor #14 (Ljava/lang/String;[Ljava/lang/String;)V
   public void intersection(java.lang.String arg0, java.lang.String... arg1){
-	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
-	  outputfile.println("L" + ++countL + " = " + Arrays.toString(arg1) + ";");
-	  outputfile.println("L" + ++countL + " = Intersection(L" + (countL - 2) + ", L" + (countL - 1) + ");");
-	  outputfile.println("O" + ++countO + " = L" + countL + ";");
+	  int n = arg1.length;
+	  if (n == 1) {
+		  outputfile.println("L" + ++countL + " = " + arg0 + ";");
+		  outputfile.println("L" + ++countL + " = " + arg1[0] + ";");
+		  outputfile.println("L" + ++countL + " = Intersection(L" + (countL - 2) + ", L" + (countL - 1) + ");");
+		  outputfile.println("O" + ++countO + " = L" + countL + ";");
+	  } else {
+		  String[] left = Arrays.copyOfRange(arg1, 0, n/2);
+		  String[] right = Arrays.copyOfRange(arg1, n/2, n);
+		  intersection(arg0, left);
+		  intersection(arg0, right);
+	  }
   }
   
   
   // Method descriptor #14 (Ljava/lang/String;[Ljava/lang/String;)V
   public void minus(java.lang.String arg0, java.lang.String... arg1){
-	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
-	  outputfile.println("L" + ++countL + " = " + Arrays.toString(arg1) + ";");
-	  outputfile.println("L" + ++countL + " = Minus(L" + (countL - 2) + ", L" + (countL - 1) + ");");
-	  outputfile.println("O" + ++countO + " = L" + countL + ";");
+	  int n = arg1.length;
+	  if (n == 1) {
+		  outputfile.println("L" + ++countL + " = " + arg0 + ";");
+		  outputfile.println("L" + ++countL + " = " + arg1[0] + ";");
+		  outputfile.println("L" + ++countL + " = Minus(L" + (countL - 2) + ", L" + (countL - 1) + ");");
+		  outputfile.println("O" + ++countO + " = L" + countL + ";");
+	  } else {
+		  String[] left = Arrays.copyOfRange(arg1, 0, n/2);
+		  String[] right = Arrays.copyOfRange(arg1, n/2, n);
+		  minus(arg0, left);
+		  minus(arg0, right);
+	  }
   }
   
   // Method descriptor #20 (Ljava/lang/String;Ljava/lang/String;III)V
