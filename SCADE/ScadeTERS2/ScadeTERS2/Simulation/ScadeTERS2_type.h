@@ -4,23 +4,6 @@
 #include "SmuTypes.h"
 
 /****************************************************************
- ** ArrayClock4 
- ****************************************************************/
-extern int ArrayClock4_to_string(const void *pValue, PFN_STR_APPEND pfnStrAppend, void *pStrObj);
-extern int check_ArrayClock4_string(const char *str, char **endptr);
-extern int string_to_ArrayClock4(const char *str, void *pValue, char **endptr);
-extern int is_ArrayClock4_double_conversion_allowed();
-extern int ArrayClock4_to_double(const void *pValue, double *nValue);
-extern int is_ArrayClock4_long_conversion_allowed();
-extern int ArrayClock4_to_long(const void *pValue, long *nValue);
-extern void compare_ArrayClock4(int *nStatus, const void *pValue1, const void *pValue2, SimTolerance *pTol, const char *pszPath, PFN_STR_LIST_APPEND pfnStrListAppend, void *pListErrPaths);
-extern int get_ArrayClock4_signature(PFN_STR_APPEND pfnStrAppend, void *pStrObj);
-extern int init_ArrayClock4(void *pValue);
-extern int release_ArrayClock4(void *pValue);
-extern int copy_ArrayClock4(void *pToValue, const void *pFromValue);
-extern SimTypeUtils _Type_ArrayClock4_Utils;
-
-/****************************************************************
  ** ClockStatus 
  ****************************************************************/
 extern int ClockStatus_to_string(const void *pValue, PFN_STR_APPEND pfnStrAppend, void *pStrObj);

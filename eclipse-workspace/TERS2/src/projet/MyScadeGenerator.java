@@ -108,13 +108,39 @@ public void close() {
 	  outputfile.println("O" + ++countO + " = L" + countL + ";");
   }
   
+/*  public String makeUnion(java.lang.String arg0, java.lang.String... arg1) {
+	  int n = arg1.length + 1;
+	  if (n == 1) {
+		  return union(arg0, arg1);
+	  } else {
+		  n --;
+		  return (union(arg1[n], makeUnion(arg0, arg1[n-1])));
+	  }
+  } 
   
+  public <T> List<T> union(List<T> list1, List<T> list2) {
+      Set<T> set = new HashSet<T>();
+
+      set.addAll(list1);
+      set.addAll(list2);
+
+      return new ArrayList<T>(set);
+  }
+  
+  */
   // Method descriptor #14 (Ljava/lang/String;[Ljava/lang/String;)V
   public void union(java.lang.String arg0, java.lang.String... arg1){
-	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
-	  outputfile.println("L" + ++countL + " = " + Arrays.toString(arg1) + ";");
-	  outputfile.println("L" + ++countL + " = Union(L" + (countL - 2) + ", L" + (countL - 1) + ");");
-	  outputfile.println("O" + ++countO + " = L" + countL + ";");
+	  int n = arg1.length;
+	  if (n == 1) {
+		  outputfile.println("L" + ++countL + " = " + arg0 + ";");
+		  outputfile.println("L" + ++countL + " = " + arg1 + ";");
+		  outputfile.println("L" + ++countL + " = Union(L" + (countL - 2) + ", L" + (countL - 1) + ");");
+		  outputfile.println("O" + ++countO + " = L" + countL + ";");
+	  } else {
+		 // union(arg0, arg1[0 ... (n-1)]); // Linear Idea
+		  union(arg0, arg1[n-1]);
+	  }
+
   }
   
   

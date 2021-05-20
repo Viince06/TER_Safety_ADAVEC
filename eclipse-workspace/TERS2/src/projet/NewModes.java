@@ -13,21 +13,22 @@ public class NewModes implements ISpecificationBuilder {
 	}
 	@Override
 	public void build(ISimpleSpecification simple) {
-		simple.addClock("Mode1");
-		simple.addClock("Mode2");
-		simple.addClock("Trigger");
+		String[] modes = { "Auto", "Manual", "MRM" };
+
+		for (String m1 : modes) {
+			changeMode(simple, m1, "MRM", "trigger");
+		}
+	}
+	public void changeMode(ISimpleSpecification simple, String initialMode, String finalMode, String trigger) {
+		simple.addClock(initialMode);
+		simple.addClock(finalMode);
+		simple.addClock(trigger);
 		simple.addClock("ReactionTime");
 		
-		simple.union("Mode", "Mode1", "Mode2");
-		
-		simple.exclusion("Mode1", "Mode2");
-		
-		simple.delayFor("Delay", "Trigger", 1, -1, "ReactionTime");
-		
-		simple.precedence("Mode", "Trigger");
-		
-		simple.precedence("Trigger", "Mode");
-		
+		simple.union("Mode", initialMode, finalMode);
+		simple.exclusion(initialMode, finalMode);
+		simple.precedence("Mode", trigger);
+		simple.precedence(trigger, "Mode");
 		simple.causality("Mode", "Delay");
 	}
 	private static IUtility[] utilities = { 
@@ -41,7 +42,6 @@ public class NewModes implements ISpecificationBuilder {
 		
 		StepperUtility exe = new StepperUtility(new BDDSolutionFinder());
 		exe.setParam(StepperUtility.INTERACTIVE, true);
-		exe.setParam(StepperUtility.DEBUG, true);
 		exe.treat(name, INSTANCE);
 		// no STS generation
 	}

@@ -1,0 +1,14 @@
+Specification DebugMode {
+	Clock start finish Trigger ReactionTime end Context
+	[
+		Let Mode be start + finish
+		Exclusion start # finish
+		Let Condition be Trigger * Context
+		Delay = Trigger $ 1 on ReactionTime  
+		Precedence Mode < Trigger
+		Precedence Trigger < Mode
+		Precedence Mode <= Delay 
+		Precedence Delay <= finish
+		Precedence finish <= end 
+	]
+}

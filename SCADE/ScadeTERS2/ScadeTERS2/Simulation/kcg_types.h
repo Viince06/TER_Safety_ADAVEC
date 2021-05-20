@@ -1,6 +1,6 @@
-/* $ ANSYS SCADE Suite (R) Code Generator version Student 2021 R1 (build 20201118) 
-** Command: scadecg.exe -config D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/config.txt
-** Generation date: 2021-05-06T15:16:31
+/* $******* SCADE Suite KCG 32-bit 6.6.1 beta (build i1) ********
+** Command: kcg661.exe -config D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/config.txt
+** Generation date: 2021-05-20T17:29:55
 *************************************************************$ */
 #ifndef _KCG_TYPES_H_
 #define _KCG_TYPES_H_
@@ -178,23 +178,9 @@ typedef signed char kcg_int8;
 
 /* ClockStatus/ */
 typedef enum kcg_tag_ClockStatus { PRESENT, ABSENT, DEAD } ClockStatus;
-/* ArrayClock4/ */
-typedef ClockStatus ArrayClock4[4];
-
-#ifndef kcg_copy_ArrayClock4
-#define kcg_copy_ArrayClock4(kcg_C1, kcg_C2)                                  \
-  (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (ArrayClock4)))
-#endif /* kcg_copy_ArrayClock4 */
-
-#ifdef kcg_use_ArrayClock4
-#ifndef kcg_comp_ArrayClock4
-extern kcg_bool kcg_comp_ArrayClock4(ArrayClock4 *kcg_c1, ArrayClock4 *kcg_c2);
-#endif /* kcg_comp_ArrayClock4 */
-#endif /* kcg_use_ArrayClock4 */
-
 #endif /* _KCG_TYPES_H_ */
-/* $ ANSYS SCADE Suite (R) Code Generator version Student 2021 R1 (build 20201118) 
+/* $******* SCADE Suite KCG 32-bit 6.6.1 beta (build i1) ********
 ** kcg_types.h
-** Generation date: 2021-05-06T15:16:31
+** Generation date: 2021-05-20T17:29:55
 *************************************************************$ */
 

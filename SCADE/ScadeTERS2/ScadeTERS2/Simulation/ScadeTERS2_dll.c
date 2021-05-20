@@ -1,2 +1,2 @@
-const char*  pszDllPathname = "Graphic_Scade__Union1.dll";
-const char*  pszLauncherPathname = "D:/Programs Installed/ANSYS Inc/v211/SCADE Student/SCADE/bin/SCSSMLNC.exe";
+const char*  pszDllPathname = "Graphic_Scade__Exclusion.dll";
+const char*  pszLauncherPathname = "C:/Program Files/ANSYS Inc/v211/SCADE/SCADE/bin/SCSSMLNC.exe";

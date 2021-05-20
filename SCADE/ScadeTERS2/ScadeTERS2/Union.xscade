@@ -125,18 +125,6 @@
 				<ed:Variable oid="!ed/5991/611A/3D1C/6064e4375817"/>
 			</pragmas>
 		</Variable>
-		<Variable name="_L9">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="bool"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/5998/611A/3D1C/6064e46a6ee"/>
-			</pragmas>
-		</Variable>
 		<Variable name="_L10">
 			<type>
 				<NamedType>
@@ -289,34 +277,13 @@
 				<ed:Equation oid="!ed/5990/611A/3D1C/6064e4377faa"/>
 			</pragmas>
 		</Equation>
-		<!-- _L9 =  not _L6; -->
-		<Equation>
-			<lefts>
-				<VariableRef name="_L9"/>
-			</lefts>
-			<right>
-				<!--  not _L6 -->
-				<UnaryOp name="1" operator="not">
-					<operand>
-						<IdExpression>
-							<path>
-								<ConstVarRef name="_L6"/>
-							</path>
-						</IdExpression>
-					</operand>
-				</UnaryOp>
-			</right>
-			<pragmas>
-				<ed:Equation oid="!ed/5997/611A/3D1C/6064e46a25cc"/>
-			</pragmas>
-		</Equation>
-		<!-- _L10 = Utils::EncodeClockStatus(_L5, _L9); -->
+		<!-- _L10 = Utils::EncodeClockStatus(_L5, _L6); -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L10"/>
 			</lefts>
 			<right>
-				<!-- Utils::EncodeClockStatus(_L5, _L9) -->
+				<!-- Utils::EncodeClockStatus(_L5, _L6) -->
 				<CallExpression>
 					<operator>
 						<OpCall name="1">
@@ -333,7 +300,7 @@
 						</IdExpression>
 						<IdExpression>
 							<path>
-								<ConstVarRef name="_L9"/>
+								<ConstVarRef name="_L6"/>
 							</path>
 						</IdExpression>
 					</callParameters>
@@ -461,22 +428,6 @@
 								<Point x="12065" y="4789"/>
 							</positions>
 						</Edge>
-						<EquationGE presentable="!ed/5997/611A/3D1C/6064e46a25cc">
-							<position>
-								<Point x="15637" y="4233"/>
-							</position>
-							<size>
-								<Size width="1005" height="662"/>
-							</size>
-						</EquationGE>
-						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/598a/611A/3D1C/6064e42558c6" dstEquation="!ed/5997/611A/3D1C/6064e46a25cc">
-							<positions>
-								<Point x="13070" y="4683"/>
-								<Point x="14340" y="4683"/>
-								<Point x="14340" y="4577"/>
-								<Point x="15637" y="4577"/>
-							</positions>
-						</Edge>
 						<EquationGE presentable="!ed/599d/611A/3D1C/6064e46f50">
 							<position>
 								<Point x="18830" y="2638"/>
@@ -491,14 +442,6 @@
 								<Point x="15928" y="1746"/>
 								<Point x="15928" y="3228"/>
 								<Point x="18838" y="3228"/>
-							</positions>
-						</Edge>
-						<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/5997/611A/3D1C/6064e46a25cc" dstEquation="!ed/599d/611A/3D1C/6064e46f50">
-							<positions>
-								<Point x="16642" y="4577"/>
-								<Point x="17727" y="4577"/>
-								<Point x="17727" y="3784"/>
-								<Point x="18838" y="3784"/>
 							</positions>
 						</Edge>
 						<EquationGE presentable="!ed/59a3/611A/3D1C/6064e4796d2f">
@@ -531,6 +474,14 @@
 								<Point x="2566" y="7964"/>
 								<Point x="2566" y="7964"/>
 								<Point x="3545" y="7964"/>
+							</positions>
+						</Edge>
+						<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/598a/611A/3D1C/6064e42558c6" dstEquation="!ed/599d/611A/3D1C/6064e46f50">
+							<positions>
+								<Point x="13070" y="4683"/>
+								<Point x="15954" y="4683"/>
+								<Point x="15954" y="3784"/>
+								<Point x="18838" y="3784"/>
 							</positions>
 						</Edge>
 					</presentationElements>

@@ -27,6 +27,28 @@ public class Lctest implements ISpecificationBuilder {
 		simple.causality("c", "d", 2, -1);
 		
 		simple.exclusion("a", "c");
+		
+		simple.minus("minusop", "e", "d");
+		
+		simple.union("_test2_0", "d", "f");
+		simple.minus("test2", "e", "_test2_0");
+		
+		simple.intersection("_test3_0", "d", "f");
+		simple.minus("test3", "e", "_test3_0");
+		
+		simple.periodic("aprime", "a", 5, 3, 10);
+		
+		simple.delayFor("g", "a", 5, -1, "b");
+		
+		simple.delayFor("h", "a", 5, -1, null);
+		
+		simple.delayFor("i", "a", 5, 10, null);
+		
+		simple.delayFor("l", "a", 0, -1, "b");
+		
+		simple.inf("j", "a", "b", "c");
+		
+		simple.sup("k", "a", "b", "c");
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()
@@ -39,7 +61,6 @@ public class Lctest implements ISpecificationBuilder {
 		
 		StepperUtility exe = new StepperUtility(new BDDSolutionFinder());
 		exe.setParam(StepperUtility.INTERACTIVE, true);
-		exe.setParam(StepperUtility.DEBUG, true);
 		exe.treat(name, INSTANCE);
 		// no STS generation
 	}

@@ -3,12 +3,12 @@
 
 #include "kcg_sensors.h"
 #include "SmuProxy.h"
-#include "Union1_Graphic_Scade.h"
+#include "Exclusion_Graphic_Scade.h"
 
 /* context */
 
-extern inC_Union1_Graphic_Scade inputs_ctx;
-extern outC_Union1_Graphic_Scade outputs_ctx;
+extern inC_Exclusion_Graphic_Scade inputs_ctx;
+extern outC_Exclusion_Graphic_Scade outputs_ctx;
 
 #ifdef __cplusplus
 extern "C" {

@@ -101,18 +101,6 @@
 				<ed:Variable oid="!ed/5ad3/611A/3D1C/6064e65f7840"/>
 			</pragmas>
 		</Variable>
-		<Variable name="_L5">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="bool"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/5ad1/611A/3D1C/6064e65f6615"/>
-			</pragmas>
-		</Variable>
 		<Variable name="_L3">
 			<type>
 				<NamedType>
@@ -260,27 +248,6 @@
 				<ed:Equation oid="!ed/5acf/611A/3D1C/6064e65f590a"/>
 			</pragmas>
 		</Equation>
-		<!-- _L5 =  not _L2; -->
-		<Equation>
-			<lefts>
-				<VariableRef name="_L5"/>
-			</lefts>
-			<right>
-				<!--  not _L2 -->
-				<UnaryOp name="1" operator="not">
-					<operand>
-						<IdExpression>
-							<path>
-								<ConstVarRef name="_L2"/>
-							</path>
-						</IdExpression>
-					</operand>
-				</UnaryOp>
-			</right>
-			<pragmas>
-				<ed:Equation oid="!ed/5ad0/611A/3D1C/6064e65f6bb2"/>
-			</pragmas>
-		</Equation>
 		<!-- _L6 = b; -->
 		<Equation>
 			<lefts>
@@ -342,13 +309,13 @@
 				<ed:Equation oid="!ed/5ad7/611A/3D1C/6064e65f125b"/>
 			</pragmas>
 		</Equation>
-		<!-- _L10 = Utils::EncodeClockStatus(_L1, _L5); -->
+		<!-- _L10 = Utils::EncodeClockStatus(_L1, _L2); -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L10"/>
 			</lefts>
 			<right>
-				<!-- Utils::EncodeClockStatus(_L1, _L5) -->
+				<!-- Utils::EncodeClockStatus(_L1, _L2) -->
 				<CallExpression>
 					<operator>
 						<OpCall name="1">
@@ -365,7 +332,7 @@
 						</IdExpression>
 						<IdExpression>
 							<path>
-								<ConstVarRef name="_L5"/>
+								<ConstVarRef name="_L2"/>
 							</path>
 						</IdExpression>
 					</callParameters>
@@ -413,14 +380,6 @@
 								<Size width="318" height="503"/>
 							</size>
 						</EquationGE>
-						<EquationGE presentable="!ed/5ad0/611A/3D1C/6064e65f6bb2">
-							<position>
-								<Point x="16219" y="5239"/>
-							</position>
-							<size>
-								<Size width="1006" height="662"/>
-							</size>
-						</EquationGE>
 						<EquationGE presentable="!ed/5ad2/611A/3D1C/6064e65f4fca">
 							<position>
 								<Point x="2037" y="6694"/>
@@ -459,14 +418,6 @@
 								<Point x="3254" y="6959"/>
 								<Point x="3254" y="6879"/>
 								<Point x="4207" y="6879"/>
-							</positions>
-						</Edge>
-						<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/5ad0/611A/3D1C/6064e65f6bb2" dstEquation="!ed/5ad9/611A/3D1C/6064e65f31c1">
-							<positions>
-								<Point x="17224" y="5583"/>
-								<Point x="18309" y="5583"/>
-								<Point x="18309" y="4789"/>
-								<Point x="19420" y="4789"/>
 							</positions>
 						</Edge>
 						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/5ad7/611A/3D1C/6064e65f125b" dstEquation="!ed/5ad4/611A/3D1C/6064e65f3d8d">
@@ -509,14 +460,6 @@
 								<Point x="12621" y="2619"/>
 							</positions>
 						</Edge>
-						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/5aca/611A/3D1C/6064e65f58f5" dstEquation="!ed/5ad0/611A/3D1C/6064e65f6bb2">
-							<positions>
-								<Point x="13653" y="5689"/>
-								<Point x="14923" y="5689"/>
-								<Point x="14923" y="5583"/>
-								<Point x="16219" y="5583"/>
-							</positions>
-						</Edge>
 						<Edge leftVarIndex="2" rightExprIndex="2" srcEquation="!ed/5acc/611A/3D1C/6064e65f5884" dstEquation="!ed/5aca/611A/3D1C/6064e65f58f5">
 							<positions>
 								<Point x="8017" y="7144"/>
@@ -531,6 +474,14 @@
 								<Point x="10319" y="3889"/>
 								<Point x="10319" y="5556"/>
 								<Point x="12647" y="5556"/>
+							</positions>
+						</Edge>
+						<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/5aca/611A/3D1C/6064e65f58f5" dstEquation="!ed/5ad9/611A/3D1C/6064e65f31c1">
+							<positions>
+								<Point x="13653" y="5689"/>
+								<Point x="16536" y="5689"/>
+								<Point x="16536" y="4789"/>
+								<Point x="19420" y="4789"/>
 							</positions>
 						</Edge>
 					</presentationElements>
