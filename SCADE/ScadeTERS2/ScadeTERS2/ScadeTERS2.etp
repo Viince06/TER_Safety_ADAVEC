@@ -510,20 +510,6 @@
 								</Prop>
 							</props>
 						</FileRef>
-						<FileRef id="292" persistAs="Union4.xscade">
-							<props>
-								<Prop id="291" name="@SCADE:NONROOT">
-									<value>true</value>
-								</Prop>
-							</props>
-						</FileRef>
-						<FileRef id="296" persistAs="Union5.xscade">
-							<props>
-								<Prop id="295" name="@SCADE:NONROOT">
-									<value>true</value>
-								</Prop>
-							</props>
-						</FileRef>
 					</elements>
 				</Folder>
 				<FileRef id="85" persistAs="ScadeTERS2.xscade"/>

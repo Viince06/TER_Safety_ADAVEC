@@ -79,8 +79,7 @@ public class LcScenarioC2 implements ISpecificationBuilder {
 		}
 		
 		StepperUtility exe = new StepperUtility(new BDDSolutionFinder());
-		exe.setParam(StepperUtility.INTERACTIVE, false);
-		exe.setParam(StepperUtility.NB_STEPS, 10);
+		exe.setParam(StepperUtility.INTERACTIVE, true);
 		exe.treat(name, INSTANCE);
 		// no STS generation
 	}

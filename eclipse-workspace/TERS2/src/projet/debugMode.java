@@ -47,13 +47,13 @@ public class debugMode implements ISpecificationBuilder {
 		changeMode(simple, "Automatic", "Manual", new String[]{"FaultySensors", "Stress"}, clockList); 										// Scenario C3
 		changeMode(simple, "Automatic", "MRM", "Death", clockList);  																		// Scenario C4
 		changeMode(simple, "Automatic", "Manual", "HighwayExit", clockList); 																// Scenario D1
-		changeMode(simple, "Automatic", "Manual", new String[]{"HighwayExit", "FaultySensors"}, clockList); // Obvious... To remove?		// Scenario D3
+		changeMode(simple, "Automatic", "Manual", new String[]{"HighwayExit", "FaultySensors"}, clockList); 				// !			// Scenario D3
 		changeMode(simple, "Automatic", "Manual", "Inactive", clockList); 																	// Scenario D4
 		changeMode(simple, "Automatic", "MRM", "Unconscious", clockList); 																	// Scenario D5
 	}
 	
 	
-	public void checkIfExists(ISimpleSpecification simple, String clock, ArrayList<String> clockList) {
+	private void addIfExists(ISimpleSpecification simple, String clock, ArrayList<String> clockList) {  // Utiliser Set?
 		if (!clockList.contains(clock)) {
 			simple.addClock(clock);
 			clockList.add(clock);
@@ -62,14 +62,14 @@ public class debugMode implements ISpecificationBuilder {
 	
 	
 	public void exclusionCondition(ISimpleSpecification simple, String clock1, String clock2, ArrayList<String> clockList) {
-		checkIfExists(simple, clock1, clockList);
-		checkIfExists(simple, clock2, clockList);
+		addIfExists(simple, clock1, clockList);
+		addIfExists(simple, clock2, clockList);
 		simple.exclusion(clock1, clock2);
 	}
 	
-	public void exclusionCondition(ISimpleSpecification simple, String[] clock, ArrayList<String> clockList) {
+	public void exclusionCondition(ISimpleSpecification simple, String[] clock, ArrayList<String> clockList) { // Eviter le double
 		for (String c1 : clock) {
-			for (String c2 : clock) {
+			for (String c2 : clock) {  // Pas possible avec String (mais avec Int)
 				if (c1 != c2) {
 					exclusionCondition(simple, c1, c2, clockList);
 				}
@@ -79,8 +79,8 @@ public class debugMode implements ISpecificationBuilder {
 	
 	
 	public void causeEffect(ISimpleSpecification simple, String cause, String effect, ArrayList<String> clockList) {
-		checkIfExists(simple, cause, clockList);
-		checkIfExists(simple, effect, clockList);
+		addIfExists(simple, cause, clockList);
+		addIfExists(simple, effect, clockList);
 		simple.causality(cause, effect);
 	}
 	
@@ -88,11 +88,11 @@ public class debugMode implements ISpecificationBuilder {
 	
 	
 	public void changeMode(ISimpleSpecification simple, String start, String finish, String trigger, ArrayList<String> clockList) {
-		checkIfExists(simple, start, clockList);
-		checkIfExists(simple, finish, clockList);
-		checkIfExists(simple, trigger, clockList);
-		checkIfExists(simple, "ReactionTime", clockList);
-		checkIfExists(simple, "end", clockList);
+		addIfExists(simple, start, clockList);
+		addIfExists(simple, finish, clockList);
+		addIfExists(simple, trigger, clockList);
+		addIfExists(simple, "ReactionTime", clockList);
+		addIfExists(simple, "end", clockList);
 		simple.union("Mode", start, finish);		
 		simple.exclusion(start, finish);
 		simple.delayFor("Delay", trigger, 1, -1, "ReactionTime");		
@@ -105,13 +105,13 @@ public class debugMode implements ISpecificationBuilder {
 	
 	
 	public void changeMode(ISimpleSpecification simple, String start, String finish, String[] trigger, ArrayList<String> clockList) {
-		checkIfExists(simple, start, clockList);
-		checkIfExists(simple, finish, clockList);
+		addIfExists(simple, start, clockList);
+		addIfExists(simple, finish, clockList);
 		for(int i = 0; i < trigger.length; i++) {
-			checkIfExists(simple, trigger[i], clockList);
+			addIfExists(simple, trigger[i], clockList);
 		}
-		checkIfExists(simple, "ReactionTime", clockList);
-		checkIfExists(simple, "end", clockList);	
+		addIfExists(simple, "ReactionTime", clockList);
+		addIfExists(simple, "end", clockList);	
 		simple.union("Mode", start, finish);
 		simple.exclusion(start, finish);
 		for(int i = 0; i < trigger.length; i++) {

@@ -75,7 +75,7 @@ public void close() {
 	  outputfile.println("L" + ++countL + " = " + arg0 + ";");
 	  outputfile.println("L" + ++countL + " = " + arg1 + ";");
 	  outputfile.println("L" + ++countL + " = kind;");
-	  outputfile.println("L" + ++countL + " = Casuality(L" + (countL - 3) + ", L" + (countL - 2) + ", L" + (countL - 1) + ");");
+	  outputfile.println("L" + ++countL + " = Causality(L" + (countL - 3) + ", L" + (countL - 2) + ", L" + (countL - 1) + ");");
 	  outputfile.println("O" + ++countO + " = L" + countL + ";");
   }
   
@@ -128,13 +128,13 @@ public void close() {
   // Method descriptor #14 (Ljava/lang/String;[Ljava/lang/String;)V
   public void union(java.lang.String arg0, java.lang.String... arg1){
 	  int n = arg1.length;
-	  if (n == 1) {
+	  if (n == 1) {  // Cas terminal: n == 2
 		  outputfile.println("L" + ++countL + " = " + arg0 + ";");
 		  outputfile.println("L" + ++countL + " = " + arg1[0] + ";");
 		  outputfile.println("L" + ++countL + " = Union(L" + (countL - 2) + ", L" + (countL - 1) + ");");
 		  outputfile.println("O" + ++countO + " = L" + countL + ";");
 	  } else {
-		  String[] left = Arrays.copyOfRange(arg1, 0, n/2);
+		  String[] left = Arrays.copyOfRange(arg1, 0, n/2);  // Faire plutôt des methodes privées (unionRec, interRec...)
 		  String[] right = Arrays.copyOfRange(arg1, n/2, n);
 		  union(arg0, left);
 		  union(arg0, right);

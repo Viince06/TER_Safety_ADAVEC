@@ -1,9 +1,9 @@
 /* $******* SCADE Suite KCG 32-bit 6.6.1 beta (build i1) ********
 ** Command: kcg661.exe -config D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/config.txt
-** Generation date: 2021-05-20T17:29:55
+** Generation date: 2021-06-11T16:15:20
 *************************************************************$ */
-#ifndef _isPresent_Utils_H_
-#define _isPresent_Utils_H_
+#ifndef _DecodeClockStatus_Utils_H_
+#define _DecodeClockStatus_Utils_H_
 
 #include "kcg_types.h"
 
@@ -15,6 +15,7 @@
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
   kcg_bool /* presence/ */ presence;
+  kcg_bool /* alive/ */ alive;
   /* -----------------------  no local probes  ----------------------- */
   /* -----------------------  no local memory  ----------------------- */
   /* -------------------- no sub nodes' contexts  -------------------- */
@@ -25,25 +26,31 @@ typedef struct {
   kcg_bool /* _L2/ */ _L2;
   kcg_bool /* _L3/ */ _L3;
   kcg_bool /* _L4/ */ _L4;
-} outC_isPresent_Utils;
+  kcg_bool /* _L5/ */ _L5;
+  kcg_bool /* _L6/ */ _L6;
+  kcg_bool /* _L7/ */ _L7;
+} outC_DecodeClockStatus_Utils;
 
 /* ===========  node initialization and cycle functions  =========== */
-/* Utils::isPresent/ */
-extern void isPresent_Utils(/* a/ */ ClockStatus a, outC_isPresent_Utils *outC);
+/* Utils::DecodeClockStatus/ */
+extern void DecodeClockStatus_Utils(
+  /* c/ */
+  ClockStatus c,
+  outC_DecodeClockStatus_Utils *outC);
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-extern void isPresent_reset_Utils(outC_isPresent_Utils *outC);
+extern void DecodeClockStatus_reset_Utils(outC_DecodeClockStatus_Utils *outC);
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 #ifndef KCG_USER_DEFINED_INIT
-extern void isPresent_init_Utils(outC_isPresent_Utils *outC);
+extern void DecodeClockStatus_init_Utils(outC_DecodeClockStatus_Utils *outC);
 #endif /* KCG_USER_DEFINED_INIT */
 
 
 
-#endif /* _isPresent_Utils_H_ */
+#endif /* _DecodeClockStatus_Utils_H_ */
 /* $******* SCADE Suite KCG 32-bit 6.6.1 beta (build i1) ********
-** isPresent_Utils.h
-** Generation date: 2021-05-20T17:29:55
+** DecodeClockStatus_Utils.h
+** Generation date: 2021-06-11T16:15:20
 *************************************************************$ */
 

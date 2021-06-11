@@ -1,45 +1,47 @@
 [scade_version: 2021 R1]
 [scade_project: D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/ScadeTERS2.etp]
 [Code Generator]
-b2f3a601f07e21ed5bcc7a69916fa9d6 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/scade_model_without_unused.scade
-f4cc7a67bfc0e4d9b67476561d876a42 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/Exclusion_Graphic_Scade.c
-3172968a99a221b05c8b56232e58b265 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/Exclusion_Graphic_Scade.h
+53abc3120b037d4b6c195a57351771de D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/scade_model_without_unused.scade
+efa2c5ac29bd0ea1cee5e19d9dd161de D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/DecodeClockStatus_Utils.c
+f19ea799a56afdc4293532547c548d06 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/DecodeClockStatus_Utils.h
+f7d751d2e261f6535df6ae27c857ea13 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/EncodeClockStatus_Utils.c
+feb16a763d57431765f4ba08caf923d7 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/EncodeClockStatus_Utils.h
+aeac7c5dbfb45df572cfbfb1d85c91a6 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/Intersection_Graphic_Scade.c
+8ecb4c301ce5a5676acacb0013ab09de D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/Intersection_Graphic_Scade.h
 55872363c80d6258c069e7f73beddc15 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/cmd_cg.log
-d1642fc828ac4dfb12a47df7cac97601 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/config.txt
-3528843619c6106b8cea9d4eb126138a D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/isPresent_Utils.c
-4083a478f8cca35167cf30b5e57d585c D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/isPresent_Utils.h
-770dec457b7d52b89ec87fdfde8de4e0 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/kcg_consts.c
-6b3004da55a84c6c09d37f2d7478b63a D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/kcg_consts.h
-6f89689a11fcc53d74ca68216e8ef461 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/kcg_files.txt
+3d3a559f58f3bc6a88c6719a205f899f D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/config.txt
+604d279c73b6204ebd08f4773d0fed08 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/kcg_consts.c
+a02956d85d0aef53d19662c061b9fe08 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/kcg_consts.h
+c429655171a4841a075550fa2d2147c0 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/kcg_files.txt
 c570e85441febaa6f6d5e23e14e58b55 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/kcg_imported_types.h
-31ba9fb39ab4138f2b35818ee2e7d726 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/kcg_metrics.txt
-764b639855866a740f505bf11ab7b9a4 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/kcg_sensors.h
-be7a2f42df702344e52ffa2dc270262d D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/kcg_types.c
-a3342166fa89b2b801bbc036c6414ba0 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/kcg_types.h
-a61568081c1052b57ee32dcbaeb0056a D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/mapping.xml
+d8558ddacbd216543d59a1c3d12e939a D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/kcg_metrics.txt
+c0254a312ae9158c1ef03f95a9a8a83c D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/kcg_sensors.h
+f94f94ef3170266e8190148f29b86e11 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/kcg_types.c
+ff59642521ed71ed24f473f67da47324 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/kcg_types.h
+9870ba6a3f85daf99269b5616e382793 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/mapping.xml
 8adc1a60ec64c7abd5c964762c98aad7 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/user_macros.h
 [Mapping Utils]
-a61568081c1052b57ee32dcbaeb0056a D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/mapping.xml
+9870ba6a3f85daf99269b5616e382793 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/mapping.xml
 3f3c42dc7a2dc6c9aef3017823a00e60 C:/Program Files/ANSYS Inc/v211/SCADE/SCADE/lib/C/SmuConfig.c
 5b9e0d7ea9b52c17fdae3092ded3ba5e C:/Program Files/ANSYS Inc/v211/SCADE/SCADE/lib/C/SmuLib.c
 134415479f730b247b59be1fa4b82ed3 C:/Program Files/ANSYS Inc/v211/SCADE/SCADE/lib/C/SmuTypes.c
 f8e54064707a32ec62840ae6f743d17e C:/Program Files/ANSYS Inc/v211/SCADE/SCADE/lib/C/SmuVTable.c
-f60dcfae57c95845d11373b121ed048d D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/ScadeTERS2.etp
-5f1ec9c8e34680cf761a6b177131c4d0 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/ScadeTERS2_mapping.c
+d23b70c148e27ad0787701662cde2aad D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/ScadeTERS2.etp
+0e285582a07e24c7ee956fac3d10c25f D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/ScadeTERS2_mapping.c
 59ced10aae7dcad060904b2caa859d8f D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/ScadeTERS2_mapping.h
 [Simulator Wrapper]
-a61568081c1052b57ee32dcbaeb0056a D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/mapping.xml
-f60dcfae57c95845d11373b121ed048d D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/ScadeTERS2.etp
-6d35656c39a2a5db402c1f40b98cb5f2 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/ScadeTERS2_dll.c
-8fe9b06b3b4accdd79c1d1f68dc2bb49 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/ScadeTERS2_interface.c
-882e61b1e1843be7066f3ca2941574ef D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/ScadeTERS2_interface.h
+9870ba6a3f85daf99269b5616e382793 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/mapping.xml
+d23b70c148e27ad0787701662cde2aad D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/ScadeTERS2.etp
+2026e4229ba2aeb65983265c8c407583 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/ScadeTERS2_dll.c
+4906f38dede2e1959c964c212d091978 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/ScadeTERS2_interface.c
+00d36e26130cc3a7f6b949ac9ee8069d D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/ScadeTERS2_interface.h
 [Type Utils]
-a61568081c1052b57ee32dcbaeb0056a D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/mapping.xml
+9870ba6a3f85daf99269b5616e382793 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/mapping.xml
 3f3c42dc7a2dc6c9aef3017823a00e60 C:/Program Files/ANSYS Inc/v211/SCADE/SCADE/lib/C/SmuConfig.c
 5b9e0d7ea9b52c17fdae3092ded3ba5e C:/Program Files/ANSYS Inc/v211/SCADE/SCADE/lib/C/SmuLib.c
 9debb3e06a0a599175a9f8724fe07b6d C:/Program Files/ANSYS Inc/v211/SCADE/SCADE/lib/C/SmuPredefConv.c
 134415479f730b247b59be1fa4b82ed3 C:/Program Files/ANSYS Inc/v211/SCADE/SCADE/lib/C/SmuTypes.c
 f8e54064707a32ec62840ae6f743d17e C:/Program Files/ANSYS Inc/v211/SCADE/SCADE/lib/C/SmuVTable.c
-f60dcfae57c95845d11373b121ed048d D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/ScadeTERS2.etp
+d23b70c148e27ad0787701662cde2aad D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/ScadeTERS2.etp
 0ec7bf98f2d8c06bf359ea328f855490 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/ScadeTERS2_type.c
 17a206d7026d5233e9aaf4c2bce50a98 D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/ScadeTERS2_type.h
