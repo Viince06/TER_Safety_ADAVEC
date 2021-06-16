@@ -1,6 +1,6 @@
 /* $******* SCADE Suite KCG 32-bit 6.6.1 beta (build i1) ********
 ** Command: kcg661.exe -config D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/config.txt
-** Generation date: 2021-06-16T11:27:42
+** Generation date: 2021-06-16T20:26:03
 *************************************************************$ */
 #ifndef _KCG_TYPES_H_
 #define _KCG_TYPES_H_
@@ -180,9 +180,19 @@ typedef signed char kcg_int8;
 typedef enum kcg_tag_Strictness { STRICT, NONSTRICT } Strictness;
 /* ClockStatus/ */
 typedef enum kcg_tag_ClockStatus { PRESENT, ABSENT, DEAD } ClockStatus;
+/* XStrictness/ */
+typedef enum kcg_tag_XStrictness { RNS, LNS, S, NS } XStrictness;
+/* Utils::Alternates/SM1: */
+typedef enum kcg_tag_SSM_TR_SM1 {
+  SSM_TR_no_trans_SM1,
+  SSM_TR_S0_S1_1_S0_SM1,
+  SSM_TR_S1_S0_1_S1_SM1
+} SSM_TR_SM1;
+/* Utils::Alternates/SM1: */
+typedef enum kcg_tag_SSM_ST_SM1 { SSM_st_S0_SM1, SSM_st_S1_SM1 } SSM_ST_SM1;
 #endif /* _KCG_TYPES_H_ */
 /* $******* SCADE Suite KCG 32-bit 6.6.1 beta (build i1) ********
 ** kcg_types.h
-** Generation date: 2021-06-16T11:27:42
+** Generation date: 2021-06-16T20:26:03
 *************************************************************$ */
 

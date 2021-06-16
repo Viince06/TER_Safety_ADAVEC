@@ -3,12 +3,12 @@
 
 #include "kcg_sensors.h"
 #include "SmuProxy.h"
-#include "ChangeMode_Generated.h"
+#include "Verifier_Utils.h"
 
 /* context */
 
-extern inC_ChangeMode_Generated inputs_ctx;
-extern outC_ChangeMode_Generated outputs_ctx;
+extern inC_Verifier_Utils inputs_ctx;
+extern outC_Verifier_Utils outputs_ctx;
 
 #ifdef __cplusplus
 extern "C" {

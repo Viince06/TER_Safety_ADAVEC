@@ -194,7 +194,8 @@ public void endXMLFile(String name) {
 	  bodyOutputfile.println("L" + ++countL + " = " + arg1 + ";");
 	  localHM.put("L" + countL, "ClockStatus");
 	  
-	  bodyOutputfile.println("L" + ++countL + " = MSG::Precedence(L" + (countL - 2) + ", L" + (countL - 1) + ");");
+	  bodyOutputfile.println("L" + ++countL + " = "
+	  		+ "MSG::Precedence(L" + (countL - 2) + ", L" + (countL - 1) + ");");
 	  localHM.put("L" + countL, "bool");
 	  
 	  bodyOutputfile.println("O" + ++countO + " = L" + countL + ";");

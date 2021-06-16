@@ -149,18 +149,6 @@
 				<ed:Variable oid="!ed/4ea2/2E64/3F6C/6093dec17ce7"/>
 			</pragmas>
 		</Variable>
-		<Variable name="_L20">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="Strictness"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/4ea8/2E64/3F6C/6093dec55dbf"/>
-			</pragmas>
-		</Variable>
 	</locals>
 	<data>
 		<!-- o = _L14; -->
@@ -314,22 +302,6 @@
 				<ed:Equation oid="!ed/4ea1/2E64/3F6C/6093dec14e06"/>
 			</pragmas>
 		</Equation>
-		<!-- _L20 = kind; -->
-		<Equation>
-			<lefts>
-				<VariableRef name="_L20"/>
-			</lefts>
-			<right>
-				<IdExpression>
-					<path>
-						<ConstVarRef name="kind"/>
-					</path>
-				</IdExpression>
-			</right>
-			<pragmas>
-				<ed:Equation oid="!ed/4ea7/2E64/3F6C/6093dec55a95"/>
-			</pragmas>
-		</Equation>
 	</data>
 	<pragmas>
 		<ed:Operator oid="!ed/4e85/406B/207C/607473ff2c41" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
@@ -416,28 +388,20 @@
 								<Size width="264" height="502"/>
 							</size>
 						</EquationGE>
-						<EquationGE presentable="!ed/4ea7/2E64/3F6C/6093dec55a95">
-							<position>
-								<Point x="3228" y="4392"/>
-							</position>
-							<size>
-								<Size width="265" height="503"/>
-							</size>
-						</EquationGE>
 						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e9b/2E64/3F6C/6093debf12d7" dstEquation="!ed/4e95/2E64/3F6C/6093de9b4c25">
 							<positions>
 								<Point x="3863" y="2937"/>
 								<Point x="6006" y="2937"/>
-								<Point x="6006" y="2937"/>
-								<Point x="8149" y="2937"/>
+								<Point x="6006" y="3228"/>
+								<Point x="8149" y="3228"/>
 							</positions>
 						</Edge>
 						<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/4ea1/2E64/3F6C/6093dec14e06" dstEquation="!ed/4e95/2E64/3F6C/6093de9b4c25">
 							<positions>
 								<Point x="3731" y="3810"/>
 								<Point x="5927" y="3810"/>
-								<Point x="5927" y="3810"/>
-								<Point x="8149" y="3810"/>
+								<Point x="5927" y="4392"/>
+								<Point x="8149" y="4392"/>
 							</positions>
 						</Edge>
 						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e95/2E64/3F6C/6093de9b4c25" dstEquation="!ed/4e94/406B/207C/607473ff3ae5">

@@ -10,7 +10,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/223e3/180F/2130/60c9ba841d6a"/>
+				<ed:Variable oid="!ed/6615e/180F/2130/60ca008f6197"/>
 			</pragmas>
 		</Variable>
 		<Variable name="Autonome">
@@ -22,7 +22,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/223e5/180F/2130/60c9ba844328"/>
+				<ed:Variable oid="!ed/66160/180F/2130/60ca008f738a"/>
 			</pragmas>
 		</Variable>
 		<Variable name="Drunk">
@@ -34,7 +34,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/223e7/180F/2130/60c9ba843acb"/>
+				<ed:Variable oid="!ed/66162/180F/2130/60ca008f4a1"/>
 			</pragmas>
 		</Variable>
 		<Variable name="RTime">
@@ -46,7 +46,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/223e9/180F/2130/60c9ba845bc"/>
+				<ed:Variable oid="!ed/66164/180F/2130/60ca008f715"/>
 			</pragmas>
 		</Variable>
 	</inputs>
@@ -60,7 +60,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/223eb/180F/2130/60c9ba84568a"/>
+				<ed:Variable oid="!ed/66166/180F/2130/60ca008f2b46"/>
 			</pragmas>
 		</Variable>
 		<Variable name="O1">
@@ -72,7 +72,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/223ed/180F/2130/60c9ba84693d"/>
+				<ed:Variable oid="!ed/66168/180F/2130/60ca008f54be"/>
 			</pragmas>
 		</Variable>
 		<Variable name="O2">
@@ -84,7 +84,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/223ee/180F/2130/60c9ba842c5f"/>
+				<ed:Variable oid="!ed/66169/180F/2130/60ca008f20e4"/>
 			</pragmas>
 		</Variable>
 		<Variable name="O3">
@@ -96,7 +96,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/223ef/180F/2130/60c9ba841749"/>
+				<ed:Variable oid="!ed/6616a/180F/2130/60ca008f53f3"/>
 			</pragmas>
 		</Variable>
 		<Variable name="O4">
@@ -108,7 +108,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/223f0/180F/2130/60c9ba844d4a"/>
+				<ed:Variable oid="!ed/6616b/180F/2130/60ca008f4ab0"/>
 			</pragmas>
 		</Variable>
 	</outputs>
@@ -122,7 +122,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/223f1/180F/2130/60c9ba844c01"/>
+				<ed:Variable oid="!ed/6616c/180F/2130/60ca008f7372"/>
 			</pragmas>
 		</Variable>
 		<Variable name="L2">
@@ -134,7 +134,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/223f3/180F/2130/60c9ba8465bd"/>
+				<ed:Variable oid="!ed/6616e/180F/2130/60ca008f1b23"/>
 			</pragmas>
 		</Variable>
 		<Variable name="L3">
@@ -146,7 +146,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/223f5/180F/2130/60c9ba84310f"/>
+				<ed:Variable oid="!ed/66170/180F/2130/60ca008f22b2"/>
 			</pragmas>
 		</Variable>
 		<Variable name="L4">
@@ -158,7 +158,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/223f7/180F/2130/60c9ba8456b6"/>
+				<ed:Variable oid="!ed/66172/180F/2130/60ca008f7477"/>
 			</pragmas>
 		</Variable>
 		<Variable name="L5">
@@ -170,7 +170,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/223f9/180F/2130/60c9ba841a3b"/>
+				<ed:Variable oid="!ed/66174/180F/2130/60ca008f6c45"/>
 			</pragmas>
 		</Variable>
 		<Variable name="L6">
@@ -182,7 +182,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/223fb/180F/2130/60c9ba847659"/>
+				<ed:Variable oid="!ed/66176/180F/2130/60ca008f7a09"/>
 			</pragmas>
 		</Variable>
 		<Variable name="L7">
@@ -194,7 +194,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/223fc/180F/2130/60c9ba847c8d"/>
+				<ed:Variable oid="!ed/66177/180F/2130/60ca008f110f"/>
 			</pragmas>
 		</Variable>
 		<Variable name="L8">
@@ -206,7 +206,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/223fe/180F/2130/60c9ba84dcd"/>
+				<ed:Variable oid="!ed/66179/180F/2130/60ca008f7b40"/>
 			</pragmas>
 		</Variable>
 		<Variable name="L9">
@@ -218,7 +218,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/22400/180F/2130/60c9ba842504"/>
+				<ed:Variable oid="!ed/6617b/180F/2130/60ca008f323a"/>
 			</pragmas>
 		</Variable>
 		<Variable name="L10">
@@ -230,7 +230,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/22401/180F/2130/60c9ba849fa"/>
+				<ed:Variable oid="!ed/6617c/180F/2130/60ca008f40d1"/>
 			</pragmas>
 		</Variable>
 		<Variable name="L11">
@@ -242,7 +242,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/22403/180F/2130/60c9ba841366"/>
+				<ed:Variable oid="!ed/6617e/180F/2130/60ca008fa5a"/>
 			</pragmas>
 		</Variable>
 		<Variable name="L12">
@@ -254,7 +254,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/22405/180F/2130/60c9ba846f13"/>
+				<ed:Variable oid="!ed/66180/180F/2130/60ca008f2d8b"/>
 			</pragmas>
 		</Variable>
 		<Variable name="L13">
@@ -266,7 +266,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/22406/180F/2130/60c9ba847ef3"/>
+				<ed:Variable oid="!ed/66181/180F/2130/60ca008f1915"/>
 			</pragmas>
 		</Variable>
 		<Variable name="L14">
@@ -278,7 +278,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/22408/180F/2130/60c9ba84208b"/>
+				<ed:Variable oid="!ed/66183/180F/2130/60ca008f7f95"/>
 			</pragmas>
 		</Variable>
 		<Variable name="L15">
@@ -290,7 +290,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/2240a/180F/2130/60c9ba8476d0"/>
+				<ed:Variable oid="!ed/66185/180F/2130/60ca008f22d8"/>
 			</pragmas>
 		</Variable>
 	</locals>
@@ -308,7 +308,7 @@
 				</IdExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26dd4/180F/2130/60c9c3fe738e"/>
+				<ed:Equation oid="!ed/6ab37/180F/2130/60ca00a568e8"/>
 			</pragmas>
 		</Equation>
 		<!-- L2 = Autonome; -->
@@ -324,7 +324,7 @@
 				</IdExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26dd5/180F/2130/60c9c3fe6329"/>
+				<ed:Equation oid="!ed/6ab38/180F/2130/60ca00a529c1"/>
 			</pragmas>
 		</Equation>
 		<!-- L3 = MSG::Union(L1, L2); -->
@@ -357,7 +357,7 @@
 				</CallExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26dd7/180F/2130/60c9c3fe2233"/>
+				<ed:Equation oid="!ed/6ab3a/180F/2130/60ca00a51a74"/>
 			</pragmas>
 		</Equation>
 		<!-- Mode = L3; -->
@@ -373,7 +373,7 @@
 				</IdExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26dd8/180F/2130/60c9c3fe20dc"/>
+				<ed:Equation oid="!ed/6ab3b/180F/2130/60ca00a55491"/>
 			</pragmas>
 		</Equation>
 		<!-- L4 = Manual; -->
@@ -389,7 +389,7 @@
 				</IdExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26dd9/180F/2130/60c9c3fe46d2"/>
+				<ed:Equation oid="!ed/6ab3c/180F/2130/60ca00a5269b"/>
 			</pragmas>
 		</Equation>
 		<!-- L5 = Autonome; -->
@@ -405,7 +405,7 @@
 				</IdExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26dda/180F/2130/60c9c3fe5650"/>
+				<ed:Equation oid="!ed/6ab3d/180F/2130/60ca00a5154a"/>
 			</pragmas>
 		</Equation>
 		<!-- L6 = MSG::Exclusion(L4, L5); -->
@@ -438,7 +438,7 @@
 				</CallExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26ddc/180F/2130/60c9c3fe3466"/>
+				<ed:Equation oid="!ed/6ab3f/180F/2130/60ca00a563f1"/>
 			</pragmas>
 		</Equation>
 		<!-- O1 = L6; -->
@@ -454,7 +454,7 @@
 				</IdExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26ddd/180F/2130/60c9c3fe5656"/>
+				<ed:Equation oid="!ed/6ab40/180F/2130/60ca00a55088"/>
 			</pragmas>
 		</Equation>
 		<!-- L7 = Manual; -->
@@ -470,7 +470,7 @@
 				</IdExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26dde/180F/2130/60c9c3fe789a"/>
+				<ed:Equation oid="!ed/6ab41/180F/2130/60ca00a573a1"/>
 			</pragmas>
 		</Equation>
 		<!-- L8 = Drunk; -->
@@ -486,21 +486,21 @@
 				</IdExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26ddf/180F/2130/60c9c3fe4702"/>
+				<ed:Equation oid="!ed/6ab42/180F/2130/60ca00a54cec"/>
 			</pragmas>
 		</Equation>
-		<!-- L9 = MSG::Precedence(L7, L8); -->
+		<!-- L9 = MSG::Causality(L7, L8); -->
 		<Equation>
 			<lefts>
 				<VariableRef name="L9"/>
 			</lefts>
 			<right>
-				<!-- MSG::Precedence(L7, L8) -->
+				<!-- MSG::Causality(L7, L8) -->
 				<CallExpression>
 					<operator>
 						<OpCall name="1">
 							<operator>
-								<OperatorRef name="MSG::Precedence"/>
+								<OperatorRef name="MSG::Causality"/>
 							</operator>
 						</OpCall>
 					</operator>
@@ -519,7 +519,7 @@
 				</CallExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26de1/180F/2130/60c9c3fe3de2"/>
+				<ed:Equation oid="!ed/6ab44/180F/2130/60ca00a54809"/>
 			</pragmas>
 		</Equation>
 		<!-- O2 = L9; -->
@@ -535,7 +535,7 @@
 				</IdExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26de2/180F/2130/60c9c3fe232d"/>
+				<ed:Equation oid="!ed/6ab45/180F/2130/60ca00a512eb"/>
 			</pragmas>
 		</Equation>
 		<!-- L10 = Drunk; -->
@@ -551,7 +551,7 @@
 				</IdExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26de3/180F/2130/60c9c3fe49eb"/>
+				<ed:Equation oid="!ed/6ab46/180F/2130/60ca00a534e7"/>
 			</pragmas>
 		</Equation>
 		<!-- L11 = RTime; -->
@@ -567,7 +567,7 @@
 				</IdExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26de4/180F/2130/60c9c3fe1082"/>
+				<ed:Equation oid="!ed/6ab47/180F/2130/60ca00a53277"/>
 			</pragmas>
 		</Equation>
 		<!-- L12 = MSG::Precedence(L10, L11); -->
@@ -579,7 +579,7 @@
 				<!-- MSG::Precedence(L10, L11) -->
 				<CallExpression>
 					<operator>
-						<OpCall name="2">
+						<OpCall name="1">
 							<operator>
 								<OperatorRef name="MSG::Precedence"/>
 							</operator>
@@ -600,7 +600,7 @@
 				</CallExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26de6/180F/2130/60c9c3fe4ac2"/>
+				<ed:Equation oid="!ed/6ab49/180F/2130/60ca00a54b0f"/>
 			</pragmas>
 		</Equation>
 		<!-- O3 = L12; -->
@@ -616,7 +616,7 @@
 				</IdExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26de7/180F/2130/60c9c3fe1188"/>
+				<ed:Equation oid="!ed/6ab4a/180F/2130/60ca00a51351"/>
 			</pragmas>
 		</Equation>
 		<!-- L13 = RTime; -->
@@ -632,7 +632,7 @@
 				</IdExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26de8/180F/2130/60c9c3fe2fd9"/>
+				<ed:Equation oid="!ed/6ab4b/180F/2130/60ca00a530f5"/>
 			</pragmas>
 		</Equation>
 		<!-- L14 = Autonome; -->
@@ -648,7 +648,7 @@
 				</IdExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26de9/180F/2130/60c9c3fe3bed"/>
+				<ed:Equation oid="!ed/6ab4c/180F/2130/60ca00a5397d"/>
 			</pragmas>
 		</Equation>
 		<!-- L15 = MSG::Precedence(L13, L14); -->
@@ -660,7 +660,7 @@
 				<!-- MSG::Precedence(L13, L14) -->
 				<CallExpression>
 					<operator>
-						<OpCall name="3">
+						<OpCall name="2">
 							<operator>
 								<OperatorRef name="MSG::Precedence"/>
 							</operator>
@@ -681,7 +681,7 @@
 				</CallExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26deb/180F/2130/60c9c3fe344c"/>
+				<ed:Equation oid="!ed/6ab4e/180F/2130/60ca00a552f5"/>
 			</pragmas>
 		</Equation>
 		<!-- O4 = L15; -->
@@ -697,35 +697,35 @@
 				</IdExpression>
 			</right>
 			<pragmas>
-				<ed:Equation oid="!ed/26dec/180F/2130/60c9c3fe11e"/>
+				<ed:Equation oid="!ed/6ab4f/180F/2130/60ca00a51fa1"/>
 			</pragmas>
 		</Equation>
 	</data>
 	<pragmas>
-		<ed:Operator oid="!ed/223e2/180F/2130/60c9ba845d55" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+		<ed:Operator oid="!ed/6615d/180F/2130/60ca008f44a7" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
 			<diagrams>
-				<TextDiagram name="ChangeMode_1" landscape="false" format="A4 (210 297)" oid="!ed/2240b/180F/2130/60c9ba84c1e">
+				<TextDiagram name="ChangeMode_1" landscape="false" format="A4 (210 297)" oid="!ed/66186/180F/2130/60ca008f5e7b">
 					<presentationElements>
-						<FlowTE presentable="!ed/26dd4/180F/2130/60c9c3fe738e"/>
-						<FlowTE presentable="!ed/26dd5/180F/2130/60c9c3fe6329"/>
-						<FlowTE presentable="!ed/26dd7/180F/2130/60c9c3fe2233"/>
-						<FlowTE presentable="!ed/26dd8/180F/2130/60c9c3fe20dc"/>
-						<FlowTE presentable="!ed/26dd9/180F/2130/60c9c3fe46d2"/>
-						<FlowTE presentable="!ed/26dda/180F/2130/60c9c3fe5650"/>
-						<FlowTE presentable="!ed/26ddc/180F/2130/60c9c3fe3466"/>
-						<FlowTE presentable="!ed/26ddd/180F/2130/60c9c3fe5656"/>
-						<FlowTE presentable="!ed/26dde/180F/2130/60c9c3fe789a"/>
-						<FlowTE presentable="!ed/26ddf/180F/2130/60c9c3fe4702"/>
-						<FlowTE presentable="!ed/26de1/180F/2130/60c9c3fe3de2"/>
-						<FlowTE presentable="!ed/26de2/180F/2130/60c9c3fe232d"/>
-						<FlowTE presentable="!ed/26de3/180F/2130/60c9c3fe49eb"/>
-						<FlowTE presentable="!ed/26de4/180F/2130/60c9c3fe1082"/>
-						<FlowTE presentable="!ed/26de6/180F/2130/60c9c3fe4ac2"/>
-						<FlowTE presentable="!ed/26de7/180F/2130/60c9c3fe1188"/>
-						<FlowTE presentable="!ed/26de8/180F/2130/60c9c3fe2fd9"/>
-						<FlowTE presentable="!ed/26de9/180F/2130/60c9c3fe3bed"/>
-						<FlowTE presentable="!ed/26deb/180F/2130/60c9c3fe344c"/>
-						<FlowTE presentable="!ed/26dec/180F/2130/60c9c3fe11e"/>
+						<FlowTE presentable="!ed/6ab37/180F/2130/60ca00a568e8"/>
+						<FlowTE presentable="!ed/6ab38/180F/2130/60ca00a529c1"/>
+						<FlowTE presentable="!ed/6ab3a/180F/2130/60ca00a51a74"/>
+						<FlowTE presentable="!ed/6ab3b/180F/2130/60ca00a55491"/>
+						<FlowTE presentable="!ed/6ab3c/180F/2130/60ca00a5269b"/>
+						<FlowTE presentable="!ed/6ab3d/180F/2130/60ca00a5154a"/>
+						<FlowTE presentable="!ed/6ab3f/180F/2130/60ca00a563f1"/>
+						<FlowTE presentable="!ed/6ab40/180F/2130/60ca00a55088"/>
+						<FlowTE presentable="!ed/6ab41/180F/2130/60ca00a573a1"/>
+						<FlowTE presentable="!ed/6ab42/180F/2130/60ca00a54cec"/>
+						<FlowTE presentable="!ed/6ab44/180F/2130/60ca00a54809"/>
+						<FlowTE presentable="!ed/6ab45/180F/2130/60ca00a512eb"/>
+						<FlowTE presentable="!ed/6ab46/180F/2130/60ca00a534e7"/>
+						<FlowTE presentable="!ed/6ab47/180F/2130/60ca00a53277"/>
+						<FlowTE presentable="!ed/6ab49/180F/2130/60ca00a54b0f"/>
+						<FlowTE presentable="!ed/6ab4a/180F/2130/60ca00a51351"/>
+						<FlowTE presentable="!ed/6ab4b/180F/2130/60ca00a530f5"/>
+						<FlowTE presentable="!ed/6ab4c/180F/2130/60ca00a5397d"/>
+						<FlowTE presentable="!ed/6ab4e/180F/2130/60ca00a552f5"/>
+						<FlowTE presentable="!ed/6ab4f/180F/2130/60ca00a51fa1"/>
 					</presentationElements>
 					<textArea>
 						<TextArea text="L1 = Manual;&#xA;
@@ -738,7 +738,7 @@ L6 = MSG::Exclusion(L4, L5);&#xA;
 O1 = L6;&#xA;
 L7 = Manual;&#xA;
 L8 = Drunk;&#xA;
-L9 = MSG::Precedence(L7, L8);&#xA;
+L9 = MSG::Causality(L7, L8);&#xA;
 O2 = L9;&#xA;
 L10 = Drunk;&#xA;
 L11 = RTime;&#xA;

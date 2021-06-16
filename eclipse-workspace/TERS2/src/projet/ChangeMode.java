@@ -43,14 +43,16 @@ public class ChangeMode implements ISpecificationBuilder {
 	}
 	
 	
-	public void changeMode(ISimpleSpecification simple, String start, String finish, String trigger) {
+	public void changeMode(ISimpleSpecification simple, String start, 
+														String finish, 
+														String trigger) {
 		simple.addClock(start);		
 		simple.addClock(finish);
 		simple.addClock(trigger);
 		simple.addClock("RTime");
 		simple.union("Mode", start, finish);
 		simple.exclusion(start, finish);
-		simple.precedence(start, trigger);
+		simple.causality(start, trigger);
 		simple.precedence(trigger, "RTime");		
 		simple.precedence("RTime", finish);
 	}

@@ -1,0 +1,4 @@
+*** Post-namespace Warning (WAR_508): Unused flow
+  at file C:\Users\samue\AppData\Local\Temp\ScadeChecker\8496\checker_file.scade, line 2048, character 0
+  at path MSG::Causality2/kind/
+ The input variable kind is never used

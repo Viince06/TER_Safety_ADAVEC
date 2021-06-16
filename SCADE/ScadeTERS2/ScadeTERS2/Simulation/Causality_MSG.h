@@ -1,11 +1,13 @@
 /* $******* SCADE Suite KCG 32-bit 6.6.1 beta (build i1) ********
 ** Command: kcg661.exe -config D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/config.txt
-** Generation date: 2021-06-16T11:27:42
+** Generation date: 2021-06-16T20:26:03
 *************************************************************$ */
-#ifndef _EncodeClockStatus_Utils_H_
-#define _EncodeClockStatus_Utils_H_
+#ifndef _Causality_MSG_H_
+#define _Causality_MSG_H_
 
 #include "kcg_types.h"
+#include "Mg_delta_Utils.h"
+#include "isPresent_Utils.h"
 
 /* =====================  no input structure  ====================== */
 
@@ -14,44 +16,53 @@
 /* ========================  context type  ========================= */
 typedef struct {
   /* ---------------------------  outputs  --------------------------- */
-  ClockStatus /* c/ */ c;
+  kcg_bool /* o/ */ o;
   /* -----------------------  no local probes  ----------------------- */
   /* -----------------------  no local memory  ----------------------- */
-  /* -------------------- no sub nodes' contexts  -------------------- */
+  /* ---------------------  sub nodes' contexts  --------------------- */
+  outC_Mg_delta_Utils /* _L12=(Utils::Mg_delta#1)/ */ Context_Mg_delta_1;
+  outC_isPresent_Utils /* _L5=(Utils::isPresent#2)/ */ Context_isPresent_2;
+  outC_isPresent_Utils /* _L4=(Utils::isPresent#1)/ */ Context_isPresent_1;
   /* ----------------- no clocks of observable data ------------------ */
   /* -------------------- (-debug) no assertions  -------------------- */
   /* ------------------- (-debug) local variables -------------------- */
-  kcg_bool /* _L1/ */ _L1;
-  kcg_bool /* _L2/ */ _L2;
-  ClockStatus /* _L3/ */ _L3;
-  ClockStatus /* _L4/ */ _L4;
-  ClockStatus /* _L5/ */ _L5;
-  ClockStatus /* _L6/ */ _L6;
-  ClockStatus /* _L7/ */ _L7;
-} outC_EncodeClockStatus_Utils;
+  ClockStatus /* _L1/ */ _L1;
+  ClockStatus /* _L2/ */ _L2;
+  kcg_bool /* _L4/ */ _L4;
+  kcg_bool /* _L5/ */ _L5;
+  kcg_bool /* _L8/ */ _L8;
+  kcg_bool /* _L10/ */ _L10;
+  kcg_bool /* _L11/ */ _L11;
+  kcg_int32 /* _L12/ */ _L12;
+  kcg_int32 /* _L13/ */ _L13;
+  kcg_bool /* _L9/ */ _L9;
+  kcg_bool /* _L7/ */ _L7;
+  kcg_bool /* _L6/ */ _L6;
+  Strictness /* _L22/ */ _L22;
+} outC_Causality_MSG;
 
 /* ===========  node initialization and cycle functions  =========== */
-/* Utils::EncodeClockStatus/ */
-extern void EncodeClockStatus_Utils(
-  /* presence/ */
-  kcg_bool presence,
-  /* alive/ */
-  kcg_bool alive,
-  outC_EncodeClockStatus_Utils *outC);
+/* MSG::Causality/ */
+extern void Causality_MSG(
+  /* a/ */
+  ClockStatus a,
+  /* b/ */
+  ClockStatus b,
+  outC_Causality_MSG *outC);
 
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-extern void EncodeClockStatus_reset_Utils(outC_EncodeClockStatus_Utils *outC);
+extern void Causality_reset_MSG(outC_Causality_MSG *outC);
 #endif /* KCG_NO_EXTERN_CALL_TO_RESET */
 
 #ifndef KCG_USER_DEFINED_INIT
-extern void EncodeClockStatus_init_Utils(outC_EncodeClockStatus_Utils *outC);
+extern void Causality_init_MSG(outC_Causality_MSG *outC);
 #endif /* KCG_USER_DEFINED_INIT */
 
 
 
-#endif /* _EncodeClockStatus_Utils_H_ */
+#endif /* _Causality_MSG_H_ */
 /* $******* SCADE Suite KCG 32-bit 6.6.1 beta (build i1) ********
-** EncodeClockStatus_Utils.h
-** Generation date: 2021-06-16T11:27:42
+** Causality_MSG.h
+** Generation date: 2021-06-16T20:26:03
 *************************************************************$ */
 

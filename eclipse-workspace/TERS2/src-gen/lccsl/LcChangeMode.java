@@ -22,7 +22,7 @@ public class LcChangeMode implements ISpecificationBuilder {
 		
 		simple.exclusion("start", "finish");
 		
-		simple.precedence("start", "trigger");
+		simple.causality("start", "trigger");
 		
 		simple.precedence("trigger", "RTime");
 		

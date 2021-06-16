@@ -2,9 +2,10 @@ Specification ChangeMode {
 	Clock start finish trigger RTime
 	[
 		Let Mode be start + finish
-		Exclusion start # finish
-		Precedence start < trigger
+		Exclusion start # finish 
+		Precedence start <= trigger 
 		Precedence trigger < RTime 
 		Precedence RTime < finish
 	]
 }
+
