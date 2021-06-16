@@ -1,0 +1,4 @@
+L1 = Drunk;
+L2 = Unconsc;
+L3 = MSG::Causality(L1, L2);
+O1 = L3;

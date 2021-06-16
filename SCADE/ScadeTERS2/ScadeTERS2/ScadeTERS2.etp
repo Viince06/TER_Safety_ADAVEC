@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="324" defaultConfiguration="23">
+<Project id="1" oid_count="407" defaultConfiguration="23">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -188,7 +188,7 @@
 		</Prop>
 		<Prop id="56" name="@STUDIO:TOOLCONF">
 			<value>Metrics and Rules Checker</value>
-			<value>282</value>
+			<value>382</value>
 		</Prop>
 		<Prop id="58" name="@GENERATOR:TARGET_DIR">
 			<value>$(Configuration)</value>
@@ -503,9 +503,30 @@
 								</Prop>
 							</props>
 						</FileRef>
-						<FileRef id="281" persistAs="Intersection1.xscade">
+						<FileRef id="338" persistAs="Debug.xscade">
 							<props>
-								<Prop id="280" name="@SCADE:NONROOT">
+								<Prop id="337" name="@SCADE:NONROOT">
+									<value>true</value>
+								</Prop>
+							</props>
+						</FileRef>
+						<FileRef id="403" persistAs="Generated\ExclusionCondition.xscade">
+							<props>
+								<Prop id="402" name="@SCADE:NONROOT">
+									<value>true</value>
+								</Prop>
+							</props>
+						</FileRef>
+						<FileRef id="405" persistAs="Generated\CauseEffect.xscade">
+							<props>
+								<Prop id="404" name="@SCADE:NONROOT">
+									<value>true</value>
+								</Prop>
+							</props>
+						</FileRef>
+						<FileRef id="407" persistAs="Generated\ChangeMode.xscade">
+							<props>
+								<Prop id="406" name="@SCADE:NONROOT">
 									<value>true</value>
 								</Prop>
 							</props>
@@ -514,7 +535,8 @@
 				</Folder>
 				<FileRef id="85" persistAs="ScadeTERS2.xscade"/>
 				<FileRef id="145" persistAs="Utils.xscade"/>
-				<FileRef id="203" persistAs="Graphic_Scade.xscade"/>
+				<FileRef id="380" persistAs="MSG.xscade"/>
+				<FileRef id="399" persistAs="Generated.xscade"/>
 			</elements>
 		</Folder>
 	</roots>
@@ -528,5 +550,8 @@
 		<Configuration id="57" name="Timing and Stack"/>
 		<Configuration id="65" name="Cert. Reporter"/>
 		<Configuration id="282" name="MetricRule"/>
+		<Configuration id="378" name="MetricRule"/>
+		<Configuration id="379" name="MetricRule"/>
+		<Configuration id="382" name="MetricRule"/>
 	</configurations>
 </Project>

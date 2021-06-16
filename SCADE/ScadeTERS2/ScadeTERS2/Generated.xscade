@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="Generated">
+			<declarations>
+				<Operator name="CauseEffect" href="Generated\CauseEffect.xscade"/>
+				<Operator name="ExclusionCondition" href="Generated\ExclusionCondition.xscade"/>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/1d173/4429/27C8/60c932e53fa2" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/1d174/4429/27C8/60c932e5d44" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/1d175/4429/27C8/60c932e5476d" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/1d176/4429/27C8/60c932e5734" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

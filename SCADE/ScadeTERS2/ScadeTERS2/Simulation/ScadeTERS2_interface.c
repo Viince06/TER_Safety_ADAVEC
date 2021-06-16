@@ -7,22 +7,25 @@
 #define UNUSED(x) (void)(x)
 /* context */
 
-inC_Intersection_Graphic_Scade inputs_ctx;
-static inC_Intersection_Graphic_Scade inputs_ctx_execute;
-outC_Intersection_Graphic_Scade outputs_ctx;
+inC_ExclusionCondition_Generated inputs_ctx;
+static inC_ExclusionCondition_Generated inputs_ctx_execute;
+outC_ExclusionCondition_Generated outputs_ctx;
 
 static void _SCSIM_RestoreInterface(void) {
-    init_ClockStatus(&inputs_ctx.b);
-    init_ClockStatus(&inputs_ctx_execute.b);
-    init_ClockStatus(&inputs_ctx.a);
-    init_ClockStatus(&inputs_ctx_execute.a);
+    init_ClockStatus(&inputs_ctx.Autonome);
+    init_ClockStatus(&inputs_ctx_execute.Autonome);
+    init_ClockStatus(&inputs_ctx.MRM);
+    init_ClockStatus(&inputs_ctx_execute.MRM);
+    init_ClockStatus(&inputs_ctx.Manual);
+    init_ClockStatus(&inputs_ctx_execute.Manual);
     memset((void*)&outputs_ctx, 0, sizeof(outputs_ctx));
 }
 
 static void _SCSIM_ExecuteInterface(void) {
     pSimulator->m_pfnAcquireValueMutex(pSimulator);
-    inputs_ctx_execute.b = inputs_ctx.b;
-    inputs_ctx_execute.a = inputs_ctx.a;
+    inputs_ctx_execute.Autonome = inputs_ctx.Autonome;
+    inputs_ctx_execute.MRM = inputs_ctx.MRM;
+    inputs_ctx_execute.Manual = inputs_ctx.Manual;
     pSimulator->m_pfnReleaseValueMutex(pSimulator);
 }
 
@@ -32,7 +35,7 @@ extern "C" {
 
 const int  rt_version = Srtv62;
 
-const char* _SCSIM_CheckSum = "d3bce7bea110fadd2dc372cee81d0b6d";
+const char* _SCSIM_CheckSum = "c9f60dea8665aa002ca662b2e4a3f119";
 const char* _SCSIM_SmuTypesCheckSum = "612a6f2dec6abe526bcaa0632c507adf";
 
 /* simulation */
@@ -44,7 +47,7 @@ int SimInit(void) {
     BeforeSimInit();
 #endif
 #ifndef KCG_USER_DEFINED_INIT
-    Intersection_init_Graphic_Scade(&outputs_ctx);
+    ExclusionCondition_init_Generated(&outputs_ctx);
     nRet = 1;
 #else
     nRet = 0;
@@ -62,7 +65,7 @@ int SimReset(void) {
     BeforeSimInit();
 #endif
 #ifndef KCG_NO_EXTERN_CALL_TO_RESET
-    Intersection_reset_Graphic_Scade(&outputs_ctx);
+    ExclusionCondition_reset_Generated(&outputs_ctx);
     nRet = 1;
 #else
     nRet = 0;
@@ -74,21 +77,21 @@ int SimReset(void) {
 }
 
 #ifdef __cplusplus
-    #ifdef pSimoutC_Intersection_Graphic_ScadeCIVTable_defined
-        extern struct SimCustomInitVTable *pSimoutC_Intersection_Graphic_ScadeCIVTable;
+    #ifdef pSimoutC_ExclusionCondition_GeneratedCIVTable_defined
+        extern struct SimCustomInitVTable *pSimoutC_ExclusionCondition_GeneratedCIVTable;
     #else 
-        struct SimCustomInitVTable *pSimoutC_Intersection_Graphic_ScadeCIVTable = NULL;
+        struct SimCustomInitVTable *pSimoutC_ExclusionCondition_GeneratedCIVTable = NULL;
     #endif
 #else
-    struct SimCustomInitVTable *pSimoutC_Intersection_Graphic_ScadeCIVTable;
+    struct SimCustomInitVTable *pSimoutC_ExclusionCondition_GeneratedCIVTable;
 #endif
 
 int SimCustomInit(void) {
     int nRet = 0;
-    if (pSimoutC_Intersection_Graphic_ScadeCIVTable != NULL && 
-        pSimoutC_Intersection_Graphic_ScadeCIVTable->m_pfnCustomInit != NULL) {
+    if (pSimoutC_ExclusionCondition_GeneratedCIVTable != NULL && 
+        pSimoutC_ExclusionCondition_GeneratedCIVTable->m_pfnCustomInit != NULL) {
         /* VTable function provided => call it */
-        nRet = pSimoutC_Intersection_Graphic_ScadeCIVTable->m_pfnCustomInit ((void*)&outputs_ctx);
+        nRet = pSimoutC_ExclusionCondition_GeneratedCIVTable->m_pfnCustomInit ((void*)&outputs_ctx);
     }
     else {
         /* VTable misssing => error */
@@ -107,7 +110,7 @@ int SimStep(void) {
         BeforeSimStep();
 #endif
     _SCSIM_ExecuteInterface();
-    Intersection_Graphic_Scade(&inputs_ctx_execute, &outputs_ctx);
+    ExclusionCondition_Generated(&inputs_ctx_execute, &outputs_ctx);
 #ifdef EXTENDED_SIM
     AfterSimStep();
 #endif
@@ -139,8 +142,8 @@ void SsmConnectExternalInputs(int bConnect) {
 
 int SsmGetDumpSize(void) {
     int nSize = 0;
-    nSize += sizeof(inC_Intersection_Graphic_Scade);
-    nSize += sizeof(outC_Intersection_Graphic_Scade);
+    nSize += sizeof(inC_ExclusionCondition_Generated);
+    nSize += sizeof(outC_ExclusionCondition_Generated);
 #ifdef EXTENDED_SIM
     nSize += ExtendedGetDumpSize();
 #endif
@@ -149,10 +152,10 @@ int SsmGetDumpSize(void) {
 
 void SsmGatherDumpData(char * pData) {
     char* pCurrent = pData;
-    memcpy(pCurrent, &inputs_ctx, sizeof(inC_Intersection_Graphic_Scade));
-    pCurrent += sizeof(inC_Intersection_Graphic_Scade);
-    memcpy(pCurrent, &outputs_ctx, sizeof(outC_Intersection_Graphic_Scade));
-    pCurrent += sizeof(outC_Intersection_Graphic_Scade);
+    memcpy(pCurrent, &inputs_ctx, sizeof(inC_ExclusionCondition_Generated));
+    pCurrent += sizeof(inC_ExclusionCondition_Generated);
+    memcpy(pCurrent, &outputs_ctx, sizeof(outC_ExclusionCondition_Generated));
+    pCurrent += sizeof(outC_ExclusionCondition_Generated);
 #ifdef EXTENDED_SIM
     ExtendedGatherDumpData(pCurrent);
 #endif
@@ -160,10 +163,10 @@ void SsmGatherDumpData(char * pData) {
 
 void SsmRestoreDumpData(const char * pData) {
     const char* pCurrent = pData;
-    memcpy(&inputs_ctx, pCurrent, sizeof(inC_Intersection_Graphic_Scade));
-    pCurrent += sizeof(inC_Intersection_Graphic_Scade);
-    memcpy(&outputs_ctx, pCurrent, sizeof(outC_Intersection_Graphic_Scade));
-    pCurrent += sizeof(outC_Intersection_Graphic_Scade);
+    memcpy(&inputs_ctx, pCurrent, sizeof(inC_ExclusionCondition_Generated));
+    pCurrent += sizeof(inC_ExclusionCondition_Generated);
+    memcpy(&outputs_ctx, pCurrent, sizeof(outC_ExclusionCondition_Generated));
+    pCurrent += sizeof(outC_ExclusionCondition_Generated);
 #ifdef EXTENDED_SIM
     ExtendedRestoreDumpData(pCurrent);
 #endif

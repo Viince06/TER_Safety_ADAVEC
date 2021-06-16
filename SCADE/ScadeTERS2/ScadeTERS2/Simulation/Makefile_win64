@@ -8,16 +8,16 @@ SHELL=cmd.exe
 
 C_FLAGS = -pedantic
 
-all: Graphic_Scade__Intersection.exe Graphic_Scade__Intersection.dll 
+all: Generated__ExclusionCondition.exe Generated__ExclusionCondition.dll 
 
-win64/Intersection_Graphic_Scade.o: Intersection_Graphic_Scade.c
-	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "Intersection_Graphic_Scade.c" -o "win64\Intersection_Graphic_Scade.o"
+win64/ExclusionCondition_Generated.o: ExclusionCondition_Generated.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "ExclusionCondition_Generated.c" -o "win64\ExclusionCondition_Generated.o"
 
-win64/EncodeClockStatus_Utils.o: EncodeClockStatus_Utils.c
-	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "EncodeClockStatus_Utils.c" -o "win64\EncodeClockStatus_Utils.o"
+win64/Exclusion_MSG.o: Exclusion_MSG.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "Exclusion_MSG.c" -o "win64\Exclusion_MSG.o"
 
-win64/DecodeClockStatus_Utils.o: DecodeClockStatus_Utils.c
-	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "DecodeClockStatus_Utils.c" -o "win64\DecodeClockStatus_Utils.o"
+win64/isPresent_Utils.o: isPresent_Utils.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "isPresent_Utils.c" -o "win64\isPresent_Utils.o"
 
 win64/kcg_types.o: kcg_types.c
 	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "kcg_types.c" -o "win64\kcg_types.o"
@@ -52,8 +52,8 @@ win64/ScadeTERS2_interface.o: ScadeTERS2_interface.c
 win64/SmuProxy.o: C:/Program\ Files/ANSYS\ Inc/v211/SCADE/SCADE/lib/C/SmuProxy.c
 	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "C:\Program Files\ANSYS Inc\v211\SCADE\SCADE\lib\C\SmuProxy.c" -o "win64\SmuProxy.o"
 
-Graphic_Scade__Intersection.dll: win64/Intersection_Graphic_Scade.o win64/EncodeClockStatus_Utils.o win64/DecodeClockStatus_Utils.o win64/kcg_types.o win64/kcg_consts.o win64/ScadeTERS2_mapping.o win64/ScadeTERS2_type.o win64/SmuPredefConv.o win64/SmuConfig.o win64/SmuTypes.o win64/SmuLib.o win64/SmuVTable.o win64/ScadeTERS2_interface.o win64/SmuProxy.o SmuExport.def 
-	gcc -mwindows -mwin32 -shared -static-libgcc  "win64\Intersection_Graphic_Scade.o" "win64\EncodeClockStatus_Utils.o" "win64\DecodeClockStatus_Utils.o" "win64\kcg_types.o" "win64\kcg_consts.o" "win64\ScadeTERS2_mapping.o" "win64\ScadeTERS2_type.o" "win64\SmuPredefConv.o" "win64\SmuConfig.o" "win64\SmuTypes.o" "win64\SmuLib.o" "win64\SmuVTable.o" "win64\ScadeTERS2_interface.o" "win64\SmuProxy.o" -Wl,--output-def,"SmuExport.def" -lm -lwsock32 -m64 -o "Graphic_Scade__Intersection.dll" 
+Generated__ExclusionCondition.dll: win64/ExclusionCondition_Generated.o win64/Exclusion_MSG.o win64/isPresent_Utils.o win64/kcg_types.o win64/kcg_consts.o win64/ScadeTERS2_mapping.o win64/ScadeTERS2_type.o win64/SmuPredefConv.o win64/SmuConfig.o win64/SmuTypes.o win64/SmuLib.o win64/SmuVTable.o win64/ScadeTERS2_interface.o win64/SmuProxy.o SmuExport.def 
+	gcc -mwindows -mwin32 -shared -static-libgcc  "win64\ExclusionCondition_Generated.o" "win64\Exclusion_MSG.o" "win64\isPresent_Utils.o" "win64\kcg_types.o" "win64\kcg_consts.o" "win64\ScadeTERS2_mapping.o" "win64\ScadeTERS2_type.o" "win64\SmuPredefConv.o" "win64\SmuConfig.o" "win64\SmuTypes.o" "win64\SmuLib.o" "win64\SmuVTable.o" "win64\ScadeTERS2_interface.o" "win64\SmuProxy.o" -Wl,--output-def,"SmuExport.def" -lm -lwsock32 -m64 -o "Generated__ExclusionCondition.dll" 
 
 SmuExport.def: C:/Program\ Files/ANSYS\ Inc/v211/SCADE/SCADE/lib/C/SmuExport.def
 	copy "C:\Program Files\ANSYS Inc\v211\SCADE\SCADE\lib\C\SmuExport.def" "SmuExport.def"
@@ -64,8 +64,8 @@ win64/ScadeTERS2_dll.o: ScadeTERS2_dll.c
 win64/SmuMainWindows.o: C:/Program\ Files/ANSYS\ Inc/v211/SCADE/SCADE/lib/C/SmuMainWindows.c
 	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "C:\Program Files\ANSYS Inc\v211\SCADE\SCADE\lib\C\SmuMainWindows.c" -o "win64\SmuMainWindows.o"
 
-Graphic_Scade__Intersection.exe: win64/ScadeTERS2_dll.o win64/SmuMainWindows.o 
-	gcc "win64\ScadeTERS2_dll.o" "win64\SmuMainWindows.o" -lm -lwsock32 -m64 -o "Graphic_Scade__Intersection.exe" 
+Generated__ExclusionCondition.exe: win64/ScadeTERS2_dll.o win64/SmuMainWindows.o 
+	gcc "win64\ScadeTERS2_dll.o" "win64\SmuMainWindows.o" -lm -lwsock32 -m64 -o "Generated__ExclusionCondition.exe" 
 
 #############################################################
 ######    End of Makefile

@@ -22,7 +22,7 @@ public class Lcmodes implements ISpecificationBuilder {
 		
 		simple.exclusion("Mode1", "Mode2");
 		
-		simple.delayFor("Delay", "Trigger", 1, -1, "ReactionTime");
+		simple.delayFor("Delay", "Trigger", 1, -1, null);
 		
 		simple.precedence("Mode", "Trigger");
 		simple.precedence("Trigger", "Mode");
@@ -38,7 +38,8 @@ public class Lcmodes implements ISpecificationBuilder {
 		}
 		
 		StepperUtility exe = new StepperUtility(new BDDSolutionFinder());
-		exe.setParam(StepperUtility.INTERACTIVE, true);
+		exe.setParam(StepperUtility.INTERACTIVE, false);
+		exe.setParam(StepperUtility.NB_STEPS, 10);
 		exe.treat(name, INSTANCE);
 		// no STS generation
 	}

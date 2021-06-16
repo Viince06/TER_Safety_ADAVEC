@@ -249,13 +249,13 @@
 				<ed:Equation oid="!ed/4e96/406B/207C/607473ff71e3"/>
 			</pragmas>
 		</Equation>
-		<!-- _L17 = Causality(_L18, _L19, _L20); -->
+		<!-- _L17 = Causality(_L18, _L19); -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L17"/>
 			</lefts>
 			<right>
-				<!-- Causality(_L18, _L19, _L20) -->
+				<!-- Causality(_L18, _L19) -->
 				<CallExpression>
 					<operator>
 						<OpCall name="1">
@@ -273,11 +273,6 @@
 						<IdExpression>
 							<path>
 								<ConstVarRef name="_L19"/>
-							</path>
-						</IdExpression>
-						<IdExpression>
-							<path>
-								<ConstVarRef name="_L20"/>
 							</path>
 						</IdExpression>
 					</callParameters>
@@ -445,17 +440,9 @@
 								<Point x="8149" y="3810"/>
 							</positions>
 						</Edge>
-						<Edge leftVarIndex="1" rightExprIndex="3" srcEquation="!ed/4ea7/2E64/3F6C/6093dec55a95" dstEquation="!ed/4e95/2E64/3F6C/6093de9b4c25">
-							<positions>
-								<Point x="3493" y="4657"/>
-								<Point x="5821" y="4657"/>
-								<Point x="5821" y="4657"/>
-								<Point x="8149" y="4657"/>
-							</positions>
-						</Edge>
 						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e95/2E64/3F6C/6093de9b4c25" dstEquation="!ed/4e94/406B/207C/607473ff3ae5">
 							<positions>
-								<Point x="14526" y="3810"/>
+								<Point x="14552" y="3810"/>
 								<Point x="19659" y="3810"/>
 								<Point x="19659" y="3810"/>
 								<Point x="24818" y="3810"/>

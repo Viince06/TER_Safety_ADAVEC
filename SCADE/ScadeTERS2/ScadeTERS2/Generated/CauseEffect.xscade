@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="node" name="CauseEffect">
+	<inputs>
+		<Variable name="Drunk">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+		</Variable>
+		<Variable name="Unconsc">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+		</Variable>
+	</inputs>
+	<outputs>
+		<Variable name="O1">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+		</Variable>
+	</outputs>
+	<locals>
+		<Variable name="L1">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+		</Variable>
+		<Variable name="L2">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+		</Variable>
+		<Variable name="L3">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+		</Variable>
+	</locals>
+	<pragmas>
+		<ed:Operator>
+			<diagrams>
+				<TextDiagram name="CauseEffect_1" landscape="false" format="A4 (210 297)"/>
+			</diagrams>
+		</ed:Operator>
+	</pragmas>
+</Operator>

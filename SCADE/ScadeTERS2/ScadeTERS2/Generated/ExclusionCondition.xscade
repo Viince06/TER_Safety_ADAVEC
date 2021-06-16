@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="ExclusionCondition">
+	<inputs>
+		<Variable name="Autonome">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3a5e8/34B5/3E38/60c9b45643ac"/>
+			</pragmas>
+		</Variable>
+		<Variable name="MRM">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3a5ea/34B5/3E38/60c9b45643c3"/>
+			</pragmas>
+		</Variable>
+		<Variable name="Manual">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3a5ec/34B5/3E38/60c9b4564043"/>
+			</pragmas>
+		</Variable>
+	</inputs>
+	<outputs>
+		<Variable name="O1">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3a5ee/34B5/3E38/60c9b4567689"/>
+			</pragmas>
+		</Variable>
+		<Variable name="O2">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3a5ef/34B5/3E38/60c9b456dc5"/>
+			</pragmas>
+		</Variable>
+		<Variable name="O3">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3a5f0/34B5/3E38/60c9b4564344"/>
+			</pragmas>
+		</Variable>
+	</outputs>
+	<locals>
+		<Variable name="L1">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3a5f1/34B5/3E38/60c9b45654a0"/>
+			</pragmas>
+		</Variable>
+		<Variable name="L2">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3a5f3/34B5/3E38/60c9b4563b05"/>
+			</pragmas>
+		</Variable>
+		<Variable name="L3">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3a5f5/34B5/3E38/60c9b4566967"/>
+			</pragmas>
+		</Variable>
+		<Variable name="L4">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3a5f6/34B5/3E38/60c9b4565ee"/>
+			</pragmas>
+		</Variable>
+		<Variable name="L5">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3a5f8/34B5/3E38/60c9b45640e5"/>
+			</pragmas>
+		</Variable>
+		<Variable name="L6">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3a5fa/34B5/3E38/60c9b456110a"/>
+			</pragmas>
+		</Variable>
+		<Variable name="L7">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3a5fb/34B5/3E38/60c9b4566027"/>
+			</pragmas>
+		</Variable>
+		<Variable name="L8">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3a5fd/34B5/3E38/60c9b4563062"/>
+			</pragmas>
+		</Variable>
+		<Variable name="L9">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3a5ff/34B5/3E38/60c9b45610a6"/>
+			</pragmas>
+		</Variable>
+	</locals>
+	<data>
+		<!-- L1 = Autonome; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L1"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="Autonome"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3efb1/34B5/3E38/60c9b4672294"/>
+			</pragmas>
+		</Equation>
+		<!-- L2 = MRM; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L2"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="MRM"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3efb2/34B5/3E38/60c9b467f32"/>
+			</pragmas>
+		</Equation>
+		<!-- L3 = MSG::Exclusion(L1, L2); -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L3"/>
+			</lefts>
+			<right>
+				<!-- MSG::Exclusion(L1, L2) -->
+				<CallExpression>
+					<operator>
+						<OpCall name="1">
+							<operator>
+								<OperatorRef name="MSG::Exclusion"/>
+							</operator>
+						</OpCall>
+					</operator>
+					<callParameters>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="L1"/>
+							</path>
+						</IdExpression>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="L2"/>
+							</path>
+						</IdExpression>
+					</callParameters>
+				</CallExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3efb4/34B5/3E38/60c9b46770de"/>
+			</pragmas>
+		</Equation>
+		<!-- O1 = L3; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="O1"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="L3"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3efb5/34B5/3E38/60c9b46773b3"/>
+			</pragmas>
+		</Equation>
+		<!-- L4 = Autonome; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L4"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="Autonome"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3efb6/34B5/3E38/60c9b4674d19"/>
+			</pragmas>
+		</Equation>
+		<!-- L5 = Manual; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L5"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="Manual"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3efb7/34B5/3E38/60c9b4675527"/>
+			</pragmas>
+		</Equation>
+		<!-- L6 = MSG::Exclusion(L4, L5); -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L6"/>
+			</lefts>
+			<right>
+				<!-- MSG::Exclusion(L4, L5) -->
+				<CallExpression>
+					<operator>
+						<OpCall name="2">
+							<operator>
+								<OperatorRef name="MSG::Exclusion"/>
+							</operator>
+						</OpCall>
+					</operator>
+					<callParameters>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="L4"/>
+							</path>
+						</IdExpression>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="L5"/>
+							</path>
+						</IdExpression>
+					</callParameters>
+				</CallExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3efb9/34B5/3E38/60c9b46763aa"/>
+			</pragmas>
+		</Equation>
+		<!-- O2 = L6; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="O2"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="L6"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3efba/34B5/3E38/60c9b467786c"/>
+			</pragmas>
+		</Equation>
+		<!-- L7 = MRM; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L7"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="MRM"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3efbb/34B5/3E38/60c9b46775c4"/>
+			</pragmas>
+		</Equation>
+		<!-- L8 = Manual; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L8"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="Manual"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3efbc/34B5/3E38/60c9b467c12"/>
+			</pragmas>
+		</Equation>
+		<!-- L9 = MSG::Exclusion(L7, L8); -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L9"/>
+			</lefts>
+			<right>
+				<!-- MSG::Exclusion(L7, L8) -->
+				<CallExpression>
+					<operator>
+						<OpCall name="3">
+							<operator>
+								<OperatorRef name="MSG::Exclusion"/>
+							</operator>
+						</OpCall>
+					</operator>
+					<callParameters>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="L7"/>
+							</path>
+						</IdExpression>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="L8"/>
+							</path>
+						</IdExpression>
+					</callParameters>
+				</CallExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3efbe/34B5/3E38/60c9b4674557"/>
+			</pragmas>
+		</Equation>
+		<!-- O3 = L9; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="O3"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="L9"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3efbf/34B5/3E38/60c9b467220b"/>
+			</pragmas>
+		</Equation>
+	</data>
+	<pragmas>
+		<ed:Operator oid="!ed/3a5e7/34B5/3E38/60c9b4561c5b" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+			<diagrams>
+				<TextDiagram name="ExclusionCondition_1" landscape="false" format="A4 (210 297)" oid="!ed/3a600/34B5/3E38/60c9b45677a9">
+					<presentationElements>
+						<FlowTE presentable="!ed/3efb1/34B5/3E38/60c9b4672294"/>
+						<FlowTE presentable="!ed/3efb2/34B5/3E38/60c9b467f32"/>
+						<FlowTE presentable="!ed/3efb4/34B5/3E38/60c9b46770de"/>
+						<FlowTE presentable="!ed/3efb5/34B5/3E38/60c9b46773b3"/>
+						<FlowTE presentable="!ed/3efb6/34B5/3E38/60c9b4674d19"/>
+						<FlowTE presentable="!ed/3efb7/34B5/3E38/60c9b4675527"/>
+						<FlowTE presentable="!ed/3efb9/34B5/3E38/60c9b46763aa"/>
+						<FlowTE presentable="!ed/3efba/34B5/3E38/60c9b467786c"/>
+						<FlowTE presentable="!ed/3efbb/34B5/3E38/60c9b46775c4"/>
+						<FlowTE presentable="!ed/3efbc/34B5/3E38/60c9b467c12"/>
+						<FlowTE presentable="!ed/3efbe/34B5/3E38/60c9b4674557"/>
+						<FlowTE presentable="!ed/3efbf/34B5/3E38/60c9b467220b"/>
+					</presentationElements>
+					<textArea>
+						<TextArea text="L1 = Autonome;&#xA;
+L2 = MRM;&#xA;
+L3 = MSG::Exclusion(L1, L2);&#xA;
+O1 = L3;&#xA;
+L4 = Autonome;&#xA;
+L5 = Manual;&#xA;
+L6 = MSG::Exclusion(L4, L5);&#xA;
+O2 = L6;&#xA;
+L7 = MRM;&#xA;
+L8 = Manual;&#xA;
+L9 = MSG::Exclusion(L7, L8);&#xA;
+O3 = L9;&#xA;
+"/>
+					</textArea>
+				</TextDiagram>
+			</diagrams>
+		</ed:Operator>
+	</pragmas>
+</Operator>

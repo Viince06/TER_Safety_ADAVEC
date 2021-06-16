@@ -9,41 +9,32 @@ Specification ScenarioA4 {
 			Automatic, Manual, MRM  // Final Mode Clocks
 			Seconds [ // Time-based ultimatum
 			
-			// Objective: Inform the driver that his driving abilities are impaired and that the vehicle is taking over
+			// Objective: Inform the driver that his driving abilities 
+			//            are impaired and that the vehicle is taking over
 			// Trigger: Driver has been drinking
 			
 			// Weather
 			Let DayTime be Sunny + Night  // UTILE SI ON PEUT PROFITER DE L'INFORMATION DONNEE
 			Precedence Sunny < (max: 1) Night
 		
-		
 			// Road
 			Let Road be Highway + Interurban + Urban
 			Exclusion Highway # Interurban # Urban
 			
-			
 			// Traffic
 			Let Traffic be HeavyTraffic + Light + StopAhead
-			
 			
 			// Vehicle  
 			Let Sensors be FaultySensor + NoIssue
 			
-			
-			
 			// Human - Health ---------START TRIGGER-----------------
 			Let Health be Death + Drunk + Unconscious + Inebriated + Relaxed + Influenced
 			//------------------END TRIGGER--------------------
-			
 			
 			// FinalMode
 			Let FinalMode be Automatic + Manual + MRM
 			
 			Transfer = Drunk $ 5 on Seconds
 			Precedence Drunk <= Automatic <= Transfer
-			
-			
-
-		
 	]
 }

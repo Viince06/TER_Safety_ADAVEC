@@ -16,9 +16,12 @@ public class Lcsimple implements ISpecificationBuilder {
 		simple.addClock("approve");
 		simple.addClock("transferFrom");
 		simple.addClock("allowance");
+		simple.addClock("clock");
 		
 		simple.precedence("approve", "transferFrom");
 		simple.precedence("transferFrom", "allowance");
+		
+		simple.exclusion("clock", "approve");
 	}
 	private static IUtility[] utilities = { 
 		new fr.kairos.timesquare.ccsl.simple.PrettyPrintUtility()
@@ -30,7 +33,8 @@ public class Lcsimple implements ISpecificationBuilder {
 		}
 		
 		StepperUtility exe = new StepperUtility(new BDDSolutionFinder());
-		exe.setParam(StepperUtility.INTERACTIVE, true);
+		exe.setParam(StepperUtility.INTERACTIVE, false);
+		exe.setParam(StepperUtility.NB_STEPS, 10);
 		exe.treat(name, INSTANCE);
 		// no STS generation
 	}

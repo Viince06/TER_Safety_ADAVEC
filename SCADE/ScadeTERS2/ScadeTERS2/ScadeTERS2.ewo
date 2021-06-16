@@ -29,7 +29,7 @@
 
 [SCADE\Generator\Tool]
 
-"PragmaTarget"="" 
+"PragmaTarget"="C" 
 
 [SCADE\Simulator\Simulation]
 

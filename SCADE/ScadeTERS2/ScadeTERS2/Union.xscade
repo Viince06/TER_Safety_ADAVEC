@@ -350,7 +350,7 @@
 					<presentationElements>
 						<EquationGE presentable="!ed/5971/611A/3D1C/6064e3e77f19">
 							<position>
-								<Point x="1588" y="2249"/>
+								<Point x="1588" y="2328"/>
 							</position>
 							<size>
 								<Size width="265" height="503"/>
@@ -366,9 +366,9 @@
 						</EquationGE>
 						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/5971/611A/3D1C/6064e3e77f19" dstEquation="!ed/597d/611A/3D1C/6064e3f04f45">
 							<positions>
-								<Point x="1852" y="2514"/>
-								<Point x="3069" y="2514"/>
-								<Point x="3069" y="2593"/>
+								<Point x="1852" y="2593"/>
+								<Point x="2672" y="2593"/>
+								<Point x="2672" y="2593"/>
 								<Point x="3519" y="2593"/>
 							</positions>
 						</Edge>

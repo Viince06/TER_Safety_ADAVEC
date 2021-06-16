@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="Debug">
+	<inputs>
+		<Variable name="INPUT">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/44133/7A76/2ACC/60c7852e388b"/>
+			</pragmas>
+		</Variable>
+	</inputs>
+	<outputs>
+		<Variable name="OUTPUT">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/44135/7A76/2ACC/60c7852e5528"/>
+			</pragmas>
+		</Variable>
+	</outputs>
+	<locals>
+		<Variable name="LOCAL">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/44136/7A76/2ACC/60c7852e4e61"/>
+			</pragmas>
+		</Variable>
+	</locals>
+	<pragmas>
+		<ed:Operator oid="!ed/44132/7A76/2ACC/60c7852e30bf" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+			<diagrams>
+				<TextDiagram name="Debug_1" landscape="false" format="A4 (210 297)" oid="!ed/44138/7A76/2ACC/60c7852e2946"/>
+			</diagrams>
+		</ed:Operator>
+	</pragmas>
+</Operator>

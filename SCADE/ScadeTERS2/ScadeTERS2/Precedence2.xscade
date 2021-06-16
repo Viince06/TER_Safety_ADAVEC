@@ -249,13 +249,13 @@
 				<ed:Equation oid="!ed/4ea9/5A7A/2BC0/606ee220659c"/>
 			</pragmas>
 		</Equation>
-		<!-- _L17 = Precedence(_L18, _L19, _L20); -->
+		<!-- _L17 = Precedence(_L18, _L19); -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L17"/>
 			</lefts>
 			<right>
-				<!-- Precedence(_L18, _L19, _L20) -->
+				<!-- Precedence(_L18, _L19) -->
 				<CallExpression>
 					<operator>
 						<OpCall name="1">
@@ -273,11 +273,6 @@
 						<IdExpression>
 							<path>
 								<ConstVarRef name="_L19"/>
-							</path>
-						</IdExpression>
-						<IdExpression>
-							<path>
-								<ConstVarRef name="_L20"/>
 							</path>
 						</IdExpression>
 					</callParameters>
@@ -445,20 +440,12 @@
 								<Point x="6403" y="3545"/>
 							</positions>
 						</Edge>
-						<Edge leftVarIndex="1" rightExprIndex="3" srcEquation="!ed/4ebf/2E64/3F6C/6093df5b5401" dstEquation="!ed/4ead/2E64/3F6C/6093df4d51a5">
-							<positions>
-								<Point x="2514" y="4498"/>
-								<Point x="3916" y="4498"/>
-								<Point x="3916" y="4498"/>
-								<Point x="6403" y="4498"/>
-							</positions>
-						</Edge>
 						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4ead/2E64/3F6C/6093df4d51a5" dstEquation="!ed/4e91/5A7A/2BC0/606ee1fc4df9">
 							<positions>
-								<Point x="14023" y="3545"/>
-								<Point x="19420" y="3545"/>
-								<Point x="19420" y="3545"/>
-								<Point x="24818" y="3545"/>
+								<Point x="14049" y="3572"/>
+								<Point x="19420" y="3572"/>
+								<Point x="19420" y="3572"/>
+								<Point x="24818" y="3572"/>
 							</positions>
 						</Edge>
 					</presentationElements>

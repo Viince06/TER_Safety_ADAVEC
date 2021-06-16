@@ -3,154 +3,154 @@ EXPORTS
     ClockStatus_to_double @2
     ClockStatus_to_long @3
     ClockStatus_to_string @4
-    DecodeClockStatus_Utils @5
-    DecodeClockStatus_init_Utils @6
-    DecodeClockStatus_reset_Utils @7
-    EncodeClockStatus_Utils @8
-    EncodeClockStatus_init_Utils @9
-    EncodeClockStatus_reset_Utils @10
-    EnumToString @11
+    EnumToString @5
+    ExclusionCondition_Generated @6
+    ExclusionCondition_init_Generated @7
+    ExclusionCondition_reset_Generated @8
+    Exclusion_MSG @9
+    Exclusion_init_MSG @10
+    Exclusion_reset_MSG @11
     ImportedToString @12
-    Intersection_Graphic_Scade @13
-    Intersection_init_Graphic_Scade @14
-    Intersection_reset_Graphic_Scade @15
-    OutputMessageCallback @16 DATA
-    SimCustomInit @17
-    SimInit @18
-    SimRealloc @19
-    SimReset @20
-    SimStep @21
-    SimStop @22
-    SimStringAlloc @23
-    SimStringAllocEx @24
-    SimStringAppend @25
-    SimStringFree @26
-    SimStringGet @27
-    SimStringListAlloc @28
-    SimStringListAllocEx @29
-    SimStringListAppend @30
-    SimStringListFree @31
-    SimStringListGetCount @32
-    SimStringListGetData @33
-    SimStringListReset @34
-    SimStringReset @35
-    SsmConnectExternalInputs @36
-    SsmCustomInit @37
-    SsmGatherDumpData @38
-    SsmGetCheckSum @39
-    SsmGetConverter @40
-    SsmGetDefaultRealFormat @41
-    SsmGetDumpSize @42
-    SsmGetMapping @43
-    SsmGetSmuTypesCheckSum @44
-    SsmInit @45
-    SsmInitValues @46
-    SsmLoadSnapshot @47
-    SsmOutputMessage @48
-    SsmReset @49
-    SsmRestoreDumpData @50
-    SsmSaveSnapshot @51
-    SsmSetOutputMessageCallback @52
-    SsmSetUpdateCallback @53
-    SsmStep @54
-    SsmStop @55
-    SsmUpdateValues @56
-    StringToConstant @57
-    StringToEnum @58
-    StringToImported @59
-    UpdateSimulatorValues @60
-    UpdateSimulatorValuesCallback @61 DATA
-    VTable_to_double @62
-    VTable_to_long @63
-    _SCSIM_CheckSum @64 DATA
-    _SCSIM_SmuTypesCheckSum @65 DATA
-    _Type_ClockStatus_Utils @66 DATA
-    _Type_kcg_bool_Utils @67 DATA
-    _Type_kcg_char_Utils @68 DATA
-    _Type_kcg_float32_Utils @69 DATA
-    _Type_kcg_float64_Utils @70 DATA
-    _Type_kcg_int16_Utils @71 DATA
-    _Type_kcg_int32_Utils @72 DATA
-    _Type_kcg_int64_Utils @73 DATA
-    _Type_kcg_int8_Utils @74 DATA
-    _Type_kcg_size_Utils @75 DATA
-    _Type_kcg_uint16_Utils @76 DATA
-    _Type_kcg_uint32_Utils @77 DATA
-    _Type_kcg_uint64_Utils @78 DATA
-    _Type_kcg_uint8_Utils @79 DATA
-    check_ClockStatus_string @80
-    check_kcg_bool_string @81
-    check_kcg_char_string @82
-    check_kcg_float32_string @83
-    check_kcg_float64_string @84
-    check_kcg_int16_string @85
-    check_kcg_int32_string @86
-    check_kcg_int64_string @87
-    check_kcg_int8_string @88
-    check_kcg_size_string @89
-    check_kcg_uint16_string @90
-    check_kcg_uint32_string @91
-    check_kcg_uint64_string @92
-    check_kcg_uint8_string @93
-    compare_ClockStatus @94
-    compare_kcg_bool @95
-    compare_kcg_char @96
-    compare_kcg_float32 @97
-    compare_kcg_float64 @98
-    compare_kcg_int16 @99
-    compare_kcg_int32 @100
-    compare_kcg_int64 @101
-    compare_kcg_int8 @102
-    compare_kcg_size @103
-    compare_kcg_uint16 @104
-    compare_kcg_uint32 @105
-    compare_kcg_uint64 @106
-    compare_kcg_uint8 @107
-    copy_ClockStatus @108
-    copy_kcg_bool @109
-    copy_kcg_char @110
-    copy_kcg_float32 @111
-    copy_kcg_float64 @112
-    copy_kcg_int16 @113
-    copy_kcg_int32 @114
-    copy_kcg_int64 @115
-    copy_kcg_int8 @116
-    copy_kcg_size @117
-    copy_kcg_uint16 @118
-    copy_kcg_uint32 @119
-    copy_kcg_uint64 @120
-    copy_kcg_uint8 @121
-    defaultSimToleranceDouble @122 DATA
-    defaultSimToleranceFloat @123 DATA
-    get_ClockStatus_signature @124
-    get_kcg_bool_signature @125
-    get_kcg_char_signature @126
-    get_kcg_float32_signature @127
-    get_kcg_float64_signature @128
-    get_kcg_int16_signature @129
-    get_kcg_int32_signature @130
-    get_kcg_int64_signature @131
-    get_kcg_int8_signature @132
-    get_kcg_size_signature @133
-    get_kcg_uint16_signature @134
-    get_kcg_uint32_signature @135
-    get_kcg_uint64_signature @136
-    get_kcg_uint8_signature @137
-    init_ClockStatus @138
-    init_kcg_bool @139
-    init_kcg_char @140
-    init_kcg_float32 @141
-    init_kcg_float64 @142
-    init_kcg_int16 @143
-    init_kcg_int32 @144
-    init_kcg_int64 @145
-    init_kcg_int8 @146
-    init_kcg_size @147
-    init_kcg_uint16 @148
-    init_kcg_uint32 @149
-    init_kcg_uint64 @150
-    init_kcg_uint8 @151
-    inputs_ctx @152 DATA
+    OutputMessageCallback @13 DATA
+    SimCustomInit @14
+    SimInit @15
+    SimRealloc @16
+    SimReset @17
+    SimStep @18
+    SimStop @19
+    SimStringAlloc @20
+    SimStringAllocEx @21
+    SimStringAppend @22
+    SimStringFree @23
+    SimStringGet @24
+    SimStringListAlloc @25
+    SimStringListAllocEx @26
+    SimStringListAppend @27
+    SimStringListFree @28
+    SimStringListGetCount @29
+    SimStringListGetData @30
+    SimStringListReset @31
+    SimStringReset @32
+    SsmConnectExternalInputs @33
+    SsmCustomInit @34
+    SsmGatherDumpData @35
+    SsmGetCheckSum @36
+    SsmGetConverter @37
+    SsmGetDefaultRealFormat @38
+    SsmGetDumpSize @39
+    SsmGetMapping @40
+    SsmGetSmuTypesCheckSum @41
+    SsmInit @42
+    SsmInitValues @43
+    SsmLoadSnapshot @44
+    SsmOutputMessage @45
+    SsmReset @46
+    SsmRestoreDumpData @47
+    SsmSaveSnapshot @48
+    SsmSetOutputMessageCallback @49
+    SsmSetUpdateCallback @50
+    SsmStep @51
+    SsmStop @52
+    SsmUpdateValues @53
+    StringToConstant @54
+    StringToEnum @55
+    StringToImported @56
+    UpdateSimulatorValues @57
+    UpdateSimulatorValuesCallback @58 DATA
+    VTable_to_double @59
+    VTable_to_long @60
+    _SCSIM_CheckSum @61 DATA
+    _SCSIM_SmuTypesCheckSum @62 DATA
+    _Type_ClockStatus_Utils @63 DATA
+    _Type_kcg_bool_Utils @64 DATA
+    _Type_kcg_char_Utils @65 DATA
+    _Type_kcg_float32_Utils @66 DATA
+    _Type_kcg_float64_Utils @67 DATA
+    _Type_kcg_int16_Utils @68 DATA
+    _Type_kcg_int32_Utils @69 DATA
+    _Type_kcg_int64_Utils @70 DATA
+    _Type_kcg_int8_Utils @71 DATA
+    _Type_kcg_size_Utils @72 DATA
+    _Type_kcg_uint16_Utils @73 DATA
+    _Type_kcg_uint32_Utils @74 DATA
+    _Type_kcg_uint64_Utils @75 DATA
+    _Type_kcg_uint8_Utils @76 DATA
+    check_ClockStatus_string @77
+    check_kcg_bool_string @78
+    check_kcg_char_string @79
+    check_kcg_float32_string @80
+    check_kcg_float64_string @81
+    check_kcg_int16_string @82
+    check_kcg_int32_string @83
+    check_kcg_int64_string @84
+    check_kcg_int8_string @85
+    check_kcg_size_string @86
+    check_kcg_uint16_string @87
+    check_kcg_uint32_string @88
+    check_kcg_uint64_string @89
+    check_kcg_uint8_string @90
+    compare_ClockStatus @91
+    compare_kcg_bool @92
+    compare_kcg_char @93
+    compare_kcg_float32 @94
+    compare_kcg_float64 @95
+    compare_kcg_int16 @96
+    compare_kcg_int32 @97
+    compare_kcg_int64 @98
+    compare_kcg_int8 @99
+    compare_kcg_size @100
+    compare_kcg_uint16 @101
+    compare_kcg_uint32 @102
+    compare_kcg_uint64 @103
+    compare_kcg_uint8 @104
+    copy_ClockStatus @105
+    copy_kcg_bool @106
+    copy_kcg_char @107
+    copy_kcg_float32 @108
+    copy_kcg_float64 @109
+    copy_kcg_int16 @110
+    copy_kcg_int32 @111
+    copy_kcg_int64 @112
+    copy_kcg_int8 @113
+    copy_kcg_size @114
+    copy_kcg_uint16 @115
+    copy_kcg_uint32 @116
+    copy_kcg_uint64 @117
+    copy_kcg_uint8 @118
+    defaultSimToleranceDouble @119 DATA
+    defaultSimToleranceFloat @120 DATA
+    get_ClockStatus_signature @121
+    get_kcg_bool_signature @122
+    get_kcg_char_signature @123
+    get_kcg_float32_signature @124
+    get_kcg_float64_signature @125
+    get_kcg_int16_signature @126
+    get_kcg_int32_signature @127
+    get_kcg_int64_signature @128
+    get_kcg_int8_signature @129
+    get_kcg_size_signature @130
+    get_kcg_uint16_signature @131
+    get_kcg_uint32_signature @132
+    get_kcg_uint64_signature @133
+    get_kcg_uint8_signature @134
+    init_ClockStatus @135
+    init_kcg_bool @136
+    init_kcg_char @137
+    init_kcg_float32 @138
+    init_kcg_float64 @139
+    init_kcg_int16 @140
+    init_kcg_int32 @141
+    init_kcg_int64 @142
+    init_kcg_int8 @143
+    init_kcg_size @144
+    init_kcg_uint16 @145
+    init_kcg_uint32 @146
+    init_kcg_uint64 @147
+    init_kcg_uint8 @148
+    inputs_ctx @149 DATA
+    isPresent_Utils @150
+    isPresent_init_Utils @151
+    isPresent_reset_Utils @152
     is_ClockStatus_double_conversion_allowed @153
     is_ClockStatus_long_conversion_allowed @154
     is_VTable_double_conversion_allowed @155
@@ -237,7 +237,7 @@ EXPORTS
     pSimUint32VTable @236 DATA
     pSimUint64VTable @237 DATA
     pSimUint8VTable @238 DATA
-    pSimoutC_Intersection_Graphic_ScadeCIVTable @239 DATA
+    pSimoutC_ExclusionCondition_GeneratedCIVTable @239 DATA
     pSimulator @240 DATA
     pTop @241 DATA
     predef_compare_enum @242

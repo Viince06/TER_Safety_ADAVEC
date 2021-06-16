@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="Intersection">
 	<inputs>
-		<Variable name="b">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="ClockStatus"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/5ac6/611A/3D1C/6064e65f3a1c"/>
-			</pragmas>
-		</Variable>
 		<Variable name="a">
 			<type>
 				<NamedType>
@@ -23,6 +11,18 @@
 			</type>
 			<pragmas>
 				<ed:Variable oid="!ed/5ac5/611A/3D1C/6064e65f52c2"/>
+			</pragmas>
+		</Variable>
+		<Variable name="b">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="ClockStatus"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/5ac6/611A/3D1C/6064e65f3a1c"/>
 			</pragmas>
 		</Variable>
 	</inputs>
@@ -382,7 +382,7 @@
 						</EquationGE>
 						<EquationGE presentable="!ed/5ad2/611A/3D1C/6064e65f4fca">
 							<position>
-								<Point x="2037" y="6694"/>
+								<Point x="2037" y="6615"/>
 							</position>
 							<size>
 								<Size width="264" height="503"/>
@@ -398,7 +398,7 @@
 						</EquationGE>
 						<EquationGE presentable="!ed/5ad7/611A/3D1C/6064e65f125b">
 							<position>
-								<Point x="2170" y="3254"/>
+								<Point x="2170" y="3334"/>
 							</position>
 							<size>
 								<Size width="265" height="503"/>
@@ -414,17 +414,17 @@
 						</EquationGE>
 						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/5ad2/611A/3D1C/6064e65f4fca" dstEquation="!ed/5acc/611A/3D1C/6064e65f5884">
 							<positions>
-								<Point x="2302" y="6959"/>
-								<Point x="3254" y="6959"/>
+								<Point x="2302" y="6879"/>
+								<Point x="3254" y="6879"/>
 								<Point x="3254" y="6879"/>
 								<Point x="4207" y="6879"/>
 							</positions>
 						</Edge>
 						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/5ad7/611A/3D1C/6064e65f125b" dstEquation="!ed/5ad4/611A/3D1C/6064e65f3d8d">
 							<positions>
-								<Point x="2434" y="3519"/>
-								<Point x="3651" y="3519"/>
-								<Point x="3651" y="3598"/>
+								<Point x="2434" y="3598"/>
+								<Point x="3254" y="3598"/>
+								<Point x="3254" y="3598"/>
 								<Point x="4101" y="3598"/>
 							</positions>
 						</Edge>
