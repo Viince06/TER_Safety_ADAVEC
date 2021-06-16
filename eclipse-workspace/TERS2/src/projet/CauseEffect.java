@@ -58,6 +58,7 @@ public class CauseEffect implements ISpecificationBuilder {
 		INSTANCE.build(myScadeGenerator);
 		myScadeGenerator.generateXMLFile(name);
 		myScadeGenerator.close();
+		System.out.println("FILES GENERATED SUCCESFULLY");
 		
 		StepperUtility exe = new StepperUtility(new BDDSolutionFinder());
 		exe.setParam(StepperUtility.INTERACTIVE, true);

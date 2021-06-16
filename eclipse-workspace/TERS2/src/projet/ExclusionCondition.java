@@ -26,10 +26,10 @@ public class ExclusionCondition implements ISpecificationBuilder {
 	@Override
 	public void build(ISimpleSpecification simple) {
 		// EXCLUSION CONDITIONS
-		//exclusionCondition(simple, "Rain", "Snow");
+		exclusionCondition(simple, "Rain", "Snow");
 		//exclusionCondition(simple, "NoSensor", "SensorOK");
 		//exclusionCondition(simple, new String[]{"HTraffic", "LTraffic", "Stop"});
-		exclusionCondition(simple, new String[]{"Autonome", "MRM", "Manual"});	
+		//exclusionCondition(simple, new String[]{"Autonome", "MRM", "Manual"});	
 	}
 	
 	
@@ -76,7 +76,7 @@ public class ExclusionCondition implements ISpecificationBuilder {
 		INSTANCE.build(myScadeGenerator);
 		myScadeGenerator.generateXMLFile(name);
 		myScadeGenerator.close();
-		System.out.println("FILE GENERATED SUCCESFULLY");
+		System.out.println("FILES GENERATED SUCCESFULLY");
 		
 		StepperUtility exe = new StepperUtility(new BDDSolutionFinder());
 		exe.setParam(StepperUtility.INTERACTIVE, true);

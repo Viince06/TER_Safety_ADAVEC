@@ -9,6 +9,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/223e3/180F/2130/60c9ba841d6a"/>
+			</pragmas>
 		</Variable>
 		<Variable name="Autonome">
 			<type>
@@ -18,6 +21,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/223e5/180F/2130/60c9ba844328"/>
+			</pragmas>
 		</Variable>
 		<Variable name="Drunk">
 			<type>
@@ -27,6 +33,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/223e7/180F/2130/60c9ba843acb"/>
+			</pragmas>
 		</Variable>
 		<Variable name="RTime">
 			<type>
@@ -36,6 +45,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/223e9/180F/2130/60c9ba845bc"/>
+			</pragmas>
 		</Variable>
 	</inputs>
 	<outputs>
@@ -47,6 +59,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/223eb/180F/2130/60c9ba84568a"/>
+			</pragmas>
 		</Variable>
 		<Variable name="O1">
 			<type>
@@ -56,6 +71,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/223ed/180F/2130/60c9ba84693d"/>
+			</pragmas>
 		</Variable>
 		<Variable name="O2">
 			<type>
@@ -65,6 +83,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/223ee/180F/2130/60c9ba842c5f"/>
+			</pragmas>
 		</Variable>
 		<Variable name="O3">
 			<type>
@@ -74,6 +95,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/223ef/180F/2130/60c9ba841749"/>
+			</pragmas>
 		</Variable>
 		<Variable name="O4">
 			<type>
@@ -83,6 +107,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/223f0/180F/2130/60c9ba844d4a"/>
+			</pragmas>
 		</Variable>
 	</outputs>
 	<locals>
@@ -94,6 +121,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/223f1/180F/2130/60c9ba844c01"/>
+			</pragmas>
 		</Variable>
 		<Variable name="L2">
 			<type>
@@ -103,6 +133,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/223f3/180F/2130/60c9ba8465bd"/>
+			</pragmas>
 		</Variable>
 		<Variable name="L3">
 			<type>
@@ -112,6 +145,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/223f5/180F/2130/60c9ba84310f"/>
+			</pragmas>
 		</Variable>
 		<Variable name="L4">
 			<type>
@@ -121,6 +157,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/223f7/180F/2130/60c9ba8456b6"/>
+			</pragmas>
 		</Variable>
 		<Variable name="L5">
 			<type>
@@ -130,6 +169,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/223f9/180F/2130/60c9ba841a3b"/>
+			</pragmas>
 		</Variable>
 		<Variable name="L6">
 			<type>
@@ -139,6 +181,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/223fb/180F/2130/60c9ba847659"/>
+			</pragmas>
 		</Variable>
 		<Variable name="L7">
 			<type>
@@ -148,6 +193,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/223fc/180F/2130/60c9ba847c8d"/>
+			</pragmas>
 		</Variable>
 		<Variable name="L8">
 			<type>
@@ -157,6 +205,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/223fe/180F/2130/60c9ba84dcd"/>
+			</pragmas>
 		</Variable>
 		<Variable name="L9">
 			<type>
@@ -166,6 +217,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/22400/180F/2130/60c9ba842504"/>
+			</pragmas>
 		</Variable>
 		<Variable name="L10">
 			<type>
@@ -175,6 +229,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/22401/180F/2130/60c9ba849fa"/>
+			</pragmas>
 		</Variable>
 		<Variable name="L11">
 			<type>
@@ -184,6 +241,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/22403/180F/2130/60c9ba841366"/>
+			</pragmas>
 		</Variable>
 		<Variable name="L12">
 			<type>
@@ -193,6 +253,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/22405/180F/2130/60c9ba846f13"/>
+			</pragmas>
 		</Variable>
 		<Variable name="L13">
 			<type>
@@ -202,6 +265,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/22406/180F/2130/60c9ba847ef3"/>
+			</pragmas>
 		</Variable>
 		<Variable name="L14">
 			<type>
@@ -211,6 +277,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/22408/180F/2130/60c9ba84208b"/>
+			</pragmas>
 		</Variable>
 		<Variable name="L15">
 			<type>
@@ -220,12 +289,468 @@
 					</type>
 				</NamedType>
 			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/2240a/180F/2130/60c9ba8476d0"/>
+			</pragmas>
 		</Variable>
 	</locals>
+	<data>
+		<!-- L1 = Manual; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L1"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="Manual"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26dd4/180F/2130/60c9c3fe738e"/>
+			</pragmas>
+		</Equation>
+		<!-- L2 = Autonome; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L2"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="Autonome"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26dd5/180F/2130/60c9c3fe6329"/>
+			</pragmas>
+		</Equation>
+		<!-- L3 = MSG::Union(L1, L2); -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L3"/>
+			</lefts>
+			<right>
+				<!-- MSG::Union(L1, L2) -->
+				<CallExpression>
+					<operator>
+						<OpCall name="1">
+							<operator>
+								<OperatorRef name="MSG::Union"/>
+							</operator>
+						</OpCall>
+					</operator>
+					<callParameters>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="L1"/>
+							</path>
+						</IdExpression>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="L2"/>
+							</path>
+						</IdExpression>
+					</callParameters>
+				</CallExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26dd7/180F/2130/60c9c3fe2233"/>
+			</pragmas>
+		</Equation>
+		<!-- Mode = L3; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="Mode"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="L3"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26dd8/180F/2130/60c9c3fe20dc"/>
+			</pragmas>
+		</Equation>
+		<!-- L4 = Manual; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L4"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="Manual"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26dd9/180F/2130/60c9c3fe46d2"/>
+			</pragmas>
+		</Equation>
+		<!-- L5 = Autonome; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L5"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="Autonome"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26dda/180F/2130/60c9c3fe5650"/>
+			</pragmas>
+		</Equation>
+		<!-- L6 = MSG::Exclusion(L4, L5); -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L6"/>
+			</lefts>
+			<right>
+				<!-- MSG::Exclusion(L4, L5) -->
+				<CallExpression>
+					<operator>
+						<OpCall name="1">
+							<operator>
+								<OperatorRef name="MSG::Exclusion"/>
+							</operator>
+						</OpCall>
+					</operator>
+					<callParameters>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="L4"/>
+							</path>
+						</IdExpression>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="L5"/>
+							</path>
+						</IdExpression>
+					</callParameters>
+				</CallExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26ddc/180F/2130/60c9c3fe3466"/>
+			</pragmas>
+		</Equation>
+		<!-- O1 = L6; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="O1"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="L6"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26ddd/180F/2130/60c9c3fe5656"/>
+			</pragmas>
+		</Equation>
+		<!-- L7 = Manual; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L7"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="Manual"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26dde/180F/2130/60c9c3fe789a"/>
+			</pragmas>
+		</Equation>
+		<!-- L8 = Drunk; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L8"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="Drunk"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26ddf/180F/2130/60c9c3fe4702"/>
+			</pragmas>
+		</Equation>
+		<!-- L9 = MSG::Precedence(L7, L8); -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L9"/>
+			</lefts>
+			<right>
+				<!-- MSG::Precedence(L7, L8) -->
+				<CallExpression>
+					<operator>
+						<OpCall name="1">
+							<operator>
+								<OperatorRef name="MSG::Precedence"/>
+							</operator>
+						</OpCall>
+					</operator>
+					<callParameters>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="L7"/>
+							</path>
+						</IdExpression>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="L8"/>
+							</path>
+						</IdExpression>
+					</callParameters>
+				</CallExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26de1/180F/2130/60c9c3fe3de2"/>
+			</pragmas>
+		</Equation>
+		<!-- O2 = L9; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="O2"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="L9"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26de2/180F/2130/60c9c3fe232d"/>
+			</pragmas>
+		</Equation>
+		<!-- L10 = Drunk; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L10"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="Drunk"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26de3/180F/2130/60c9c3fe49eb"/>
+			</pragmas>
+		</Equation>
+		<!-- L11 = RTime; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L11"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="RTime"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26de4/180F/2130/60c9c3fe1082"/>
+			</pragmas>
+		</Equation>
+		<!-- L12 = MSG::Precedence(L10, L11); -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L12"/>
+			</lefts>
+			<right>
+				<!-- MSG::Precedence(L10, L11) -->
+				<CallExpression>
+					<operator>
+						<OpCall name="2">
+							<operator>
+								<OperatorRef name="MSG::Precedence"/>
+							</operator>
+						</OpCall>
+					</operator>
+					<callParameters>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="L10"/>
+							</path>
+						</IdExpression>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="L11"/>
+							</path>
+						</IdExpression>
+					</callParameters>
+				</CallExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26de6/180F/2130/60c9c3fe4ac2"/>
+			</pragmas>
+		</Equation>
+		<!-- O3 = L12; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="O3"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="L12"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26de7/180F/2130/60c9c3fe1188"/>
+			</pragmas>
+		</Equation>
+		<!-- L13 = RTime; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L13"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="RTime"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26de8/180F/2130/60c9c3fe2fd9"/>
+			</pragmas>
+		</Equation>
+		<!-- L14 = Autonome; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L14"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="Autonome"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26de9/180F/2130/60c9c3fe3bed"/>
+			</pragmas>
+		</Equation>
+		<!-- L15 = MSG::Precedence(L13, L14); -->
+		<Equation>
+			<lefts>
+				<VariableRef name="L15"/>
+			</lefts>
+			<right>
+				<!-- MSG::Precedence(L13, L14) -->
+				<CallExpression>
+					<operator>
+						<OpCall name="3">
+							<operator>
+								<OperatorRef name="MSG::Precedence"/>
+							</operator>
+						</OpCall>
+					</operator>
+					<callParameters>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="L13"/>
+							</path>
+						</IdExpression>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="L14"/>
+							</path>
+						</IdExpression>
+					</callParameters>
+				</CallExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26deb/180F/2130/60c9c3fe344c"/>
+			</pragmas>
+		</Equation>
+		<!-- O4 = L15; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="O4"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="L15"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/26dec/180F/2130/60c9c3fe11e"/>
+			</pragmas>
+		</Equation>
+	</data>
 	<pragmas>
-		<ed:Operator>
+		<ed:Operator oid="!ed/223e2/180F/2130/60c9ba845d55" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
 			<diagrams>
-				<TextDiagram name="ChangeMode_1" landscape="false" format="A4 (210 297)"/>
+				<TextDiagram name="ChangeMode_1" landscape="false" format="A4 (210 297)" oid="!ed/2240b/180F/2130/60c9ba84c1e">
+					<presentationElements>
+						<FlowTE presentable="!ed/26dd4/180F/2130/60c9c3fe738e"/>
+						<FlowTE presentable="!ed/26dd5/180F/2130/60c9c3fe6329"/>
+						<FlowTE presentable="!ed/26dd7/180F/2130/60c9c3fe2233"/>
+						<FlowTE presentable="!ed/26dd8/180F/2130/60c9c3fe20dc"/>
+						<FlowTE presentable="!ed/26dd9/180F/2130/60c9c3fe46d2"/>
+						<FlowTE presentable="!ed/26dda/180F/2130/60c9c3fe5650"/>
+						<FlowTE presentable="!ed/26ddc/180F/2130/60c9c3fe3466"/>
+						<FlowTE presentable="!ed/26ddd/180F/2130/60c9c3fe5656"/>
+						<FlowTE presentable="!ed/26dde/180F/2130/60c9c3fe789a"/>
+						<FlowTE presentable="!ed/26ddf/180F/2130/60c9c3fe4702"/>
+						<FlowTE presentable="!ed/26de1/180F/2130/60c9c3fe3de2"/>
+						<FlowTE presentable="!ed/26de2/180F/2130/60c9c3fe232d"/>
+						<FlowTE presentable="!ed/26de3/180F/2130/60c9c3fe49eb"/>
+						<FlowTE presentable="!ed/26de4/180F/2130/60c9c3fe1082"/>
+						<FlowTE presentable="!ed/26de6/180F/2130/60c9c3fe4ac2"/>
+						<FlowTE presentable="!ed/26de7/180F/2130/60c9c3fe1188"/>
+						<FlowTE presentable="!ed/26de8/180F/2130/60c9c3fe2fd9"/>
+						<FlowTE presentable="!ed/26de9/180F/2130/60c9c3fe3bed"/>
+						<FlowTE presentable="!ed/26deb/180F/2130/60c9c3fe344c"/>
+						<FlowTE presentable="!ed/26dec/180F/2130/60c9c3fe11e"/>
+					</presentationElements>
+					<textArea>
+						<TextArea text="L1 = Manual;&#xA;
+L2 = Autonome;&#xA;
+L3 = MSG::Union(L1, L2);&#xA;
+Mode = L3;&#xA;
+L4 = Manual;&#xA;
+L5 = Autonome;&#xA;
+L6 = MSG::Exclusion(L4, L5);&#xA;
+O1 = L6;&#xA;
+L7 = Manual;&#xA;
+L8 = Drunk;&#xA;
+L9 = MSG::Precedence(L7, L8);&#xA;
+O2 = L9;&#xA;
+L10 = Drunk;&#xA;
+L11 = RTime;&#xA;
+L12 = MSG::Precedence(L10, L11);&#xA;
+O3 = L12;&#xA;
+L13 = RTime;&#xA;
+L14 = Autonome;&#xA;
+L15 = MSG::Precedence(L13, L14);&#xA;
+O4 = L15;&#xA;
+"/>
+					</textArea>
+				</TextDiagram>
 			</diagrams>
 		</ed:Operator>
 	</pragmas>

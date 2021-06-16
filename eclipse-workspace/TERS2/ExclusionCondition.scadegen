@@ -1,12 +1,4 @@
-L1 = Autonome;
-L2 = MRM;
+L1 = Rain;
+L2 = Snow;
 L3 = MSG::Exclusion(L1, L2);
 O1 = L3;
-L4 = Autonome;
-L5 = Manual;
-L6 = MSG::Exclusion(L4, L5);
-O2 = L6;
-L7 = MRM;
-L8 = Manual;
-L9 = MSG::Exclusion(L7, L8);
-O3 = L9;

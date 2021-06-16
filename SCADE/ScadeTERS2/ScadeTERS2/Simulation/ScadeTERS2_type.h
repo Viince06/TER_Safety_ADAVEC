@@ -241,5 +241,22 @@ extern int release_kcg_uint8(void *pValue);
 extern int copy_kcg_uint8(void *pToValue, const void *pFromValue);
 extern SimTypeUtils _Type_kcg_uint8_Utils;
 
+/****************************************************************
+ ** Strictness 
+ ****************************************************************/
+extern int Strictness_to_string(const void *pValue, PFN_STR_APPEND pfnStrAppend, void *pStrObj);
+extern int check_Strictness_string(const char *str, char **endptr);
+extern int string_to_Strictness(const char *str, void *pValue, char **endptr);
+extern int is_Strictness_double_conversion_allowed();
+extern int Strictness_to_double(const void *pValue, double *nValue);
+extern int is_Strictness_long_conversion_allowed();
+extern int Strictness_to_long(const void *pValue, long *nValue);
+extern void compare_Strictness(int *nStatus, const void *pValue1, const void *pValue2, SimTolerance *pTol, const char *pszPath, PFN_STR_LIST_APPEND pfnStrListAppend, void *pListErrPaths);
+extern int get_Strictness_signature(PFN_STR_APPEND pfnStrAppend, void *pStrObj);
+extern int init_Strictness(void *pValue);
+extern int release_Strictness(void *pValue);
+extern int copy_Strictness(void *pToValue, const void *pFromValue);
+extern SimTypeUtils _Type_Strictness_Utils;
+
 
 #endif /*SCADETERS2_TYPES_CONVERSION */

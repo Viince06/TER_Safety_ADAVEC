@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--$******* SCADE Suite KCG 32-bit 6.6.1 beta (build i1) ********
 ** Command: kcg661.exe -config D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/config.txt
-** Generation date: 2021-06-16T10:21:05
+** Generation date: 2021-06-16T11:27:42
 *************************************************************$-->
 <mapping>
   <config>
@@ -36,7 +36,7 @@
     <option name="exp" value="#off#"/>
     <option name="target_dir" value="D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation"/>
     <option name="target" value="C"/>
-    <option name="root" value="Generated::ExclusionCondition"/>
+    <option name="root" value="Generated::ChangeMode"/>
     <option name="auth" value="#off#"/>
   </config>
   <model>
@@ -58,280 +58,644 @@
       <value id="16" name="ABSENT" default="false"/>
       <value id="17" name="DEAD" default="false"/>
     </enum>
-    <package id="18" name="Generated">
-      <operator id="19" name="ExclusionCondition" imported="false" root="true" expanded="false">
-        <input id="20" name="Autonome" clock="false" type="14"/>
-        <input id="21" name="MRM" clock="false" type="14"/>
-        <input id="22" name="Manual" clock="false" type="14"/>
-        <output id="23" name="O1" clock="false" type="1"/>
-        <output id="24" name="O2" clock="false" type="1"/>
-        <output id="25" name="O3" clock="false" type="1"/>
-        <local id="26" name="L1" clock="false" type="14"/>
-        <local id="27" name="L2" clock="false" type="14"/>
-        <local id="28" name="L3" clock="false" type="1"/>
-        <local id="29" name="L4" clock="false" type="14"/>
-        <local id="30" name="L5" clock="false" type="14"/>
-        <local id="31" name="L6" clock="false" type="1"/>
-        <local id="32" name="L7" clock="false" type="14"/>
-        <local id="33" name="L8" clock="false" type="14"/>
-        <local id="34" name="L9" clock="false" type="1"/>
-        <instance id="35" name="1" op="39" expanded="false"/>
-        <instance id="36" name="2" op="39" expanded="false"/>
-        <instance id="37" name="3" op="39" expanded="false"/>
+    <enum id="18" name="Strictness">
+      <value id="19" name="STRICT" default="false"/>
+      <value id="20" name="NONSTRICT" default="false"/>
+    </enum>
+    <package id="21" name="Generated">
+      <operator id="22" name="ChangeMode" imported="false" root="true" expanded="false">
+        <input id="23" name="Manual" clock="false" type="14"/>
+        <input id="24" name="Autonome" clock="false" type="14"/>
+        <input id="25" name="Drunk" clock="false" type="14"/>
+        <input id="26" name="RTime" clock="false" type="14"/>
+        <output id="27" name="Mode" clock="false" type="14"/>
+        <output id="28" name="O1" clock="false" type="1"/>
+        <output id="29" name="O2" clock="false" type="1"/>
+        <output id="30" name="O3" clock="false" type="1"/>
+        <output id="31" name="O4" clock="false" type="1"/>
+        <local id="32" name="L1" clock="false" type="14"/>
+        <local id="33" name="L2" clock="false" type="14"/>
+        <local id="34" name="L3" clock="false" type="14"/>
+        <local id="35" name="L4" clock="false" type="14"/>
+        <local id="36" name="L5" clock="false" type="14"/>
+        <local id="37" name="L6" clock="false" type="1"/>
+        <local id="38" name="L7" clock="false" type="14"/>
+        <local id="39" name="L8" clock="false" type="14"/>
+        <local id="40" name="L9" clock="false" type="1"/>
+        <local id="41" name="L10" clock="false" type="14"/>
+        <local id="42" name="L11" clock="false" type="14"/>
+        <local id="43" name="L12" clock="false" type="1"/>
+        <local id="44" name="L13" clock="false" type="14"/>
+        <local id="45" name="L14" clock="false" type="14"/>
+        <local id="46" name="L15" clock="false" type="1"/>
+        <instance id="47" name="1" op="53" expanded="false"/>
+        <instance id="48" name="1" op="69" expanded="false"/>
+        <instance id="49" name="1" op="81" expanded="false"/>
+        <instance id="50" name="2" op="81" expanded="false"/>
+        <instance id="51" name="3" op="81" expanded="false"/>
       </operator>
     </package>
-    <package id="38" name="MSG">
-      <operator id="39" name="Exclusion" imported="false" root="false" expanded="false">
-        <input id="40" name="a" clock="false" type="14"/>
-        <input id="41" name="b" clock="false" type="14"/>
-        <output id="42" name="o" clock="false" type="1"/>
-        <local id="43" name="_L1" clock="false" type="14"/>
-        <local id="44" name="_L2" clock="false" type="14"/>
-        <local id="45" name="_L3" clock="false" type="1"/>
-        <local id="46" name="_L4" clock="false" type="1"/>
-        <local id="47" name="_L5" clock="false" type="1"/>
-        <local id="48" name="_L6" clock="false" type="1"/>
-        <instance id="49" name="1" op="52" expanded="false"/>
-        <instance id="50" name="2" op="52" expanded="false"/>
-      </operator>
-    </package>
-    <package id="51" name="Utils">
-      <operator id="52" name="isPresent" imported="false" root="false" expanded="false">
-        <input id="53" name="a" clock="false" type="14"/>
-        <output id="54" name="presence" clock="false" type="1"/>
-        <local id="55" name="_L1" clock="false" type="14"/>
-        <local id="56" name="_L2" clock="false" type="1"/>
-        <local id="57" name="_L3" clock="false" type="1"/>
+    <package id="52" name="MSG">
+      <operator id="53" name="Union" imported="false" root="false" expanded="false">
+        <input id="54" name="a" clock="false" type="14"/>
+        <input id="55" name="b" clock="false" type="14"/>
+        <output id="56" name="o" clock="false" type="14"/>
+        <local id="57" name="_L1" clock="false" type="14"/>
         <local id="58" name="_L4" clock="false" type="1"/>
+        <local id="59" name="_L3" clock="false" type="1"/>
+        <local id="60" name="_L5" clock="false" type="1"/>
+        <local id="61" name="_L6" clock="false" type="1"/>
+        <local id="62" name="_L8" clock="false" type="1"/>
+        <local id="63" name="_L7" clock="false" type="1"/>
+        <local id="64" name="_L10" clock="false" type="14"/>
+        <local id="65" name="_L20" clock="false" type="14"/>
+        <instance id="66" name="1" op="102" expanded="false"/>
+        <instance id="67" name="2" op="102" expanded="false"/>
+        <instance id="68" name="1" op="113" expanded="false"/>
+      </operator>
+      <operator id="69" name="Exclusion" imported="false" root="false" expanded="false">
+        <input id="70" name="a" clock="false" type="14"/>
+        <input id="71" name="b" clock="false" type="14"/>
+        <output id="72" name="o" clock="false" type="1"/>
+        <local id="73" name="_L1" clock="false" type="14"/>
+        <local id="74" name="_L2" clock="false" type="14"/>
+        <local id="75" name="_L3" clock="false" type="1"/>
+        <local id="76" name="_L4" clock="false" type="1"/>
+        <local id="77" name="_L5" clock="false" type="1"/>
+        <local id="78" name="_L6" clock="false" type="1"/>
+        <instance id="79" name="1" op="124" expanded="false"/>
+        <instance id="80" name="2" op="124" expanded="false"/>
+      </operator>
+      <operator id="81" name="Precedence" imported="false" root="false" expanded="false">
+        <input id="82" name="a" clock="false" type="14"/>
+        <input id="83" name="b" clock="false" type="14"/>
+        <output id="84" name="o" clock="false" type="1"/>
+        <local id="85" name="_L1" clock="false" type="14"/>
+        <local id="86" name="_L2" clock="false" type="14"/>
+        <local id="87" name="_L4" clock="false" type="1"/>
+        <local id="88" name="_L5" clock="false" type="1"/>
+        <local id="89" name="_L6" clock="false" type="1"/>
+        <local id="90" name="_L7" clock="false" type="1"/>
+        <local id="91" name="_L8" clock="false" type="1"/>
+        <local id="92" name="_L9" clock="false" type="1"/>
+        <local id="93" name="_L10" clock="false" type="1"/>
+        <local id="94" name="_L11" clock="false" type="1"/>
+        <local id="95" name="_L12" clock="false" type="5"/>
+        <local id="96" name="_L13" clock="false" type="5"/>
+        <local id="97" name="_L14" clock="false" type="18"/>
+        <instance id="98" name="1" op="124" expanded="false"/>
+        <instance id="99" name="2" op="124" expanded="false"/>
+        <instance id="100" name="1" op="131" expanded="false"/>
+      </operator>
+    </package>
+    <package id="101" name="Utils">
+      <operator id="102" name="DecodeClockStatus" imported="false" root="false" expanded="false">
+        <input id="103" name="c" clock="false" type="14"/>
+        <output id="104" name="presence" clock="false" type="1"/>
+        <output id="105" name="alive" clock="false" type="1"/>
+        <local id="106" name="_L1" clock="false" type="14"/>
+        <local id="107" name="_L2" clock="false" type="1"/>
+        <local id="108" name="_L3" clock="false" type="1"/>
+        <local id="109" name="_L4" clock="false" type="1"/>
+        <local id="110" name="_L5" clock="false" type="1"/>
+        <local id="111" name="_L6" clock="false" type="1"/>
+        <local id="112" name="_L7" clock="false" type="1"/>
+      </operator>
+      <operator id="113" name="EncodeClockStatus" imported="false" root="false" expanded="false">
+        <input id="114" name="presence" clock="false" type="1"/>
+        <input id="115" name="alive" clock="false" type="1"/>
+        <output id="116" name="c" clock="false" type="14"/>
+        <local id="117" name="_L1" clock="false" type="1"/>
+        <local id="118" name="_L2" clock="false" type="1"/>
+        <local id="119" name="_L3" clock="false" type="14"/>
+        <local id="120" name="_L4" clock="false" type="14"/>
+        <local id="121" name="_L5" clock="false" type="14"/>
+        <local id="122" name="_L6" clock="false" type="14"/>
+        <local id="123" name="_L7" clock="false" type="14"/>
+      </operator>
+      <operator id="124" name="isPresent" imported="false" root="false" expanded="false">
+        <input id="125" name="a" clock="false" type="14"/>
+        <output id="126" name="presence" clock="false" type="1"/>
+        <local id="127" name="_L1" clock="false" type="14"/>
+        <local id="128" name="_L2" clock="false" type="1"/>
+        <local id="129" name="_L3" clock="false" type="1"/>
+        <local id="130" name="_L4" clock="false" type="1"/>
+      </operator>
+      <operator id="131" name="Mg_delta" imported="false" root="false" expanded="false">
+        <input id="132" name="a" clock="false" type="1"/>
+        <input id="133" name="b" clock="false" type="1"/>
+        <output id="134" name="delta" clock="false" type="5"/>
+        <local id="135" name="_L1" clock="false" type="1"/>
+        <local id="136" name="_L2" clock="false" type="1"/>
+        <local id="137" name="_L3" clock="false" type="5"/>
+        <local id="138" name="_L4" clock="false" type="5"/>
+        <local id="139" name="_L5" clock="false" type="5"/>
+        <local id="140" name="_L6" clock="false" type="5"/>
+        <local id="141" name="_L7" clock="false" type="5"/>
+        <local id="142" name="_L8" clock="false" type="5"/>
+        <local id="143" name="_L9" clock="false" type="5"/>
+        <local id="144" name="_L10" clock="false" type="5"/>
+        <fby id="145" name="1"/>
       </operator>
     </package>
   </model>
   <generated>
     <c>
-      <file id="59" name="ExclusionCondition_Generated.h">
-        <function id="60" name="ExclusionCondition_init_Generated">
-          <parameter id="61" name="outC" type="67" pointer="true"/>
+      <file id="146" name="ChangeMode_Generated.h">
+        <function id="147" name="ChangeMode_init_Generated">
+          <parameter id="148" name="outC" type="154" pointer="true"/>
         </function>
-        <function id="62" name="ExclusionCondition_reset_Generated">
-          <parameter id="63" name="outC" type="67" pointer="true"/>
+        <function id="149" name="ChangeMode_reset_Generated">
+          <parameter id="150" name="outC" type="154" pointer="true"/>
         </function>
-        <function id="64" name="ExclusionCondition_Generated">
-          <parameter id="65" name="inC" type="83" pointer="true"/>
-          <parameter id="66" name="outC" type="67" pointer="true"/>
+        <function id="151" name="ChangeMode_Generated">
+          <parameter id="152" name="inC" type="180" pointer="true"/>
+          <parameter id="153" name="outC" type="154" pointer="true"/>
         </function>
-        <struct id="67" name="outC_ExclusionCondition_Generated">
-          <field id="68" name="O1" type="159" pointer="false"/>
-          <field id="69" name="O2" type="159" pointer="false"/>
-          <field id="70" name="O3" type="159" pointer="false"/>
-          <field id="71" name="Context_Exclusion_1" type="96" pointer="false"/>
-          <field id="72" name="Context_Exclusion_2" type="96" pointer="false"/>
-          <field id="73" name="Context_Exclusion_3" type="96" pointer="false"/>
-          <field id="74" name="L1" type="121" pointer="false"/>
-          <field id="75" name="L2" type="121" pointer="false"/>
-          <field id="76" name="L3" type="159" pointer="false"/>
-          <field id="77" name="L4" type="121" pointer="false"/>
-          <field id="78" name="L5" type="121" pointer="false"/>
-          <field id="79" name="L6" type="159" pointer="false"/>
-          <field id="80" name="L7" type="121" pointer="false"/>
-          <field id="81" name="L8" type="121" pointer="false"/>
-          <field id="82" name="L9" type="159" pointer="false"/>
+        <struct id="154" name="outC_ChangeMode_Generated">
+          <field id="155" name="Mode" type="327" pointer="false"/>
+          <field id="156" name="O1" type="368" pointer="false"/>
+          <field id="157" name="O2" type="368" pointer="false"/>
+          <field id="158" name="O3" type="368" pointer="false"/>
+          <field id="159" name="O4" type="368" pointer="false"/>
+          <field id="160" name="Context_Union_1" type="276" pointer="false"/>
+          <field id="161" name="Context_Exclusion_1" type="243" pointer="false"/>
+          <field id="162" name="Context_Precedence_1" type="194" pointer="false"/>
+          <field id="163" name="Context_Precedence_2" type="194" pointer="false"/>
+          <field id="164" name="Context_Precedence_3" type="194" pointer="false"/>
+          <field id="165" name="L1" type="327" pointer="false"/>
+          <field id="166" name="L2" type="327" pointer="false"/>
+          <field id="167" name="L3" type="327" pointer="false"/>
+          <field id="168" name="L4" type="327" pointer="false"/>
+          <field id="169" name="L5" type="327" pointer="false"/>
+          <field id="170" name="L6" type="368" pointer="false"/>
+          <field id="171" name="L7" type="327" pointer="false"/>
+          <field id="172" name="L8" type="327" pointer="false"/>
+          <field id="173" name="L9" type="368" pointer="false"/>
+          <field id="174" name="L10" type="327" pointer="false"/>
+          <field id="175" name="L11" type="327" pointer="false"/>
+          <field id="176" name="L12" type="368" pointer="false"/>
+          <field id="177" name="L13" type="327" pointer="false"/>
+          <field id="178" name="L14" type="327" pointer="false"/>
+          <field id="179" name="L15" type="368" pointer="false"/>
         </struct>
-        <struct id="83" name="inC_ExclusionCondition_Generated">
-          <field id="84" name="Autonome" type="121" pointer="false"/>
-          <field id="85" name="MRM" type="121" pointer="false"/>
-          <field id="86" name="Manual" type="121" pointer="false"/>
-        </struct>
-      </file>
-      <file id="87" name="Exclusion_MSG.h">
-        <function id="88" name="Exclusion_init_MSG">
-          <parameter id="89" name="outC" type="96" pointer="true"/>
-        </function>
-        <function id="90" name="Exclusion_reset_MSG">
-          <parameter id="91" name="outC" type="96" pointer="true"/>
-        </function>
-        <function id="92" name="Exclusion_MSG">
-          <parameter id="93" name="a" type="121" pointer="false"/>
-          <parameter id="94" name="b" type="121" pointer="false"/>
-          <parameter id="95" name="outC" type="96" pointer="true"/>
-        </function>
-        <struct id="96" name="outC_Exclusion_MSG">
-          <field id="97" name="o" type="159" pointer="false"/>
-          <field id="98" name="Context_isPresent_1" type="114" pointer="false"/>
-          <field id="99" name="Context_isPresent_2" type="114" pointer="false"/>
-          <field id="100" name="_L1" type="121" pointer="false"/>
-          <field id="101" name="_L2" type="121" pointer="false"/>
-          <field id="102" name="_L3" type="159" pointer="false"/>
-          <field id="103" name="_L4" type="159" pointer="false"/>
-          <field id="104" name="_L5" type="159" pointer="false"/>
-          <field id="105" name="_L6" type="159" pointer="false"/>
+        <struct id="180" name="inC_ChangeMode_Generated">
+          <field id="181" name="Manual" type="327" pointer="false"/>
+          <field id="182" name="Autonome" type="327" pointer="false"/>
+          <field id="183" name="Drunk" type="327" pointer="false"/>
+          <field id="184" name="RTime" type="327" pointer="false"/>
         </struct>
       </file>
-      <file id="106" name="isPresent_Utils.h">
-        <function id="107" name="isPresent_init_Utils">
-          <parameter id="108" name="outC" type="114" pointer="true"/>
+      <file id="185" name="Precedence_MSG.h">
+        <function id="186" name="Precedence_init_MSG">
+          <parameter id="187" name="outC" type="194" pointer="true"/>
         </function>
-        <function id="109" name="isPresent_reset_Utils">
-          <parameter id="110" name="outC" type="114" pointer="true"/>
+        <function id="188" name="Precedence_reset_MSG">
+          <parameter id="189" name="outC" type="194" pointer="true"/>
         </function>
-        <function id="111" name="isPresent_Utils">
-          <parameter id="112" name="a" type="121" pointer="false"/>
-          <parameter id="113" name="outC" type="114" pointer="true"/>
+        <function id="190" name="Precedence_MSG">
+          <parameter id="191" name="a" type="327" pointer="false"/>
+          <parameter id="192" name="b" type="327" pointer="false"/>
+          <parameter id="193" name="outC" type="194" pointer="true"/>
         </function>
-        <struct id="114" name="outC_isPresent_Utils">
-          <field id="115" name="presence" type="159" pointer="false"/>
-          <field id="116" name="_L1" type="121" pointer="false"/>
-          <field id="117" name="_L2" type="159" pointer="false"/>
-          <field id="118" name="_L3" type="159" pointer="false"/>
-          <field id="119" name="_L4" type="159" pointer="false"/>
+        <struct id="194" name="outC_Precedence_MSG">
+          <field id="195" name="o" type="368" pointer="false"/>
+          <field id="196" name="Context_Mg_delta_1" type="221" pointer="false"/>
+          <field id="197" name="Context_isPresent_2" type="261" pointer="false"/>
+          <field id="198" name="Context_isPresent_1" type="261" pointer="false"/>
+          <field id="199" name="_L1" type="327" pointer="false"/>
+          <field id="200" name="_L2" type="327" pointer="false"/>
+          <field id="201" name="_L4" type="368" pointer="false"/>
+          <field id="202" name="_L5" type="368" pointer="false"/>
+          <field id="203" name="_L6" type="368" pointer="false"/>
+          <field id="204" name="_L7" type="368" pointer="false"/>
+          <field id="205" name="_L8" type="368" pointer="false"/>
+          <field id="206" name="_L9" type="368" pointer="false"/>
+          <field id="207" name="_L10" type="368" pointer="false"/>
+          <field id="208" name="_L11" type="368" pointer="false"/>
+          <field id="209" name="_L12" type="359" pointer="false"/>
+          <field id="210" name="_L13" type="359" pointer="false"/>
+          <field id="211" name="_L14" type="331" pointer="false"/>
         </struct>
       </file>
-      <file id="120" name="kcg_types.h">
-        <enum id="121" name="ClockStatus" tagName="kcg_tag_ClockStatus">
-          <value id="122" name="PRESENT"/>
-          <value id="123" name="ABSENT"/>
-          <value id="124" name="DEAD"/>
+      <file id="212" name="Mg_delta_Utils.h">
+        <function id="213" name="Mg_delta_init_Utils">
+          <parameter id="214" name="outC" type="221" pointer="true"/>
+        </function>
+        <function id="215" name="Mg_delta_reset_Utils">
+          <parameter id="216" name="outC" type="221" pointer="true"/>
+        </function>
+        <function id="217" name="Mg_delta_Utils">
+          <parameter id="218" name="a" type="368" pointer="false"/>
+          <parameter id="219" name="b" type="368" pointer="false"/>
+          <parameter id="220" name="outC" type="221" pointer="true"/>
+        </function>
+        <struct id="221" name="outC_Mg_delta_Utils">
+          <field id="222" name="delta" type="359" pointer="false"/>
+          <field id="223" name="init" type="368" pointer="false"/>
+          <field id="224" name="_L3" type="359" pointer="false"/>
+          <field id="225" name="_L1" type="368" pointer="false"/>
+          <field id="226" name="_L2" type="368" pointer="false"/>
+          <field id="227" name="_L4" type="359" pointer="false"/>
+          <field id="228" name="_L5" type="359" pointer="false"/>
+          <field id="229" name="_L6" type="359" pointer="false"/>
+          <field id="230" name="_L7" type="359" pointer="false"/>
+          <field id="231" name="_L8" type="359" pointer="false"/>
+          <field id="232" name="_L9" type="359" pointer="false"/>
+          <field id="233" name="_L10" type="359" pointer="false"/>
+        </struct>
+      </file>
+      <file id="234" name="Exclusion_MSG.h">
+        <function id="235" name="Exclusion_init_MSG">
+          <parameter id="236" name="outC" type="243" pointer="true"/>
+        </function>
+        <function id="237" name="Exclusion_reset_MSG">
+          <parameter id="238" name="outC" type="243" pointer="true"/>
+        </function>
+        <function id="239" name="Exclusion_MSG">
+          <parameter id="240" name="a" type="327" pointer="false"/>
+          <parameter id="241" name="b" type="327" pointer="false"/>
+          <parameter id="242" name="outC" type="243" pointer="true"/>
+        </function>
+        <struct id="243" name="outC_Exclusion_MSG">
+          <field id="244" name="o" type="368" pointer="false"/>
+          <field id="245" name="Context_isPresent_1" type="261" pointer="false"/>
+          <field id="246" name="Context_isPresent_2" type="261" pointer="false"/>
+          <field id="247" name="_L1" type="327" pointer="false"/>
+          <field id="248" name="_L2" type="327" pointer="false"/>
+          <field id="249" name="_L3" type="368" pointer="false"/>
+          <field id="250" name="_L4" type="368" pointer="false"/>
+          <field id="251" name="_L5" type="368" pointer="false"/>
+          <field id="252" name="_L6" type="368" pointer="false"/>
+        </struct>
+      </file>
+      <file id="253" name="isPresent_Utils.h">
+        <function id="254" name="isPresent_init_Utils">
+          <parameter id="255" name="outC" type="261" pointer="true"/>
+        </function>
+        <function id="256" name="isPresent_reset_Utils">
+          <parameter id="257" name="outC" type="261" pointer="true"/>
+        </function>
+        <function id="258" name="isPresent_Utils">
+          <parameter id="259" name="a" type="327" pointer="false"/>
+          <parameter id="260" name="outC" type="261" pointer="true"/>
+        </function>
+        <struct id="261" name="outC_isPresent_Utils">
+          <field id="262" name="presence" type="368" pointer="false"/>
+          <field id="263" name="_L1" type="327" pointer="false"/>
+          <field id="264" name="_L2" type="368" pointer="false"/>
+          <field id="265" name="_L3" type="368" pointer="false"/>
+          <field id="266" name="_L4" type="368" pointer="false"/>
+        </struct>
+      </file>
+      <file id="267" name="Union_MSG.h">
+        <function id="268" name="Union_init_MSG">
+          <parameter id="269" name="outC" type="276" pointer="true"/>
+        </function>
+        <function id="270" name="Union_reset_MSG">
+          <parameter id="271" name="outC" type="276" pointer="true"/>
+        </function>
+        <function id="272" name="Union_MSG">
+          <parameter id="273" name="a" type="327" pointer="false"/>
+          <parameter id="274" name="b" type="327" pointer="false"/>
+          <parameter id="275" name="outC" type="276" pointer="true"/>
+        </function>
+        <struct id="276" name="outC_Union_MSG">
+          <field id="277" name="o" type="327" pointer="false"/>
+          <field id="278" name="Context_EncodeClockStatus_1" type="299" pointer="false"/>
+          <field id="279" name="Context_DecodeClockStatus_1" type="316" pointer="false"/>
+          <field id="280" name="Context_DecodeClockStatus_2" type="316" pointer="false"/>
+          <field id="281" name="_L1" type="327" pointer="false"/>
+          <field id="282" name="_L4" type="368" pointer="false"/>
+          <field id="283" name="_L3" type="368" pointer="false"/>
+          <field id="284" name="_L5" type="368" pointer="false"/>
+          <field id="285" name="_L6" type="368" pointer="false"/>
+          <field id="286" name="_L8" type="368" pointer="false"/>
+          <field id="287" name="_L7" type="368" pointer="false"/>
+          <field id="288" name="_L10" type="327" pointer="false"/>
+          <field id="289" name="_L20" type="327" pointer="false"/>
+        </struct>
+      </file>
+      <file id="290" name="EncodeClockStatus_Utils.h">
+        <function id="291" name="EncodeClockStatus_init_Utils">
+          <parameter id="292" name="outC" type="299" pointer="true"/>
+        </function>
+        <function id="293" name="EncodeClockStatus_reset_Utils">
+          <parameter id="294" name="outC" type="299" pointer="true"/>
+        </function>
+        <function id="295" name="EncodeClockStatus_Utils">
+          <parameter id="296" name="presence" type="368" pointer="false"/>
+          <parameter id="297" name="alive" type="368" pointer="false"/>
+          <parameter id="298" name="outC" type="299" pointer="true"/>
+        </function>
+        <struct id="299" name="outC_EncodeClockStatus_Utils">
+          <field id="300" name="c" type="327" pointer="false"/>
+          <field id="301" name="_L1" type="368" pointer="false"/>
+          <field id="302" name="_L2" type="368" pointer="false"/>
+          <field id="303" name="_L3" type="327" pointer="false"/>
+          <field id="304" name="_L4" type="327" pointer="false"/>
+          <field id="305" name="_L5" type="327" pointer="false"/>
+          <field id="306" name="_L6" type="327" pointer="false"/>
+          <field id="307" name="_L7" type="327" pointer="false"/>
+        </struct>
+      </file>
+      <file id="308" name="DecodeClockStatus_Utils.h">
+        <function id="309" name="DecodeClockStatus_init_Utils">
+          <parameter id="310" name="outC" type="316" pointer="true"/>
+        </function>
+        <function id="311" name="DecodeClockStatus_reset_Utils">
+          <parameter id="312" name="outC" type="316" pointer="true"/>
+        </function>
+        <function id="313" name="DecodeClockStatus_Utils">
+          <parameter id="314" name="c" type="327" pointer="false"/>
+          <parameter id="315" name="outC" type="316" pointer="true"/>
+        </function>
+        <struct id="316" name="outC_DecodeClockStatus_Utils">
+          <field id="317" name="presence" type="368" pointer="false"/>
+          <field id="318" name="alive" type="368" pointer="false"/>
+          <field id="319" name="_L1" type="327" pointer="false"/>
+          <field id="320" name="_L2" type="368" pointer="false"/>
+          <field id="321" name="_L3" type="368" pointer="false"/>
+          <field id="322" name="_L4" type="368" pointer="false"/>
+          <field id="323" name="_L5" type="368" pointer="false"/>
+          <field id="324" name="_L6" type="368" pointer="false"/>
+          <field id="325" name="_L7" type="368" pointer="false"/>
+        </struct>
+      </file>
+      <file id="326" name="kcg_types.h">
+        <enum id="327" name="ClockStatus" tagName="kcg_tag_ClockStatus">
+          <value id="328" name="PRESENT"/>
+          <value id="329" name="ABSENT"/>
+          <value id="330" name="DEAD"/>
         </enum>
-        <macro id="125" name="kcg_assign_array"/>
-        <macro id="126" name="kcg_assign_struct"/>
-        <macro id="127" name="kcg_lnot_uint8"/>
-        <macro id="128" name="kcg_lnot_uint16"/>
-        <macro id="129" name="kcg_lnot_uint32"/>
-        <macro id="130" name="kcg_lnot_uint64"/>
-        <macro id="131" name="kcg_lsl_uint8"/>
-        <macro id="132" name="kcg_lsl_uint16"/>
-        <macro id="133" name="kcg_lsl_uint32"/>
-        <macro id="134" name="kcg_lsl_uint64"/>
-        <macro id="135" name="kcg_true"/>
-        <macro id="136" name="kcg_false"/>
-        <macro id="137" name="kcg_lit_int8"/>
-        <macro id="138" name="kcg_lit_int16"/>
-        <macro id="139" name="kcg_lit_int32"/>
-        <macro id="140" name="kcg_lit_int64"/>
-        <macro id="141" name="kcg_lit_uint8"/>
-        <macro id="142" name="kcg_lit_uint16"/>
-        <macro id="143" name="kcg_lit_uint32"/>
-        <macro id="144" name="kcg_lit_uint64"/>
-        <macro id="145" name="kcg_lit_size"/>
-        <macro id="146" name="kcg_lit_float64"/>
-        <macro id="147" name="kcg_lit_float32"/>
-        <predefType id="148" name="kcg_int8"/>
-        <predefType id="149" name="kcg_int16"/>
-        <predefType id="150" name="kcg_int32"/>
-        <predefType id="151" name="kcg_int64"/>
-        <predefType id="152" name="kcg_uint8"/>
-        <predefType id="153" name="kcg_uint16"/>
-        <predefType id="154" name="kcg_uint32"/>
-        <predefType id="155" name="kcg_uint64"/>
-        <predefType id="156" name="kcg_size"/>
-        <predefType id="157" name="kcg_float64"/>
-        <predefType id="158" name="kcg_float32"/>
-        <predefType id="159" name="kcg_bool"/>
-        <predefType id="160" name="kcg_char"/>
-        <macro id="161" name="KCG_MAPW_CPY"/>
+        <enum id="331" name="Strictness" tagName="kcg_tag_Strictness">
+          <value id="332" name="STRICT"/>
+          <value id="333" name="NONSTRICT"/>
+        </enum>
+        <macro id="334" name="kcg_assign_array"/>
+        <macro id="335" name="kcg_assign_struct"/>
+        <macro id="336" name="kcg_lnot_uint8"/>
+        <macro id="337" name="kcg_lnot_uint16"/>
+        <macro id="338" name="kcg_lnot_uint32"/>
+        <macro id="339" name="kcg_lnot_uint64"/>
+        <macro id="340" name="kcg_lsl_uint8"/>
+        <macro id="341" name="kcg_lsl_uint16"/>
+        <macro id="342" name="kcg_lsl_uint32"/>
+        <macro id="343" name="kcg_lsl_uint64"/>
+        <macro id="344" name="kcg_true"/>
+        <macro id="345" name="kcg_false"/>
+        <macro id="346" name="kcg_lit_int8"/>
+        <macro id="347" name="kcg_lit_int16"/>
+        <macro id="348" name="kcg_lit_int32"/>
+        <macro id="349" name="kcg_lit_int64"/>
+        <macro id="350" name="kcg_lit_uint8"/>
+        <macro id="351" name="kcg_lit_uint16"/>
+        <macro id="352" name="kcg_lit_uint32"/>
+        <macro id="353" name="kcg_lit_uint64"/>
+        <macro id="354" name="kcg_lit_size"/>
+        <macro id="355" name="kcg_lit_float64"/>
+        <macro id="356" name="kcg_lit_float32"/>
+        <predefType id="357" name="kcg_int8"/>
+        <predefType id="358" name="kcg_int16"/>
+        <predefType id="359" name="kcg_int32"/>
+        <predefType id="360" name="kcg_int64"/>
+        <predefType id="361" name="kcg_uint8"/>
+        <predefType id="362" name="kcg_uint16"/>
+        <predefType id="363" name="kcg_uint32"/>
+        <predefType id="364" name="kcg_uint64"/>
+        <predefType id="365" name="kcg_size"/>
+        <predefType id="366" name="kcg_float64"/>
+        <predefType id="367" name="kcg_float32"/>
+        <predefType id="368" name="kcg_bool"/>
+        <predefType id="369" name="kcg_char"/>
+        <macro id="370" name="KCG_MAPW_CPY"/>
       </file>
-      <file id="162" name="kcg_consts.h"/>
-      <file id="163" name="kcg_sensors.h"/>
+      <file id="371" name="kcg_consts.h"/>
+      <file id="372" name="kcg_sensors.h"/>
     </c>
-    <map srcId="157" dstId="146" role="wrapped-lit"/>
-    <map srcId="158" dstId="147" role="wrapped-lit"/>
-    <map srcId="156" dstId="145" role="wrapped-lit"/>
-    <map srcId="155" dstId="144" role="wrapped-lit"/>
-    <map srcId="155" dstId="130" role="wrapped-lnot"/>
-    <map srcId="155" dstId="134" role="wrapped-lsl"/>
-    <map srcId="154" dstId="143" role="wrapped-lit"/>
-    <map srcId="154" dstId="129" role="wrapped-lnot"/>
-    <map srcId="154" dstId="133" role="wrapped-lsl"/>
-    <map srcId="153" dstId="142" role="wrapped-lit"/>
-    <map srcId="153" dstId="128" role="wrapped-lnot"/>
-    <map srcId="153" dstId="132" role="wrapped-lsl"/>
-    <map srcId="152" dstId="141" role="wrapped-lit"/>
-    <map srcId="152" dstId="127" role="wrapped-lnot"/>
-    <map srcId="152" dstId="131" role="wrapped-lsl"/>
-    <map srcId="151" dstId="140" role="wrapped-lit"/>
-    <map srcId="150" dstId="139" role="wrapped-lit"/>
-    <map srcId="149" dstId="138" role="wrapped-lit"/>
-    <map srcId="148" dstId="137" role="wrapped-lit"/>
+    <map srcId="366" dstId="355" role="wrapped-lit"/>
+    <map srcId="367" dstId="356" role="wrapped-lit"/>
+    <map srcId="365" dstId="354" role="wrapped-lit"/>
+    <map srcId="364" dstId="353" role="wrapped-lit"/>
+    <map srcId="364" dstId="339" role="wrapped-lnot"/>
+    <map srcId="364" dstId="343" role="wrapped-lsl"/>
+    <map srcId="363" dstId="352" role="wrapped-lit"/>
+    <map srcId="363" dstId="338" role="wrapped-lnot"/>
+    <map srcId="363" dstId="342" role="wrapped-lsl"/>
+    <map srcId="362" dstId="351" role="wrapped-lit"/>
+    <map srcId="362" dstId="337" role="wrapped-lnot"/>
+    <map srcId="362" dstId="341" role="wrapped-lsl"/>
+    <map srcId="361" dstId="350" role="wrapped-lit"/>
+    <map srcId="361" dstId="336" role="wrapped-lnot"/>
+    <map srcId="361" dstId="340" role="wrapped-lsl"/>
+    <map srcId="360" dstId="349" role="wrapped-lit"/>
+    <map srcId="359" dstId="348" role="wrapped-lit"/>
+    <map srcId="358" dstId="347" role="wrapped-lit"/>
+    <map srcId="357" dstId="346" role="wrapped-lit"/>
   </generated>
-  <map modelId="17" generatedId="124"/>
-  <map modelId="16" generatedId="123"/>
-  <map modelId="15" generatedId="122"/>
-  <map modelId="19" generatedId="61" role="context-parameter"/>
-  <map modelId="19" generatedId="60" role="init-method"/>
-  <map modelId="19" generatedId="63" role="context-parameter"/>
-  <map modelId="19" generatedId="62" role="reset-method"/>
-  <map modelId="19" generatedId="65" role="input-struct-parameter"/>
-  <map modelId="22" generatedId="86"/>
-  <map modelId="21" generatedId="85"/>
-  <map modelId="20" generatedId="84"/>
-  <map modelId="19" generatedId="83" role="input-struct-type"/>
-  <map modelId="19" generatedId="66" role="context-parameter"/>
-  <map modelId="34" generatedId="82"/>
-  <map modelId="33" generatedId="81"/>
-  <map modelId="32" generatedId="80"/>
-  <map modelId="31" generatedId="79"/>
-  <map modelId="30" generatedId="78"/>
-  <map modelId="29" generatedId="77"/>
-  <map modelId="28" generatedId="76"/>
-  <map modelId="27" generatedId="75"/>
-  <map modelId="26" generatedId="74"/>
-  <map modelId="37" generatedId="73"/>
-  <map modelId="36" generatedId="72"/>
-  <map modelId="35" generatedId="71"/>
-  <map modelId="25" generatedId="70"/>
-  <map modelId="24" generatedId="69"/>
-  <map modelId="23" generatedId="68"/>
-  <map modelId="19" generatedId="67" role="context-type"/>
-  <map modelId="19" generatedId="59" role="interface-file"/>
-  <map modelId="19" generatedId="64" role="cycle-method"/>
-  <map modelId="39" generatedId="89" role="context-parameter"/>
-  <map modelId="39" generatedId="88" role="init-method"/>
-  <map modelId="39" generatedId="91" role="context-parameter"/>
-  <map modelId="39" generatedId="90" role="reset-method"/>
-  <map modelId="41" generatedId="94"/>
-  <map modelId="40" generatedId="93"/>
-  <map modelId="39" generatedId="95" role="context-parameter"/>
-  <map modelId="48" generatedId="105"/>
-  <map modelId="47" generatedId="104"/>
-  <map modelId="46" generatedId="103"/>
-  <map modelId="45" generatedId="102"/>
-  <map modelId="44" generatedId="101"/>
-  <map modelId="43" generatedId="100"/>
-  <map modelId="50" generatedId="99"/>
-  <map modelId="49" generatedId="98"/>
-  <map modelId="42" generatedId="97"/>
-  <map modelId="39" generatedId="96" role="context-type"/>
-  <map modelId="39" generatedId="87" role="interface-file"/>
-  <map modelId="39" generatedId="92" role="cycle-method"/>
-  <map modelId="52" generatedId="108" role="context-parameter"/>
-  <map modelId="52" generatedId="107" role="init-method"/>
-  <map modelId="52" generatedId="110" role="context-parameter"/>
-  <map modelId="52" generatedId="109" role="reset-method"/>
-  <map modelId="53" generatedId="112"/>
-  <map modelId="52" generatedId="113" role="context-parameter"/>
-  <map modelId="58" generatedId="119"/>
-  <map modelId="57" generatedId="118"/>
-  <map modelId="56" generatedId="117"/>
-  <map modelId="55" generatedId="116"/>
-  <map modelId="54" generatedId="115"/>
-  <map modelId="52" generatedId="114" role="context-type"/>
-  <map modelId="52" generatedId="106" role="interface-file"/>
-  <map modelId="52" generatedId="111" role="cycle-method"/>
-  <map modelId="14" generatedId="121"/>
-  <map modelId="2" generatedId="160"/>
-  <map modelId="1" generatedId="159"/>
-  <map modelId="12" generatedId="157"/>
-  <map modelId="11" generatedId="158"/>
-  <map modelId="13" generatedId="156"/>
-  <map modelId="10" generatedId="155"/>
-  <map modelId="9" generatedId="154"/>
-  <map modelId="8" generatedId="153"/>
-  <map modelId="7" generatedId="152"/>
-  <map modelId="6" generatedId="151"/>
-  <map modelId="5" generatedId="150"/>
-  <map modelId="4" generatedId="149"/>
-  <map modelId="3" generatedId="148"/>
+  <map modelId="20" generatedId="333"/>
+  <map modelId="19" generatedId="332"/>
+  <map modelId="16" generatedId="329"/>
+  <map modelId="15" generatedId="328"/>
+  <map modelId="17" generatedId="330"/>
+  <map modelId="22" generatedId="148" role="context-parameter"/>
+  <map modelId="22" generatedId="147" role="init-method"/>
+  <map modelId="22" generatedId="150" role="context-parameter"/>
+  <map modelId="22" generatedId="149" role="reset-method"/>
+  <map modelId="22" generatedId="152" role="input-struct-parameter"/>
+  <map modelId="26" generatedId="184"/>
+  <map modelId="25" generatedId="183"/>
+  <map modelId="24" generatedId="182"/>
+  <map modelId="23" generatedId="181"/>
+  <map modelId="22" generatedId="180" role="input-struct-type"/>
+  <map modelId="22" generatedId="153" role="context-parameter"/>
+  <map modelId="46" generatedId="179"/>
+  <map modelId="45" generatedId="178"/>
+  <map modelId="44" generatedId="177"/>
+  <map modelId="43" generatedId="176"/>
+  <map modelId="42" generatedId="175"/>
+  <map modelId="41" generatedId="174"/>
+  <map modelId="40" generatedId="173"/>
+  <map modelId="39" generatedId="172"/>
+  <map modelId="38" generatedId="171"/>
+  <map modelId="37" generatedId="170"/>
+  <map modelId="36" generatedId="169"/>
+  <map modelId="35" generatedId="168"/>
+  <map modelId="34" generatedId="167"/>
+  <map modelId="33" generatedId="166"/>
+  <map modelId="32" generatedId="165"/>
+  <map modelId="51" generatedId="164"/>
+  <map modelId="50" generatedId="163"/>
+  <map modelId="49" generatedId="162"/>
+  <map modelId="48" generatedId="161"/>
+  <map modelId="47" generatedId="160"/>
+  <map modelId="31" generatedId="159"/>
+  <map modelId="30" generatedId="158"/>
+  <map modelId="29" generatedId="157"/>
+  <map modelId="28" generatedId="156"/>
+  <map modelId="27" generatedId="155"/>
+  <map modelId="22" generatedId="154" role="context-type"/>
+  <map modelId="22" generatedId="146" role="interface-file"/>
+  <map modelId="22" generatedId="151" role="cycle-method"/>
+  <map modelId="81" generatedId="187" role="context-parameter"/>
+  <map modelId="81" generatedId="186" role="init-method"/>
+  <map modelId="81" generatedId="189" role="context-parameter"/>
+  <map modelId="81" generatedId="188" role="reset-method"/>
+  <map modelId="83" generatedId="192"/>
+  <map modelId="82" generatedId="191"/>
+  <map modelId="81" generatedId="193" role="context-parameter"/>
+  <map modelId="97" generatedId="211"/>
+  <map modelId="96" generatedId="210"/>
+  <map modelId="95" generatedId="209"/>
+  <map modelId="94" generatedId="208"/>
+  <map modelId="93" generatedId="207"/>
+  <map modelId="92" generatedId="206"/>
+  <map modelId="91" generatedId="205"/>
+  <map modelId="90" generatedId="204"/>
+  <map modelId="89" generatedId="203"/>
+  <map modelId="88" generatedId="202"/>
+  <map modelId="87" generatedId="201"/>
+  <map modelId="86" generatedId="200"/>
+  <map modelId="85" generatedId="199"/>
+  <map modelId="98" generatedId="198"/>
+  <map modelId="99" generatedId="197"/>
+  <map modelId="100" generatedId="196"/>
+  <map modelId="84" generatedId="195"/>
+  <map modelId="81" generatedId="194" role="context-type"/>
+  <map modelId="81" generatedId="185" role="interface-file"/>
+  <map modelId="81" generatedId="190" role="cycle-method"/>
+  <map modelId="131" generatedId="214" role="context-parameter"/>
+  <map modelId="131" generatedId="213" role="init-method"/>
+  <map modelId="131" generatedId="216" role="context-parameter"/>
+  <map modelId="131" generatedId="215" role="reset-method"/>
+  <map modelId="133" generatedId="219"/>
+  <map modelId="132" generatedId="218"/>
+  <map modelId="131" generatedId="220" role="context-parameter"/>
+  <map modelId="144" generatedId="233"/>
+  <map modelId="143" generatedId="232"/>
+  <map modelId="142" generatedId="231"/>
+  <map modelId="141" generatedId="230"/>
+  <map modelId="140" generatedId="229"/>
+  <map modelId="139" generatedId="228"/>
+  <map modelId="138" generatedId="227"/>
+  <map modelId="136" generatedId="226"/>
+  <map modelId="135" generatedId="225"/>
+  <map modelId="137" generatedId="224"/>
+  <map modelId="145" generatedId="224" role="memory"/>
+  <map modelId="145" generatedId="223" role="init"/>
+  <map modelId="134" generatedId="222"/>
+  <map modelId="131" generatedId="221" role="context-type"/>
+  <map modelId="131" generatedId="212" role="interface-file"/>
+  <map modelId="131" generatedId="217" role="cycle-method"/>
+  <map modelId="69" generatedId="236" role="context-parameter"/>
+  <map modelId="69" generatedId="235" role="init-method"/>
+  <map modelId="69" generatedId="238" role="context-parameter"/>
+  <map modelId="69" generatedId="237" role="reset-method"/>
+  <map modelId="71" generatedId="241"/>
+  <map modelId="70" generatedId="240"/>
+  <map modelId="69" generatedId="242" role="context-parameter"/>
+  <map modelId="78" generatedId="252"/>
+  <map modelId="77" generatedId="251"/>
+  <map modelId="76" generatedId="250"/>
+  <map modelId="75" generatedId="249"/>
+  <map modelId="74" generatedId="248"/>
+  <map modelId="73" generatedId="247"/>
+  <map modelId="80" generatedId="246"/>
+  <map modelId="79" generatedId="245"/>
+  <map modelId="72" generatedId="244"/>
+  <map modelId="69" generatedId="243" role="context-type"/>
+  <map modelId="69" generatedId="234" role="interface-file"/>
+  <map modelId="69" generatedId="239" role="cycle-method"/>
+  <map modelId="124" generatedId="255" role="context-parameter"/>
+  <map modelId="124" generatedId="254" role="init-method"/>
+  <map modelId="124" generatedId="257" role="context-parameter"/>
+  <map modelId="124" generatedId="256" role="reset-method"/>
+  <map modelId="125" generatedId="259"/>
+  <map modelId="124" generatedId="260" role="context-parameter"/>
+  <map modelId="130" generatedId="266"/>
+  <map modelId="129" generatedId="265"/>
+  <map modelId="128" generatedId="264"/>
+  <map modelId="127" generatedId="263"/>
+  <map modelId="126" generatedId="262"/>
+  <map modelId="124" generatedId="261" role="context-type"/>
+  <map modelId="124" generatedId="253" role="interface-file"/>
+  <map modelId="124" generatedId="258" role="cycle-method"/>
+  <map modelId="53" generatedId="269" role="context-parameter"/>
+  <map modelId="53" generatedId="268" role="init-method"/>
+  <map modelId="53" generatedId="271" role="context-parameter"/>
+  <map modelId="53" generatedId="270" role="reset-method"/>
+  <map modelId="55" generatedId="274"/>
+  <map modelId="54" generatedId="273"/>
+  <map modelId="53" generatedId="275" role="context-parameter"/>
+  <map modelId="65" generatedId="289"/>
+  <map modelId="64" generatedId="288"/>
+  <map modelId="63" generatedId="287"/>
+  <map modelId="62" generatedId="286"/>
+  <map modelId="61" generatedId="285"/>
+  <map modelId="60" generatedId="284"/>
+  <map modelId="59" generatedId="283"/>
+  <map modelId="58" generatedId="282"/>
+  <map modelId="57" generatedId="281"/>
+  <map modelId="67" generatedId="280"/>
+  <map modelId="66" generatedId="279"/>
+  <map modelId="68" generatedId="278"/>
+  <map modelId="56" generatedId="277"/>
+  <map modelId="53" generatedId="276" role="context-type"/>
+  <map modelId="53" generatedId="267" role="interface-file"/>
+  <map modelId="53" generatedId="272" role="cycle-method"/>
+  <map modelId="113" generatedId="292" role="context-parameter"/>
+  <map modelId="113" generatedId="291" role="init-method"/>
+  <map modelId="113" generatedId="294" role="context-parameter"/>
+  <map modelId="113" generatedId="293" role="reset-method"/>
+  <map modelId="115" generatedId="297"/>
+  <map modelId="114" generatedId="296"/>
+  <map modelId="113" generatedId="298" role="context-parameter"/>
+  <map modelId="123" generatedId="307"/>
+  <map modelId="122" generatedId="306"/>
+  <map modelId="121" generatedId="305"/>
+  <map modelId="120" generatedId="304"/>
+  <map modelId="119" generatedId="303"/>
+  <map modelId="118" generatedId="302"/>
+  <map modelId="117" generatedId="301"/>
+  <map modelId="116" generatedId="300"/>
+  <map modelId="113" generatedId="299" role="context-type"/>
+  <map modelId="113" generatedId="290" role="interface-file"/>
+  <map modelId="113" generatedId="295" role="cycle-method"/>
+  <map modelId="102" generatedId="310" role="context-parameter"/>
+  <map modelId="102" generatedId="309" role="init-method"/>
+  <map modelId="102" generatedId="312" role="context-parameter"/>
+  <map modelId="102" generatedId="311" role="reset-method"/>
+  <map modelId="103" generatedId="314"/>
+  <map modelId="102" generatedId="315" role="context-parameter"/>
+  <map modelId="112" generatedId="325"/>
+  <map modelId="111" generatedId="324"/>
+  <map modelId="110" generatedId="323"/>
+  <map modelId="109" generatedId="322"/>
+  <map modelId="108" generatedId="321"/>
+  <map modelId="107" generatedId="320"/>
+  <map modelId="106" generatedId="319"/>
+  <map modelId="105" generatedId="318"/>
+  <map modelId="104" generatedId="317"/>
+  <map modelId="102" generatedId="316" role="context-type"/>
+  <map modelId="102" generatedId="308" role="interface-file"/>
+  <map modelId="102" generatedId="313" role="cycle-method"/>
+  <map modelId="18" generatedId="331"/>
+  <map modelId="14" generatedId="327"/>
+  <map modelId="2" generatedId="369"/>
+  <map modelId="1" generatedId="368"/>
+  <map modelId="12" generatedId="366"/>
+  <map modelId="11" generatedId="367"/>
+  <map modelId="13" generatedId="365"/>
+  <map modelId="10" generatedId="364"/>
+  <map modelId="9" generatedId="363"/>
+  <map modelId="8" generatedId="362"/>
+  <map modelId="7" generatedId="361"/>
+  <map modelId="6" generatedId="360"/>
+  <map modelId="5" generatedId="359"/>
+  <map modelId="4" generatedId="358"/>
+  <map modelId="3" generatedId="357"/>
 </mapping>
 <!--$******* SCADE Suite KCG 32-bit 6.6.1 beta (build i1) ********
 ** mapping.xml
-** Generation date: 2021-06-16T10:21:05
+** Generation date: 2021-06-16T11:27:42
 *************************************************************$-->

@@ -3,8 +3,6 @@
 	<declarations>
 		<Package name="Generated">
 			<declarations>
-				<Operator name="CauseEffect" href="Generated\CauseEffect.xscade"/>
-				<Operator name="ExclusionCondition" href="Generated\ExclusionCondition.xscade"/>
 			</declarations>
 			<pragmas>
 				<ed:Package oid="!ed/1d173/4429/27C8/60c932e53fa2" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">

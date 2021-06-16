@@ -2016,3 +2016,153 @@ SimTypeUtils _Type_kcg_uint8_Utils = {
     sizeof(kcg_uint8)
 };
 
+/****************************************************************
+ ** Strictness 
+ ****************************************************************/
+
+#ifdef __cplusplus
+  #ifdef pSimStrictnessVTable_defined
+    extern struct SimTypeVTable *pSimStrictnessVTable;
+  #else 
+    struct SimTypeVTable *pSimStrictnessVTable = NULL;
+  #endif
+#else
+  struct SimTypeVTable *pSimStrictnessVTable;
+#endif
+
+static SimEnumValUtils Strictness_values[] = {
+    { "STRICT", STRICT},
+    { "STRICT", STRICT},
+    { "NONSTRICT", NONSTRICT},
+    { "NONSTRICT", NONSTRICT},
+};
+const int Strictness_nb_values = 4;
+
+int Strictness_to_string(const void *pValue, PFN_STR_APPEND pfnStrAppend, void *pStrObj)
+{
+    if (pSimStrictnessVTable != NULL
+        && pSimStrictnessVTable->m_pfnGetConvInfo(SptString, SptNone) == 1) {
+       return pfnStrAppend(*(char**)pSimStrictnessVTable->m_pfnToType(SptString, pValue), pStrObj);
+    }
+    return pConverter->m_pfnEnumToString(*(Strictness*)pValue, Strictness_values, Strictness_nb_values, pfnStrAppend, pStrObj); 
+}
+
+int check_Strictness_string(const char *str, char **endptr)
+{
+    static Strictness rTemp;
+    return string_to_Strictness(str, (void*)&rTemp, endptr);
+}
+
+int string_to_Strictness(const char *str, void *pValue, char **endptr)
+{
+    int nRet = 0;
+    skip_whitespace(str);
+    if (pSimStrictnessVTable != NULL) {
+        nRet = string_to_VTable(str, pSimStrictnessVTable, pValue, endptr);
+    }
+    if (nRet == 0) {
+        int nTemp = 0;
+        nRet = pConverter->m_pfnStringToEnum(str, &nTemp, Strictness_values, Strictness_nb_values, endptr);
+        if (pValue != NULL && nRet != 0)
+            *(Strictness*)pValue = (Strictness)nTemp;
+    }
+    return nRet;
+}
+
+int is_Strictness_double_conversion_allowed()
+{
+    if (pSimStrictnessVTable != NULL) {
+        return is_VTable_double_conversion_allowed(pSimStrictnessVTable);
+    }
+    return 1;
+}
+
+int Strictness_to_double(const void *pValue, double *nValue)
+{
+    if (pSimStrictnessVTable != NULL) {
+        return VTable_to_double(pValue, pSimStrictnessVTable, nValue);
+    }
+    *nValue = (double)*((Strictness*)pValue);
+    return 1;
+}
+
+int is_Strictness_long_conversion_allowed()
+{
+    if (pSimStrictnessVTable != NULL) {
+        return is_VTable_long_conversion_allowed(pSimStrictnessVTable);
+    }
+    return 1;
+}
+
+int Strictness_to_long(const void *pValue, long *nValue)
+{
+    if (pSimStrictnessVTable != NULL) {
+        return VTable_to_long(pValue, pSimStrictnessVTable, nValue);
+    }
+    *nValue = (long)*((Strictness*)pValue);
+    return 1;
+}
+
+void compare_Strictness(int *pResult, const void *pValue1, const void *pValue2, SimTolerance *pTol, const char *pszPath, PFN_STR_LIST_APPEND pfnStrListAppend, void *pListErrPaths)
+{
+    int unitResult = 0;
+    /* Customized comparison */
+    if (pSimStrictnessVTable != NULL
+        && pSimStrictnessVTable->m_version >= Scv612
+        && pSimStrictnessVTable->m_pfnCompare != NULL) {
+        if (pSimStrictnessVTable->m_version >= Scv65) {
+            /* R15 and higher: VTable Compare function shall UPDATE *pResult global flag (*pResult |= SIM_CMP_RES_LT/...): */
+            unitResult = pSimStrictnessVTable->m_pfnCompare(pResult, pValue1, pValue2);
+        } else {
+            /* Before R15: VTable Compare function shall SET *pResult global flag (*pResult = -1/1/0): */
+            pSimStrictnessVTable->m_pfnCompare(&unitResult, pValue1, pValue2);
+            updateCompareResult(unitResult, pResult);
+        }
+    } else {
+        /* Predefined comparison */
+        unitResult = predef_compare_enum(pResult, (int)(*(Strictness*)pValue1), (int)(*(Strictness*)pValue2));
+    }
+    UNUSED(pTol);
+    if (unitResult != 0 && pfnStrListAppend != NULL && pszPath != NULL && *pszPath != 0 && pListErrPaths != NULL)
+        pfnStrListAppend(pszPath, pListErrPaths);
+}
+
+int get_Strictness_signature(PFN_STR_APPEND pfnStrAppend, void *pStrObj)
+{
+    return pConverter->m_pfnGetEnumSignature(Strictness_values, Strictness_nb_values, pfnStrAppend, pStrObj);
+}
+
+int init_Strictness(void *pValue)
+{
+    *(Strictness*)pValue = STRICT;
+    return 1;
+}
+
+int release_Strictness(void *pValue)
+{
+    UNUSED(pValue);
+    return 1;
+}
+
+int copy_Strictness(void *pToValue, const void *pFromValue)
+{
+    *((Strictness*)pToValue) = *((Strictness*)pFromValue);
+    return 1;
+}
+
+SimTypeUtils _Type_Strictness_Utils = {
+    Strictness_to_string,
+    check_Strictness_string,
+    string_to_Strictness,
+    is_Strictness_double_conversion_allowed,
+    Strictness_to_double,
+    is_Strictness_long_conversion_allowed,
+    Strictness_to_long,
+    compare_Strictness,
+    get_Strictness_signature,
+    init_Strictness,
+    release_Strictness,
+    copy_Strictness,
+    sizeof(Strictness)
+};
+

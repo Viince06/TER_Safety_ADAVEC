@@ -96,8 +96,8 @@ public class ChangeMode implements ISpecificationBuilder {
 		INSTANCE.build(myScadeGenerator);
 		myScadeGenerator.generateXMLFile(name);
 		myScadeGenerator.close();
+		System.out.println("FILES GENERATED SUCCESFULLY");
 		
-		System.out.println("FILE GENERATED SUCCESFULLY");
 		StepperUtility exe = new StepperUtility(new BDDSolutionFinder());
 		exe.setParam(StepperUtility.INTERACTIVE, true);
 		exe.treat(name, INSTANCE);

@@ -1,9 +1,14 @@
 *****************************
 *** Generated KCG H/Ads files ***
 *****************************
-ExclusionCondition_Generated.h
+ChangeMode_Generated.h
+Precedence_MSG.h
+Mg_delta_Utils.h
 Exclusion_MSG.h
 isPresent_Utils.h
+Union_MSG.h
+EncodeClockStatus_Utils.h
+DecodeClockStatus_Utils.h
 kcg_types.h
 kcg_consts.h
 kcg_sensors.h
@@ -11,9 +16,14 @@ kcg_sensors.h
 *****************************
 *** Generated KCG C/Adb files ***
 *****************************
-ExclusionCondition_Generated.c
+ChangeMode_Generated.c
+Precedence_MSG.c
+Mg_delta_Utils.c
 Exclusion_MSG.c
 isPresent_Utils.c
+Union_MSG.c
+EncodeClockStatus_Utils.c
+DecodeClockStatus_Utils.c
 kcg_types.c
 kcg_consts.c
 

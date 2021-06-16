@@ -1,6 +1,6 @@
 /* $******* SCADE Suite KCG 32-bit 6.6.1 beta (build i1) ********
 ** Command: kcg661.exe -config D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/config.txt
-** Generation date: 2021-06-16T10:21:05
+** Generation date: 2021-06-16T11:27:42
 *************************************************************$ */
 #ifndef _KCG_TYPES_H_
 #define _KCG_TYPES_H_
@@ -176,11 +176,13 @@ typedef signed char kcg_int8;
 #define kcg_assign_array kcg_assign
 #endif /* kcg_assign_array */
 
+/* Strictness/ */
+typedef enum kcg_tag_Strictness { STRICT, NONSTRICT } Strictness;
 /* ClockStatus/ */
 typedef enum kcg_tag_ClockStatus { PRESENT, ABSENT, DEAD } ClockStatus;
 #endif /* _KCG_TYPES_H_ */
 /* $******* SCADE Suite KCG 32-bit 6.6.1 beta (build i1) ********
 ** kcg_types.h
-** Generation date: 2021-06-16T10:21:05
+** Generation date: 2021-06-16T11:27:42
 *************************************************************$ */
 

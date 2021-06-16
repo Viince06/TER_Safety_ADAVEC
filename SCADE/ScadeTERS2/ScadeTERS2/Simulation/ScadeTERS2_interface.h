@@ -3,12 +3,12 @@
 
 #include "kcg_sensors.h"
 #include "SmuProxy.h"
-#include "ExclusionCondition_Generated.h"
+#include "ChangeMode_Generated.h"
 
 /* context */
 
-extern inC_ExclusionCondition_Generated inputs_ctx;
-extern outC_ExclusionCondition_Generated outputs_ctx;
+extern inC_ChangeMode_Generated inputs_ctx;
+extern outC_ChangeMode_Generated outputs_ctx;
 
 #ifdef __cplusplus
 extern "C" {

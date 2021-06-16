@@ -1,6 +1,6 @@
 /* $******* SCADE Suite KCG 32-bit 6.6.1 beta (build i1) ********
 ** Command: kcg661.exe -config D:/Projets/S2/TERS2/TER_SafetyCriticalSystem/SCADE/ScadeTERS2/ScadeTERS2/Simulation/config.txt
-** Generation date: 2021-06-16T10:21:05
+** Generation date: 2021-06-16T11:27:42
 *************************************************************$ */
 #ifndef _Exclusion_MSG_H_
 #define _Exclusion_MSG_H_
@@ -54,6 +54,6 @@ extern void Exclusion_init_MSG(outC_Exclusion_MSG *outC);
 #endif /* _Exclusion_MSG_H_ */
 /* $******* SCADE Suite KCG 32-bit 6.6.1 beta (build i1) ********
 ** Exclusion_MSG.h
-** Generation date: 2021-06-16T10:21:05
+** Generation date: 2021-06-16T11:27:42
 *************************************************************$ */
 
